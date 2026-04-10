@@ -34,17 +34,17 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 lg:py-32 bg-card">
+    <section id="faq" className="py-24 lg:py-32 bg-card" aria-label="Preguntas frecuentes sobre robots cortacésped">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
+          <header className="text-center mb-12">
             <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-4 block">
               Preguntas Frecuentes
             </span>
             <h2 className="text-3xl md:text-5xl font-bold">
               ¿Tenés dudas?
             </h2>
-          </div>
+          </header>
 
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (

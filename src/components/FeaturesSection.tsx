@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Brain, Wifi, Map, Scissors, Smartphone, Shield } from "lucide-react";
 
 const features = [
@@ -64,6 +65,15 @@ const FeaturesSection = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            to="/tecnologia"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors text-sm"
+          >
+            Ver guía tecnológica completa →
+          </Link>
         </div>
       </div>
     </section>

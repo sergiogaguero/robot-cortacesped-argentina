@@ -1,17 +1,23 @@
 import { ArrowDown } from "lucide-react";
-import heroImage from "@/assets/hero-mower.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Presentación del robot cortacésped TerraMow"
+    >
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Robot cortacésped TerraMow en césped"
-          width={1920}
-          height={1080}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           className="w-full h-full object-cover"
-        />
+          aria-hidden="true"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
@@ -32,7 +38,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            Robots cortacésped TerraMow V Series. Navegación con IA, sin cables, sin antenas. Tu jardín perfecto con un solo click.
+            Robots cortacésped TerraMow V Series con navegación por inteligencia artificial. Sin cables, sin antenas. Tu jardín perfecto con un solo click.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
@@ -55,6 +61,7 @@ const HeroSection = () => {
       <a
         href="#productos"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-float"
+        aria-label="Ver productos"
       >
         <ArrowDown className="text-muted-foreground" size={24} />
       </a>
