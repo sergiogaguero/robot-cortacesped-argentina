@@ -28,7 +28,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://sergiogaguero.mitiendanube.com/"
+                  href="https://robotscortacesped.com.ar/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
@@ -58,13 +58,13 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://sergiogaguero.mitiendanube.com/"
+                  href="https://robotscortacesped.com.ar/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <ExternalLink size={16} className="text-primary shrink-0" />
-                  sergiogaguero.mitiendanube.com
+                  robotscortacesped.com.ar
                 </a>
               </li>
             </ul>

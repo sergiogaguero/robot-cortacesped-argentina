@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Clock, Zap, Brain, Eye, Map, Smartphone, Shield, Leaf, TrendingDown, Timer, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft, Clock, Zap, Brain, Eye, Map, Smartphone, Shield, Leaf, TrendingDown, Timer, CheckCircle2, XCircle, BatteryCharging, Scissors, Home, ScanLine } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { breadcrumbTecnologia, howItWorksSchema } from "@/lib/seo-data";
 import logo from "@/assets/logo.png";
@@ -242,9 +242,8 @@ const Tecnologia = () => {
             {timeComparison.map((row, idx) => (
               <div
                 key={row.task}
-                className={`grid grid-cols-4 gap-4 p-4 border-x border-b border-border text-sm ${
-                  idx % 2 === 0 ? "bg-background" : "bg-secondary/30"
-                } ${idx === timeComparison.length - 1 ? "rounded-b-2xl" : ""}`}
+                className={`grid grid-cols-4 gap-4 p-4 border-x border-b border-border text-sm ${idx % 2 === 0 ? "bg-background" : "bg-secondary/30"
+                  } ${idx === timeComparison.length - 1 ? "rounded-b-2xl" : ""}`}
               >
                 <div className="font-medium text-foreground">{row.task}</div>
                 <div className="text-center text-muted-foreground">{row.manual}</div>
@@ -282,9 +281,8 @@ const Tecnologia = () => {
             {manualVsRobot.map((row, idx) => (
               <div
                 key={row.feature}
-                className={`grid grid-cols-3 gap-4 p-4 border-x border-b border-border text-sm ${
-                  idx % 2 === 0 ? "bg-background" : "bg-secondary/30"
-                } ${idx === manualVsRobot.length - 1 ? "rounded-b-2xl" : ""}`}
+                className={`grid grid-cols-3 gap-4 p-4 border-x border-b border-border text-sm ${idx % 2 === 0 ? "bg-background" : "bg-secondary/30"
+                  } ${idx === manualVsRobot.length - 1 ? "rounded-b-2xl" : ""}`}
               >
                 <div className="font-medium">{row.feature}</div>
                 <div className="flex justify-center">
@@ -320,14 +318,14 @@ const Tecnologia = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               {[
-                { icon: "🔋", label: "Carga en base", time: "~60 min" },
-                { icon: "🗺️", label: "Analiza el mapa", time: "~30 seg" },
-                { icon: "✂️", label: "Corta el césped", time: "~90 min" },
-                { icon: "🏠", label: "Regresa a base", time: "Auto" },
+                { icon: BatteryCharging, label: "Carga en base", time: "~60 min" },
+                { icon: ScanLine, label: "Analiza el mapa", time: "~30 seg" },
+                { icon: Scissors, label: "Corta el césped", time: "~90 min" },
+                { icon: Home, label: "Regresa a base", time: "Auto" },
               ].map((phase, idx) => (
                 <div key={phase.label} className="flex items-center gap-4 sm:gap-2 sm:flex-col">
                   <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-primary/20 to-primary/5 border border-border text-center min-w-[120px]">
-                    <div className="text-3xl sm:text-4xl mb-2">{phase.icon}</div>
+                    <div className="flex justify-center mb-2"><phase.icon className="text-primary" size={32} /></div>
                     <h4 className="font-semibold text-sm mb-1">{phase.label}</h4>
                     <span className="text-xs text-primary font-medium">{phase.time}</span>
                   </div>
