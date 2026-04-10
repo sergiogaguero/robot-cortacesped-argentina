@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import mowerV600 from "@/assets/mower-v600.jpg";
-import mowerV1000 from "@/assets/mower-v1000.jpg";
+import mowerV600 from "@/assets/mower-v600.png";
+import mowerV1000 from "@/assets/mower-v1000.png";
 
 const products = [
   {
