@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { SiWhatsapp } from "react-icons/si";
 import { ArrowLeft, Check } from "lucide-react";
 import mowerV1000 from "@/assets/mower-v1000.png";
@@ -7,6 +8,45 @@ import Footer from "@/components/Footer";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
+  const [currency, setCurrency] = useState<"USD" | "ARS">("USD");
+  const [exchangeRate, setExchangeRate] = useState<number>(1);
+  const [loading, setLoading] = useState(true);
+
+  const PRICE_USD = 2100;
+
+  useEffect(() => {
+    const fetchExchangeRate = async () => {
+      try {
+        // Intentar obtener del Banco Central de la República Argentina
+        const response = await fetch(
+          "https://api.bluelytics.com.ar/v2/latest"
+        );
+        const data = await response.json();
+        // Usar el precio oficial del Banco Nación (official_price.value_sell)
+        setExchangeRate(data.oficial.value_sell || 1);
+      } catch (error) {
+        console.error("Error fetching exchange rate:", error);
+        // Fallback a API alternativa si falla
+        try {
+          const fallbackResponse = await fetch(
+            "https://api.exchangerate-api.com/v4/latest/USD"
+          );
+          const fallbackData = await fallbackResponse.json();
+          setExchangeRate(fallbackData.rates.ARS || 1200);
+        } catch {
+          setExchangeRate(1200); // Último fallback
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchExchangeRate();
+  }, []);
+
+  const priceInARS = Math.round(PRICE_USD * exchangeRate);
+  const displayPrice = currency === "USD" ? PRICE_USD : priceInARS;
+  const currencySymbol = currency === "USD" ? "$" : "$";
 
   const handleBuyNow = () => {
     const whatsappNumber = "5492494028837";
@@ -100,8 +140,41 @@ const ProductDetail = () => {
 
               {/* Price */}
               <div className="mb-8">
-                <p className="text-sm text-muted-foreground mb-2">Precio:</p>
-                <p className="text-4xl font-bold text-primary">$2,100 USD</p>
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-sm text-muted-foreground">Precio:</p>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setCurrency("USD")}
+                      className={`text-xs px-3 py-1 rounded-full font-semibold transition-colors ${
+                        currency === "USD"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-muted-foreground hover:text-primary"
+                      }`}
+                    >
+                      USD
+                    </button>
+                    <button
+                      onClick={() => setCurrency("ARS")}
+                      className={`text-xs px-3 py-1 rounded-full font-semibold transition-colors ${
+                        currency === "ARS"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-secondary text-muted-foreground hover:text-primary"
+                      }`}
+                    >
+                      ARS*
+                    </button>
+                  </div>
+                </div>
+                <p className="text-4xl font-bold text-primary">
+                  {loading ? "Cargando..." : `${currencySymbol} ${displayPrice.toLocaleString()}`}
+                  {currency === "ARS" && " ARS"}
+                  {currency === "USD" && " USD"}
+                </p>
+                {currency === "ARS" && (
+                  <p className="text-xs text-muted-foreground mt-3">
+                    * Precio de referencia según cotización del Banco Nación. El precio final dependerá de la cotización del día de la compra.
+                  </p>
+                )}
               </div>
 
               {/* Key Features */}
