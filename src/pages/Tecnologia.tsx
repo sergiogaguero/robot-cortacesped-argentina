@@ -102,7 +102,7 @@ const Tecnologia = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       <SEOHead
         title="Tecnología Robot Cortacésped con IA"
         description="Guía completa sobre cómo funciona un robot cortacésped con inteligencia artificial TerraMow. Navegación autónoma, ahorro de tiempo y comparativa vs corte manual."

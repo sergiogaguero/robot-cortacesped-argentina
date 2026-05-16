@@ -18,7 +18,7 @@ import {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       <SEOHead
         title="Robot Cortacésped con IA TerraMow V Series"
         description="Distribuidor oficial de robots cortacésped TerraMow V Series en Argentina. Navegación con IA, sin cables perimetrales. Comprá online tu V600 o V1000 con envío a todo el país."
