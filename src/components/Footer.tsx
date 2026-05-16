@@ -1,4 +1,4 @@
-import { Mail, MapPin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, ExternalLink, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -53,6 +53,17 @@ const Footer = () => {
                 >
                   <Mail size={16} className="text-primary shrink-0" />
                   ventas@robotscortacesped.com.ar
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/robotscortacesped_argentina/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Instagram size={16} className="text-primary shrink-0" />
+                  Instagram
                 </a>
               </li>
             </ul>

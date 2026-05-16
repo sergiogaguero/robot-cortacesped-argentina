@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -33,6 +33,15 @@ const Navbar = () => {
             <a href="#faq" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               FAQ
             </a>
+            <a
+              href="https://www.instagram.com/robotscortacesped_argentina/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} />
+            </a>
             <button
               onClick={handleBuyWhatsApp}
               className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
@@ -55,6 +64,16 @@ const Navbar = () => {
             <a href="#tecnologia" onClick={() => setIsOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Tecnología</a>
             <a href="#nosotros" onClick={() => setIsOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Nosotros</a>
             <a href="#faq" onClick={() => setIsOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">FAQ</a>
+            <a
+              href="https://www.instagram.com/robotscortacesped_argentina/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Instagram size={18} />
+              Instagram
+            </a>
             <button
               onClick={() => {
                 handleBuyWhatsApp();
