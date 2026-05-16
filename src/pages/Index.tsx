@@ -1,5 +1,6 @@
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -32,6 +33,7 @@ const Index = () => {
         ]}
       />
       <Navbar />
+      <WhatsAppButton />
       <main>
         <HeroSection />
         <ProductsSection />
