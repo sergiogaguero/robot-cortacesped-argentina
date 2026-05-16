@@ -5,6 +5,13 @@ import logo from "@/assets/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleBuyWhatsApp = () => {
+    const whatsappNumber = "5492494028837";
+    const message = "Estoy interesado en comprar un robot cortacésped";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
@@ -26,14 +33,12 @@ const Navbar = () => {
             <a href="#faq" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               FAQ
             </a>
-            <a
-              href="https://sergiogaguero.mitiendanube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleBuyWhatsApp}
               className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
-              Tienda Online
-            </a>
+              Comprar Ahora
+            </button>
           </div>
 
           <button
@@ -50,14 +55,15 @@ const Navbar = () => {
             <a href="#tecnologia" onClick={() => setIsOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Tecnología</a>
             <a href="#nosotros" onClick={() => setIsOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Nosotros</a>
             <a href="#faq" onClick={() => setIsOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">FAQ</a>
-            <a
-              href="https://sergiogaguero.mitiendanube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => {
+                handleBuyWhatsApp();
+                setIsOpen(false);
+              }}
               className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center hover:opacity-90 transition-opacity"
             >
-              Tienda Online
-            </a>
+              Comprar Ahora
+            </button>
           </div>
         )}
       </div>

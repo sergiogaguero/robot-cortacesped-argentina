@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Clock, Zap, Brain, Eye, Map, Smartphone, Shield, Leaf, TrendingDown, Timer, CheckCircle2, XCircle, BatteryCharging, Scissors, Home, ScanLine } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { breadcrumbTecnologia, howItWorksSchema } from "@/lib/seo-data";
@@ -92,6 +92,15 @@ const techAdvantages = [
 ];
 
 const Tecnologia = () => {
+  const navigate = useNavigate();
+
+  const handleBuyWhatsApp = () => {
+    const whatsappNumber = "5492494028837";
+    const message = "Estoy interesado en comprar un robot cortacésped";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -352,22 +361,18 @@ const Tecnologia = () => {
             Explorá los modelos V600 y V1000 de TerraMow y elegí el que mejor se adapte a tu jardín.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://sergiogaguero.mitiendanube.com/productos/robot-cortacesped-terramow-v600/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleBuyWhatsApp}
               className="px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
-              Ver TerraMow V600
-            </a>
-            <a
-              href="https://sergiogaguero.mitiendanube.com/productos/robot-cortacesped-terramow-v1000/"
-              target="_blank"
-              rel="noopener noreferrer"
+              Contactar por V600
+            </button>
+            <button
+              onClick={() => navigate("/productos/v1000")}
               className="px-8 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
             >
               Ver TerraMow V1000
-            </a>
+            </button>
           </div>
           <Link to="/" className="inline-flex items-center gap-2 mt-8 text-sm text-muted-foreground hover:text-primary transition-colors">
             <ArrowLeft size={16} /> Volver al inicio

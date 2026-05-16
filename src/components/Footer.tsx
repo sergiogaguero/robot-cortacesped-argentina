@@ -28,16 +28,6 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://robotscortacesped.com.ar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
-                >
-                  Tienda Online <ExternalLink size={12} />
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://www.terramow.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -58,13 +48,11 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://robotscortacesped.com.ar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:ventas@robotscortacesped.com.ar"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <ExternalLink size={16} className="text-primary shrink-0" />
-                  robotscortacesped.com.ar
+                  <Mail size={16} className="text-primary shrink-0" />
+                  ventas@robotscortacesped.com.ar
                 </a>
               </li>
             </ul>

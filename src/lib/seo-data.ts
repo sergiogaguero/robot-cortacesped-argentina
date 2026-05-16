@@ -1,5 +1,5 @@
 const SITE_URL = "https://www.robotscortacesped.com.ar";
-const STORE_URL = "https://sergiogaguero.mitiendanube.com";
+const CONTACT_EMAIL = "ventas@robotscortacesped.com.ar";
 
 export const organizationSchema = {
   "@context": "https://schema.org",
@@ -14,11 +14,11 @@ export const organizationSchema = {
     addressLocality: "Buenos Aires",
     addressCountry: "AR",
   },
-  sameAs: [STORE_URL],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
-    url: STORE_URL,
+    email: CONTACT_EMAIL,
+    telephone: "+54 9 2494 028837",
     availableLanguage: "es",
   },
 };
@@ -31,11 +31,7 @@ export const websiteSchema = {
   description:
     "Robots cortacésped con inteligencia artificial TerraMow V Series. Envíos a todo el país.",
   inLanguage: "es",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${STORE_URL}/search/?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
+
 };
 
 export const productSchemaV600 = {
@@ -47,10 +43,10 @@ export const productSchemaV600 = {
   brand: { "@type": "Brand", name: "TerraMow" },
   model: "V600",
   category: "Robot Cortacésped",
-  url: `${STORE_URL}/productos/robot-cortacesped-terramow-v600/`,
+  url: SITE_URL,
   offers: {
     "@type": "Offer",
-    url: `${STORE_URL}/productos/robot-cortacesped-terramow-v600/`,
+    url: SITE_URL,
     availability: "https://schema.org/InStock",
     priceCurrency: "ARS",
     seller: { "@type": "Organization", name: "Robot Cortacésped Argentina" },
@@ -78,10 +74,10 @@ export const productSchemaV1000 = {
   brand: { "@type": "Brand", name: "TerraMow" },
   model: "V1000",
   category: "Robot Cortacésped",
-  url: `${STORE_URL}/productos/robot-cortacesped-terramow-v1000/`,
+  url: SITE_URL,
   offers: {
     "@type": "Offer",
-    url: `${STORE_URL}/productos/robot-cortacesped-terramow-v1000/`,
+    url: SITE_URL,
     availability: "https://schema.org/InStock",
     priceCurrency: "ARS",
     seller: { "@type": "Organization", name: "Robot Cortacésped Argentina" },

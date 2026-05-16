@@ -10,7 +10,6 @@ const products = [
     image: mowerV600,
     coverage: "Hasta 600 m²",
     features: ["Navegación IA sin cables", "Mapeo automático", "Corte de bordes avanzado", "Control vía App"],
-    url: "https://sergiogaguero.mitiendanube.com/productos/robot-cortacesped-terramow-v600/",
     alt: "Robot cortacésped TerraMow V600 con navegación por IA para jardines de hasta 600m²",
     external: true,
     inStock: false,
@@ -127,7 +126,7 @@ const ProductsSection = () => {
                     </ul>
                     {product.inStock ? (
                       <div className="mt-6 py-3 text-center bg-primary text-primary-foreground font-semibold rounded-lg group-hover:opacity-90 transition-opacity">
-                        Ver detalles
+                        Ver Mas
                       </div>
                     ) : (
                       <div className="mt-6 py-3 text-center bg-muted text-muted-foreground font-semibold rounded-lg cursor-not-allowed opacity-60">
