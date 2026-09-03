@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404
 
-Sitemap: https://www.robotscortacesped.com.ar/sitemap.xml
+Sitemap: https://www.robotscortacesped.com.ar/sitemap-index.xml

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-background: hsl(0 0% 5%);
+  --color-foreground: hsl(0 0% 95%);
+  --color-card: hsl(0 0% 8%);
+  --color-secondary: hsl(0 0% 12%);
+  --color-muted: hsl(0 0% 15%);
+  --color-muted-foreground: hsl(0 0% 60%);
+  --color-border: hsl(0 0% 18%);
+  --color-primary: hsl(84 81% 44%);
+  --color-primary-foreground: hsl(0 0% 5%);
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1ebe5a;
+
+  --radius-lg: 0.75rem;
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(84 81% 44% / 0.1); }
+    50% { box-shadow: 0 0 40px hsl(84 81% 44% / 0.25); }
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  * { @apply border-border; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-primary; }
+}
+
+@utility wrap {
+  @apply mx-auto w-full max-w-7xl px-4 lg:px-8;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, hsl(84 81% 44%), hsl(120 60% 50%));
+}
+
+@utility glow-border {
+  box-shadow: 0 0 20px hsl(84 81% 44% / 0.1), inset 0 0 20px hsl(84 81% 44% / 0.05);
+}
+
+/* Cuerpo de artículos del blog (se usa en ArticleLayout, Parte 3) */
+@utility prose-dark {
+  @apply text-foreground/90 leading-relaxed;
+  & h2 { @apply mt-12 mb-4 text-2xl font-bold text-foreground md:text-3xl; }
+  & h3 { @apply mt-8 mb-3 text-xl font-semibold text-foreground; }
+  & p { @apply mb-5; }
+  & ul, & ol { @apply mb-5 ml-6 space-y-2; }
+  & ul { @apply list-disc; }
+  & ol { @apply list-decimal; }
+  & a { @apply text-primary underline underline-offset-4 hover:opacity-80; }
+  & strong { @apply font-semibold text-foreground; }
+  & table { @apply my-6 w-full border-collapse text-sm; }
+  & th { @apply border-b border-border bg-secondary px-3 py-2 text-left font-semibold; }
+  & td { @apply border-b border-border px-3 py-2 align-top; }
+  & blockquote { @apply my-6 border-l-4 border-primary pl-4 text-muted-foreground italic; }
+  & img { @apply my-6 rounded-xl; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
