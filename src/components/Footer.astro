@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.png";
+import IconInstagram from "@/components/icons/IconInstagram.astro";
+import { site } from "@/config/site";
+
+const year = new Date().getFullYear();
+const linkCls = "text-sm text-muted-foreground transition-colors hover:text-primary";
+---
+<footer class="border-t border-border py-16">
+  <div class="wrap">
+    <div class="mb-12 grid gap-12 md:grid-cols-3">
+      <div>
+        <Image src={logo} alt={site.name} height={48} width={Math.round((logo.width * 48) / logo.height)} format="webp" loading="lazy" class="mb-4 h-12 w-auto" />
+        <p class="text-sm leading-relaxed text-muted-foreground">
+          {site.brandClaim}. Robots cortacésped con navegación por cámara e inteligencia artificial para el cuidado del jardín.
+        </p>
+      </div>
+      <nav aria-label="Enlaces del sitio">
+        <h2 class="mb-4 font-semibold">Enlaces</h2>
+        <ul class="space-y-3">
+          <li><a href="/#productos" class={linkCls}>Productos</a></li>
+          <li><a href="/productos/v600-vs-v1000" class={linkCls}>Comparativa V600 vs V1000</a></li>
+          <li><a href="/tecnologia" class={linkCls}>Tecnología</a></li>
+          <li><a href="/blog" class={linkCls}>Guías</a></li>
+          <li><a href={site.terramow} target="_blank" rel="noopener noreferrer" class={linkCls}>Sitio de TerraMow ↗</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="mb-4 font-semibold">Contacto</h2>
+        <ul class="space-y-3">
+          <li class="text-sm text-muted-foreground">{site.location.locality}, Argentina</li>
+          <li><a href={`mailto:${site.email}`} class={linkCls}>{site.email}</a></li>
+          <li><a href={site.instagram} target="_blank" rel="noopener noreferrer" class:list={["inline-flex items-center gap-2", linkCls]}><IconInstagram size={16} /> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs text-muted-foreground md:flex-row">
+      <p>© {year} {site.name}. Todos los derechos reservados.</p>
+      <p>{site.brandClaim}</p>
+    </div>
+  </div>
+</footer>

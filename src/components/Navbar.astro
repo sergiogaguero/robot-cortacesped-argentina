@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.png";
+import IconClose from "@/components/icons/IconClose.astro";
+import IconInstagram from "@/components/icons/IconInstagram.astro";
+import IconMenu from "@/components/icons/IconMenu.astro";
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import { site } from "@/config/site";
+
+const links = [
+  { href: "/#productos", label: "Productos" },
+  { href: "/tecnologia", label: "Tecnología" },
+  { href: "/blog", label: "Guías" },
+];
+const linkCls = "text-sm font-medium text-muted-foreground transition-colors hover:text-primary";
+---
+<header class="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
+  <nav class="wrap flex h-16 items-center justify-between lg:h-20" aria-label="Principal">
+    <a href="/" class="flex items-center" aria-label={`${site.name} — inicio`}>
+      <Image src={logo} alt={site.name} height={56} width={Math.round((logo.width * 56) / logo.height)} format="webp" loading="eager" class="h-10 w-auto lg:h-14" />
+    </a>
+
+    <div class="hidden items-center gap-8 md:flex">
+      {links.map((l) => <a href={l.href} class={linkCls}>{l.label}</a>)}
+      <a href={site.instagram} target="_blank" rel="noopener noreferrer" class={linkCls} aria-label="Instagram"><IconInstagram size={20} /></a>
+      <WhatsAppButton context="general" wa="nav" label="Consultar" variant="bar" />
+    </div>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      class="text-foreground md:hidden"
+      aria-controls="menu-mobile"
+      aria-expanded="false"
+      aria-label="Abrir menú"
+    >
+      <IconMenu class="menu-icon-open" size={24} />
+      <IconClose class="menu-icon-close hidden" size={24} />
+    </button>
+  </nav>
+
+  <div id="menu-mobile" class="wrap hidden flex-col gap-4 border-t border-border pb-6 pt-4 md:hidden">
+    {links.map((l) => <a href={l.href} class={linkCls}>{l.label}</a>)}
+    <a href={site.instagram} target="_blank" rel="noopener noreferrer" class:list={["flex items-center gap-2", linkCls]}><IconInstagram size={18} /> Instagram</a>
+    <WhatsAppButton context="general" wa="nav-mobile" label="Consultar por WhatsApp" variant="primary" class="w-full" />
+  </div>
+</header>
+
+<script>
+  import "@/scripts/menu.ts";
+</script>
