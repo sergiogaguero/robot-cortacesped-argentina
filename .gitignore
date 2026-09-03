@@ -42,3 +42,8 @@ coverage
 # OS
 .DS_Store
 Thumbs.db
+
+# Brainstorming / Astro / Vercel
+.superpowers/
+.astro/
+.vercel/
