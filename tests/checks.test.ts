@@ -13,6 +13,14 @@ describe("dist-ok pasa todos los chequeos", () => {
   it("links", () => expect(checkLinks(ok)).toEqual([]));
   it("seo", () => expect(checkSeo(ok)).toEqual([]));
   it("budget", () => expect(checkBudget(ok, 500 * 1024)).toEqual([]));
+  it("un script inline (no JSON-LD) con la clave 'oficial' de una API externa no cuenta como palabra prohibida", () => {
+    // tests/fixtures/dist-ok/script-inline.html contiene <script>var k={oficial:1};</script>
+    // en el body: esa clave solo vive en JavaScript (no es copy del sitio) y no debe disparar el
+    // chequeo. Los otros chequeos también deben seguir pasando para ese archivo.
+    expect(checkForbidden(ok)).toEqual([]);
+    expect(checkLinks(ok)).toEqual([]);
+    expect(checkSeo(ok)).toEqual([]);
+  });
 });
 
 describe("dist-bad reporta cada problema", () => {
@@ -20,6 +28,13 @@ describe("dist-bad reporta cada problema", () => {
     const errs = checkForbidden(bad);
     expect(errs.some((e) => e.includes("index.html"))).toBe(true);
     expect(errs.some((e) => e.includes("sitemap-0.xml"))).toBe(true);
+  });
+  it("forbidden sigue revisando el contenido de los scripts JSON-LD", () => {
+    // tests/fixtures/dist-bad/jsonld.html tiene la palabra prohibida únicamente dentro de un
+    // <script type="application/ld+json">, sin aparecer en el texto visible de la página: el
+    // chequeo debe encontrarla igual, porque ese JSON-LD es copy que Google lee.
+    const errs = checkForbidden(bad);
+    expect(errs.some((e) => e.includes("jsonld.html"))).toBe(true);
   });
   it("links detecta href e img rotos", () => {
     const errs = checkLinks(bad);
