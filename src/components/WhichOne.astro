@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from "astro:content";
+import IconArrowRight from "@/components/icons/IconArrowRight.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import { formatNumber, formatUSD } from "@/lib/price";
+
+interface Props { products: CollectionEntry<"products">[] }
+const { products } = Astro.props;
+const rows = [
+  { label: "Superficie", value: (p: (typeof products)[number]) => `Hasta ${formatNumber(p.data.coverageM2)} m²` },
+  { label: "Autonomía por carga", value: (p: (typeof products)[number]) => `${p.data.fit.runtimeMin} min` },
+  { label: "Precio", value: (p: (typeof products)[number]) => formatUSD(p.data.priceUSD) },
+  { label: "Disponibilidad", value: (p: (typeof products)[number]) => (p.data.inStock ? "En stock" : "Sin stock") },
+];
+---
+<section class="bg-card py-24 lg:py-32">
+  <div class="wrap">
+    <SectionHeader eyebrow="¿Cuál me conviene?" title="V600 o V1000, en 10 segundos" text="La diferencia es la superficie y la autonomía. Todo lo demás —cámaras, IA, app, mulching— es igual." />
+    <div class="mx-auto max-w-3xl overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-border text-left">
+            <th scope="col" class="py-3 pr-4 font-semibold">Característica</th>
+            {products.map((p) => <th scope="col" class="py-3 pr-4 font-semibold text-primary">{p.data.name}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr class="border-b border-border">
+              <th scope="row" class="py-3 pr-4 text-left font-medium">{r.label}</th>
+              {products.map((p) => <td class="py-3 pr-4 text-muted-foreground">{r.value(p)}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 text-center">
+      <a href="/productos/v600-vs-v1000" class="inline-flex items-center gap-2 rounded-lg border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10">
+        Ver la comparativa completa <IconArrowRight size={16} />
+      </a>
+    </div>
+  </div>
+</section>

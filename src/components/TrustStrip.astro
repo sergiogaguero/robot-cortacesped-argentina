@@ -1,0 +1,16 @@
+---
+import IconCheck from "@/components/icons/IconCheck.astro";
+import { site } from "@/config/site";
+
+const items = [site.brandClaim, "Garantía del fabricante", "Envíos a todo el país", "Soporte técnico local"];
+---
+<section class="border-y border-border bg-card" aria-label="Por qué comprarnos">
+  <ul class="wrap grid grid-cols-2 gap-x-6 gap-y-4 py-6 md:grid-cols-4">
+    {items.map((item) => (
+      <li class="flex items-center gap-2 text-sm text-muted-foreground">
+        <IconCheck class="shrink-0 text-primary" size={18} />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+</section>

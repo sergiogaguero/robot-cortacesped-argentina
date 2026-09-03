@@ -1,0 +1,28 @@
+---
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import type { WaContext } from "@/lib/whatsapp";
+
+interface Props {
+  title?: string;
+  text?: string;
+  wa: string;
+  context?: WaContext;
+  subject?: string;
+  product?: string;
+  label?: string;
+}
+const {
+  title = "¿Hablamos de tu jardín?",
+  text = "Contanos cuántos metros tenés, si hay árboles o pendientes, y te decimos qué modelo te conviene. Sin compromiso.",
+  wa, context = "general", subject, product, label = "Escribinos por WhatsApp",
+} = Astro.props;
+---
+<section class="py-24 lg:py-32">
+  <div class="wrap text-center">
+    <div class="mx-auto max-w-3xl rounded-3xl border border-primary/20 bg-primary/5 px-6 py-16 glow-border">
+      <h2 class="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+      <p class="mx-auto mb-8 max-w-xl text-muted-foreground">{text}</p>
+      <WhatsAppButton context={context} subject={subject} wa={wa} product={product} label={label} />
+    </div>
+  </div>
+</section>

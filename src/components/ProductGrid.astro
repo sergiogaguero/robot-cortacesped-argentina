@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProductCard from "@/components/ProductCard.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+
+interface Props { products: CollectionEntry<"products">[] }
+const { products } = Astro.props;
+---
+<section id="productos" class="scroll-mt-20 py-24 lg:py-32" aria-labelledby="productos-titulo">
+  <div class="wrap">
+    <SectionHeader id="productos-titulo" eyebrow="V Series" title="Elegí tu robot cortacésped" text="Visión artificial de triple cámara. Sin cables, sin antenas RTK. Configuración en minutos." />
+    <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+      {products.map((product) => <ProductCard product={product} />)}
+    </div>
+  </div>
+</section>

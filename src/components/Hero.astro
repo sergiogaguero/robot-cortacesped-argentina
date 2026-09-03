@@ -1,0 +1,55 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "@/assets/hero-mower.jpg";
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import { site } from "@/config/site";
+---
+<section class="relative flex min-h-[92svh] items-center overflow-hidden" aria-label="Robot cortacésped TerraMow con inteligencia artificial">
+  <div class="absolute inset-0" aria-hidden="true">
+    <Picture
+      src={heroImage}
+      formats={["avif", "webp"]}
+      widths={[640, 1024, 1600]}
+      sizes="100vw"
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+      class="h-full w-full object-cover"
+    />
+    <video
+      id="hero-video"
+      class="absolute inset-0 hidden h-full w-full object-cover"
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-webm="/videos/hero.webm"
+      data-mp4="/videos/hero.mp4"
+    ></video>
+    <div class="absolute inset-0 bg-linear-to-r from-background via-background/80 to-background/40"></div>
+    <div class="absolute inset-0 bg-linear-to-t from-background via-transparent to-background/60"></div>
+  </div>
+
+  <div class="wrap relative z-10 pt-24 pb-16">
+    <div class="max-w-2xl">
+      <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-2 backdrop-blur-sm animate-fade-up">
+        <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-xs font-medium tracking-wider text-muted-foreground uppercase">{site.brandClaim}</span>
+      </p>
+      <h1 class="mb-6 text-4xl leading-tight font-bold animate-fade-up md:text-6xl lg:text-7xl" style="animation-delay: 0.1s">
+        El futuro del<br /><span class="text-gradient">corte inteligente</span>
+      </h1>
+      <p class="mb-8 max-w-lg text-lg text-muted-foreground animate-fade-up md:text-xl" style="animation-delay: 0.2s">
+        Robots cortacésped TerraMow con navegación por cámara e inteligencia artificial. Sin cables, sin antenas. Tu jardín perfecto sin mover un dedo.
+      </p>
+      <div class="flex flex-col gap-4 animate-fade-up sm:flex-row" style="animation-delay: 0.3s">
+        <WhatsAppButton context="general" wa="home-hero" label="Consultar por WhatsApp" />
+        <a href="#productos" class="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3.5 font-semibold text-foreground transition-colors hover:bg-secondary">Ver modelos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "@/scripts/hero.ts";
+</script>

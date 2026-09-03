@@ -1,0 +1,23 @@
+---
+import SectionHeader from "@/components/SectionHeader.astro";
+
+const stats = [
+  { value: "+168 hs", label: "libres por año", text: "Es lo que lleva cortar 500 m² todas las semanas, más limpiar y guardar la máquina. El robot lo hace mientras vos hacés otra cosa." },
+  { value: "< 54 dB", label: "de ruido", text: "Menos que una conversación normal. Puede trabajar de noche o mientras dormís la siesta sin molestar a nadie." },
+  { value: "0 cables", label: "para instalar", text: "Sin cable perimetral enterrado ni antena RTK. Ponés la base, hacés el mapeo automático y ya está trabajando." },
+];
+---
+<section class="py-24 lg:py-32">
+  <div class="wrap">
+    <SectionHeader eyebrow="¿Por qué un robot?" title="Tu tiempo vale más que cortar el pasto" text="Un robot cortacésped no es un lujo: es la diferencia entre ocuparte del jardín y disfrutarlo." />
+    <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+      {stats.map((s) => (
+        <div class="rounded-2xl border border-border bg-card p-8 transition-colors hover:border-primary/30">
+          <p class="text-4xl font-bold text-primary lg:text-5xl">{s.value}</p>
+          <p class="mb-4 text-sm tracking-wide text-muted-foreground uppercase">{s.label}</p>
+          <p class="text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,11 +1,38 @@
 ---
+import { getCollection } from "astro:content";
+import ArticlesBlock from "@/components/ArticlesBlock.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import FAQ from "@/components/FAQ.astro";
+import Hero from "@/components/Hero.astro";
+import HowItWorks from "@/components/HowItWorks.astro";
+import ProductGrid from "@/components/ProductGrid.astro";
+import TrustStrip from "@/components/TrustStrip.astro";
+import WhichOne from "@/components/WhichOne.astro";
+import WhyRobot from "@/components/WhyRobot.astro";
+import { site } from "@/config/site";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import { withPublishedLinks } from "@/lib/faq-links";
+import { ldBreadcrumb, ldFaq } from "@/lib/schema";
+
+const products = (await getCollection("products")).sort((a, b) => a.data.coverageM2 - b.data.coverageM2);
+const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
+const faqs = withPublishedLinks(
+  (await getCollection("faq", ({ data }) => data.scope.includes("home"))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
+  publishedIds,
+);
+
+const title = "Robot Cortacésped con IA en Argentina | TerraMow";
+const description = "Robots cortacésped con navegación por cámara e IA, sin cables perimetrales. Modelos TerraMow V600 y V1000, garantía y soporte local. Consultá por WhatsApp.";
+const jsonLd = [ldBreadcrumb([{ name: "Inicio", url: `${site.url}/` }]), ldFaq(faqs)];
 ---
-<BaseLayout title="Robot Cortacésped con IA en Argentina | TerraMow" description="Robots cortacésped con navegación por cámara e IA, sin cables perimetrales. Modelos TerraMow V600 y V1000, garantía y soporte local. Consultá por WhatsApp.">
-  <section id="productos" class="wrap py-32">
-    <h1 class="mb-6 text-4xl font-bold">Robot cortacésped con IA en Argentina</h1>
-    <p class="mb-8 text-muted-foreground">Sitio en construcción.</p>
-    <WhatsAppButton context="general" wa="home-temp" label="Consultar por WhatsApp" />
-  </section>
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <Hero />
+  <TrustStrip />
+  <WhyRobot />
+  <ProductGrid products={products} />
+  <WhichOne products={products} />
+  <HowItWorks />
+  <ArticlesBlock />
+  <FAQ items={faqs} />
+  <CTAFinal wa="home-cta" />
 </BaseLayout>
