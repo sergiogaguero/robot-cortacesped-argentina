@@ -1,10 +1,128 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import FAQ from "@/components/FAQ.astro";
+import IconCheck from "@/components/icons/IconCheck.astro";
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import type { Product } from "@/content/schemas";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withPublishedLinks } from "@/lib/faq-links";
+import { formatNumber, formatUSD } from "@/lib/price";
+import { productImage } from "@/lib/product-images";
+import { ldBreadcrumb, ldFaq, ldItemList } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+const products = (await getCollection("products")).sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
+const [v600, v1000] = products as [Product, Product];
+const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
+const faqs = withPublishedLinks(
+  (await getCollection("faq", ({ data }) => data.scope.includes("comparativa"))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
+  publishedIds,
+);
+
+const spec = (p: Product, label: string): string =>
+  p.specs.flatMap((g) => g.items).find((i) => i.label === label)?.value ?? "—";
+
+const rows: { label: string; value: (p: Product) => string }[] = [
+  { label: "Superficie recomendada", value: (p) => `Hasta ${formatNumber(p.coverageM2)} m²` },
+  { label: "Autonomía por carga", value: (p) => `${p.fit.runtimeMin} min` },
+  { label: "Área por carga completa", value: (p) => spec(p, "Área de corte por carga completa") },
+  { label: "Tiempo de carga", value: (p) => spec(p, "Tiempo de carga") },
+  { label: "Batería", value: (p) => spec(p, "Capacidad") },
+  { label: "Área de corte por hora", value: (p) => p.fit.areaPerHourM2 },
+  { label: "Navegación", value: (p) => spec(p, "Tecnología de navegación") },
+  { label: "Pendiente máxima", value: (p) => `${p.fit.maxSlopeDeg}° (${p.fit.maxSlopePct} %)` },
+  { label: "Nivel de ruido", value: (p) => `< ${p.fit.noiseDb} dB` },
+  { label: "Impermeabilidad", value: (p) => spec(p, "Impermeabilidad") },
+  { label: "Peso", value: (p) => spec(p, "Peso") },
+  { label: "Precio", value: (p) => formatUSD(p.priceUSD) },
+  { label: "Disponibilidad", value: (p) => (p.inStock ? "En stock" : "Sin stock — consultar") },
+];
+
+const pick600 = [
+  "Tu jardín tiene hasta 600 m² y es una sola zona o dos muy cercanas.",
+  "Querés la misma navegación por cámara e IA con una inversión menor.",
+  "No tenés pendientes fuertes ni muchos sectores separados por caminos.",
+];
+const pick1000 = [
+  "Tu jardín supera los 600 m² o tiene varias zonas separadas.",
+  "Querés que termine en menos sesiones: 150 minutos de autonomía por carga.",
+  "Tenés árboles, canteros o pendientes de hasta 18° y necesitás más batería para recorrerlos.",
+];
+
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Productos", href: "/#productos" },
+  { name: "V600 vs V1000", href: "/productos/v600-vs-v1000" },
+];
+const jsonLd = [
+  ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))),
+  ldItemList(products.map((p) => ({ name: p.name, url: absoluteUrl(`/productos/${p.slug}`) }))),
+  ldFaq(faqs),
+];
 ---
-<BaseLayout title="TerraMow V600 vs V1000: ¿cuál robot cortacésped elegir?" description="Comparativa completa entre el TerraMow V600 y el V1000: superficie, batería, ruido, precio y para qué jardín conviene cada uno.">
-  <section class="wrap py-32">
-    <h1 class="mb-6 text-4xl font-bold">V600 vs V1000</h1>
-    <p class="mb-8 text-muted-foreground">Esta página está en construcción.</p>
-    <a href="/" class="text-primary underline underline-offset-4 hover:opacity-80">Volver al inicio</a>
-  </section>
+<BaseLayout
+  title="TerraMow V600 vs V1000: ¿cuál robot cortacésped elegir?"
+  description="Comparativa completa entre el TerraMow V600 y el V1000: superficie, batería, ruido, precio y para qué jardín conviene cada uno."
+  jsonLd={jsonLd}
+>
+  <div class="wrap pt-24 pb-16 lg:pt-32">
+    <Breadcrumbs items={crumbs} />
+    <p class="mb-4 text-xs font-semibold tracking-widest text-primary uppercase">Comparativa</p>
+    <h1 class="mb-6 text-4xl font-bold md:text-6xl">TerraMow V600 vs V1000: ¿cuál elegir?</h1>
+    <p class="max-w-3xl text-lg text-muted-foreground">Los dos usan la misma navegación por cámara con IA, el mismo ancho de corte y la misma app. La diferencia está en cuánto jardín cubren por carga. Acá tenés todo lado a lado.</p>
+  </div>
+
+  <div class="wrap pb-24">
+    <div class="grid gap-8 md:grid-cols-2">
+      {products.map((p) => (
+        <a href={`/productos/${p.slug}`} class="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/40">
+          <Image src={productImage(p.image)} alt={p.imageAlt} width={160} height={160} format="webp" loading="eager" class="h-20 w-20 rounded-xl object-cover" />
+          <div>
+            <p class="text-xl font-bold">{p.name}</p>
+            <p class="text-sm text-primary">Hasta {formatNumber(p.coverageM2)} m² · {formatUSD(p.priceUSD)}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 overflow-x-auto rounded-2xl border border-border">
+      <table class="w-full text-sm">
+        <caption class="sr-only">Comparación de especificaciones entre TerraMow V600 y V1000</caption>
+        <thead class="bg-primary/10 text-left">
+          <tr>
+            <th scope="col" class="p-4 font-semibold">Característica</th>
+            <th scope="col" class="p-4 font-semibold text-primary">{v600.name}</th>
+            <th scope="col" class="p-4 font-semibold text-primary">{v1000.name}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr class:list={["border-t border-border", i % 2 === 1 && "bg-secondary/30"]}>
+              <th scope="row" class="p-4 text-left font-medium">{r.label}</th>
+              <td class="p-4 text-muted-foreground">{r.value(v600)}</td>
+              <td class="p-4 text-muted-foreground">{r.value(v1000)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-16 grid gap-8 md:grid-cols-2">
+      {[{ p: v600, items: pick600, wa: "comparativa-v600" }, { p: v1000, items: pick1000, wa: "comparativa-v1000" }].map(({ p, items, wa }) => (
+        <section class="rounded-2xl border border-border bg-card p-8" aria-labelledby={`elegi-${p.slug}`}>
+          <h2 id={`elegi-${p.slug}`} class="mb-6 text-2xl font-bold">Elegí el {p.model} si…</h2>
+          <ul class="mb-8 space-y-3">
+            {items.map((t) => <li class="flex items-start gap-3 text-muted-foreground"><IconCheck class="mt-0.5 shrink-0 text-primary" size={20} /><span>{t}</span></li>)}
+          </ul>
+          <WhatsAppButton context="product" subject={p.name} wa={wa} product={p.slug} label={p.inStock ? `Consultar por el ${p.model}` : `Consultar stock del ${p.model}`} class="w-full" />
+        </section>
+      ))}
+    </div>
+  </div>
+
+  <FAQ items={faqs} title="Dudas al elegir" id="faq-comparativa" />
+  <CTAFinal wa="comparativa-ayuda" context="compare" title="¿Todavía no sabés cuál?" text="Mandanos una foto o un plano de tu jardín con los metros aproximados y te decimos cuál conviene. Es gratis y sin compromiso." label="Pedir ayuda para elegir" />
 </BaseLayout>
