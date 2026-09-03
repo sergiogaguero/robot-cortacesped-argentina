@@ -1,0 +1,7 @@
+{
+  "question": "¿Cuánto tarda en cortar el jardín?",
+  "answer": "Depende de la superficie y de la complejidad. Como referencia, corta entre 80 y 120 m² por hora: un jardín de 600 m² lleva unas 5 a 7 horas repartidas en una o dos sesiones; uno de 1200 m², entre 10 y 15. Como trabaja solo y en los horarios que le programes, el tiempo no lo pasás vos.",
+  "scope": ["home", "v600", "v1000", "comparativa"],
+  "order": 2,
+  "link": { "label": "Ver cuánto tiempo ahorrás al año", "href": "/blog/conviene-robot-cortacesped-argentina" }
+}

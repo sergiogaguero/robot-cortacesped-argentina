@@ -1,0 +1,81 @@
+{
+  "name": "TerraMow V1000",
+  "slug": "v1000",
+  "model": "V1000",
+  "tagline": "Máxima cobertura para jardines grandes",
+  "coverageM2": 1200,
+  "priceUSD": 2100,
+  "inStock": true,
+  "highlights": [
+    "Navegación por cámara con IA, sin cables ni antenas RTK",
+    "Cobertura hasta 1200 m²",
+    "Triple cámara TerraVision™ 2.0",
+    "Impermeabilidad IPX6"
+  ],
+  "fit": {
+    "maxSlopeDeg": 18,
+    "maxSlopePct": 32.5,
+    "obstacles": true,
+    "multiZone": true,
+    "noiseDb": 54,
+    "areaPerHourM2": "80-120 m²",
+    "runtimeMin": 150
+  },
+  "specs": [
+    {
+      "category": "Parámetros generales",
+      "items": [
+        { "label": "Tecnología de navegación", "value": "TerraVision™ 2.0, visión con IA de triple cámara" },
+        { "label": "Conectividad", "value": "Wi-Fi / red celular 4G" },
+        { "label": "Área de corte recomendada", "value": "1200 m² (0,3 acres)" },
+        { "label": "Área de corte por hora", "value": "80-120 m² (según la complejidad del césped)" },
+        { "label": "Área de corte por carga completa", "value": "160-300 m²" },
+        { "label": "Altura de corte", "value": "25-75 mm" },
+        { "label": "Ancho de corte", "value": "203 mm" }
+      ]
+    },
+    {
+      "category": "Funciones inteligentes",
+      "items": [
+        { "label": "Mapeo automático con IA", "value": "Sí" },
+        { "label": "Evasión de obstáculos 3D", "value": "Sí" },
+        { "label": "Ajuste eléctrico de altura de corte", "value": "Sí" },
+        { "label": "Recarga automática", "value": "Sí" },
+        { "label": "Detección de lluvia", "value": "Sí" },
+        { "label": "Actualización OTA (por internet)", "value": "Sí" }
+      ]
+    },
+    {
+      "category": "Batería",
+      "items": [
+        { "label": "Capacidad", "value": "4,5 Ah / 98,55 Wh" },
+        { "label": "Tiempo de carga", "value": "120 minutos" },
+        { "label": "Autonomía por carga", "value": "150 minutos" }
+      ]
+    },
+    {
+      "category": "Otras especificaciones",
+      "items": [
+        { "label": "Nivel de ruido", "value": "< 54 dB" },
+        { "label": "Impermeabilidad", "value": "IPX6" },
+        { "label": "Temperatura de operación", "value": "0-55 °C" },
+        { "label": "Pendiente máxima", "value": "18° (32,5 %)" },
+        { "label": "Voltaje de trabajo", "value": "24 V CC" },
+        { "label": "Peso", "value": "11,8 kg" },
+        { "label": "Dimensiones", "value": "60,2 × 39,4 × 33,1 cm" }
+      ]
+    }
+  ],
+  "image": "v1000.png",
+  "imageAlt": "Robot cortacésped TerraMow V1000 con navegación por cámara e IA para jardines de hasta 1200 m²",
+  "ogImage": "/og/v1000.jpg",
+  "faq": ["recoger-cesped", "cuanto-tarda", "mantenimiento", "cables", "seguridad", "garantia"],
+  "why": {
+    "title": "¿Por qué el V1000?",
+    "text": "Es el modelo para jardines grandes o con varias zonas: hasta 1200 m², 150 minutos de autonomía y triple cámara con IA que reconoce el césped, los bordes y los obstáculos sin cables perimetrales ni antenas RTK. Vuelve solo a la base, detecta lluvia y se actualiza por internet. Ideal si tenés más de 600 m², árboles, canteros o pendientes de hasta 18°."
+  },
+  "seo": {
+    "title": "TerraMow V1000: robot cortacésped hasta 1200 m² | Precio",
+    "description": "Ficha completa del TerraMow V1000: 1200 m² de cobertura, triple cámara con IA, sin cables ni RTK, especificaciones y precio. Garantía y envío a todo el país."
+  }
+}

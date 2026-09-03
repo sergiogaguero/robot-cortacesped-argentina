@@ -1,0 +1,7 @@
+{
+  "question": "¿Qué superficie cubre cada modelo?",
+  "answer": "El TerraMow V600 cubre hasta 600 m² y es ideal para jardines medianos. El V1000 cubre hasta 1200 m² y tiene más autonomía (150 minutos por carga), pensado para terrenos grandes o con varias zonas.",
+  "scope": ["home", "comparativa"],
+  "order": 5,
+  "link": { "label": "Comparar V600 y V1000", "href": "/productos/v600-vs-v1000" }
+}

@@ -1,0 +1,7 @@
+{
+  "question": "¿Qué mantenimiento necesita?",
+  "answer": "Muy poco: cambiar las cuchillas cada 4 a 8 semanas (son económicas y se cambian con un destornillador), limpiar la parte inferior y las cámaras cada tanto, y guardarlo bajo techo en invierno si no lo vas a usar. No tiene aceite, nafta ni filtros.",
+  "scope": ["home", "v600", "v1000"],
+  "order": 3,
+  "link": { "label": "Guía completa de mantenimiento", "href": "/blog/mantenimiento-robot-cortacesped" }
+}

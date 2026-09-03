@@ -1,0 +1,7 @@
+{
+  "question": "¿Hay que recoger el césped cortado?",
+  "answer": "No. El robot corta un poco cada vez y deja recortes muy finos que caen entre las hojas y se descomponen en uno o dos días (mulching). No queda césped acumulado ni hay que rastrillar; además funciona como fertilizante natural.",
+  "scope": ["home", "v600", "v1000"],
+  "order": 1,
+  "link": { "label": "Leé la guía de mantenimiento", "href": "/blog/mantenimiento-robot-cortacesped" }
+}

@@ -1,0 +1,7 @@
+{
+  "question": "¿Necesita cables perimetrales para funcionar?",
+  "answer": "No. Los robots TerraMow V Series navegan con cámaras e inteligencia artificial: reconocen dónde hay césped y dónde no. No requieren cables enterrados, antenas RTK ni balizas. Se instala la base, se hace el mapeo automático y ya está.",
+  "scope": ["home", "v600", "v1000"],
+  "order": 4,
+  "link": { "label": "Cámara con IA vs RTK vs LiDAR", "href": "/blog/camara-ia-vs-rtk-vs-lidar-robot-cortacesped" }
+}
