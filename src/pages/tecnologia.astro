@@ -1,10 +1,151 @@
 ---
+import { getEntry } from "astro:content";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import HowItWorks from "@/components/HowItWorks.astro";
+import IconArrowRight from "@/components/icons/IconArrowRight.astro";
+import IconCheck from "@/components/icons/IconCheck.astro";
+import IconClose from "@/components/icons/IconClose.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import { howItWorks } from "@/data/how-it-works";
+import { manualVsRobot, techAdvantages, timeComparison, workCycle } from "@/data/tecnologia";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { ldBreadcrumb, ldHowTo } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+// El link a la guía comparativa solo se muestra cuando el artículo está publicado (Parte 3, Task 13).
+const guiaCamara = await getEntry("blog", "camara-ia-vs-rtk-vs-lidar-robot-cortacesped");
+const showGuia = guiaCamara !== undefined && !guiaCamara.data.draft;
+
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Tecnología", href: "/tecnologia" },
+];
+const jsonLd = [
+  ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))),
+  ldHowTo({
+    name: "Cómo funciona un robot cortacésped con IA",
+    description: "Guía paso a paso del funcionamiento de un robot cortacésped autónomo con navegación por cámara e inteligencia artificial.",
+    steps: howItWorks.map((s) => ({ name: s.title, text: s.description })),
+  }),
+];
+const headCell = "p-4 text-sm font-semibold";
 ---
-<BaseLayout title="Cómo funciona un robot cortacésped con IA | Guía" description="Guía paso a paso: mapeo, planificación, corte autónomo y control por app. Ahorro de tiempo real y comparativa contra el corte manual.">
-  <section class="wrap py-32">
-    <h1 class="mb-6 text-4xl font-bold">Tecnología</h1>
-    <p class="mb-8 text-muted-foreground">Esta página está en construcción.</p>
-    <a href="/" class="text-primary underline underline-offset-4 hover:opacity-80">Volver al inicio</a>
+<BaseLayout
+  title="Cómo funciona un robot cortacésped con IA | Guía"
+  description="Guía paso a paso: mapeo, planificación, corte autónomo y control por app. Ahorro de tiempo real y comparativa contra el corte manual."
+  jsonLd={jsonLd}
+>
+  <div class="wrap pt-24 pb-8 text-center lg:pt-32">
+    <Breadcrumbs items={crumbs} />
+    <p class="mb-4 text-xs font-semibold tracking-widest text-primary uppercase">Guía tecnológica</p>
+    <h1 class="mb-6 text-4xl font-bold md:text-6xl">¿Cómo funciona un <span class="text-gradient">robot cortacésped</span>?</h1>
+    <p class="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">Descubrí en detalle la tecnología detrás de la V Series de TerraMow: inteligencia artificial, navegación autónoma y ahorro real de tiempo y dinero.</p>
+  </div>
+
+  <HowItWorks detailed showLink={false} />
+
+  <section class="bg-card py-16 lg:py-24">
+    <div class="wrap">
+      <SectionHeader title="Ventajas tecnológicas clave" text="Cada característica está pensada para darte el mejor resultado con el menor esfuerzo." />
+      <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+        {techAdvantages.map((adv) => (
+          <article class="rounded-2xl border border-border bg-background p-6 transition-colors hover:border-primary/30 lg:p-8">
+            <div class="mb-4 text-right">
+              <p class="text-3xl font-bold text-primary">{adv.stat}</p>
+              <p class="text-xs text-muted-foreground">{adv.statLabel}</p>
+            </div>
+            <h3 class="mb-2 text-lg font-semibold">{adv.title}</h3>
+            <p class="text-sm leading-relaxed text-muted-foreground">{adv.description}</p>
+          </article>
+        ))}
+      </div>
+      {showGuia && (
+        <p class="mt-10 text-center text-sm text-muted-foreground">
+          ¿Querés entender por qué la cámara le gana al cable, al RTK y al LiDAR?
+          <a href="/blog/camara-ia-vs-rtk-vs-lidar-robot-cortacesped" class="inline-flex items-center gap-1 font-medium text-primary hover:underline">Leé la guía comparativa <IconArrowRight size={14} /></a>
+        </p>
+      )}
+    </div>
   </section>
+
+  <section class="py-16 lg:py-24">
+    <div class="wrap">
+      <SectionHeader title="Ahorro real de tiempo" text="Mirá cuántas horas recuperás al año dejando que el robot haga el trabajo pesado." />
+      <div class="mx-auto max-w-4xl overflow-x-auto rounded-2xl border border-border">
+        <table class="w-full">
+          <caption class="sr-only">Horas de trabajo: corte manual contra robot</caption>
+          <thead class="bg-primary/10 text-left">
+            <tr>
+              <th scope="col" class={headCell}>Tarea</th>
+              <th scope="col" class:list={[headCell, "text-center"]}>Manual</th>
+              <th scope="col" class:list={[headCell, "text-center"]}>Robot</th>
+              <th scope="col" class:list={[headCell, "text-center text-primary"]}>Ahorro</th>
+            </tr>
+          </thead>
+          <tbody>
+            {timeComparison.map((row, i) => (
+              <tr class:list={["border-t border-border text-sm", i % 2 === 1 && "bg-secondary/30"]}>
+                <th scope="row" class="p-4 text-left font-medium">{row.task}</th>
+                <td class="p-4 text-center text-muted-foreground">{row.manual}</td>
+                <td class="p-4 text-center font-medium text-primary">{row.robot}</td>
+                <td class="p-4 text-center font-bold text-primary">{row.savings}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="mx-auto mt-8 max-w-4xl rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
+        <p class="mb-2 text-5xl font-bold text-primary">+168 hs</p>
+        <p class="text-muted-foreground">de tiempo libre por año — el equivalente a <span class="font-semibold text-foreground">21 días laborables</span> completos</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-16 lg:py-24">
+    <div class="wrap">
+      <SectionHeader title="Corte manual vs. robot con IA" text="Una comparativa clara para que veas por qué cada vez más hogares eligen la automatización." />
+      <div class="mx-auto max-w-3xl overflow-x-auto rounded-2xl border border-border">
+        <table class="w-full">
+          <caption class="sr-only">Comparación de características entre corte manual y robot</caption>
+          <thead class="bg-primary/10 text-left">
+            <tr>
+              <th scope="col" class={headCell}>Característica</th>
+              <th scope="col" class:list={[headCell, "text-center"]}>Manual</th>
+              <th scope="col" class:list={[headCell, "text-center"]}>Robot IA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {manualVsRobot.map((row, i) => (
+              <tr class:list={["border-t border-border text-sm", i % 2 === 1 && "bg-secondary/30"]}>
+                <th scope="row" class="p-4 text-left font-medium">{row.feature}</th>
+                <td class="p-4"><span class="flex justify-center">{row.manual ? <IconCheck class="text-muted-foreground" size={20} /> : <IconClose class="text-muted-foreground/40" size={20} />}<span class="sr-only">{row.manual ? "Sí" : "No"}</span></span></td>
+                <td class="p-4"><span class="flex justify-center">{row.robot ? <IconCheck class="text-primary" size={20} /> : <IconClose class="text-muted-foreground/40" size={20} />}<span class="sr-only">{row.robot ? "Sí" : "No"}</span></span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24">
+    <div class="wrap">
+      <SectionHeader title="Ciclo de trabajo autónomo" text="El robot repite este ciclo solo, manteniendo tu jardín siempre parejo." />
+      <ol class="mx-auto flex max-w-4xl flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+        {workCycle.map((phase, i) => (
+          <li class="flex items-center gap-4 sm:flex-col sm:gap-2">
+            <div class="min-w-[130px] rounded-2xl border border-border bg-linear-to-b from-primary/20 to-primary/5 p-5 text-center">
+              <p class="mb-1 text-sm font-semibold">{phase.label}</p>
+              <p class="text-xs font-medium text-primary">{phase.time}</p>
+            </div>
+            {i < workCycle.length - 1 && <span class="hidden text-xl font-bold text-primary sm:block" aria-hidden="true">→</span>}
+          </li>
+        ))}
+      </ol>
+      <p class="mt-6 text-center"><span class="rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">↻ El ciclo se repite según tu programación</span></p>
+    </div>
+  </section>
+
+  <CTAFinal wa="tecnologia-cta" title="¿Listo para recuperar tu tiempo?" text="Mirá los modelos V600 y V1000 o escribinos y te ayudamos a elegir según tu jardín." />
 </BaseLayout>
