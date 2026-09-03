@@ -121,7 +121,7 @@ public/
   og/default.jpg  og/v600.jpg  og/v1000.jpg   (1200×630)
   logo.png                                referenciado por Organization.logo
   videos/hero.mp4  videos/hero.webm       comprimidos, solo desktop
-scripts/check/                            chequeos de build (ver §9.2)
+scripts/check/                            chequeos de build (ver §10.2)
 docs/superpowers/specs/                   este documento
 tests/                                    Vitest
 ```
@@ -454,7 +454,7 @@ Rollback: `git revert` del merge + push.
 | `og-image.jpg` inexistente; sin preview en WhatsApp | `public/og/*.jpg` reales por página + chequeo de existencia en build (§7.1, §10.2) |
 | Tarjeta V600 sin `href` | Tarjetas desde la colección, siempre con link a la ficha; chequeo de links rotos (§6.2, §10.2) |
 | Navbar rota fuera de la home (`#productos`, logo `href="#"`) | Links absolutos (`/#productos`, `/`), Navbar compartida (§6.2) |
-| Video 3,6 MB `preload="auto"` | ≤ 600 KB, solo desktop, `poster`, `preload="metadata"`, reduced-motion (§7.5) |
+| Video 3,6 MB `preload="auto"` | ≤ 600 KB, solo desktop, `poster`, `preload="none"`, reduced-motion (§7.5) |
 | 1000 vs 1200 m² | Un solo campo `coverageM2` leído por todas las páginas (§5.1); valor pendiente de confirmación |
 | JSON-LD: V600 `InStock` con "Out of Stock"; `Offer` sin `price`; `logo.png` 404 | `availability` desde `inStock`; `price` USD; `public/logo.png` existe; builders testeados (§7.3, §10.1) |
 | `/productos/v1000` sin SEOHead ni en sitemap; `lastmod` viejo | `SEO.astro` en `BaseLayout` para todas; sitemap automático con `lastmod` real (§7.1, §7.4) |
