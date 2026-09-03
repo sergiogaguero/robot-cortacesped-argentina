@@ -1,0 +1,17 @@
+---
+import type { Product } from "@/content/schemas";
+import WhatsAppButton from "@/components/WhatsAppButton.astro";
+import { formatUSD } from "@/lib/price";
+
+interface Props { product: Product }
+const { product: p } = Astro.props;
+---
+<div id="sticky-bar" class="fixed inset-x-0 bottom-0 z-40 translate-y-full border-t border-border bg-background/95 backdrop-blur-xl transition-transform duration-300 lg:hidden" aria-hidden="true">
+  <div class="wrap flex items-center justify-between gap-3 py-3">
+    <div>
+      <p class="text-xs text-muted-foreground">{p.name}</p>
+      <p class="text-lg font-bold text-primary" data-price>{formatUSD(p.priceUSD)}</p>
+    </div>
+    <WhatsAppButton context="product" subject={p.name} wa={`ficha-${p.slug}-sticky`} product={p.slug} label={p.inStock ? "Comprar" : "Consultar"} variant="bar" />
+  </div>
+</div>

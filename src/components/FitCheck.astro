@@ -1,0 +1,34 @@
+---
+import type { Product } from "@/content/schemas";
+import IconArrowRight from "@/components/icons/IconArrowRight.astro";
+import { formatNumber } from "@/lib/price";
+
+interface Props { product: Product; other: Product }
+const { product: p, other } = Astro.props;
+const bigger = other.coverageM2 > p.coverageM2;
+const cells = [
+  { value: `${formatNumber(p.coverageM2)} m²`, label: "superficie máxima" },
+  { value: `${p.fit.maxSlopeDeg}°`, label: `pendiente máxima (${p.fit.maxSlopePct} %)` },
+  { value: p.fit.obstacles ? "Sí" : "No", label: "árboles, canteros, macetas" },
+  { value: p.fit.multiZone ? "Sí" : "No", label: "varias zonas separadas" },
+  { value: `${p.fit.runtimeMin} min`, label: "autonomía por carga" },
+  { value: `< ${p.fit.noiseDb} dB`, label: "nivel de ruido" },
+];
+---
+<section class="mt-16 rounded-2xl border border-border bg-card p-6 lg:p-8" aria-labelledby="fit-titulo">
+  <h2 id="fit-titulo" class="mb-2 text-2xl font-bold">¿Es para tu jardín?</h2>
+  <p class="mb-6 text-sm text-muted-foreground">Chequeá estos seis datos contra tu terreno. Si dudás, escribinos y lo vemos juntos.</p>
+  <dl class="grid grid-cols-2 gap-4 md:grid-cols-3">
+    {cells.map((c) => (
+      <div class="rounded-xl border border-border bg-background p-4">
+        <dt class="order-2 text-xs text-muted-foreground">{c.label}</dt>
+        <dd class="text-2xl font-bold text-primary">{c.value}</dd>
+      </div>
+    ))}
+  </dl>
+  <p class="mt-6 text-sm text-muted-foreground">
+    {bigger
+      ? <>¿Tu jardín supera los {formatNumber(p.coverageM2)} m²? Mirá el <a href={`/productos/${other.slug}`} class="inline-flex items-center gap-1 font-medium text-primary hover:underline">{other.name} <IconArrowRight size={14} /></a>, que cubre hasta {formatNumber(other.coverageM2)} m².</>
+      : <>¿Tu jardín es más chico? El <a href={`/productos/${other.slug}`} class="inline-flex items-center gap-1 font-medium text-primary hover:underline">{other.name} <IconArrowRight size={14} /></a> cubre hasta {formatNumber(other.coverageM2)} m² con la misma tecnología.</>}
+  </p>
+</section>
