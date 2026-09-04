@@ -5,6 +5,7 @@ import { checkBudget } from "../scripts/check/budget.mjs";
 import { checkForbidden } from "../scripts/check/forbidden.mjs";
 import { checkLinks } from "../scripts/check/links.mjs";
 import { checkSeo } from "../scripts/check/seo.mjs";
+import { checkWhatsapp } from "../scripts/check/whatsapp.mjs";
 
 const ok = join(process.cwd(), "tests/fixtures/dist-ok");
 const bad = join(process.cwd(), "tests/fixtures/dist-bad");
@@ -14,6 +15,7 @@ describe("dist-ok pasa todos los chequeos", () => {
   it("links", () => expect(checkLinks(ok)).toEqual([]));
   it("seo", () => expect(checkSeo(ok)).toEqual([]));
   it("budget", () => expect(checkBudget(ok, 500 * 1024)).toEqual([]));
+  it("whatsapp", () => expect(checkWhatsapp(ok)).toEqual([]));
   it("budget no cuenta imágenes con loading=\"lazy\" (no viajan en la transferencia inicial)", () => {
     // tests/fixtures/dist-ok/index.html tiene <img src="/lazy.png" ... loading="lazy">: ese archivo
     // pesa ~2 KB pero no debe sumarse al total, así que el presupuesto pasa incluso con un límite
@@ -61,5 +63,11 @@ describe("dist-bad reporta cada problema", () => {
   });
   it("budget falla con un límite muy bajo", () => {
     expect(checkBudget(ok, 10).length).toBe(1);
+  });
+  it("whatsapp detecta el número viejo y el link sin data-wa", () => {
+    const errs = checkWhatsapp(bad);
+    expect(errs.length).toBe(2);
+    expect(errs.some((e) => e.includes("5492494028837"))).toBe(true);
+    expect(errs.some((e) => e.includes("data-wa"))).toBe(true);
   });
 });

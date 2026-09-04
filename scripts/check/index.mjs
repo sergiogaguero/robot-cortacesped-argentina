@@ -3,6 +3,7 @@ import { checkBudget } from "./budget.mjs";
 import { checkForbidden } from "./forbidden.mjs";
 import { checkLinks } from "./links.mjs";
 import { checkSeo } from "./seo.mjs";
+import { checkWhatsapp } from "./whatsapp.mjs";
 
 const dist = join(process.cwd(), "dist");
 const suites = [
@@ -10,6 +11,7 @@ const suites = [
   ["Links internos", checkLinks],
   ["Reglas SEO", checkSeo],
   ["Presupuesto de peso", checkBudget],
+  ["Botones de WhatsApp", checkWhatsapp],
 ];
 
 let failed = 0;

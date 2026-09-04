@@ -57,9 +57,9 @@ if (usd > 0 && buttons.length > 0) {
     b.addEventListener("click", async () => {
       const currency = b.dataset.currency ?? "USD";
       if (currency === "ARS" && !rateInfo) {
-        b.disabled = true;
+        for (const btn of buttons) btn.disabled = true;
         rateInfo = await loadRate();
-        b.disabled = false;
+        for (const btn of buttons) btn.disabled = false;
       }
       render(currency);
     });
