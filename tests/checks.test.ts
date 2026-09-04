@@ -1,3 +1,4 @@
+import { statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { checkBudget } from "../scripts/check/budget.mjs";
@@ -13,6 +14,17 @@ describe("dist-ok pasa todos los chequeos", () => {
   it("links", () => expect(checkLinks(ok)).toEqual([]));
   it("seo", () => expect(checkSeo(ok)).toEqual([]));
   it("budget", () => expect(checkBudget(ok, 500 * 1024)).toEqual([]));
+  it("budget no cuenta imágenes con loading=\"lazy\" (no viajan en la transferencia inicial)", () => {
+    // tests/fixtures/dist-ok/index.html tiene <img src="/lazy.png" ... loading="lazy">: ese archivo
+    // pesa ~2 KB pero no debe sumarse al total, así que el presupuesto pasa incluso con un límite
+    // apenas por encima del peso real de index.html + style.css (sin contar lazy.png).
+    const base = statSync(join(ok, "index.html")).size + statSync(join(ok, "style.css")).size;
+    expect(checkBudget(ok, base + 100)).toEqual([]);
+  });
+  it("budget sigue fallando por debajo del peso real (sanity check del fixture)", () => {
+    const base = statSync(join(ok, "index.html")).size + statSync(join(ok, "style.css")).size;
+    expect(checkBudget(ok, base - 1).length).toBe(1);
+  });
   it("un script inline (no JSON-LD) con la clave 'oficial' de una API externa no cuenta como palabra prohibida", () => {
     // tests/fixtures/dist-ok/script-inline.html contiene <script>var k={oficial:1};</script>
     // en el body: esa clave solo vive en JavaScript (no es copy del sitio) y no debe disparar el

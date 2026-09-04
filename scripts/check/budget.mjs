@@ -11,7 +11,11 @@ const ASSETS = [
   ["link[rel=preload][href]", "href"],
 ];
 
-/** Peso de index.html + CSS + JS + imágenes referenciadas (sin video). */
+/**
+ * Peso de la transferencia inicial de index.html: el propio HTML + CSS + JS + imágenes
+ * referenciadas (sin video). Las imágenes con loading="lazy" no cuentan: no viajan en la carga
+ * inicial, así que quedan fuera del presupuesto (product cards, covers de artículos, pasos, etc).
+ */
 export function checkBudget(distDir, limit = BUDGET_BYTES) {
   const index = join(distDir, "index.html");
   const html = readFileSync(index, "utf8");
@@ -20,6 +24,7 @@ export function checkBudget(distDir, limit = BUDGET_BYTES) {
   const seen = new Set();
   for (const [selector, attr] of ASSETS) {
     for (const el of root.querySelectorAll(selector)) {
+      if (el.getAttribute("loading") === "lazy") continue;
       const url = (el.getAttribute(attr) ?? "").split("?")[0];
       if (!isInternal(url) || seen.has(url)) continue;
       seen.add(url);
