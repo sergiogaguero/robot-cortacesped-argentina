@@ -65,8 +65,8 @@ Ningún robot cortacésped es la respuesta correcta para todos los jardines. Ant
 
 ## Entonces, ¿conviene?
 
-La cuenta final es más simple de lo que parece. Si pagás X por cada corte y cortás 30 veces al año, tu gasto anual es 30 × X. Dividí el precio del robot por ese número y el resultado es Y: los años que tarda en pagarse solo. Para la mayoría de los jardines de tamaño mediano a grande, esa cuenta da una Y de entre 2 y 4 años, contando solo la plata.
+La cuenta final es más simple de lo que parece. Si pagás X por cada corte y cortás 30 veces al año, tu gasto anual es 30 × X. Dividí el precio del robot por ese número y el resultado, Y, es la cantidad de años en que el robot se paga solo: hacé la cuenta con tu número y esa Y es tu respuesta.
 
-Y después está el otro lado de la cuenta, el que no se mide en pesos: más de 156 horas libres por año, que hoy se van en cortar el pasto, cargar la bolsa y guardar la máquina. Son casi 20 fines de semana enteros de vuelta en tu calendario.
+Y después está el otro lado de la cuenta, el que no se mide en pesos: más de 156 horas libres por año, que hoy se van en cortar el pasto, cargar la bolsa y guardar la máquina — casi 20 días laborables completos de vuelta en tu calendario.
 
 Si te cerró la cuenta, el siguiente paso es chequear qué modelo te conviene según los metros de tu jardín — la comparativa [V600 vs V1000](/productos/v600-vs-v1000) lo resuelve en un minuto — y después escribirnos por WhatsApp para confirmar los detalles de tu caso.
