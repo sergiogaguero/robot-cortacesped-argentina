@@ -226,7 +226,7 @@ Animaciones (`fade-up`, `float`, `pulse-glow`) se desactivan completas bajo `pre
 1. **Navbar** (fija, blur): logo → `/`; links: Productos (`/#productos`), Tecnología (`/tecnologia`), Guías (`/blog`), Instagram; botón WhatsApp. Menú móvil con `aria-expanded`.
 2. **Hero**: badge "Distribuidor autorizado de TerraMow"; H1 "El futuro del corte inteligente" (o variante aprobada); 1 párrafo; botones: WhatsApp (primario, verde) + "Ver modelos" (secundario). Fondo: video en desktop (`<video muted loop playsinline preload="none">` con `poster`, activado por `hero.ts`), imagen WebP en móvil (`fetchpriority="high"`, es el LCP).
 3. **TrustStrip**: Distribuidor autorizado · Garantía · Envíos a todo el país · Soporte local.
-4. **WhyRobot**: 3 stats grandes (+168 hs libres/año, < 54 dB, 0 cables) con una línea cada uno.
+4. **WhyRobot**: 3 stats grandes (+156 hs libres/año, < 54 dB, 0 cables) con una línea cada uno.
 5. **ProductGrid** (`id="productos"`): 2 `ProductCard` desde la colección. Toda la tarjeta es un `<a>` a la ficha; sin stock → etiqueta "Sin stock · Consultá disponibilidad" pero el link sigue yendo a la ficha.
 6. **WhichOne**: mini tabla V600 vs V1000 (m², precio, stock) → link a comparativa.
 7. **HowItWorks**: 4 pasos con imagen → link a `/tecnologia`.
