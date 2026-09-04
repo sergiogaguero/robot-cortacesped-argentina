@@ -9,6 +9,7 @@ export async function GET(context: APIContext) {
     title: `${site.name} — Guías`,
     description: "Guías prácticas sobre robots cortacésped: costos, mantenimiento, tecnologías de navegación y cómo elegir.",
     site: context.site ?? site.url,
+    trailingSlash: false,
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,

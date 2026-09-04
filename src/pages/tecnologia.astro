@@ -1,5 +1,5 @@
 ---
-import { getEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAFinal from "@/components/CTAFinal.astro";
 import HowItWorks from "@/components/HowItWorks.astro";
@@ -10,12 +10,15 @@ import SectionHeader from "@/components/SectionHeader.astro";
 import { howItWorks } from "@/data/how-it-works";
 import { manualVsRobot, techAdvantages, timeComparison, workCycle } from "@/data/tecnologia";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { formatNumber } from "@/lib/price";
 import { ldBreadcrumb, ldHowTo } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/seo";
 
 // El link a la guía comparativa solo se muestra cuando el artículo está publicado (Parte 3, Task 13).
 const guiaCamara = await getEntry("blog", "camara-ia-vs-rtk-vs-lidar-robot-cortacesped");
 const showGuia = guiaCamara !== undefined && !guiaCamara.data.draft;
+
+const [v600, v1000] = (await getCollection("products")).sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
 
 const crumbs = [
   { name: "Inicio", href: "/" },
@@ -146,6 +149,12 @@ const headCell = "p-4 text-sm font-semibold";
       <p class="mt-6 text-center"><span class="rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">↻ El ciclo se repite según tu programación</span></p>
     </div>
   </section>
+
+  <div class="wrap pb-16 text-center">
+    <p class="mx-auto max-w-3xl text-muted-foreground">
+      Conocé el <a href="/productos/v600" class="font-medium text-primary hover:underline">TerraMow {v600.model}</a> para jardines de hasta {formatNumber(v600.coverageM2)} m² y el <a href="/productos/v1000" class="font-medium text-primary hover:underline">TerraMow {v1000.model}</a> para hasta {formatNumber(v1000.coverageM2)} m².
+    </p>
+  </div>
 
   <CTAFinal wa="tecnologia-cta" title="¿Listo para recuperar tu tiempo?" text="Mirá los modelos V600 y V1000 o escribinos y te ayudamos a elegir según tu jardín." />
 </BaseLayout>

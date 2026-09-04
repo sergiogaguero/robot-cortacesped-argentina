@@ -14,6 +14,7 @@ const { post } = Astro.props;
 const d = post.data;
 const url = absoluteUrl(`/blog/${post.id}`);
 const cover = await getImage({ src: d.cover, width: 1200, height: 675, format: "webp" });
+const og = await getImage({ src: d.cover, width: 1200, height: 630, format: "jpeg" });
 const date = d.pubDate.toLocaleDateString("es-AR", { year: "numeric", month: "long", day: "numeric" });
 
 const related = (await getCollection("products", ({ data }) => d.relatedProducts.includes(data.slug))).sort((a, b) => a.data.coverageM2 - b.data.coverageM2);
@@ -31,7 +32,7 @@ const jsonLd = [
   ldArticle({ title: d.title, description: d.description, url, imageUrl: absoluteUrl(cover.src), pubDate: d.pubDate, updatedDate: d.updatedDate }),
 ];
 ---
-<BaseLayout title={d.title} description={d.description} ogType="article" jsonLd={jsonLd}>
+<BaseLayout title={d.title} description={d.description} ogImage={og.src} ogType="article" jsonLd={jsonLd}>
   <article class="wrap pt-24 pb-16 lg:pt-32">
     <div class="mx-auto max-w-3xl">
       <Breadcrumbs items={crumbs} />
