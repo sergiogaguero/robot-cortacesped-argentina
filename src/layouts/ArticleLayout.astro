@@ -1,0 +1,73 @@
+---
+import { getImage, Image } from "astro:assets";
+import { getCollection, type CollectionEntry } from "astro:content";
+import ArticleCard from "@/components/ArticleCard.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import ProductCard from "@/components/ProductCard.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { ldArticle, ldBreadcrumb } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+interface Props { post: CollectionEntry<"blog"> }
+const { post } = Astro.props;
+const d = post.data;
+const url = absoluteUrl(`/blog/${post.id}`);
+const cover = await getImage({ src: d.cover, width: 1200, height: 675, format: "webp" });
+const date = d.pubDate.toLocaleDateString("es-AR", { year: "numeric", month: "long", day: "numeric" });
+
+const related = (await getCollection("products", ({ data }) => d.relatedProducts.includes(data.slug))).sort((a, b) => a.data.coverageM2 - b.data.coverageM2);
+const others = (await getCollection("blog", ({ id, data }) => id !== post.id && !data.draft))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
+
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Guías", href: "/blog" },
+  { name: d.title, href: `/blog/${post.id}` },
+];
+const jsonLd = [
+  ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))),
+  ldArticle({ title: d.title, description: d.description, url, imageUrl: absoluteUrl(cover.src), pubDate: d.pubDate, updatedDate: d.updatedDate }),
+];
+---
+<BaseLayout title={d.title} description={d.description} ogType="article" jsonLd={jsonLd}>
+  <article class="wrap pt-24 pb-16 lg:pt-32">
+    <div class="mx-auto max-w-3xl">
+      <Breadcrumbs items={crumbs} />
+      <p class="mb-3 text-xs font-semibold tracking-widest text-primary uppercase">{d.tags.join(" · ")}</p>
+      <h1 class="mb-4 text-3xl leading-tight font-bold md:text-5xl">{d.title}</h1>
+      <p class="mb-6 text-lg text-muted-foreground">{d.description}</p>
+      <p class="mb-8 text-sm text-muted-foreground">
+        Publicado el <time datetime={d.pubDate.toISOString()}>{date}</time>
+        {d.updatedDate && <> · Actualizado el <time datetime={d.updatedDate.toISOString()}>{d.updatedDate.toLocaleDateString("es-AR", { year: "numeric", month: "long", day: "numeric" })}</time></>}
+      </p>
+      <Image src={d.cover} alt={d.coverAlt} width={1200} height={675} format="webp" loading="eager" fetchpriority="high" class="mb-10 aspect-video w-full rounded-2xl object-cover" />
+      <div class="prose-dark">
+        <slot />
+      </div>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="bg-card py-16" aria-labelledby="relacionados-titulo">
+      <div class="wrap">
+        <h2 id="relacionados-titulo" class="mb-8 text-center text-2xl font-bold md:text-3xl">Modelos relacionados</h2>
+        <div class:list={["mx-auto grid gap-8", related.length > 1 ? "max-w-5xl md:grid-cols-2" : "max-w-md"]}>
+          {related.map((product) => <ProductCard product={product} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTAFinal wa={`blog-${post.id}-cta`} context="article" subject={d.title} title="¿Te quedó alguna duda?" text="Escribinos por WhatsApp: te respondemos con datos concretos para tu jardín, sin compromiso." />
+
+  {others.length > 0 && (
+    <section class="wrap pb-24" aria-labelledby="otras-titulo">
+      <h2 id="otras-titulo" class="mb-8 text-2xl font-bold">Otras guías</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        {others.map((p) => <ArticleCard post={p} />)}
+      </div>
+    </section>
+  )}
+</BaseLayout>
