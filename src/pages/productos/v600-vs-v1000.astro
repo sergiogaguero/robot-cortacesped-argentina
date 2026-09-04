@@ -9,18 +9,20 @@ import WhatsAppButton from "@/components/WhatsAppButton.astro";
 import type { Product } from "@/content/schemas";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { withPublishedLinks } from "@/lib/faq-links";
-import { formatNumber, formatUSD } from "@/lib/price";
+import { formatDecimal, formatNumber, formatUSD } from "@/lib/price";
 import { productImage } from "@/lib/product-images";
 import { ldBreadcrumb, ldFaq, ldItemList } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/seo";
 
-const products = (await getCollection("products")).sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
-const [v600, v1000] = products as [Product, Product];
+const productEntries = await getCollection("products");
+if (productEntries.length !== 2) throw new Error(`Se esperan exactamente 2 productos, hay ${productEntries.length}: ${productEntries.map((p) => p.id).join(", ")}`);
+const products = productEntries.sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
+const [v600, v1000] = products;
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
 const faqs = withPublishedLinks(
   (await getCollection("faq", ({ data }) => data.scope.includes("comparativa"))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
   publishedIds,
-);
+).map((f) => ({ ...f, link: f.link?.href === "/productos/v600-vs-v1000" ? undefined : f.link }));
 
 const spec = (p: Product, label: string): string =>
   p.specs.flatMap((g) => g.items).find((i) => i.label === label)?.value ?? "—";
@@ -33,23 +35,23 @@ const rows: { label: string; value: (p: Product) => string }[] = [
   { label: "Batería", value: (p) => spec(p, "Capacidad") },
   { label: "Área de corte por hora", value: (p) => p.fit.areaPerHourM2 },
   { label: "Navegación", value: (p) => spec(p, "Tecnología de navegación") },
-  { label: "Pendiente máxima", value: (p) => `${p.fit.maxSlopeDeg}° (${p.fit.maxSlopePct} %)` },
+  { label: "Pendiente máxima", value: (p) => `${p.fit.maxSlopeDeg}° (${formatDecimal(p.fit.maxSlopePct)} %)` },
   { label: "Nivel de ruido", value: (p) => `< ${p.fit.noiseDb} dB` },
   { label: "Impermeabilidad", value: (p) => spec(p, "Impermeabilidad") },
   { label: "Peso", value: (p) => spec(p, "Peso") },
   { label: "Precio", value: (p) => formatUSD(p.priceUSD) },
-  { label: "Disponibilidad", value: (p) => (p.inStock ? "En stock" : "Sin stock — consultar") },
+  { label: "Disponibilidad", value: (p) => (p.inStock ? "En stock" : "Sin stock · Consultá disponibilidad") },
 ];
 
 const pick600 = [
-  "Tu jardín tiene hasta 600 m² y es una sola zona o dos muy cercanas.",
+  `Tu jardín tiene hasta ${formatNumber(v600.coverageM2)} m² y es una sola zona o dos muy cercanas.`,
   "Querés la misma navegación por cámara e IA con una inversión menor.",
   "No tenés pendientes fuertes ni muchos sectores separados por caminos.",
 ];
 const pick1000 = [
-  "Tu jardín supera los 600 m² o tiene varias zonas separadas.",
-  "Querés que termine en menos sesiones: 150 minutos de autonomía por carga.",
-  "Tenés árboles, canteros o pendientes de hasta 18° y necesitás más batería para recorrerlos.",
+  `Tu jardín supera los ${formatNumber(v600.coverageM2)} m² o tiene varias zonas separadas.`,
+  `Querés que termine en menos sesiones: ${v1000.fit.runtimeMin} minutos de autonomía por carga.`,
+  `Tenés árboles, canteros o pendientes de hasta ${v1000.fit.maxSlopeDeg}° y necesitás más batería para recorrerlos.`,
 ];
 
 const crumbs = [

@@ -69,13 +69,12 @@
   "image": "v600.png",
   "imageAlt": "Robot cortacésped TerraMow V600 con navegación por cámara e IA para jardines de hasta 600 m²",
   "ogImage": "/og/v600.jpg",
-  "faq": ["recoger-cesped", "cuanto-tarda", "mantenimiento", "cables", "seguridad", "garantia"],
   "why": {
     "title": "¿Por qué el V600?",
     "text": "Es la puerta de entrada a la V Series: la misma navegación por cámara con IA y las mismas funciones inteligentes que el V1000, en un equipo pensado para jardines de hasta 600 m². Sin cables perimetrales, sin antenas, con mapeo automático y control desde la app. Si tu jardín es mediano y sin zonas muy separadas, es la opción justa."
   },
   "seo": {
     "title": "TerraMow V600: robot cortacésped hasta 600 m² | Ficha",
-    "description": "Ficha del TerraMow V600 para jardines medianos: navegación con IA sin cables, mapeo automático y especificaciones. Ver disponibilidad por WhatsApp."
+    "description": "Ficha del TerraMow V600 para jardines medianos: navegación con IA sin cables, mapeo automático y especificaciones. Consultá disponibilidad por WhatsApp."
   }
 }

@@ -10,7 +10,7 @@ const rows = [
   { label: "Superficie", value: (p: (typeof products)[number]) => `Hasta ${formatNumber(p.data.coverageM2)} m²` },
   { label: "Autonomía por carga", value: (p: (typeof products)[number]) => `${p.data.fit.runtimeMin} min` },
   { label: "Precio", value: (p: (typeof products)[number]) => formatUSD(p.data.priceUSD) },
-  { label: "Disponibilidad", value: (p: (typeof products)[number]) => (p.data.inStock ? "En stock" : "Sin stock") },
+  { label: "Disponibilidad", value: (p: (typeof products)[number]) => (p.data.inStock ? "En stock" : "Sin stock · Consultá disponibilidad") },
 ];
 ---
 <section class="bg-card py-24 lg:py-32">

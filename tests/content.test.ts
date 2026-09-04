@@ -28,9 +28,23 @@ describe("productos", () => {
     expect(byId.v1000!.coverageM2).toBe(1200);
     expect(byId.v600!.coverageM2).toBe(600);
   });
-  it("cada FAQ referenciada existe", () => {
-    const ids = new Set(faqs.map((f) => f.id));
-    for (const p of products) for (const id of productSchema.parse(p.data).faq) expect(ids.has(id), `faq "${id}" no existe`).toBe(true);
+  it.each(["v600", "v1000"] as const)("%s tiene al menos 3 FAQ cuyo scope lo incluye", (slug) => {
+    const matches = faqs.filter((f) => faqSchema.parse(f.data).scope.includes(slug));
+    expect(matches.length).toBeGreaterThanOrEqual(3);
+  });
+  it.each(products)("$id: coverageM2 aparece en seo.title y en algún highlight", ({ data }) => {
+    const p = productSchema.parse(data);
+    const m2 = String(p.coverageM2);
+    expect(p.seo.title).toContain(m2);
+    expect(p.highlights.some((h) => h.includes(m2))).toBe(true);
+  });
+  it.each(products)("$id: los specs de pendiente, ruido y autonomía coinciden con fit", ({ data }) => {
+    const p = productSchema.parse(data);
+    const items = p.specs.flatMap((g) => g.items);
+    const value = (label: string) => items.find((i) => i.label === label)?.value ?? "";
+    expect(value("Pendiente máxima")).toContain(`${p.fit.maxSlopeDeg}°`);
+    expect(value("Nivel de ruido")).toContain(`${p.fit.noiseDb}`);
+    expect(value("Autonomía por carga")).toContain(`${p.fit.runtimeMin}`);
   });
 });
 

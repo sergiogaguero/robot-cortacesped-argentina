@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { CONSULT_LABEL, formatARS, formatNumber, formatUSD, usdToArs } from "@/lib/price";
+import { CONSULT_LABEL, formatARS, formatDecimal, formatNumber, formatUSD, usdToArs } from "@/lib/price";
 
 describe("price", () => {
   it("formatNumber usa separador de miles es-AR", () => {
@@ -18,5 +18,9 @@ describe("price", () => {
   it("usdToArs redondea", () => {
     expect(usdToArs(2100, 1200)).toBe(2520000);
     expect(usdToArs(2100, 1234.567)).toBe(2592591);
+  });
+  it("formatDecimal usa coma decimal es-AR", () => {
+    expect(formatDecimal(32.5)).toBe("32,5");
+    expect(formatDecimal(18)).toBe("18");
   });
 });

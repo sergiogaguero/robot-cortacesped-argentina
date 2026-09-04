@@ -69,7 +69,6 @@
   "image": "v1000.png",
   "imageAlt": "Robot cortacésped TerraMow V1000 con navegación por cámara e IA para jardines de hasta 1200 m²",
   "ogImage": "/og/v1000.jpg",
-  "faq": ["recoger-cesped", "cuanto-tarda", "mantenimiento", "cables", "seguridad", "garantia"],
   "why": {
     "title": "¿Por qué el V1000?",
     "text": "Es el modelo para jardines grandes o con varias zonas: hasta 1200 m², 150 minutos de autonomía y triple cámara con IA que reconoce el césped, los bordes y los obstáculos sin cables perimetrales ni antenas RTK. Vuelve solo a la base, detecta lluvia y se actualiza por internet. Ideal si tenés más de 600 m², árboles, canteros o pendientes de hasta 18°."

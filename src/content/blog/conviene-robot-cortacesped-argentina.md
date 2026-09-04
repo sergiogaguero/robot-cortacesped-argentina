@@ -37,7 +37,7 @@ El equipo de referencia acá es el [TerraMow V1000](/productos/v1000), pensado p
 
 | Concepto | Costo |
 | --- | --- |
-| Equipo | TerraMow V1000 (hasta 1200 m²): USD 2.100. TerraMow V600 (hasta 600 m²): a consultar |
+| Equipo | TerraMow V1000 (hasta 1200 m²): ver precio actualizado en la [ficha del V1000](/productos/v1000). TerraMow V600 (hasta 600 m²): a consultar |
 | Electricidad por año | ≈100 Wh por carga × ~150 cargas al año ≈ 15 kWh — menos que una heladera en una semana |
 | Cuchillas | Kit de 9 cuchillas por temporada, costo bajo: a consultar |
 | Mantenimiento | 0: sin aceite, sin nafta, sin filtros |
@@ -49,7 +49,7 @@ El costo real de un robot cortacésped está casi todo en la compra inicial. Una
 
 En metros cuadrados por hora, un robot cortacésped anda entre 80 y 120 m²/hora, según la complejidad del terreno: obstáculos, desniveles, forma del jardín. La autonomía por carga cambia según el modelo — el TerraMow V600 corta hasta 120 minutos por carga, y el TerraMow V1000, pensado para superficies más grandes, hasta 150 minutos.
 
-Con esos números, un jardín de 600 m² tarda entre 5 y 7 horas en cortarse por completo, repartidas en 2 o 3 sesiones de carga y corte. Uno de 1200 m² lleva entre 10 y 15 horas, lo que en la práctica son unos 2 días de trabajo autónomo: el robot sale, corta, vuelve a cargar y vuelve a salir, sin que nadie tenga que mirarlo.
+Con esos números, un jardín de 600 m² tarda entre 5 y 7 horas en cortarse por completo, repartidas en 3 a 5 sesiones de carga y corte. Uno de 1200 m² lleva entre 10 y 15 horas, en 4 a 8 sesiones, lo que en la práctica son unos 2 días de trabajo autónomo: el robot sale, corta, vuelve a cargar y vuelve a salir, sin que nadie tenga que mirarlo.
 
 Acá está el punto que más cuesta entender al principio: esas horas no importan, porque no son tuyas. El robot corta 2 o 3 veces por semana de forma automática, así que el pasto nunca crece lo suficiente como para necesitar un corte largo — siempre está a la misma altura, como una cancha. El tiempo lo pone la máquina. El tuyo queda libre.
 

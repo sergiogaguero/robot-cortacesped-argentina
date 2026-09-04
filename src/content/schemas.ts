@@ -40,7 +40,6 @@ export const productSchema = z.object({
   image: z.string().regex(/^[a-z0-9-]+\.(png|jpg|webp)$/),
   imageAlt: z.string().min(10),
   ogImage: z.string().startsWith("/og/"),
-  faq: z.array(z.string().min(1)),
   why: z.object({ title: z.string().min(1), text: z.string().min(50) }),
   seo: z.object({
     title: z.string().min(10).max(60),

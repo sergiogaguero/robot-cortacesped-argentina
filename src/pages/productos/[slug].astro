@@ -19,6 +19,7 @@ import { absoluteUrl } from "@/lib/seo";
 
 export async function getStaticPaths() {
   const products = await getCollection("products");
+  if (products.length !== 2) throw new Error(`Se esperan exactamente 2 productos, hay ${products.length}: ${products.map((p) => p.id).join(", ")}`);
   return products.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
 }
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -28,7 +29,7 @@ const p = entry.data;
 const other = (await getCollection("products")).find((o) => o.data.slug !== p.slug)!.data;
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
 const faqs = withPublishedLinks(
-  (await getCollection("faq", ({ id }) => p.faq.includes(id))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
+  (await getCollection("faq", ({ data }) => data.scope.includes(p.slug))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
   publishedIds,
 );
 

@@ -50,6 +50,8 @@ Sitio estático en [Astro](https://astro.build) + Tailwind 4. Objetivo: que el v
 
 `src/content/products/v600.json` y `v1000.json`. Campos clave: `priceUSD` (número o `null` = "Consultar precio"), `inStock` (`true`/`false`), `coverageM2`, `specs`. Todas las páginas leen de acá.
 
+La cobertura del V1000 (1200 m²) sale de la ficha de TerraMow; si cambia, actualizá `coverageM2` y regenerá las imágenes OG con `npm run media:og`.
+
 ### Editar las preguntas frecuentes
 
 `src/content/faq/*.json`. `scope` define dónde aparece cada una: `home`, `v600`, `v1000`, `comparativa`. `link` es opcional.

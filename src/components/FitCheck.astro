@@ -1,14 +1,14 @@
 ---
 import type { Product } from "@/content/schemas";
 import IconArrowRight from "@/components/icons/IconArrowRight.astro";
-import { formatNumber } from "@/lib/price";
+import { formatDecimal, formatNumber } from "@/lib/price";
 
 interface Props { product: Product; other: Product }
 const { product: p, other } = Astro.props;
 const bigger = other.coverageM2 > p.coverageM2;
 const cells = [
   { value: `${formatNumber(p.coverageM2)} m²`, label: "superficie máxima" },
-  { value: `${p.fit.maxSlopeDeg}°`, label: `pendiente máxima (${p.fit.maxSlopePct} %)` },
+  { value: `${p.fit.maxSlopeDeg}°`, label: `pendiente máxima (${formatDecimal(p.fit.maxSlopePct)} %)` },
   { value: p.fit.obstacles ? "Sí" : "No", label: "árboles, canteros, macetas" },
   { value: p.fit.multiZone ? "Sí" : "No", label: "varias zonas separadas" },
   { value: `${p.fit.runtimeMin} min`, label: "autonomía por carga" },
@@ -20,7 +20,7 @@ const cells = [
   <p class="mb-6 text-sm text-muted-foreground">Chequeá estos seis datos contra tu terreno. Si dudás, escribinos y lo vemos juntos.</p>
   <dl class="grid grid-cols-2 gap-4 md:grid-cols-3">
     {cells.map((c) => (
-      <div class="rounded-xl border border-border bg-background p-4">
+      <div class="flex flex-col rounded-xl border border-border bg-background p-4">
         <dt class="order-2 text-xs text-muted-foreground">{c.label}</dt>
         <dd class="text-2xl font-bold text-primary">{c.value}</dd>
       </div>

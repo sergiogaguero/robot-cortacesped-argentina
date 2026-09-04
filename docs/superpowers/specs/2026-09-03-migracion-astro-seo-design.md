@@ -153,7 +153,6 @@ Principio: **cada dato vive en un solo lugar**. Todas las páginas leen de las c
   specs: { category: string, items: { label: string, value: string }[] }[],
   images: { main: ImageMetadata, gallery?: ImageMetadata[] },   // via image() del schema
   ogImage: string,              // "/og/v1000.jpg"
-  faq: string[],                // ids de la colección faq
   seo: { title: string, description: string }
 }
 ```
@@ -161,7 +160,7 @@ Principio: **cada dato vive en un solo lugar**. Todas las páginas leen de las c
 ### 5.2 `faq` (JSON, uno por pregunta)
 
 ```ts
-{ id: string, question: string, answer: string, scope: ("home" | "v600" | "v1000" | "tecnologia")[], order: number }
+{ id: string, question: string, answer: string, scope: ("home" | "v600" | "v1000" | "comparativa")[], order: number }
 ```
 
 La misma fuente alimenta lo que se ve en pantalla y el JSON-LD `FAQPage` de cada página (deben coincidir; Google lo verifica).
@@ -286,7 +285,7 @@ En español: "Esta página no existe", links a Productos, Tecnología, Guías, b
 | Página | `<title>` | Descripción |
 |---|---|---|
 | `/` | Robot Cortacésped con IA en Argentina \| TerraMow | Robots cortacésped con navegación por cámara e IA, sin cables perimetrales. Modelos TerraMow V600 y V1000, garantía y soporte local. Consultá por WhatsApp. |
-| `/productos/v1000` | TerraMow V1000: robot cortacésped hasta 1000 m² \| Precio | Ficha completa del TerraMow V1000: cobertura, triple cámara con IA, sin cables ni RTK, especificaciones y precio. Garantía y envío a todo el país. |
+| `/productos/v1000` | TerraMow V1000: robot cortacésped hasta 1200 m² \| Precio | Ficha completa del TerraMow V1000: cobertura, triple cámara con IA, sin cables ni RTK, especificaciones y precio. Garantía y envío a todo el país. |
 | `/productos/v600` | TerraMow V600: robot cortacésped hasta 600 m² \| Ficha | Ficha del TerraMow V600 para jardines medianos: navegación con IA sin cables, mapeo automático y especificaciones. Consultá disponibilidad por WhatsApp. |
 | `/productos/v600-vs-v1000` | TerraMow V600 vs V1000: ¿cuál robot cortacésped elegir? | Comparativa completa entre el TerraMow V600 y el V1000: superficie, batería, ruido, precio y para qué jardín conviene cada uno. |
 | `/tecnologia` | Cómo funciona un robot cortacésped con IA \| Guía | Guía paso a paso: mapeo, planificación, corte autónomo y control por app. Ahorro de tiempo real y comparativa contra el corte manual. |
@@ -477,7 +476,7 @@ Rollback: `git revert` del merge + push.
 
 | Pendiente | Quién | Plan si no llega |
 |---|---|---|
-| V1000: 1000 o 1200 m² | Usuario | Verificar en terramow.com; usar el dato oficial |
+| V1000: 1000 o 1200 m² — resuelta | Usuario | 1200 m² confirmado en la ficha de terramow.com (products/v1000) el 2026-09-03 |
 | Precio del V600 | Usuario | `priceUSD: null` → "Consultar" |
 | Revisión de los 3 artículos | Usuario | Quedan `draft: true` hasta aprobación; el bloque "Guías" no aparece en la home |
 | `PUBLIC_GA_ID` | Usuario | GA desactivado hasta que se cargue |

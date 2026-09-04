@@ -29,7 +29,7 @@ Una limpieza semanal o quincenal alcanza para mantener el robot funcionando bien
 
 En los robots con navegación por cámara, hay una tarea que pesa más que todas las demás juntas: limpiar los lentes. Se ensucian con rocío, polvo y algún resto de pasto, y un lente sucio puede hacer que el robot pierda precisión para reconocer bordes y obstáculos. Son 10 segundos con un paño húmedo, una vez por semana, y es la tarea de mantenimiento más importante de todo este artículo. Si tenés curiosidad por cómo funciona esa navegación, la [guía de tecnología](/tecnologia) y la comparativa de [cámara con IA vs RTK vs LiDAR](/blog/camara-ia-vs-rtk-vs-lidar-robot-cortacesped) lo explican en detalle.
 
-Lo que nunca hay que usar es una hidrolavadora ni un chorro de agua directo a presión: la impermeabilidad IPX6 que tienen estos equipos protege contra la lluvia, no contra un chorro apuntado de cerca, que puede meter agua donde no debería. Tampoco conviene usar solventes ni productos de limpieza fuertes sobre la carcasa: alcanza con agua.
+Lo que nunca hay que usar es una hidrolavadora: la impermeabilidad IPX6 que tienen estos equipos resiste chorros de agua potentes, como la lluvia fuerte o una manguera común, pero no la presión mucho mayor de una hidrolavadora, que puede forzar agua donde no debería entrar. Tampoco conviene usar solventes ni productos de limpieza fuertes sobre la carcasa: alcanza con agua.
 
 ## Lluvia, rocío y calor
 
