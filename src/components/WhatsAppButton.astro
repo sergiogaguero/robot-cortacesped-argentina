@@ -15,11 +15,18 @@ interface Props {
 const { context, subject, wa, product, label, variant = "primary", class: cls = "" } = Astro.props;
 const href = whatsappUrl(context, subject);
 const variants = {
-  primary: "bg-whatsapp text-white hover:bg-whatsapp-hover shadow-lg shadow-whatsapp/20 px-6 py-3.5 text-base",
+  primary: "bg-whatsapp text-primary-foreground hover:bg-whatsapp-hover shadow-lg shadow-whatsapp/20 px-6 py-3.5 text-base",
   outline: "border border-border text-foreground hover:bg-secondary px-6 py-3.5 text-base",
-  bar: "bg-whatsapp text-white hover:bg-whatsapp-hover px-4 py-2.5 text-sm",
+  bar: "bg-whatsapp text-primary-foreground hover:bg-whatsapp-hover px-4 py-2.5 text-sm",
 };
-const ariaLabel = subject ? `${label} — ${subject} por WhatsApp` : `${label} por WhatsApp`;
+const hasWhatsapp = label.toLowerCase().includes("whatsapp");
+const ariaLabel = hasWhatsapp
+  ? subject
+    ? `${label} — ${subject}`
+    : label
+  : subject
+    ? `${label} — ${subject} por WhatsApp`
+    : `${label} por WhatsApp`;
 ---
 <a
   href={href}
