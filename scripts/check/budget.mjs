@@ -24,7 +24,7 @@ export function checkBudget(distDir, limit = BUDGET_BYTES) {
   const seen = new Set();
   for (const [selector, attr] of ASSETS) {
     for (const el of root.querySelectorAll(selector)) {
-      if (el.getAttribute("loading") === "lazy") continue;
+      if (selector === "img[src]" && (el.getAttribute("loading") ?? "").toLowerCase() === "lazy") continue;
       const url = (el.getAttribute(attr) ?? "").split("?")[0];
       if (!isInternal(url) || seen.has(url)) continue;
       seen.add(url);
