@@ -1,0 +1,6 @@
+{
+  "question": "¿Cómo se controla el robot?",
+  "answer": "Desde la app TerraMow para iOS y Android. Ahí programás horarios, ajustás la altura de corte, definís zonas de trabajo y zonas prohibidas, y seguís el progreso en tiempo real. También podés mandarlo a la base o pausarlo desde el celular.",
+  "scope": ["home", "v600", "v1000"],
+  "order": 6
+}

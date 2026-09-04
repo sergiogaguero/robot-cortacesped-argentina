@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "@/components/ArticleCard.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { ldBreadcrumb } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Guías", href: "/blog" },
+];
+const jsonLd = [ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) })))];
+---
+<BaseLayout
+  title="Guías sobre robots cortacésped | Blog"
+  description="Guías prácticas sobre robots cortacésped: costos, mantenimiento, tecnologías de navegación y cómo elegir el modelo para tu jardín."
+  jsonLd={jsonLd}
+>
+  <div class="wrap pt-24 pb-24 lg:pt-32">
+    <Breadcrumbs items={crumbs} />
+    <p class="mb-4 text-xs font-semibold tracking-widest text-primary uppercase">Blog</p>
+    <h1 class="mb-6 text-4xl font-bold md:text-6xl">Guías sobre robots cortacésped</h1>
+    <p class="mb-12 max-w-2xl text-lg text-muted-foreground">Lo que conviene saber antes de comprar: cuánto cuesta de verdad, cómo navegan, qué mantenimiento piden y cuál elegir.</p>
+    {posts.length > 0 ? (
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => <ArticleCard post={post} />)}
+      </div>
+    ) : (
+      <p class="rounded-2xl border border-border bg-card p-8 text-muted-foreground">Estamos preparando las primeras guías. Mientras tanto, <a href="/tecnologia" class="text-primary hover:underline">mirá cómo funciona un robot cortacésped</a>.</p>
+    )}
+  </div>
+  <CTAFinal wa="blog-index-cta" />
+</BaseLayout>

@@ -1,0 +1,6 @@
+{
+  "question": "¿Tienen garantía?",
+  "answer": "Sí. Todos los equipos tienen garantía del fabricante y soporte técnico local: te ayudamos con la instalación, la configuración de la app y cualquier consulta de mantenimiento.",
+  "scope": ["home", "v600", "v1000"],
+  "order": 9
+}

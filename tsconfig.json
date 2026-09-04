@@ -1,24 +1,13 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "allowJs": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "skipLibCheck": true,
-    "strictNullChecks": false
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+    "types": ["vitest/globals"]
   },
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "include": [".astro/types.d.ts", "src/**/*", "tests/**/*", "scripts/**/*.mjs"],
+  "exclude": ["dist", "node_modules"]
 }

@@ -1,0 +1,6 @@
+{
+  "question": "¿Es seguro con mascotas y niños?",
+  "answer": "Sí. Detecta obstáculos en 3D y los esquiva o se detiene; si se levanta o se inclina, las cuchillas se frenan al instante. Además tiene sistema antirrobo con PIN y alarma. De todos modos, como con cualquier máquina de corte, no conviene dejar chicos jugando sobre el césped mientras trabaja.",
+  "scope": ["home", "v600", "v1000"],
+  "order": 7
+}

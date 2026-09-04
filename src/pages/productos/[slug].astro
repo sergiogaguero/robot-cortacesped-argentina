@@ -1,0 +1,85 @@
+---
+import { getImage, Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import type { InferGetStaticPropsType } from "astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import FAQ from "@/components/FAQ.astro";
+import FitCheck from "@/components/FitCheck.astro";
+import IconArrowRight from "@/components/icons/IconArrowRight.astro";
+import PriceBlock from "@/components/PriceBlock.astro";
+import SpecsTable from "@/components/SpecsTable.astro";
+import StickyBar from "@/components/StickyBar.astro";
+import TrustStrip from "@/components/TrustStrip.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withPublishedLinks } from "@/lib/faq-links";
+import { productImage } from "@/lib/product-images";
+import { ldBreadcrumb, ldFaq, ldProduct } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+export async function getStaticPaths() {
+  const products = await getCollection("products");
+  if (products.length !== 2) throw new Error(`Se esperan exactamente 2 productos, hay ${products.length}: ${products.map((p) => p.id).join(", ")}`);
+  return products.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry } = Astro.props as Props;
+const p = entry.data;
+const other = (await getCollection("products")).find((o) => o.data.slug !== p.slug)!.data;
+const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
+const faqs = withPublishedLinks(
+  (await getCollection("faq", ({ data }) => data.scope.includes(p.slug))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
+  publishedIds,
+);
+
+const image = productImage(p.image);
+const optimized = await getImage({ src: image, width: 800, height: 800, format: "webp" });
+const url = absoluteUrl(`/productos/${p.slug}`);
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Productos", href: "/#productos" },
+  { name: p.name, href: `/productos/${p.slug}` },
+];
+const jsonLd = [
+  ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href === "/" ? "/" : c.href) }))),
+  ldProduct(p, { url, imageUrl: absoluteUrl(optimized.src) }),
+  ldFaq(faqs),
+];
+---
+<BaseLayout title={p.seo.title} description={p.seo.description} ogImage={p.ogImage} ogType="product" jsonLd={jsonLd}>
+  <div class="wrap pt-24 pb-24 lg:pt-32">
+    <Breadcrumbs items={crumbs} />
+
+    <div class="grid gap-12 md:grid-cols-2">
+      <div class="flex items-center justify-center">
+        <div class="aspect-square w-full max-w-md overflow-hidden rounded-2xl bg-secondary/30">
+          <Image src={image} alt={p.imageAlt} width={800} height={800} format="webp" loading="eager" fetchpriority="high" class="h-full w-full object-cover" />
+        </div>
+      </div>
+      <PriceBlock product={p} />
+    </div>
+  </div>
+
+  <TrustStrip />
+
+  <div class="wrap pb-24">
+    <FitCheck product={p} other={other} />
+    <SpecsTable specs={p.specs} />
+
+    <section class="mt-24 rounded-2xl border border-border bg-card p-8 md:p-12" aria-labelledby="why-titulo">
+      <h2 id="why-titulo" class="mb-4 text-2xl font-bold">{p.why.title}</h2>
+      <p class="mb-6 leading-relaxed text-muted-foreground">{p.why.text}</p>
+      <a href="/productos/v600-vs-v1000" class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">¿Dudás entre los dos? Mirá la comparativa <IconArrowRight size={16} /></a>
+    </section>
+  </div>
+
+  <FAQ items={faqs} title={`Preguntas sobre el ${p.name}`} id="faq-producto" />
+  <CTAFinal wa={`ficha-${p.slug}-cta`} context="product" subject={p.name} product={p.slug} title={`¿Te interesa el ${p.name}?`} text={`Escribinos y te confirmamos ${p.inStock ? "precio del día, envío y forma de pago" : "cuándo vuelve a haber stock y qué alternativa te conviene mientras tanto"}.`} />
+  <StickyBar product={p} />
+</BaseLayout>
+
+<script>
+  import "@/scripts/currency.ts";
+  import "@/scripts/sticky-bar.ts";
+</script>

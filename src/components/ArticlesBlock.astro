@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "@/components/ArticleCard.astro";
+import IconArrowRight from "@/components/icons/IconArrowRight.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
+const show = posts.length >= 3;
+---
+{show && (
+  <section class="bg-card py-24 lg:py-32">
+    <div class="wrap">
+      <SectionHeader eyebrow="Guías" title="Antes de decidir, informate" text="Costos reales, tecnologías de navegación, mantenimiento: lo que conviene saber antes de comprar un robot cortacésped." />
+      <div class="grid gap-6 md:grid-cols-3">
+        {posts.map((post) => <ArticleCard post={post} />)}
+      </div>
+      <div class="mt-12 text-center">
+        <a href="/blog" class="inline-flex items-center gap-2 rounded-lg border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10">
+          Todas las guías <IconArrowRight size={16} />
+        </a>
+      </div>
+    </div>
+  </section>
+)}

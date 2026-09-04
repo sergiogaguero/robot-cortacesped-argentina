@@ -1,0 +1,60 @@
+---
+import "@/styles/global.css";
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import Footer from "@/components/Footer.astro";
+import JsonLd from "@/components/JsonLd.astro";
+import Navbar from "@/components/Navbar.astro";
+import SEO from "@/components/SEO.astro";
+import WhatsAppFloat from "@/components/WhatsAppFloat.astro";
+import { gaId, site } from "@/config/site";
+import { ldOrganization, ldWebSite } from "@/lib/schema";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: "website" | "product" | "article";
+  noindex?: boolean;
+  jsonLd?: object[];
+}
+const { title, description, ogImage, ogType, noindex, jsonLd = [] } = Astro.props;
+const schemas = [ldOrganization(), ldWebSite(), ...jsonLd];
+---
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0d0d" />
+    <link rel="preload" href={interWoff2} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${site.name} — Guías`} href="/rss.xml" />
+    <SEO title={title} description={description} ogImage={ogImage} ogType={ogType} noindex={noindex} />
+    {schemas.map((s) => <JsonLd data={s} />)}
+    {gaId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag("js", new Date());
+          gtag("config", gaId);
+        </script>
+      </>
+    )}
+  </head>
+  <body class="min-h-screen">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground">Ir al contenido</a>
+    <Navbar />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppFloat />
+    <script>
+      import "@/scripts/analytics.ts";
+    </script>
+  </body>
+</html>

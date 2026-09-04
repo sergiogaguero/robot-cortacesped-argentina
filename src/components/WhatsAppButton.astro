@@ -1,0 +1,42 @@
+---
+import IconWhatsApp from "@/components/icons/IconWhatsApp.astro";
+import { whatsappUrl, type WaContext } from "@/lib/whatsapp";
+
+interface Props {
+  context: WaContext;
+  subject?: string;
+  /** Identificador del botón para GA4, ej. "home-hero", "ficha-v1000-sticky" */
+  wa: string;
+  product?: string;
+  label: string;
+  variant?: "primary" | "outline" | "bar";
+  class?: string;
+}
+const { context, subject, wa, product, label, variant = "primary", class: cls = "" } = Astro.props;
+const href = whatsappUrl(context, subject);
+const variants = {
+  primary: "bg-whatsapp text-primary-foreground hover:bg-whatsapp-hover shadow-lg shadow-whatsapp/20 px-6 py-3.5 text-base",
+  outline: "border border-border text-foreground hover:bg-secondary px-6 py-3.5 text-base",
+  bar: "bg-whatsapp text-primary-foreground hover:bg-whatsapp-hover px-4 py-2.5 text-sm",
+};
+const hasWhatsapp = label.toLowerCase().includes("whatsapp");
+const ariaLabel = hasWhatsapp
+  ? subject
+    ? `${label} — ${subject}`
+    : label
+  : subject
+    ? `${label} — ${subject} por WhatsApp`
+    : `${label} por WhatsApp`;
+---
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-wa={wa}
+  data-product={product}
+  aria-label={ariaLabel}
+  class:list={["inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors", variants[variant], cls]}
+>
+  <IconWhatsApp size={variant === "bar" ? 18 : 22} />
+  <span>{label}</span>
+</a>

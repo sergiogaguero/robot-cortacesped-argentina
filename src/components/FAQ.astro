@@ -1,0 +1,33 @@
+---
+import IconChevronDown from "@/components/icons/IconChevronDown.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+
+interface Props {
+  items: { question: string; answer: string; link?: { label: string; href: string } }[];
+  title?: string;
+  eyebrow?: string;
+  id?: string;
+}
+const { items, title = "¿Tenés dudas?", eyebrow = "Preguntas frecuentes", id = "faq" } = Astro.props;
+---
+<section id={id} class="scroll-mt-20 py-24 lg:py-32">
+  <div class="wrap">
+    <div class="mx-auto max-w-3xl">
+      <SectionHeader eyebrow={eyebrow} title={title} />
+      <div class="space-y-3">
+        {items.map((f) => (
+          <details class="group rounded-xl border border-border bg-card px-6 open:border-primary/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-medium [&::-webkit-details-marker]:hidden">
+              <span>{f.question}</span>
+              <IconChevronDown class="shrink-0 text-muted-foreground transition-transform group-open:rotate-180" size={20} />
+            </summary>
+            <div class="pb-5 text-muted-foreground">
+              <p>{f.answer}</p>
+              {f.link && <a href={f.link.href} class="mt-3 inline-block text-sm font-medium text-primary hover:underline">{f.link.label} →</a>}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

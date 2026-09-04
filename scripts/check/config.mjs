@@ -1,0 +1,6 @@
+// Debe coincidir con `site` en astro.config.mjs y src/config/site.ts
+export const SITE_URL = "https://www.robotscortacesped.com.ar";
+export const BUDGET_BYTES = 500 * 1024;
+export const FORBIDDEN = /oficial/i;
+// Debe coincidir con site.whatsapp.number en src/config/site.ts
+export const WHATSAPP_NUMBER = "5492494318185";
