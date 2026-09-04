@@ -43,7 +43,7 @@ El equipo de referencia acá es el [TerraMow V1000](/productos/v1000), pensado p
 | Mantenimiento | 0: sin aceite, sin nafta, sin filtros |
 | Vida útil | 5 a 8 años, con batería reemplazable |
 
-El costo real de un robot cortacésped está casi todo en la compra inicial. Una vez instalado, lo que sigue es casi nada: electricidad que no se nota en la factura, un kit de cuchillas por temporada y ningún service de motor, filtro o cambio de aceite. Comparado con una cortadora a nafta, es la diferencia entre pagar todo por adelantado y pagar de a poquito, corte tras corte, durante años.
+El costo real de un robot cortacésped está casi todo en la compra inicial. Una vez instalado, lo que sigue es casi nada: electricidad que no se nota en la factura, un kit de cuchillas por temporada (el detalle de cuándo y cómo cambiarlas está en la [guía de mantenimiento](/blog/mantenimiento-robot-cortacesped)) y ningún service de motor, filtro o cambio de aceite. Comparado con una cortadora a nafta, es la diferencia entre pagar todo por adelantado y pagar de a poquito, corte tras corte, durante años.
 
 ## Cuánto tarda en cortar (y por qué no importa tanto)
 
