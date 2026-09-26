@@ -1,0 +1,146 @@
+{
+ "title": "5 preguntas rápidas",
+ "scenes": [
+  {
+   "dur": 1.6,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "5 preguntas.<br><em>Respuestas rápidas.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 6.0,
+    "focus": 0.35
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Necesita cables?",
+     "a": "No.",
+     "detail": "Se guía con cámaras e IA.",
+     "answerAt": 0.7
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 9.5
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Hay que juntar el pasto?",
+     "a": "No.",
+     "detail": "Queda como abono natural.",
+     "answerAt": 0.7
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 7.0
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Y si llueve?",
+     "a": "Lo detecta.",
+     "detail": "Y es resistente al agua: IPX6.",
+     "answerAt": 0.7
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 0.5
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Envían a mi ciudad?",
+     "a": "Sí.",
+     "detail": "A todo el país.",
+     "answerAt": 0.7
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 3.5,
+    "focus": 0.45
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Tiene garantía?",
+     "a": "Sí.",
+     "detail": "Del fabricante, con soporte local.",
+     "answerAt": 0.7
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Te quedó otra? <em>Escribinos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

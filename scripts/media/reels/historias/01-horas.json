@@ -1,0 +1,35 @@
+{
+ "title": "156 horas por año",
+ "scenes": [
+  {
+   "bg": {
+    "clip": "hero",
+    "from": 1.0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "¿Sabías que…?"
+    },
+    {
+     "type": "counter",
+     "to": 156,
+     "suffix": " hs",
+     "label": "por año cortando el pasto"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Es lo que lleva un jardín de 500 m²: cortar todas las semanas, limpiar y guardar la máquina."
+    },
+    {
+     "type": "note",
+     "text": "robotscortacesped.com.ar"
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

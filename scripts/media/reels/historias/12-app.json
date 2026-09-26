@@ -1,0 +1,34 @@
+{
+ "title": "Desde el celular",
+ "scenes": [
+  {
+   "bg": {
+    "image": "src/assets/step-monitoring.jpg",
+    "focus": 0.6
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "App TerraMow"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Todo desde <em>tu celular.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "items": [
+      "Horarios y zonas",
+      "Altura de corte",
+      "Avisos en tiempo real"
+     ]
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

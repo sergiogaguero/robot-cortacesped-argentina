@@ -1,0 +1,127 @@
+{
+ "title": "¿Y si pasa el perro?",
+ "scenes": [
+  {
+   "dur": 1.9,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 2.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Y si pasa <em>el perro?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 6.0,
+    "focus": 0.35
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Evasión de obstáculos 3D"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Lo <em>ve</em> y lo esquiva. O se detiene."
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 3.4,
+    "focus": 0.45,
+    "speed": 0.6
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Sensor de elevación"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Si lo levantás, las cuchillas <em>frenan al instante.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "style": "glow"
+   },
+   "product": "src/assets/products/v1000.png",
+   "productTop": 560,
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Y si se lo quieren llevar"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "PIN y <em>alarma</em> antirrobo."
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "align": "center",
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Un consejo"
+    },
+    {
+     "type": "lead",
+     "text": "Como con cualquier máquina de corte, mejor que los chicos no jueguen en el césped mientras trabaja."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Seguro para tu familia.",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

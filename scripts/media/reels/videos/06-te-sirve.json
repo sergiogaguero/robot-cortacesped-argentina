@@ -1,0 +1,150 @@
+{
+ "title": "¿Te sirve un robot cortacésped?",
+ "scenes": [
+  {
+   "dur": 2.0,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 0.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Antes de comprar"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Te sirve un robot <em>cortacésped?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "clip": "hero",
+    "from": 0.3
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Tamaño"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "¿Tu jardín tiene <em>más de 150 m²?</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Si es más chico, a mano te conviene más."
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "clip": "comercial",
+    "from": 3.4,
+    "focus": 0.45,
+    "speed": 0.7
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Pendientes"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "¿Las pendientes son de <em>18° o menos?</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Es lo máximo que sube de forma segura."
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "image": "src/assets/step-monitoring.jpg",
+    "focus": 0.6
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Base de carga"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "¿Tenés <em>un enchufe</em> y Wi-Fi o 4G?"
+    },
+    {
+     "type": "lead",
+     "text": "Para la base y para manejarlo desde la app."
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "align": "center",
+   "bg": {
+    "clip": "comercial",
+    "from": 9.5
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿3 veces sí?"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "<em>Es para vos.</em>",
+     "at": 0.8
+    }
+   ]
+  },
+  {
+   "dur": 4.2,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Mandanos fotos de tu jardín y te decimos qué modelo va.",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

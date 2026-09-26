@@ -1,0 +1,24 @@
+{
+ "title": "Slider: cuánto odiás cortar",
+ "scenes": [
+  {
+   "bg": {
+    "clip": "comercial",
+    "from": 12.6
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Sincericidio"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Cuánto odiás <em>cortar el pasto?</em>"
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

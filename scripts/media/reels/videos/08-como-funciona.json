@@ -1,0 +1,145 @@
+{
+ "title": "Cómo funciona en 4 pasos",
+ "scenes": [
+  {
+   "dur": 1.9,
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 5.0,
+    "focus": 0.4
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "En 4 pasos"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Cómo <em>funciona?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "bg": {
+    "image": "src/assets/step-mapping.jpg",
+    "zoom": [
+     1.25,
+     1.1
+    ]
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Mapea"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Recorre el jardín y arma <em>el mapa solo.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "bg": {
+    "image": "src/assets/step-planning.jpg",
+    "zoom": [
+     1.25,
+     1.1
+    ]
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Planifica"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Calcula la ruta <em>más eficiente.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.0
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Corta"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Esquiva obstáculos y <em>vuelve solo</em> a cargar."
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "bg": {
+    "image": "src/assets/step-monitoring.jpg",
+    "focus": 0.6,
+    "zoom": [
+     1.05,
+     1.15
+    ]
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "step",
+     "n": "4",
+     "text": "Controlás"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Horarios, zonas y altura <em>desde la app.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Te lo mostramos funcionando?",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

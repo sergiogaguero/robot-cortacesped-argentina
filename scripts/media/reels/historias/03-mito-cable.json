@@ -1,0 +1,34 @@
+{
+ "title": "Mito: hay que enterrar un cable",
+ "scenes": [
+  {
+   "bg": {
+    "image": "src/assets/step-mapping.jpg"
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Mito"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "“Un robot necesita <s>un cable enterrado</s>.”"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Realidad"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Los TerraMow se guían con <em>cámaras e IA.</em> Sin cable, sin antena, sin obra."
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

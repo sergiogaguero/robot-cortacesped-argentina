@@ -1,0 +1,154 @@
+{
+ "title": "Chau cable perimetral",
+ "scenes": [
+  {
+   "dur": 2.0,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 0.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Robot cortacésped"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Hay que enterrar <s>un cable?</s>"
+    }
+   ]
+  },
+  {
+   "dur": 1.1,
+   "cut": true,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "mega",
+     "text": "<em>No.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 5.6,
+   "bg": {
+    "image": "src/assets/step-mapping.jpg",
+    "zoom": [
+     1.2,
+     1.08
+    ]
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Cómo se ubica un robot"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "3 tecnologías, <em>una sin obra.</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 180
+    },
+    {
+     "type": "table",
+     "at": 0.7,
+     "head": [
+      "",
+      "Cable",
+      "RTK",
+      "Cámara IA"
+     ],
+     "hi": 3,
+     "rows": [
+      [
+       "Cable enterrado",
+       "Sí",
+       "No",
+       "No"
+      ],
+      [
+       "Antena externa",
+       "No",
+       "Sí",
+       "No"
+      ],
+      [
+       "Bajo árboles",
+       "✓",
+       "Pierde señal",
+       "✓"
+      ],
+      [
+       "Reconoce el césped",
+       "No",
+       "No",
+       "Sí"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 6.0,
+    "focus": 0.35
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "TerraVision™ 2.0"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Triple cámara con IA que <em>ve</em> tu jardín."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Consultanos sin compromiso",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

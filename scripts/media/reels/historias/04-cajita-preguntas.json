@@ -1,0 +1,29 @@
+{
+ "title": "Cajita de preguntas",
+ "scenes": [
+  {
+   "bg": {
+    "clip": "comercial",
+    "from": 4.2,
+    "focus": 0.45
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Preguntanos"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Qué querés saber <em>del robot?</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Respondemos todo en historias."
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

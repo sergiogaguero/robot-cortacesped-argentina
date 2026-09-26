@@ -1,0 +1,26 @@
+{
+ "title": "Encuesta: ¿quién corta el pasto?",
+ "scenes": [
+  {
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Encuesta"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Quién corta el pasto <em>en tu casa?</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Votá acá abajo"
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

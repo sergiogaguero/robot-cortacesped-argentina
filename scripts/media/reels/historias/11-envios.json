@@ -1,0 +1,37 @@
+{
+ "title": "Envíos a todo el país",
+ "scenes": [
+  {
+   "bg": {
+    "clip": "comercial",
+    "from": 0.4
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Distribuidor autorizado de TerraMow"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Llegamos a <em>todo el país.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "items": [
+      "Garantía del fabricante",
+      "Soporte técnico local",
+      "Te ayudamos con la instalación"
+     ]
+    },
+    {
+     "type": "wa"
+    }
+   ],
+   "dur": 3.5
+  }
+ ]
+}

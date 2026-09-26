@@ -1,0 +1,26 @@
+{
+ "title": "Encuesta: qué te frena",
+ "scenes": [
+  {
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Encuesta"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Qué te frena para tener <em>un robot?</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Contanos, nos ayuda un montón."
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

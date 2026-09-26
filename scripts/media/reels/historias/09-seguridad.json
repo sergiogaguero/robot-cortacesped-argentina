@@ -1,0 +1,35 @@
+{
+ "title": "Seguridad",
+ "scenes": [
+  {
+   "bg": {
+    "clip": "comercial",
+    "from": 3.8,
+    "focus": 0.45
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Seguridad"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Si lo levantás, las cuchillas <em>frenan al instante.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Obstáculos 3D",
+      "PIN antirrobo",
+      "Alarma"
+     ]
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}
