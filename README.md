@@ -14,6 +14,8 @@ Sitio estático en [Astro](https://astro.build) + Tailwind 4. Objetivo: que el v
 | `npm run media:video` | Recomprime `media/hero-original.mp4` → `public/videos/` |
 | `npm run media:og` | Regenera las imágenes de preview (`public/og/`) |
 | `npm run media:icons` | Regenera `public/logo.png` y `apple-touch-icon.png` |
+| `npm run media:promo -- <nombre>` | Renderiza una animación suelta (`scripts/media/promo/<nombre>.html`: `terramow` o `tiempo`) → `public/redes/extra/<nombre>.mp4`. Necesita Playwright + Chromium |
+| `npm run media:reels -- [nombre…]` | Renderiza los reels e historias de la serie para redes (guiones en `scripts/media/reels/`) → `public/redes/`. Ver `docs/redes.md` |
 
 ## Publicar
 

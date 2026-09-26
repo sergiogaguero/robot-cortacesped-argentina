@@ -1,0 +1,120 @@
+{
+ "title": "POV: domingo 8 AM",
+ "scenes": [
+  {
+   "dur": 2.3,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "pill",
+     "text": "POV"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Domingo, 8 AM."
+    },
+    {
+     "type": "lead",
+     "text": "Tu vecino arranca la cortadora a nafta.",
+     "at": 0.8
+    }
+   ]
+  },
+  {
+   "dur": 1.3,
+   "cut": true,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "mega",
+     "text": "<s>BRRRRR</s>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "cut": true,
+   "bg": {
+    "clip": "hero",
+    "from": 2.0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Mientras tanto, en tu jardín"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Tu robot corta <em>en silencio.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "counter",
+     "at": 0.8,
+     "to": 54,
+     "prefix": "&lt; ",
+     "suffix": " dB",
+     "label": "menos que una conversación"
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "bg": {
+    "clip": "comercial",
+    "from": 10.8,
+    "focus": 0.35,
+    "speed": 0.8
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Programalo para la siesta. <em>Ni te enterás.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Que el ruido lo haga <em>otro.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

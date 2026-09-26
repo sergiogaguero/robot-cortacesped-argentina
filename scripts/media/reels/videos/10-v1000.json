@@ -1,0 +1,146 @@
+{
+ "title": "TerraMow V1000",
+ "scenes": [
+  {
+   "dur": 1.5,
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 0.0,
+    "zoom": [
+     1.12,
+     1.02
+    ]
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Primavera"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Arrancó la <em>temporada de corte.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 1.4,
+   "cut": true,
+   "bg": {
+    "clip": "comercial",
+    "from": 3.4,
+    "focus": 0.45
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Este año, que corte <em>él.</em>",
+     "at": 0.05
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "style": "glow"
+   },
+   "product": "src/assets/products/v1000.png",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Robot cortacésped con IA"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "TerraMow <em>V1000</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "at": 1.0,
+     "items": [
+      "Hasta 1200 m²",
+      "150 min por carga",
+      "Triple cámara"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Altura de corte de <em>25 a 75 mm</em>, con ajuste eléctrico."
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "at": 0.8,
+     "items": [
+      "Pendientes de hasta 18°",
+      "IPX6"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 2.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 11.0,
+    "focus": 0.35
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Sin cables.<br><em>Sin antenas.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Precio del día <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

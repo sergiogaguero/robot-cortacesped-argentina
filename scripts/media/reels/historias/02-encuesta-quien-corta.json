@@ -1,0 +1,42 @@
+{
+ "title": "¿Quién corta el pasto?",
+ "scenes": [
+  {
+   "dur": 3.0,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Quién corta el pasto <em>en tu casa?</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · Yo",
+      "2 · El jardinero",
+      "3 · Nadie (se nota)"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número por mensaje."
+    }
+   ]
+  }
+ ]
+}

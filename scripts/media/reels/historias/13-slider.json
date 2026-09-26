@@ -1,0 +1,30 @@
+{
+ "title": "¿Cuánto odiás cortar el pasto?",
+ "scenes": [
+  {
+   "dur": 3.0,
+   "bg": {
+    "clip": "comercial",
+    "from": 12.6
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Sincericidio"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Del 1 al 10, ¿cuánto odiás <em>cortar el pasto?</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Respondé esta historia con tu número. Si es más de 7, tenemos algo para vos."
+    }
+   ]
+  }
+ ]
+}

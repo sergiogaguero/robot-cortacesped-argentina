@@ -1,0 +1,140 @@
+{
+ "title": "Mantenimiento: 2 horas por año",
+ "scenes": [
+  {
+   "dur": 1.9,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 7.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Cuánto mantenimiento <em>lleva?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 4.6,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Horas de mantenimiento por año"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Robot vs. <s>cortadora</s>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 120
+    },
+    {
+     "type": "bars",
+     "at": 0.6,
+     "max": 12,
+     "items": [
+      {
+       "label": "Cortadora convencional",
+       "value": 11,
+       "display": "10-12 hs"
+      },
+      {
+       "label": "Robot TerraMow",
+       "value": 2,
+       "display": "≈ 2 hs",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "note",
+     "at": 2.2,
+     "text": "Sin contar el tiempo de cortar. Afilado, aceite, bujía y filtro vs. cuchillas y limpieza."
+    }
+   ]
+  },
+  {
+   "dur": 4.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.4,
+    "speed": 0.8
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Lo único que se cambia: <em>las cuchillas.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "at": 0.6,
+     "items": [
+      "Cada 4 a 8 semanas",
+      "5 minutos, con un destornillador",
+      "El V1000 trae 9 de repuesto"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "align": "center",
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Sin nafta.<br>Sin aceite.<br><em>Sin service.</em>",
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Menos taller, <em>más jardín.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

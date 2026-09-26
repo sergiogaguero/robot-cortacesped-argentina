@@ -1,0 +1,35 @@
+{
+ "title": "Menos de 54 dB",
+ "scenes": [
+  {
+   "bg": {
+    "clip": "hero",
+    "from": 2.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Silencioso de verdad"
+    },
+    {
+     "type": "counter",
+     "to": 54,
+     "prefix": "&lt; ",
+     "suffix": " dB",
+     "label": "menos que una conversación"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Programalo para la siesta y ni te enterás."
+    },
+    {
+     "type": "wa"
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

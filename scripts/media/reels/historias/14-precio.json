@@ -1,0 +1,29 @@
+{
+ "title": "Precio del día",
+ "scenes": [
+  {
+   "bg": {
+    "style": "glow"
+   },
+   "product": "src/assets/products/v1000.png",
+   "productTop": 660,
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "TerraMow V1000"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Precio del día y asesoramiento <em>por WhatsApp.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "wa"
+    }
+   ],
+   "dur": 3.2
+  }
+ ]
+}

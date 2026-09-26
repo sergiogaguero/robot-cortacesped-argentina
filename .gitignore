@@ -22,3 +22,4 @@ Thumbs.db
 # herramientas de sesión
 .superpowers/
 .claude/launch.json
+social/.estado.json

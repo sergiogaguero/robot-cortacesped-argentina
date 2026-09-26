@@ -1,0 +1,50 @@
+{
+ "title": "Mantenimiento por año",
+ "scenes": [
+  {
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Mantenimiento por año"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Robot vs. <s>cortadora</s>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "bars",
+     "max": 12,
+     "items": [
+      {
+       "label": "Cortadora convencional",
+       "value": 11,
+       "display": "10-12 hs"
+      },
+      {
+       "label": "Robot TerraMow",
+       "value": 2,
+       "display": "≈ 2 hs",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "wa"
+    }
+   ],
+   "dur": 3.5
+  }
+ ]
+}

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>Promo tiempo libre</title>
+<!--
+  Animación "el tiempo que te devuelve el robot" (1080×1920, 9:16).
+  No se abre a mano: la renderiza scripts/media/promo.mjs cuadro por cuadro llamando a
+  window.renderFrame(t) (npm run media:promo -- tiempo).
+  Cifras: las 156 hs/año y los casi 20 días laborables son las del sitio
+  (src/components/WhyRobot.astro y el artículo conviene-robot-cortacesped-argentina.md:
+  cortar 500 m² todas las semanas, más limpiar y guardar la máquina). 156/52 = 3 hs por semana;
+  en 10 años, 1560 hs = 65 días de 24 hs.
+-->
+<style>
+  @font-face {
+    font-family: "Inter";
+    src: url("../../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2") format("woff2-variations");
+    font-weight: 100 900;
+  }
+  :root { --bg: #0d0d0d; --fg: #f2f2f2; --primary: #8fce15; --wa: #25d366; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+  body { font-family: "Inter", sans-serif; color: var(--fg); -webkit-font-smoothing: antialiased; }
+  .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+  .full { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .shade { position: absolute; inset: 0; }
+  .glow { background: radial-gradient(ellipse 75% 42% at 50% 50%, rgba(143,206,21,.22), transparent 70%), #050505; }
+  .grad {
+    background: linear-gradient(90deg, #b6f03a, #8fce15 50%, #5fae0e);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .h1 { font-size: 124px; line-height: 1.02; font-weight: 800; letter-spacing: -.035em; }
+  .h2 { font-size: 92px; line-height: 1.05; font-weight: 800; letter-spacing: -.03em; }
+  .lead { font-size: 44px; line-height: 1.3; font-weight: 500; color: #cfcfcf; }
+  .eyebrow { font-size: 32px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--primary); }
+  .pad { position: absolute; left: 80px; right: 80px; }
+  .center { text-align: center; }
+
+  /* Escena 2: reloj */
+  #ring { position: absolute; left: 140px; top: 520px; width: 800px; height: 800px; }
+  #ringNum { position: absolute; left: 0; right: 0; top: 760px; text-align: center; }
+  #ringNum .n { font-size: 250px; font-weight: 900; letter-spacing: -.05em; line-height: 1; }
+  #ringNum .u { font-size: 44px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #cfcfcf; margin-top: 10px; }
+
+  /* Escena 3: calendario de días laborables */
+  .cal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .cal .d { font-size: 30px; font-weight: 700; color: #8a8a8a; text-align: center; letter-spacing: .1em; }
+  .cell {
+    aspect-ratio: 1; border-radius: 26px; border: 3px solid rgba(255,255,255,.14); background: rgba(255,255,255,.03);
+    display: grid; place-items: center; font-size: 40px; font-weight: 800; color: rgba(255,255,255,.25);
+  }
+  .cell.on { background: var(--primary); border-color: var(--primary); color: #0d0d0d; box-shadow: 0 0 40px rgba(143,206,21,.45); }
+
+  /* Escena 4: 10 años */
+  .mega { font-size: 230px; font-weight: 900; letter-spacing: -.05em; line-height: .95; }
+
+  /* Escena 5: palabras que rotan */
+  .rot { position: relative; height: 260px; }
+  .rot .w { position: absolute; left: 0; right: 0; top: 0; font-size: 116px; font-weight: 800; letter-spacing: -.035em; line-height: 1.05; opacity: 0; }
+
+  /* Escena 6: producto */
+  #prod { position: absolute; left: -40px; top: 430px; width: 1160px; height: 1160px; mix-blend-mode: lighten; }
+  .chips { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+  .chip {
+    padding: 18px 30px; border-radius: 20px; font-size: 38px; font-weight: 600;
+    background: rgba(143,206,21,.12); border: 2px solid rgba(143,206,21,.45); color: #e8ffd0;
+  }
+
+  /* Escena 7: cierre */
+  .wa {
+    display: flex; align-items: center; justify-content: center; gap: 24px;
+    padding: 40px 36px; border-radius: 32px; background: var(--wa); color: #06210f;
+    font-size: 58px; font-weight: 800; letter-spacing: -.01em; box-shadow: 0 20px 80px rgba(37,211,102,.35);
+  }
+  .wa svg { width: 72px; height: 72px; }
+  .trust { display: flex; justify-content: center; gap: 30px; font-size: 32px; color: #bdbdbd; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <!-- 1 · Gancho -->
+  <section class="scene" id="s1">
+    <img class="full" id="v1" alt="">
+    <div class="shade" style="background: linear-gradient(180deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,.15) 35%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.9) 100%)"></div>
+    <div class="pad" style="bottom: 340px">
+      <p class="eyebrow" id="s1e">Hacé la cuenta</p>
+      <h1 class="h1" id="s1t" style="margin-top: 26px">¿Cuánto de tu vida se va <span class="grad">cortando el pasto?</span></h1>
+    </div>
+  </section>
+
+  <!-- 2 · Horas -->
+  <section class="scene glow" id="s2">
+    <div class="pad center" style="top: 220px">
+      <p class="eyebrow" id="s2e">Un jardín de 500 m²</p>
+      <p class="lead" id="s2l" style="margin-top: 20px">Cortar todas las semanas, limpiar<br>y guardar la máquina</p>
+    </div>
+    <svg id="ring" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="3.2"/>
+      <circle id="arc" cx="50" cy="50" r="44" fill="none" stroke="#8fce15" stroke-width="3.2" stroke-linecap="round"
+        stroke-dasharray="276.46" stroke-dashoffset="276.46" transform="rotate(-90 50 50)" style="filter: drop-shadow(0 0 2px rgba(143,206,21,.8))"/>
+    </svg>
+    <div id="ringNum">
+      <div class="n grad" id="hrs">0</div>
+      <div class="u" id="hrsU">horas por semana</div>
+    </div>
+  </section>
+
+  <!-- 3 · Días laborables -->
+  <section class="scene glow" id="s3">
+    <div class="pad" style="top: 220px">
+      <p class="eyebrow" id="s3e">156 horas por año son</p>
+      <h2 class="h2" id="s3t" style="margin-top: 22px">casi <span class="grad">20 días</span><br>de trabajo.</h2>
+    </div>
+    <div class="pad" style="top: 640px; left: 150px; right: 150px">
+      <div class="cal" id="cal">
+        <span class="d">LUN</span><span class="d">MAR</span><span class="d">MIÉ</span><span class="d">JUE</span><span class="d">VIE</span>
+      </div>
+    </div>
+    <div class="pad" style="bottom: 340px">
+      <p class="lead" id="s3l">Un mes entero de laburo, todos los años, empujando la cortadora.</p>
+    </div>
+  </section>
+
+  <!-- 4 · 10 años -->
+  <section class="scene" id="s4" style="background:#050505">
+    <div class="pad" style="top: 300px">
+      <p class="eyebrow" id="s4e">En 10 años</p>
+      <p class="mega" id="s4n" style="margin-top: 30px">1.560 hs</p>
+    </div>
+    <div class="pad" style="top: 900px">
+      <h2 class="h2" id="s4t">Son <span class="grad">65 días<br>enteros</span> de tu vida.</h2>
+    </div>
+    <div class="pad" style="bottom: 340px">
+      <p class="lead" id="s4l">Día y noche. Sin parar.</p>
+    </div>
+  </section>
+
+  <!-- 5 · Para qué -->
+  <section class="scene" id="s5">
+    <img class="full" id="v5" alt="">
+    <div class="shade" style="background: linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.45) 45%, rgba(0,0,0,.92) 100%)"></div>
+    <div class="pad" style="top: 220px">
+      <p class="eyebrow" id="s5e">Recuperá ese tiempo</p>
+    </div>
+    <div class="pad" style="bottom: 380px">
+      <p class="h2" id="s5p" style="color:#cfcfcf">Para</p>
+      <div class="rot" style="margin-top: 12px">
+        <p class="w grad">tu familia.</p>
+        <p class="w grad">el asado del domingo.</p>
+        <p class="w grad">la siesta.</p>
+        <p class="w grad">tus amigos.</p>
+        <p class="w grad">vos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Mientras, el robot -->
+  <section class="scene" id="s6" style="background: radial-gradient(ellipse 70% 40% at 50% 58%, rgba(143,206,21,.28), transparent 70%), #000">
+    <div class="pad" style="top: 220px">
+      <p class="eyebrow" id="s6e">TerraMow V1000</p>
+      <h2 class="h2" id="s6t" style="margin-top: 22px">Mientras,<br><span class="grad">él corta.</span></h2>
+    </div>
+    <img id="prod" src="../../../src/assets/products/v1000.png" alt="">
+    <div class="pad" style="bottom: 330px">
+      <div class="chips">
+        <span class="chip" data-chip>Corta solo, sin cables</span>
+        <span class="chip" data-chip>Vuelve solo a cargar</span>
+        <span class="chip" data-chip>&lt; 54 dB: ni te enterás</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · Cierre -->
+  <section class="scene glow" id="s7">
+    <div class="pad center" style="top: 280px">
+      <img id="logo" src="../../../src/assets/logo.png" alt="" style="width: 860px">
+    </div>
+    <div class="pad center" style="top: 720px">
+      <h2 class="h2" id="s7t">Tu tiempo vale más<br><span class="grad">que cortar el pasto.</span></h2>
+    </div>
+    <div class="pad" style="top: 1150px" id="s7wa">
+      <div class="wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.41 9.41 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.37 9.37 0 0 1 6.67 2.77 9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.3 11.3 0 0 0 12.05.72C5.78.72.68 5.82.68 12.09c0 2 .52 3.96 1.52 5.68L.58 23.28l5.64-1.48a11.3 11.3 0 0 0 5.43 1.38h.01c6.26 0 11.36-5.1 11.37-11.37 0-3.04-1.18-5.89-3.33-8.04"/></svg>
+        +54 9 2494 31-8185
+      </div>
+      <p class="center lead" style="margin-top: 36px; color: var(--fg); font-weight: 700">robotscortacesped.com.ar</p>
+    </div>
+    <div class="pad" style="bottom: 330px" id="s7trust">
+      <div class="trust"><span>✓ Garantía</span><span>✓ Envíos a todo el país</span><span>✓ Soporte local</span></div>
+    </div>
+  </section>
+</div>
+
+<script>
+  const FPS = 30;
+  const XF = 0.4;
+  const SCENES = [
+    ["s1", 0, 4.4],
+    ["s2", 4.4, 9.4],
+    ["s3", 9.4, 13.8],
+    ["s4", 13.8, 17.8],
+    ["s5", 17.8, 22.2],
+    ["s6", 22.2, 25.8],
+    ["s7", 25.8, 30],
+  ];
+  window.DURATION = 30;
+  // Tramos del video real (media/hero-original.mp4)
+  const CLIP1 = 0.0; // plano general
+  const CLIP5 = 4.8; // primer plano cortando
+
+  const $ = (id) => document.getElementById(id);
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const prog = (t, a, b) => clamp((t - a) / (b - a));
+  const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+  const easeInOut = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  const back = (x) => { const c = 1.6; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+  function rise(el, t, start, dur = 0.6, dist = 60) {
+    const p = easeOut(prog(t, start, start + dur));
+    el.style.opacity = p;
+    el.style.transform = `translateY(${(1 - p) * dist}px)`;
+  }
+  function videoFrame(sec) {
+    const list = window.VIDEO_FRAMES || [];
+    if (!list.length) return "";
+    return list[Math.min(list.length - 1, Math.max(0, Math.round(sec * FPS)))];
+  }
+  async function setSrc(img, src) {
+    if (!src || img.getAttribute("src") === src) return;
+    img.src = src;
+    await img.decode().catch(() => {});
+  }
+
+  // Calendario: 4 semanas × 5 días hábiles = 20 días
+  const cal = $("cal");
+  for (let i = 0; i < 20; i++) {
+    const c = document.createElement("div");
+    c.className = "cell";
+    c.textContent = i + 1;
+    cal.appendChild(c);
+  }
+  const cells = [...cal.querySelectorAll(".cell")];
+
+  window.renderFrame = async function (t) {
+    for (const [id, a, b] of SCENES) {
+      const fadeIn = a === 0 ? 1 : prog(t, a, a + XF);
+      const fadeOut = b >= window.DURATION ? 1 : 1 - prog(t, b, b + XF);
+      $(id).style.opacity = Math.min(fadeIn, fadeOut);
+      $(id).style.visibility = t >= a && t <= b + XF ? "visible" : "hidden";
+    }
+
+    // 1 · Gancho
+    {
+      const [, a, b] = SCENES[0];
+      const lt = t - a;
+      await setSrc($("v1"), videoFrame(CLIP1 + lt));
+      $("v1").style.transform = `scale(${1.1 - 0.1 * prog(t, a, b)})`;
+      rise($("s1e"), lt, 0.3, 0.6, 30);
+      rise($("s1t"), lt, 0.5, 0.8, 90);
+    }
+
+    // 2 · Horas: 3 por semana → 156 por año
+    {
+      const [, a] = SCENES[1];
+      const lt = t - a;
+      rise($("s2e"), lt, 0.3);
+      rise($("s2l"), lt, 0.45);
+      const week = easeOut(prog(lt, 0.5, 1.4));
+      const year = easeInOut(prog(lt, 2.2, 3.9));
+      const hrs = lt < 2.2 ? Math.round(3 * week) : Math.round(3 + 153 * year);
+      $("hrs").textContent = hrs;
+      $("hrsU").textContent = lt < 2.2 ? "horas por semana" : "horas por año";
+      // Cambio de unidad con un pequeño golpe
+      const swap = prog(lt, 2.2, 2.5);
+      $("hrsU").style.opacity = lt < 2.0 ? easeOut(prog(lt, 0.5, 1.0)) : lt < 2.2 ? 1 - prog(lt, 2.0, 2.2) : swap;
+      const punch = lt > 3.9 ? back(prog(lt, 3.9, 4.3)) : 1;
+      $("hrs").style.transform = `scale(${lt > 3.9 ? 1.12 - 0.12 * punch + 0.06 : 1})`;
+      // Anillo: primero 3/168 hs de la semana; después se completa al llegar al año
+      const arcP = lt < 2.2 ? week * 0.12 : 0.12 + 0.88 * year;
+      $("arc").setAttribute("stroke-dashoffset", 276.46 * (1 - arcP));
+      const r = easeOut(prog(lt, 0.1, 0.8));
+      $("ring").style.opacity = r;
+      $("ring").style.transform = `scale(${0.85 + 0.15 * r})`;
+      $("ringNum").style.opacity = r;
+    }
+
+    // 3 · 20 días laborables
+    {
+      const [, a] = SCENES[2];
+      const lt = t - a;
+      rise($("s3e"), lt, 0.3);
+      rise($("s3t"), lt, 0.45);
+      cells.forEach((c, i) => {
+        const on = lt > 1.0 + i * 0.1;
+        c.classList.toggle("on", on);
+        const p = back(prog(lt, 1.0 + i * 0.1, 1.3 + i * 0.1));
+        c.style.transform = on ? `scale(${0.8 + 0.2 * p})` : "scale(1)";
+      });
+      rise($("s3l"), lt, 3.1);
+    }
+
+    // 4 · 10 años
+    {
+      const [, a] = SCENES[3];
+      const lt = t - a;
+      rise($("s4e"), lt, 0.3);
+      const n = Math.round(1560 * easeOut(prog(lt, 0.4, 1.6)));
+      $("s4n").textContent = `${n.toLocaleString("es-AR")} hs`;
+      rise($("s4n"), lt, 0.4, 0.5, 40);
+      rise($("s4t"), lt, 1.7, 0.7, 80);
+      rise($("s4l"), lt, 2.6);
+    }
+
+    // 5 · Para qué
+    {
+      const [, a, b] = SCENES[4];
+      const lt = t - a;
+      await setSrc($("v5"), videoFrame(CLIP5 + lt));
+      $("v5").style.transform = `scale(${1.0 + 0.08 * prog(t, a, b)})`;
+      rise($("s5e"), lt, 0.3);
+      rise($("s5p"), lt, 0.5);
+      const words = [...document.querySelectorAll("#s5 .w")];
+      const step = 0.72;
+      words.forEach((w, i) => {
+        const s = 0.8 + i * step;
+        const last = i === words.length - 1;
+        const pin = easeOut(prog(lt, s, s + 0.28));
+        const pout = last ? 0 : easeInOut(prog(lt, s + step - 0.2, s + step));
+        w.style.opacity = pin * (1 - pout);
+        w.style.transform = `translateY(${(1 - pin) * 70 - pout * 70}px)`;
+        if (last) w.style.transform += ` scale(${1 + 0.15 * back(prog(lt, s, s + 0.4)) - 0.15})`;
+      });
+    }
+
+    // 6 · Producto
+    {
+      const [, a] = SCENES[5];
+      const lt = t - a;
+      rise($("s6e"), lt, 0.3);
+      rise($("s6t"), lt, 0.45);
+      const p = easeOut(prog(lt, 0.1, 1.3));
+      const drift = prog(lt, 0, 4);
+      $("prod").style.opacity = p;
+      $("prod").style.transform = `translateY(${(1 - p) * 120 - drift * 30}px) scale(${0.86 + 0.14 * p + drift * 0.04})`;
+      document.querySelectorAll("#s6 [data-chip]").forEach((el, i) => {
+        const q = easeOut(prog(lt, 1.1 + i * 0.3, 1.6 + i * 0.3));
+        el.style.opacity = q;
+        el.style.transform = `translateX(${(1 - q) * -80}px)`;
+      });
+    }
+
+    // 7 · Cierre
+    {
+      const [, a] = SCENES[6];
+      const lt = t - a;
+      const l = back(prog(lt, 0.2, 1.0));
+      $("logo").style.opacity = clamp(l * 2);
+      $("logo").style.transform = `scale(${0.7 + 0.3 * l})`;
+      rise($("s7t"), lt, 0.7);
+      const w = back(prog(lt, 1.3, 1.9));
+      $("s7wa").style.opacity = clamp(w * 2);
+      $("s7wa").style.transform = `scale(${0.8 + 0.2 * w})`;
+      const beat = lt > 2.2 ? 1 + 0.025 * Math.sin((lt - 2.2) * Math.PI * 2) : 1;
+      $("s7wa").querySelector(".wa").style.transform = `scale(${beat})`;
+      rise($("s7trust"), lt, 2.0, 0.6, 30);
+    }
+  };
+</script>
+</body>
+</html>

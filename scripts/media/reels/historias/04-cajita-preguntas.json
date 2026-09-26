@@ -1,0 +1,31 @@
+{
+ "title": "Preguntanos lo que quieras",
+ "scenes": [
+  {
+   "dur": 3.0,
+   "bg": {
+    "clip": "comercial",
+    "from": 4.2,
+    "focus": 0.45
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Qué querés saber <em>del robot?</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos tu pregunta por mensaje y te contestamos. Las mejores van a un próximo video."
+    }
+   ]
+  }
+ ]
+}

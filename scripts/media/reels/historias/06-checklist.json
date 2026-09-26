@@ -1,0 +1,41 @@
+{
+ "title": "¿Te sirve? Checklist",
+ "scenes": [
+  {
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "¿Te sirve un robot?"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Si tildás las 3, <em>es para vos.</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 80
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Jardín de más de 150 m²",
+      "Pendientes de 18° o menos",
+      "Enchufe + Wi-Fi o 4G"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "wa"
+    }
+   ],
+   "dur": 3.0
+  }
+ ]
+}

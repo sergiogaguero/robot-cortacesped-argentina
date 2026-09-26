@@ -1,0 +1,124 @@
+{
+ "title": "¿Y el pasto cortado?",
+ "scenes": [
+  {
+   "dur": 1.8,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 12.0,
+    "zoom": [
+     1.0,
+     1.1
+    ]
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Y el pasto cortado?"
+    }
+   ]
+  },
+  {
+   "dur": 1.3,
+   "cut": true,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "<em>No se junta.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 4.0,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.0,
+    "speed": 0.7
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Mulching"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Corta un poco, <em>seguido.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Deja recortes tan finos que caen entre las hojas y desaparecen en uno o dos días."
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "bg": {
+    "clip": "comercial",
+    "from": 9.5,
+    "speed": 0.8
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Y funcionan como <em>abono natural.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "at": 0.6,
+     "items": [
+      "Nada de rastrillar",
+      "Nada de bolsas de pasto",
+      "Césped parejo, como una cancha"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Césped de cancha, <em>sin esfuerzo.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}
