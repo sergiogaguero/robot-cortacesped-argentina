@@ -1,7 +1,8 @@
 {
- "title": "Quiz: cortes por año",
+ "title": "Dato: cortes por año",
  "scenes": [
   {
+   "dur": 3.0,
    "bg": {
     "clip": "comercial",
     "from": 9.8
@@ -9,16 +10,24 @@
    "shade": "dark",
    "top": [
     {
-     "type": "pill",
-     "text": "Quiz"
+     "type": "eyebrow",
+     "text": "¿Sabías que…?"
     },
     {
      "type": "title",
      "size": "m",
-     "text": "En zona templada, ¿cuántas veces por año <em>se corta el pasto?</em>"
+     "text": "En zona templada, el pasto se corta <em>25 a 35 veces</em> por año."
     }
    ],
-   "dur": 3.0
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "¿Cuántas de esas te tocan a vos? Respondé esta historia."
+    },
+    {
+     "type": "wa"
+    }
+   ]
   }
  ]
 }

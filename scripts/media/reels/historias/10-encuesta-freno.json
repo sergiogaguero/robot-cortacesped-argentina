@@ -1,26 +1,42 @@
 {
- "title": "Encuesta: qué te frena",
+ "title": "¿Qué te frena?",
  "scenes": [
   {
+   "dur": 3.0,
    "bg": {
     "style": "glow"
    },
    "top": [
     {
      "type": "pill",
-     "text": "Encuesta"
+     "text": "Respondé esta historia"
     },
     {
      "type": "title",
      "size": "l",
      "text": "¿Qué te frena para tener <em>un robot?</em>"
-    },
-    {
-     "type": "lead",
-     "text": "Contanos, nos ayuda un montón."
     }
    ],
-   "dur": 3.0
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · El precio",
+      "2 · No sé si me sirve",
+      "3 · Otra cosa"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número: te respondemos con lo que necesitás saber."
+    }
+   ]
   }
  ]
 }

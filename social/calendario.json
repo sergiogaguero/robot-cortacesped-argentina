@@ -1,5 +1,5 @@
 {
-  "$comment": "Calendario de publicaciones. Lo lee scripts/social/publish.mjs (GitHub Actions, cada 30 min). auto:false = se publica a mano desde la app (ver 'manual'). Los archivos se sirven desde baseUrl, es decir, desde public/redes/ del sitio publicado.",
+  "$comment": "Calendario de publicaciones. Lo lee scripts/social/publish.mjs (GitHub Actions, cada 30 min) y publica lo que tenga auto:true cuando llega su hora. Los archivos se sirven desde baseUrl, es decir, desde public/redes/ del sitio publicado.",
   "baseUrl": "https://www.robotscortacesped.com.ar/redes",
   "posts": [
     {
@@ -15,16 +15,21 @@
       "type": "reel",
       "file": "reels/01-unboxing.mp4",
       "caption": "De la caja al jardín en minutos 📦➡️🌱\n\nSin cables enterrados, sin antenas, sin obra: el TerraMow mapea tu jardín solo con sus cámaras y se pone a cortar. Y te ayudamos con la instalación y la app.\n\n¿Lo querés ver funcionando en tu casa? Escribinos por WhatsApp (link en la bio) 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #casainteligente #argentina",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-09-28-historia-reel-01-unboxing",
+      "when": "2026-09-28T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/01-unboxing.mp4",
+      "auto": true
     },
     {
       "id": "2026-09-29-historia-02-encuesta-quien-corta",
       "when": "2026-09-29T13:00:00-03:00",
       "type": "story",
       "file": "historias/02-encuesta-quien-corta.jpg",
-      "auto": false,
-      "manual": "Subila desde la app y agregale: Sticker de encuesta: \"Yo 😩\" / \"El jardinero\". La API de Instagram no permite stickers interactivos."
+      "auto": true
     },
     {
       "id": "2026-09-29-reel-07-domingo",
@@ -32,8 +37,14 @@
       "type": "reel",
       "file": "reels/07-domingo.mp4",
       "caption": "Domingo 8 AM y el vecino arranca la cortadora a nafta 😩 ¿Te pasó?\n\nEl robot corta a menos de 54 dB: menos que una conversación. Lo programás para la hora que quieras y ni te enterás.\n\nEtiquetá a ese vecino 👇 (con cariño)\n\n#robotcortacesped #terramow #jardin #cortacesped #domingo #humor",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-09-29-historia-reel-07-domingo",
+      "when": "2026-09-29T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/07-domingo.mp4",
+      "auto": true
     },
     {
       "id": "2026-09-30-historia-03-mito-cable",
@@ -54,8 +65,7 @@
       "when": "2026-10-01T13:00:00-03:00",
       "type": "story",
       "file": "historias/04-cajita-preguntas.jpg",
-      "auto": false,
-      "manual": "Subila desde la app y agregale: Sticker de preguntas: \"Preguntame lo que quieras\". La API de Instagram no permite stickers interactivos."
+      "auto": true
     },
     {
       "id": "2026-10-01-reel-02-sin-cables",
@@ -63,8 +73,14 @@
       "type": "reel",
       "file": "reels/02-sin-cables.mp4",
       "caption": "¿Robot cortacésped = enterrar un cable por todo el jardín? Ya no 🙅\n\nHay 3 formas de que un robot sepa dónde cortar: cable, RTK (GPS con antena) y cámara con IA. Los TerraMow usan la tercera: reconocen el césped, no necesitan antena y trabajan bajo los árboles.\n\nLa comparativa completa está en el blog 👉 link en la bio\n\n#robotcortacesped #terramow #jardin #cortacesped #inteligenciaartificial #tecnologia",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-01-historia-reel-02-sin-cables",
+      "when": "2026-10-01T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/02-sin-cables.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-02-historia-05-silencio",
@@ -79,8 +95,14 @@
       "type": "reel",
       "file": "reels/03-mulching.mp4",
       "caption": "¿Y el pasto cortado? No se junta 🌱\n\nEl robot corta un poco y seguido, y deja recortes tan finos que desaparecen entre las hojas en uno o dos días. Funcionan como abono natural: césped más verde y cero rastrillo.\n\nGuardalo para la próxima vez que te digan que \"igual hay que juntar el pasto\" 😉\n\n#robotcortacesped #terramow #jardin #cortacesped #mulching #jardineria",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-02-historia-reel-03-mulching",
+      "when": "2026-10-02T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/03-mulching.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-03-historia-06-checklist",
@@ -95,16 +117,21 @@
       "type": "reel",
       "file": "reels/06-te-sirve.mp4",
       "caption": "Antes de comprar un robot cortacésped, hacete estas 3 preguntas ✅\n\n1️⃣ ¿Tu jardín tiene más de 150 m²?\n2️⃣ ¿Las pendientes son de 18° o menos?\n3️⃣ ¿Tenés enchufe y Wi-Fi o 4G donde va la base?\n\n¿3 veces sí? Mandanos fotos de tu jardín por WhatsApp y te decimos qué modelo te conviene. Sin compromiso.\n\n#robotcortacesped #terramow #jardin #cortacesped #asesoramiento #casainteligente",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
     },
     {
       "id": "2026-10-04-historia-07-quiz-cortes",
       "when": "2026-10-04T13:00:00-03:00",
       "type": "story",
       "file": "historias/07-quiz-cortes.jpg",
-      "auto": false,
-      "manual": "Subila desde la app y agregale: Sticker de quiz: 10 / 25 a 35 (correcta) / 60. La API de Instagram no permite stickers interactivos."
+      "auto": true
+    },
+    {
+      "id": "2026-10-04-historia-reel-06-te-sirve",
+      "when": "2026-10-04T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/06-te-sirve.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-05-historia-08-mantenimiento",
@@ -119,8 +146,14 @@
       "type": "reel",
       "file": "reels/08-como-funciona.mp4",
       "caption": "Cómo funciona un robot cortacésped con IA, en 4 pasos 👇\n\n1. Mapea tu jardín con sus cámaras\n2. Planifica la ruta más eficiente\n3. Corta, esquiva obstáculos y vuelve solo a cargar\n4. Vos lo controlás desde la app\n\n¿Querés que te lo mostremos? Escribinos 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #tecnologia #domotica",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-05-historia-reel-08-como-funciona",
+      "when": "2026-10-05T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/08-como-funciona.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-06-historia-09-seguridad",
@@ -135,16 +168,21 @@
       "type": "reel",
       "file": "reels/05-seguridad.mp4",
       "caption": "¿Y si pasa el perro? 🐶 Es la pregunta que más nos hacen.\n\nDetecta obstáculos en 3D y los esquiva o se detiene. Si lo levantás, las cuchillas frenan al instante. Y tiene PIN y alarma antirrobo.\n\nUn consejo honesto: como con cualquier máquina de corte, mejor que los chicos no jueguen en el césped mientras trabaja.\n\n¿Más dudas? Dejalas en comentarios 👇\n\n#robotcortacesped #terramow #jardin #cortacesped #mascotas #perros",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-06-historia-reel-05-seguridad",
+      "when": "2026-10-06T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/05-seguridad.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-07-historia-10-encuesta-freno",
       "when": "2026-10-07T13:00:00-03:00",
       "type": "story",
       "file": "historias/10-encuesta-freno.jpg",
-      "auto": false,
-      "manual": "Subila desde la app y agregale: Sticker de encuesta: \"El precio\" / \"No sé si me sirve\". La API de Instagram no permite stickers interactivos."
+      "auto": true
     },
     {
       "id": "2026-10-07-historia-video-terramow",
@@ -166,8 +204,14 @@
       "type": "reel",
       "file": "reels/04-mantenimiento.mp4",
       "caption": "Mantenimiento de un robot cortacésped: unas 2 horas por año ⏱️\n\nUna cortadora convencional lleva de 10 a 12 (afilado, aceite, bujía, filtro…), sin contar el tiempo de cortar. En el robot, lo único que se cambia seguido son las cuchillas: cada 4 a 8 semanas, 5 minutos con un destornillador.\n\nGuía completa de mantenimiento en el blog 👉 link en la bio\n\n#robotcortacesped #terramow #jardin #cortacesped #mantenimiento #jardineria",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-08-historia-reel-04-mantenimiento",
+      "when": "2026-10-08T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/04-mantenimiento.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-09-historia-12-app",
@@ -182,16 +226,21 @@
       "type": "reel",
       "file": "reels/09-preguntas.mp4",
       "caption": "5 preguntas que nos hacen todos los días, respondidas en segundos ⚡\n\n¿Cables? No. ¿Juntar el pasto? No. ¿Lluvia? La detecta (IPX6). ¿Envíos? A todo el país. ¿Garantía? Sí, del fabricante y con soporte local.\n\n¿Te quedó otra? Dejala en comentarios y la respondemos en un próximo video 👇\n\n#robotcortacesped #terramow #jardin #cortacesped #preguntasfrecuentes #argentina",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-09-historia-reel-09-preguntas",
+      "when": "2026-10-09T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/09-preguntas.mp4",
+      "auto": true
     },
     {
       "id": "2026-10-10-historia-13-slider",
       "when": "2026-10-10T13:00:00-03:00",
       "type": "story",
       "file": "historias/13-slider.jpg",
-      "auto": false,
-      "manual": "Subila desde la app y agregale: Sticker de slider con el emoji 😤. La API de Instagram no permite stickers interactivos."
+      "auto": true
     },
     {
       "id": "2026-10-11-historia-14-precio",
@@ -206,8 +255,14 @@
       "type": "reel",
       "file": "reels/10-v1000.mp4",
       "caption": "Arrancó la temporada de corte 🌱 Este año, que corte él.\n\nTerraMow V1000: hasta 1200 m², 150 minutos por carga, triple cámara con IA, pendientes de hasta 18° e IPX6. Sin cables ni antenas.\n\nPrecio del día y asesoramiento por WhatsApp 💬 (link en la bio)\n\n#robotcortacesped #terramow #jardin #cortacesped #primavera #casainteligente",
-      "auto": true,
-      "manual": "20:30: compartilo en historias. Respondé los comentarios de la primera hora."
+      "auto": true
+    },
+    {
+      "id": "2026-10-11-historia-reel-10-v1000",
+      "when": "2026-10-11T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/10-v1000.mp4",
+      "auto": true
     }
   ]
 }

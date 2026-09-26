@@ -56,9 +56,10 @@ también en los guiones.
 ## Publicación automática en Instagram
 
 El workflow `Redes` corre cada 30 minutos, lee `social/calendario.json` y publica lo que tenga
-`"auto": true` y ya haya llegado a su hora. Lo marcado `"auto": false` son historias con stickers
-(encuestas, preguntas, quiz): la API de Instagram no los permite, así que se suben a mano desde la app.
-El campo `manual` dice qué hacer.
+`"auto": true` y ya haya llegado a su hora. La API de Instagram no permite stickers (encuestas, preguntas,
+quiz, links), así que las historias interactivas piden "Respondé esta historia": las respuestas llegan
+como mensaje directo. Si alguna vez querés una historia para subir a mano, poné `"auto": false` y un campo
+`manual` con la instrucción.
 
 ### Configuración (una sola vez)
 

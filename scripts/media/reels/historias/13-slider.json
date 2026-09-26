@@ -1,7 +1,8 @@
 {
- "title": "Slider: cuánto odiás cortar",
+ "title": "¿Cuánto odiás cortar el pasto?",
  "scenes": [
   {
+   "dur": 3.0,
    "bg": {
     "clip": "comercial",
     "from": 12.6
@@ -15,10 +16,15 @@
     {
      "type": "title",
      "size": "l",
-     "text": "¿Cuánto odiás <em>cortar el pasto?</em>"
+     "text": "Del 1 al 10, ¿cuánto odiás <em>cortar el pasto?</em>"
     }
    ],
-   "dur": 3.0
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Respondé esta historia con tu número. Si es más de 7, tenemos algo para vos."
+    }
+   ]
   }
  ]
 }
