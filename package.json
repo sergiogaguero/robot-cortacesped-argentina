@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "media:video": "node scripts/media/compress-video.mjs",
     "media:og": "node scripts/media/og-images.mjs",
-    "media:icons": "node scripts/media/icons.mjs"
+    "media:icons": "node scripts/media/icons.mjs",
+    "media:promo": "node scripts/media/promo.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
