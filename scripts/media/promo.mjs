@@ -1,5 +1,7 @@
-// Renderiza la animación promocional para redes (scripts/media/promo/promo.html) a MP4 vertical.
-// Uso: node scripts/media/promo.mjs  →  media/promo/promo-terramow-9x16.mp4
+// Renderiza una animación promocional para redes (scripts/media/promo/<nombre>.html) a MP4 vertical.
+// Uso: node scripts/media/promo.mjs [nombre]  →  media/promo/<nombre>-9x16.mp4
+//   terramow (por defecto): presentación del producto
+//   tiempo: el tiempo libre que devuelve el robot
 // Necesita Playwright con Chromium (npx playwright install chromium si no está).
 import { spawn, execFileSync } from "node:child_process";
 import { mkdirSync, mkdtempSync, readdirSync, rmSync } from "node:fs";
@@ -13,9 +15,10 @@ const FPS = 30;
 const W = 1080;
 const H = 1920;
 const VIDEO = "media/hero-original.mp4";
-const PAGE = "scripts/media/promo/promo.html";
+const NAME = process.argv[2] ?? "terramow";
+const PAGE = `scripts/media/promo/${NAME}.html`;
 const OUT_DIR = "media/promo";
-const OUT = `${OUT_DIR}/promo-terramow-9x16.mp4`;
+const OUT = `${OUT_DIR}/${NAME}-9x16.mp4`;
 
 async function loadChromium() {
   try {
