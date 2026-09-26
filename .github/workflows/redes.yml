@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Solo mostrar qué publicaría"
+        description: "Prueba: verificar la conexión y mostrar qué publicaría, sin publicar"
         type: boolean
         default: true
 
@@ -33,7 +33,7 @@ jobs:
           key: redes-estado-${{ github.run_id }}
           restore-keys: redes-estado-
       - name: Publicar
-        run: node scripts/social/publish.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: node scripts/social/publish.mjs ${{ inputs.dry_run && '--dry-run --check' || '' }}
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}

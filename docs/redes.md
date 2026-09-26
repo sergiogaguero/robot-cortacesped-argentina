@@ -74,7 +74,8 @@ como mensaje directo. Si alguna vez querés una historia para subir a mano, pon�
    `https://graph.facebook.com/v23.0/me/accounts?fields=instagram_business_account&access_token=TOKEN`
    (es el número de `instagram_business_account.id`).
 5. En GitHub: **Settings → Secrets and variables → Actions**, crear `IG_USER_ID` e `IG_ACCESS_TOKEN`.
-6. Probar: **Actions → Redes → Run workflow** con "Solo mostrar qué publicaría" tildado.
+6. Probar: **Actions → Redes → Run workflow** con la casilla de prueba tildada. Tiene que decir
+   "Conectado a Instagram como @…" y "Archivos publicados".
 
 ### A tener en cuenta
 

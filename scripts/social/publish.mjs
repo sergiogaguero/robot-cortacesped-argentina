@@ -4,6 +4,7 @@
 //   node scripts/social/publish.mjs                → publica lo que corresponda ahora
 //   node scripts/social/publish.mjs --dry-run      → solo muestra qué publicaría
 //   node scripts/social/publish.mjs --now 2026-09-28T19:40:00-03:00 --dry-run   → simula otra hora
+//   node scripts/social/publish.mjs --check        → verifica el token y que los archivos estén publicados
 //
 // Variables de entorno (secretos del repo en GitHub):
 //   IG_USER_ID       ID de la cuenta profesional de Instagram (no es el @usuario)
@@ -22,6 +23,7 @@ const ESPERA_MAX_MS = 10 * 60 * 1000;
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
+const check = args.includes("--check");
 const nowArg = args.indexOf("--now");
 const now = nowArg >= 0 ? new Date(args[nowArg + 1]) : new Date();
 
@@ -35,6 +37,7 @@ const pendientes = posts.filter((p) => {
 });
 
 const { IG_USER_ID, IG_ACCESS_TOKEN } = process.env;
+if (check) await verificar();
 if (pendientes.length === 0) {
   console.log(`Nada para publicar (${now.toISOString()}).`);
   process.exit(0);
@@ -77,6 +80,30 @@ async function publicar(p) {
   }
   const { id: mediaId } = await graph("POST", `${IG_USER_ID}/media_publish`, { creation_id: creationId });
   return mediaId;
+}
+
+// Prueba de configuración: el token sirve, la cuenta es la correcta y el sitio sirve los archivos.
+async function verificar() {
+  if (!IG_USER_ID || !IG_ACCESS_TOKEN) {
+    console.error("✖ Faltan los secretos IG_USER_ID o IG_ACCESS_TOKEN. Ver docs/redes.md.");
+    process.exit(1);
+  }
+  try {
+    const { username } = await graph("GET", IG_USER_ID, { fields: "username" });
+    console.log(`✔ Conectado a Instagram como @${username}`);
+  } catch (e) {
+    console.error(`✖ Instagram no acepta el token o el ID: ${e.message}`);
+    process.exit(1);
+  }
+  const proximo = posts.find((p) => new Date(p.when) > now) ?? posts.at(-1);
+  const url = `${baseUrl}/${proximo.file}`;
+  const head = await fetch(url, { method: "HEAD" });
+  if (!head.ok) {
+    console.error(`✖ ${url} responde ${head.status}: falta publicar el sitio con public/redes/`);
+    process.exit(1);
+  }
+  console.log(`✔ Archivos publicados (${url})`);
+  console.log(`  Próxima publicación: ${proximo.id} (${proximo.when})`);
 }
 
 let fallas = 0;
