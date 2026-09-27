@@ -1,0 +1,210 @@
+{
+ "title": "Quiénes somos",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "casa",
+    "from": 0.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Bienvenidos"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Robots cortacésped <em>en Argentina</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Te contamos quiénes somos y cómo trabajamos."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Quiénes somos"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Distribuidor autorizado <em>de TerraMow</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "Robots con cámaras e inteligencia artificial: cortan solos, sin cables enterrados ni antenas."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "product": "src/assets/products/v1000.png",
+   "productTop": 320,
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "El modelo"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "TerraMow <em>V1000</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Hasta 1200 m²",
+      "150 min por carga",
+      "Pendientes de 18°",
+      "IPX6"
+     ]
+    }
+   ],
+   "productSize": 880
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Cómo comprás"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Todo por <em>WhatsApp</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "ticks",
+     "step": 0.2,
+     "items": [
+      "Te asesoramos según tu jardín",
+      "Precio del día en pesos",
+      "Envío a todo el país"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Después de la compra"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "No te <em>dejamos solo</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "ticks",
+     "step": 0.2,
+     "items": [
+      "Garantía del fabricante",
+      "Soporte técnico local",
+      "Ayuda con la instalación y la app"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "arboles",
+    "from": 6.0
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "En esta cuenta"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Qué vas a <em>ver acá</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "ticks",
+     "step": 0.2,
+     "items": [
+      "Videos reales de robots trabajando",
+      "Tips para tu jardín",
+      "Respuestas a tus preguntas"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Seguinos y escribinos <em>cuando quieras.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

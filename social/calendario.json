@@ -4,6 +4,51 @@
   "facebook": true,
   "posts": [
     {
+      "id": "2026-09-27-reel-07-domingo",
+      "when": "2026-09-27T10:00:00-03:00",
+      "type": "reel",
+      "file": "reels/07-domingo.mp4",
+      "caption": "Domingo 8 AM y el vecino arranca la cortadora a nafta 😩 ¿Te pasó?\n\nEl robot corta a menos de 54 dB: menos que una conversación. Lo programás para la hora que quieras y ni te enterás.\n\nEtiquetá a ese vecino 👇 (con cariño)\n\n#robotcortacesped #terramow #jardin #cortacesped #domingo #humor",
+      "auto": true
+    },
+    {
+      "id": "2026-09-27-carrusel-05-quienes-somos",
+      "when": "2026-09-27T12:30:00-03:00",
+      "type": "carousel",
+      "auto": true,
+      "files": [
+        "carruseles/05-quienes-somos/01.jpg",
+        "carruseles/05-quienes-somos/02.jpg",
+        "carruseles/05-quienes-somos/03.jpg",
+        "carruseles/05-quienes-somos/04.jpg",
+        "carruseles/05-quienes-somos/05.jpg",
+        "carruseles/05-quienes-somos/06.jpg",
+        "carruseles/05-quienes-somos/07.jpg"
+      ],
+      "caption": "¡Hola! Somos Robot Cortacésped Argentina 👋🌱\n\nDistribuidor autorizado de TerraMow: robots que cortan el pasto solos, con cámaras e inteligencia artificial, sin cables ni antenas.\n\nDeslizá para conocer el modelo, cómo comprar y qué vas a encontrar en esta cuenta 👉\n\nConsultas y precio del día por WhatsApp (link en la bio) 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #argentina #casainteligente"
+    },
+    {
+      "id": "2026-09-27-historia-19-arranca-temporada",
+      "when": "2026-09-27T15:00:00-03:00",
+      "type": "story",
+      "file": "historias/19-arranca-temporada.mp4",
+      "auto": true
+    },
+    {
+      "id": "2026-09-27-historia-20-que-queres-ver",
+      "when": "2026-09-27T17:00:00-03:00",
+      "type": "story",
+      "file": "historias/20-que-queres-ver.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-09-27-historia-reel-07-domingo",
+      "when": "2026-09-27T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/07-domingo.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-09-28-historia-01-horas",
       "when": "2026-09-28T10:00:00-03:00",
       "type": "story",
@@ -33,18 +78,18 @@
       "auto": true
     },
     {
-      "id": "2026-09-29-reel-07-domingo",
+      "id": "2026-09-29-reel-13-pov-pasto",
       "when": "2026-09-29T19:30:00-03:00",
       "type": "reel",
-      "file": "reels/07-domingo.mp4",
-      "caption": "Domingo 8 AM y el vecino arranca la cortadora a nafta 😩 ¿Te pasó?\n\nEl robot corta a menos de 54 dB: menos que una conversación. Lo programás para la hora que quieras y ni te enterás.\n\nEtiquetá a ese vecino 👇 (con cariño)\n\n#robotcortacesped #terramow #jardin #cortacesped #domingo #humor",
-      "auto": true
+      "file": "reels/13-pov-pasto.mp4",
+      "auto": true,
+      "caption": "POV: sos el pasto y llega el robot 🌱🤖\n\nCorta un poquito cada día, sin ruido y sin bolsas. El pasto queda parejo y vos ni te enterás.\n\nFilmado con el celu en un jardín real, sin efectos. ¿Lo querés en el tuyo? Escribinos por WhatsApp (link en la bio) 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #pov #humor"
     },
     {
-      "id": "2026-09-29-historia-reel-07-domingo",
+      "id": "2026-09-29-historia-reel-13-pov-pasto",
       "when": "2026-09-29T20:30:00-03:00",
       "type": "story",
-      "file": "reels/07-domingo.mp4",
+      "file": "reels/13-pov-pasto.mp4",
       "auto": true
     },
     {
@@ -168,24 +213,9 @@
     },
     {
       "id": "2026-10-03-historia-video-tiempo",
-      "when": "2026-10-03T16:00:00-03:00",
+      "when": "2026-10-03T20:30:00-03:00",
       "type": "story",
       "file": "extra/tiempo.mp4",
-      "auto": true
-    },
-    {
-      "id": "2026-10-03-reel-13-pov-pasto",
-      "when": "2026-10-03T19:30:00-03:00",
-      "type": "reel",
-      "file": "reels/13-pov-pasto.mp4",
-      "auto": true,
-      "caption": "POV: sos el pasto y llega el robot 🌱🤖\n\nCorta un poquito cada día, sin ruido y sin bolsas. El pasto queda parejo y vos ni te enterás.\n\nFilmado con el celu en un jardín real, sin efectos. ¿Lo querés en el tuyo? Escribinos por WhatsApp (link en la bio) 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #pov #humor"
-    },
-    {
-      "id": "2026-10-03-historia-reel-13-pov-pasto",
-      "when": "2026-10-03T21:00:00-03:00",
-      "type": "story",
-      "file": "reels/13-pov-pasto.mp4",
       "auto": true
     },
     {

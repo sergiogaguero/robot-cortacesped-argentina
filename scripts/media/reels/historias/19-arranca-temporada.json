@@ -1,0 +1,44 @@
+{
+ "title": "Arrancó la temporada",
+ "format": "video",
+ "audio": "media/musica/arranca.mp3",
+ "scenes": [
+  {
+   "dur": 6.5,
+   "bg": {
+    "clip": "casa",
+    "from": 0,
+    "speed": 0.32
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Arrancó la temporada"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Todos los días, <em>algo nuevo</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "at": 1.2,
+     "step": 0.5,
+     "items": [
+      "Videos reales del robot",
+      "Tips para tu jardín",
+      "Respuestas a lo que nos preguntes"
+     ]
+    },
+    {
+     "type": "note",
+     "at": 3.0,
+     "text": "Activá las notificaciones para no perderte nada."
+    }
+   ]
+  }
+ ]
+}

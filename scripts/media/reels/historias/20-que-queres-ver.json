@@ -1,0 +1,44 @@
+{
+ "title": "¿Qué querés ver primero?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 0.5
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Qué querés <em>ver primero?</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · Cómo funciona",
+      "2 · Precios",
+      "3 · Robots en jardines reales"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número por mensaje."
+    }
+   ]
+  }
+ ]
+}

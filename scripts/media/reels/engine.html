@@ -355,6 +355,7 @@
     if (sd.product) {
       scene.product = root.appendChild(Object.assign(h("img", "product"), { src: asset(sd.product) }));
       if (sd.productTop != null) scene.product.style.top = `${sd.productTop}px`;
+      if (sd.productSize != null) Object.assign(scene.product.style, { width: `${sd.productSize}px`, height: `${sd.productSize}px`, left: `${(1080 - sd.productSize) / 2}px` });
     }
     let auto = sd.at ?? 0.25;
     for (const pos of ["top", "center", "bottom"]) {
