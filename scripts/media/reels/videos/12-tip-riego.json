@@ -1,0 +1,127 @@
+{
+ "title": "Tip: cómo regar",
+ "scenes": [
+  {
+   "dur": 1.9,
+   "at": 0.05,
+   "bg": {
+    "clip": "hero",
+    "from": 0.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Tip de primavera"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Cuándo conviene <em>regar?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "hero",
+    "from": 2.2
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Temprano"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Regá a la mañana <em>temprano</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Se evapora menos agua y la hoja se seca en el día: menos hongos."
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 3.2,
+    "focus": 0.45
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Profundo"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Pocas veces, pero <em>bien profundo</em>"
+    },
+    {
+     "type": "lead",
+     "text": "Las raíces bajan a buscar agua y el pasto aguanta mejor el calor."
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.0
+   },
+   "shade": "dark",
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Más alto"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Con calor, <em>cortá más alto</em>"
+    },
+    {
+     "type": "lead",
+     "text": "La hoja le hace sombra al suelo y guarda humedad. El V1000 ajusta la altura desde la app, de 25 a 75 mm."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Tu jardín, listo para <em>el verano.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

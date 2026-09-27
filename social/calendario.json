@@ -1,6 +1,7 @@
 {
-  "$comment": "Calendario de publicaciones. Lo lee scripts/social/publish.mjs (GitHub Actions, cada 30 min) y publica lo que tenga auto:true cuando llega su hora. Los archivos se sirven desde baseUrl, es decir, desde public/redes/ del sitio publicado.",
+  "$comment": "Calendario de publicaciones. Lo lee scripts/social/publish.mjs (GitHub Actions, cada 30 min) y publica lo que tenga auto:true cuando llega su hora, en Instagram y en la página de Facebook (facebook:false en un post lo deja solo en Instagram). Los archivos se sirven desde baseUrl, es decir, desde public/redes/ del sitio publicado. Tipos: reel, story, carousel (con files: lista de láminas).",
   "baseUrl": "https://www.robotscortacesped.com.ar/redes",
+  "facebook": true,
   "posts": [
     {
       "id": "2026-09-28-historia-01-horas",
@@ -54,10 +55,34 @@
       "auto": true
     },
     {
-      "id": "2026-09-30-historia-video-tiempo",
+      "id": "2026-09-30-carrusel-01-mitos",
+      "when": "2026-09-30T12:30:00-03:00",
+      "type": "carousel",
+      "files": [
+        "carruseles/01-mitos/01.jpg",
+        "carruseles/01-mitos/02.jpg",
+        "carruseles/01-mitos/03.jpg",
+        "carruseles/01-mitos/04.jpg",
+        "carruseles/01-mitos/05.jpg",
+        "carruseles/01-mitos/06.jpg",
+        "carruseles/01-mitos/07.jpg"
+      ],
+      "caption": "5 mitos del robot cortacésped que casi todos creen 🤔👉\n\nDeslizá para ver la verdad sobre cables, pasto cortado, mascotas, mantenimiento y lluvia.\n\nGuardalo para cuando alguien te diga \"eso no funciona\" 😉 ¿Tenés otra duda? Escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #terramow #jardin #cortacesped #jardineria",
+      "auto": true
+    },
+    {
+      "id": "2026-09-30-reel-11-tip-tercio",
+      "when": "2026-09-30T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/11-tip-tercio.mp4",
+      "caption": "¿Cortás el pasto muy corto? ✂️ Ojo con la regla del tercio.\n\nNunca cortes más de un tercio de la hoja por vez: si te pasás, el pasto se pone amarillo, se seca más rápido y le deja lugar a las malezas.\n\nPor eso un robot corta poquito y seguido: siempre dentro de la regla. Guardalo para esta primavera 🌱\n\n#robotcortacesped #terramow #jardin #cortacesped #tipsdejardin #primavera",
+      "auto": true
+    },
+    {
+      "id": "2026-09-30-historia-reel-11-tip-tercio",
       "when": "2026-09-30T20:30:00-03:00",
       "type": "story",
-      "file": "extra/tiempo.mp4",
+      "file": "reels/11-tip-tercio.mp4",
       "auto": true
     },
     {
@@ -65,6 +90,13 @@
       "when": "2026-10-01T13:00:00-03:00",
       "type": "story",
       "file": "historias/04-cajita-preguntas.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-10-01-historia-15-tip-puntas",
+      "when": "2026-10-01T17:00:00-03:00",
+      "type": "story",
+      "file": "historias/15-tip-puntas.jpg",
       "auto": true
     },
     {
@@ -105,10 +137,33 @@
       "auto": true
     },
     {
+      "id": "2026-10-03-carrusel-02-checklist",
+      "when": "2026-10-03T11:00:00-03:00",
+      "type": "carousel",
+      "files": [
+        "carruseles/02-checklist/01.jpg",
+        "carruseles/02-checklist/02.jpg",
+        "carruseles/02-checklist/03.jpg",
+        "carruseles/02-checklist/04.jpg",
+        "carruseles/02-checklist/05.jpg",
+        "carruseles/02-checklist/06.jpg",
+        "carruseles/02-checklist/07.jpg"
+      ],
+      "caption": "¿Tu jardín está listo para un robot cortacésped? ✅ Chequealo en 5 puntos antes de comprar 👉\n\nSi cumplís los 5, mandanos fotos de tu jardín por WhatsApp y te decimos qué modelo te conviene. Sin compromiso.\n\n#robotcortacesped #terramow #jardin #cortacesped #jardineria",
+      "auto": true
+    },
+    {
       "id": "2026-10-03-historia-06-checklist",
       "when": "2026-10-03T11:00:00-03:00",
       "type": "story",
       "file": "historias/06-checklist.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-10-03-historia-video-tiempo",
+      "when": "2026-10-03T20:30:00-03:00",
+      "type": "story",
+      "file": "extra/tiempo.mp4",
       "auto": true
     },
     {
@@ -124,6 +179,13 @@
       "when": "2026-10-04T13:00:00-03:00",
       "type": "story",
       "file": "historias/07-quiz-cortes.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-10-04-historia-16-tip-amarillo",
+      "when": "2026-10-04T17:00:00-03:00",
+      "type": "story",
+      "file": "historias/16-tip-amarillo.jpg",
       "auto": true
     },
     {
@@ -163,6 +225,13 @@
       "auto": true
     },
     {
+      "id": "2026-10-06-historia-17-tip-recortes",
+      "when": "2026-10-06T17:00:00-03:00",
+      "type": "story",
+      "file": "historias/17-tip-recortes.jpg",
+      "auto": true
+    },
+    {
       "id": "2026-10-06-reel-05-seguridad",
       "when": "2026-10-06T19:30:00-03:00",
       "type": "reel",
@@ -178,6 +247,22 @@
       "auto": true
     },
     {
+      "id": "2026-10-07-carrusel-03-tecnologias",
+      "when": "2026-10-07T12:30:00-03:00",
+      "type": "carousel",
+      "files": [
+        "carruseles/03-tecnologias/01.jpg",
+        "carruseles/03-tecnologias/02.jpg",
+        "carruseles/03-tecnologias/03.jpg",
+        "carruseles/03-tecnologias/04.jpg",
+        "carruseles/03-tecnologias/05.jpg",
+        "carruseles/03-tecnologias/06.jpg",
+        "carruseles/03-tecnologias/07.jpg"
+      ],
+      "caption": "Cable, RTK, LiDAR o cámara con IA: cómo sabe un robot dónde cortar 🧠👉\n\nCada tecnología tiene su punto fuerte y su límite. Te lo explicamos sin vueltas (y sin esconder nada).\n\nLa comparativa completa está en el blog 👉 link en la bio\n\n#robotcortacesped #terramow #jardin #cortacesped #jardineria",
+      "auto": true
+    },
+    {
       "id": "2026-10-07-historia-10-encuesta-freno",
       "when": "2026-10-07T13:00:00-03:00",
       "type": "story",
@@ -185,10 +270,18 @@
       "auto": true
     },
     {
-      "id": "2026-10-07-historia-video-terramow",
+      "id": "2026-10-07-reel-12-tip-riego",
+      "when": "2026-10-07T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/12-tip-riego.mp4",
+      "caption": "¿Cuándo conviene regar el pasto? 💧 3 tips para llegar bien al verano:\n\n1. A la mañana temprano: se evapora menos y hay menos hongos.\n2. Pocas veces, pero profundo: raíces más fuertes.\n3. Con calor, cortá más alto: la hoja protege el suelo.\n\nGuardalo y compartilo con quien riega a las 3 de la tarde 😅\n\n#robotcortacesped #terramow #jardin #cortacesped #tipsdejardin #primavera",
+      "auto": true
+    },
+    {
+      "id": "2026-10-07-historia-reel-12-tip-riego",
       "when": "2026-10-07T20:30:00-03:00",
       "type": "story",
-      "file": "extra/terramow.mp4",
+      "file": "reels/12-tip-riego.mp4",
       "auto": true
     },
     {
@@ -221,6 +314,13 @@
       "auto": true
     },
     {
+      "id": "2026-10-09-historia-18-tip-calor",
+      "when": "2026-10-09T17:00:00-03:00",
+      "type": "story",
+      "file": "historias/18-tip-calor.jpg",
+      "auto": true
+    },
+    {
       "id": "2026-10-09-reel-09-preguntas",
       "when": "2026-10-09T19:30:00-03:00",
       "type": "reel",
@@ -236,10 +336,32 @@
       "auto": true
     },
     {
+      "id": "2026-10-10-carrusel-04-mantenimiento",
+      "when": "2026-10-10T11:00:00-03:00",
+      "type": "carousel",
+      "files": [
+        "carruseles/04-mantenimiento/01.jpg",
+        "carruseles/04-mantenimiento/02.jpg",
+        "carruseles/04-mantenimiento/03.jpg",
+        "carruseles/04-mantenimiento/04.jpg",
+        "carruseles/04-mantenimiento/05.jpg",
+        "carruseles/04-mantenimiento/06.jpg"
+      ],
+      "caption": "Mantenimiento de un robot cortacésped: la guía corta 🛠️👉\n\nUnas 2 horas por año en total. Guardalo para tenerlo a mano.\n\n¿Dudas? Escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #terramow #jardin #cortacesped #jardineria",
+      "auto": true
+    },
+    {
       "id": "2026-10-10-historia-13-slider",
       "when": "2026-10-10T13:00:00-03:00",
       "type": "story",
       "file": "historias/13-slider.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-10-10-historia-video-terramow",
+      "when": "2026-10-10T20:30:00-03:00",
+      "type": "story",
+      "file": "extra/terramow.mp4",
       "auto": true
     },
     {

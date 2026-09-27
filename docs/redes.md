@@ -6,6 +6,8 @@ Todo lo que sale en Instagram está en el repo:
 |---|---|
 | Guiones de los reels | `scripts/media/reels/videos/*.json` |
 | Guiones de las historias | `scripts/media/reels/historias/*.json` |
+| Guiones de los carruseles (feed, 1080×1350) | `scripts/media/reels/carruseles/*.json` — una lámina por escena |
+| Videos propios (entregas, clientes) | `media/clips/<nombre>.mp4` → se usan como `"clip": "<nombre>"` |
 | Motor que los anima | `scripts/media/reels/engine.html` |
 | Videos e imágenes listos | `public/redes/` (se publican con el sitio en `/redes/…`) |
 | Calendario (fecha, hora, texto) | `social/calendario.json` |
@@ -29,7 +31,8 @@ Todo lo que sale en Instagram está en el repo:
       "dur": 2.0,                 // segundos
       "cut": true,                // corte seco en vez de fundido (opcional)
       "bg": { "clip": "comercial", "from": 7.0, "speed": 0.8, "focus": 0.4 },
-      //     clip: "comercial" (media/terramow-comercial.mp4) o "hero" (media/hero-original.mp4)
+      //     clip: "comercial" (media/terramow-comercial.mp4), "hero" (media/hero-original.mp4)
+      //     o cualquier video propio guardado en media/clips/<nombre>.mp4
       //     o { "image": "src/assets/step-mapping.jpg" } o { "style": "glow" | "black" }
       "shade": "bottom",          // bottom | top | both | dark | none: sombra para que se lea el texto
       "align": "center",          // centra los bloques (opcional)
@@ -53,10 +56,13 @@ otro; `at` fija el segundo exacto de entrada.
 Los textos y cifras salen del sitio (fichas de producto, FAQ y blog). Si algo cambia ahí, cambiarlo
 también en los guiones.
 
-## Publicación automática en Instagram
+## Publicación automática en Instagram y Facebook
 
 El workflow `Redes` corre cada 30 minutos, lee `social/calendario.json` y publica lo que tenga
-`"auto": true` y ya haya llegado a su hora. La API de Instagram no permite stickers (encuestas, preguntas,
+`"auto": true` y ya haya llegado a su hora, en Instagram y en la página de Facebook vinculada
+(`"facebook": false` en un post, o en la raíz del calendario, lo deja solo en Instagram). Tipos: `reel`,
+`story` y `carousel` (este último con `files`: la lista de láminas). Un error en Facebook avisa pero no
+frena Instagram; el resumen de cada corrida en Actions muestra una tabla con el estado de todo. La API de Instagram no permite stickers (encuestas, preguntas,
 quiz, links), así que las historias interactivas piden "Respondé esta historia": las respuestas llegan
 como mensaje directo. Si alguna vez querés una historia para subir a mano, poné `"auto": false` y un campo
 `manual` con la instrucción.
@@ -68,8 +74,11 @@ como mensaje directo. Si alguna vez querés una historia para subir a mano, pon�
    agregarle el producto **Instagram** (API con inicio de sesión de Facebook).
 3. En **Meta Business Suite → Configuración → Usuarios del sistema**, crear un usuario del sistema
    (administrador), asignarle la página, la cuenta de Instagram y la app, y **generar un token** con los
-   permisos `instagram_basic`, `instagram_content_publish`, `pages_show_list` y
-   `pages_read_engagement`. El token de un usuario del sistema no vence.
+   permisos `instagram_basic`, `instagram_content_publish`, `pages_show_list`,
+   `pages_read_engagement`, `business_management` y, para publicar en Facebook, `pages_manage_posts`.
+   El token de un usuario del sistema no vence. Si el negocio tiene menos de 7 días, Meta no deja crear
+   usuarios del sistema administradores: usar rol Empleado y darle rol de administrador en la app
+   (developers.facebook.com → Roles de la app).
 4. Averiguar el ID de la cuenta de Instagram:
    `https://graph.facebook.com/v23.0/me/accounts?fields=instagram_business_account&access_token=TOKEN`
    (es el número de `instagram_business_account.id`).
@@ -87,3 +96,34 @@ como mensaje directo. Si alguna vez querés una historia para subir a mano, pon�
   tiene `"audio": "media/musica/tema.mp3"`, el render la mezcla (usar solo música libre de derechos).
 - Si una corrida falla, la siguiente reintenta hasta 6 horas después de la hora pactada; pasado eso,
   el post se saltea para que no salga a destiempo.
+
+## Centro de redes (app de control)
+
+Página de claude.ai (https://claude.ai/artifact/M1pLMhbMfQjdYTiUfkS7jM) con el calendario, vista previa de
+cada pieza, su estado en Instagram y Facebook, y un formulario para pedirle cambios a Claude: el pedido
+se guarda como comentario en la página y le llega a la sesión de Claude que la mantiene, con el id de la
+publicación entre corchetes (`[2026-10-01-reel-02-sin-cables] …`, o `[general] …`).
+
+- Código: `scripts/social/centro/` (`template.html` + `build.mjs`). Datos propios: `social/centro.json`
+  (estado sincronizado, salud del sistema, historial de cambios).
+- Armar: `node scripts/social/centro/build.mjs` → `.centro/centro-redes.html` y las vistas previas en
+  `.centro/p/`. Se publica con el tool Artifact (url de arriba, `root: .centro`, los archivos de `p/`
+  como `files`, `capabilities` sin cambios).
+
+### Sincronizar el estado
+
+1. Última corrida completada del workflow `redes.yml` (GitHub Actions) → logs del job `publicar` →
+   la línea `ESTADO_JSON {…}` que imprime `publish.mjs` al final de cada corrida.
+2. Copiar ese objeto a `estado` en `social/centro.json`, poner `syncedAt` con la hora actual (ISO) y
+   ajustar `health` si cambió algo (por ejemplo, Facebook ya conectado, o errores repetidos).
+3. Armar y volver a publicar la página. Si hay errores de Instagram, avisarle al usuario.
+
+### Atender un pedido
+
+1. Leer el id entre corchetes y ubicar el post en `social/calendario.json` y su guion en
+   `scripts/media/reels/`.
+2. Hacer el cambio (horario, texto, guion), volver a renderizar si cambió la pieza
+   (`npm run media:reels -- <nombre>`), validar con `node scripts/social/publish.mjs --dry-run`.
+3. Commit y push, y llevarlo a `master` (el workflow y el sitio publican desde ahí).
+4. Sumar una línea a `changelog` en `social/centro.json`, rearmar y republicar la página, y responder
+   en el hilo del comentario qué se cambió.

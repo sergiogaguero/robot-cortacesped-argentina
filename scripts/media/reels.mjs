@@ -4,22 +4,27 @@
 //   node scripts/media/reels.mjs 03-mulching      → uno (o varios) por nombre
 //   node scripts/media/reels.mjs --preview <dir>  → en vez de video, un JPG por escena (para revisar)
 //
-// Guiones: scripts/media/reels/videos/*.json (reels) e historias/*.json (historias).
-// Salida:  public/redes/reels/<nombre>.mp4 y public/redes/historias/<nombre>.jpg|mp4 — se publican con
+// Guiones: scripts/media/reels/videos/*.json (reels), historias/*.json (historias) y
+// carruseles/*.json (una lámina por escena).
+// Salida:  public/redes/reels/<nombre>.mp4, public/redes/historias/<nombre>.jpg|mp4 y
+// public/redes/carruseles/<nombre>/01.jpg, 02.jpg… — se publican con
 // el sitio para que la automatización de Instagram (scripts/social/publish.mjs) los tome por URL.
 import { existsSync, mkdirSync, readdirSync, readFileSync } from "node:fs";
 import { basename, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { H, W, extractFrames, loadChromium, renderToVideo } from "./lib/render.mjs";
 
-// Videos fuente que pueden usar los guiones ("bg": { "clip": "<nombre>" }).
+// Videos fuente que pueden usar los guiones ("bg": { "clip": "<nombre>" }). Cualquier otro nombre se
+// busca en media/clips/<nombre>.mp4 (ahí van los videos propios: entregas, clientes, antes/después).
 const CLIPS = {
   comercial: "media/terramow-comercial.mp4", // comercial de TerraMow (caja, encendido, corte en primer plano)
   hero: "media/hero-original.mp4", // robot real en el jardín (el video de la portada del sitio)
 };
+const clipPath = (name) => CLIPS[name] ?? (existsSync(`media/clips/${name}.mp4`) ? `media/clips/${name}.mp4` : null);
 const DIRS = [
   { src: "scripts/media/reels/videos", out: "public/redes/reels", still: false },
   { src: "scripts/media/reels/historias", out: "public/redes/historias", still: true },
+  { src: "scripts/media/reels/carruseles", out: "public/redes/carruseles", carousel: true },
 ];
 const ENGINE = "scripts/media/reels/engine.html";
 
@@ -28,7 +33,7 @@ const previewAt = args.indexOf("--preview");
 const previewDir = previewAt >= 0 ? args.splice(previewAt, 2)[1] : null;
 const only = new Set(args);
 
-const jobs = DIRS.flatMap((d) =>
+const jobs = DIRS.filter((d) => existsSync(d.src)).flatMap((d) =>
   readdirSync(d.src)
     .filter((f) => f.endsWith(".json"))
     .map((f) => ({ ...d, name: basename(f, ".json"), script: JSON.parse(readFileSync(join(d.src, f), "utf8")) }))
@@ -44,8 +49,8 @@ const used = new Set(jobs.flatMap((j) => j.script.scenes.map((s) => s.bg?.clip).
 const clipFrames = {};
 const cleanups = [];
 for (const name of used) {
-  if (!CLIPS[name]) throw new Error(`Clip desconocido "${name}". Opciones: ${Object.keys(CLIPS).join(", ")}`);
-  const { frames, cleanup } = extractFrames(CLIPS[name]);
+  if (!clipPath(name)) throw new Error(`Clip desconocido "${name}": no está en CLIPS ni en media/clips/${name}.mp4`);
+  const { frames, cleanup } = extractFrames(clipPath(name));
   clipFrames[name] = frames;
   cleanups.push(cleanup);
 }
@@ -55,6 +60,8 @@ const browser = await chromium.launch({ args: ["--allow-file-access-from-files"]
 const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
 
 for (const job of jobs) {
+  const [w, hgt] = job.script.size || [W, H];
+  await page.setViewportSize({ width: w, height: hgt });
   await page.goto(pathToFileURL(resolve(ENGINE)).href);
   const duration = await page.evaluate(([s, c]) => window.load(s, c), [job.script, clipFrames]);
 
@@ -72,7 +79,18 @@ for (const job of jobs) {
   }
 
   mkdirSync(job.out, { recursive: true });
-  if (job.still && job.script.format !== "video") {
+  if (job.carousel) {
+    // Una lámina JPG por escena, en su momento final (con todo ya en pantalla).
+    const dir = join(job.out, job.name);
+    mkdirSync(dir, { recursive: true });
+    let t = 0;
+    for (const [i, s] of job.script.scenes.entries()) {
+      t += s.dur;
+      await page.evaluate((x) => window.renderFrame(x), t - 0.01);
+      await page.screenshot({ path: join(dir, `${String(i + 1).padStart(2, "0")}.jpg`), type: "jpeg", quality: 92 });
+    }
+    console.log(`✔ ${dir}/ (${job.script.scenes.length} láminas)`);
+  } else if (job.still && job.script.format !== "video") {
     // JPG: la API de Instagram solo acepta JPEG para historias con imagen.
     const out = join(job.out, `${job.name}.jpg`);
     await page.evaluate((x) => window.renderFrame(x), duration - 0.01);

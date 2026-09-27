@@ -1,0 +1,207 @@
+{
+ "title": "5 mitos del robot cortacésped",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "hero",
+    "from": 1.0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Mitos"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "5 mitos del <em>robot cortacésped</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Lo que casi todos creen, y lo que pasa en realidad."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Mito 1"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "“Hay que enterrar <s>un cable</s>.”"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "pill",
+     "text": "Realidad"
+    },
+    {
+     "type": "lead",
+     "text": "Los TerraMow se guían con cámaras e IA: reconocen el césped. Sin cable, sin antena, sin obra."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Mito 2"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "“Después hay que <s>juntar el pasto</s>.”"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "pill",
+     "text": "Realidad"
+    },
+    {
+     "type": "lead",
+     "text": "Corta poco y seguido. Los recortes son tan finos que se degradan en uno o dos días y abonan el suelo."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Mito 3"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "“Es peligroso <s>para las mascotas</s>.”"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "pill",
+     "text": "Realidad"
+    },
+    {
+     "type": "lead",
+     "text": "Detecta obstáculos en 3D y los esquiva o se frena. Si lo levantás, las cuchillas se detienen al instante."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Mito 4"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "“Da <s>mucho trabajo</s>.”"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "pill",
+     "text": "Realidad"
+    },
+    {
+     "type": "lead",
+     "text": "Unas 2 horas de mantenimiento por año: cuchillas cada 4 a 8 semanas y limpiar los lentes. Sin nafta ni aceite."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Mito 5"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "“Con la lluvia <s>se arruina</s>.”"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "pill",
+     "text": "Realidad"
+    },
+    {
+     "type": "lead",
+     "text": "Tiene sensor de lluvia: corta la sesión y vuelve solo a la base. Y es resistente al agua (IPX6)."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Tenés otra duda? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

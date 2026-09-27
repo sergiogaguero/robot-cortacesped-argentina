@@ -1,0 +1,239 @@
+{
+ "title": "Cable, RTK o cámara con IA",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "image": "src/assets/step-mapping.jpg"
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Tecnología"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Cable, RTK o <em>cámara con IA</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Cómo sabe un robot dónde cortar, explicado sin vueltas."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Cable perimetral"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Un límite <em>enterrado</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "✗ Obra para enterrarlo en todo el jardín",
+      "✗ Se corta con una pala o una raíz",
+      "✗ Cambiar el jardín es volver a cavar"
+     ],
+     "step": 0.2
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "RTK"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "GPS de precisión <em>con antena</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Muy preciso a cielo abierto",
+      "✗ Pierde señal bajo árboles y cerca de paredes",
+      "✗ Hay que instalar una antena externa"
+     ],
+     "step": 0.2
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "LiDAR"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Láser, como los <em>autos autónomos</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Funciona de noche",
+      "✗ No distingue césped de tierra o canteros",
+      "✗ Le afectan la lluvia intensa y el polvo"
+     ],
+     "step": 0.2
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Cámara con IA (TerraMow)"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Un robot <em>que ve</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Reconoce el césped, los bordes y los obstáculos",
+      "Instalación mínima: solo la base",
+      "Se adapta si cambiás el jardín",
+      "✗ Necesita luz: no corta de noche"
+     ],
+     "step": 0.2
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "En resumen"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Cuál conviene <em>en tu jardín</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "table",
+     "head": [
+      "",
+      "Cable",
+      "RTK",
+      "Cámara IA"
+     ],
+     "hi": 3,
+     "rows": [
+      [
+       "Obra",
+       "Sí",
+       "Antena",
+       "No"
+      ],
+      [
+       "Bajo árboles",
+       "✓",
+       "Falla",
+       "✓"
+      ],
+      [
+       "Reconoce el césped",
+       "No",
+       "No",
+       "Sí"
+      ],
+      [
+       "De noche",
+       "✓",
+       "✓",
+       "No"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿No sabés cuál te conviene? <em>Te asesoramos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

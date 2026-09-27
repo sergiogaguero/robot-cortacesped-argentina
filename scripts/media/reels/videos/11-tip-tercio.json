@@ -1,0 +1,127 @@
+{
+ "title": "Tip: la regla del tercio",
+ "scenes": [
+  {
+   "dur": 1.9,
+   "at": 0.05,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Tip de primavera"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Cortás el pasto <s>muy corto?</s>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "La regla <em>del tercio</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "mega",
+     "text": "<em>1/3</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Nunca cortes más de un tercio de la hoja por vez."
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "clip": "hero",
+    "from": 4.6
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Si cortás de más, <em>el pasto sufre</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "at": 0.6,
+     "items": [
+      "✗ Se pone amarillo",
+      "✗ Se seca más rápido",
+      "✗ Le deja lugar a las malezas"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "comercial",
+    "from": 9.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Por eso el robot corta <em>poquito y seguido</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Siempre dentro de la regla, sin que tengas que acordarte."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Pasto sano, <em>sin pensarlo.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

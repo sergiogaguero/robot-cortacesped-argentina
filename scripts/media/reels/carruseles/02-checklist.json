@@ -1,0 +1,192 @@
+{
+ "title": "Checklist: ¿tu jardín está listo?",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "hero",
+    "from": 0.3
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Checklist"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Tu jardín está listo para <em>un robot?</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Chequealo en 5 puntos antes de comprar."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Superficie"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Más de <em>150 m²</em> de césped"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "En patios más chicos, cortar a mano sigue siendo más rápido y más barato."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Pendientes"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Pendientes de hasta <em>18°</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Es lo máximo que sube de forma segura (32,5 %). Si hay escalones, hace falta una rampa."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Terreno"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Césped <em>sin pozos</em> ni raíces expuestas"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Si el terreno es muy irregular, conviene nivelarlo antes de instalar."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "4",
+     "text": "Base de carga"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Un <em>enchufe</em> cerca del jardín"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Para la base, adonde el robot vuelve solo cuando necesita cargar."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "5",
+     "text": "Señal"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "<em>Wi-Fi o 4G</em> en el jardín"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Para manejarlo desde la app y recibir las actualizaciones."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Cumplís los 5? Mandanos fotos y te decimos <em>qué modelo va.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}
