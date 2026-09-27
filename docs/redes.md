@@ -92,8 +92,9 @@ como mensaje directo. Si alguna vez querés una historia para subir a mano, pon�
   que estar publicado con esos archivos **antes** de la hora del post.
 - GitHub solo ejecuta los workflows programados desde `master`, y los pausa si el repo pasa 60 días sin
   commits (se reactivan desde la pestaña Actions).
-- Los reels salen **sin música**: la API no da acceso a la biblioteca de audio de Instagram. Si un guion
-  tiene `"audio": "media/musica/tema.mp3"`, el render la mezcla (usar solo música libre de derechos).
+- La API no da acceso a la biblioteca de audio de Instagram. Para ponerle música a un reel:
+  `node scripts/media/musica.mjs media/musica/<nombre>.mp3 <duración> [segundo del drop]` compone
+  una pista original (sin derechos de terceros) y `"audio": "media/musica/<nombre>.mp3"` en el guion la suma.
 - Si una corrida falla, la siguiente reintenta hasta 6 horas después de la hora pactada; pasado eso,
   el post se saltea para que no salga a destiempo.
 
