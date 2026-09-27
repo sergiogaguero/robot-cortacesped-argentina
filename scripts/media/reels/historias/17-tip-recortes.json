@@ -1,0 +1,34 @@
+{
+ "title": "No tires los recortes",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "comercial",
+    "from": 12.3
+   },
+   "shade": "dark",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Tip de jardín"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "No tires <em>los recortes</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Dejarlos en el césped devuelve nutrientes al suelo. Es abono gratis."
+    },
+    {
+     "type": "note",
+     "text": "robotscortacesped.com.ar"
+    }
+   ]
+  }
+ ]
+}

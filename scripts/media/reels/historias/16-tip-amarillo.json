@@ -1,0 +1,33 @@
+{
+ "title": "¿Pasto amarillo después de cortar?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "shade": null,
+   "top": [
+    {
+     "type": "pill",
+     "text": "Tip de jardín"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Pasto amarillo <em>después de cortar?</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Seguramente cortaste de más. La regla: nunca más de un tercio de la hoja por vez."
+    },
+    {
+     "type": "note",
+     "text": "robotscortacesped.com.ar"
+    }
+   ]
+  }
+ ]
+}

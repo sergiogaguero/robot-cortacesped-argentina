@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Motor de reels</title>
 <!--
-  Motor de plantillas para reels e historias (1080×1920).
+  Motor de plantillas para reels e historias (1080×1920) y carruseles del feed (1080×1350).
   Arma la animación a partir de un guion JSON (scripts/media/reels/videos/*.json o historias/*.json)
   que scripts/media/reels.mjs le pasa con window.load(guion, cuadros). Después el script llama a
   window.renderFrame(t) cuadro por cuadro. El formato del guion está documentado en
@@ -31,6 +31,11 @@
   .block { position: absolute; left: 80px; right: 80px; display: flex; flex-direction: column; gap: 26px; }
   .block.top { top: 230px; }
   .block.bottom { bottom: 360px; right: 150px; }
+  /* Carruseles del feed: no hay interfaz encima, los márgenes son menores */
+  #stage.feed .block.top { top: 110px; }
+  #stage.feed .block.bottom { bottom: 150px; right: 80px; }
+  .slide-foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-size: 28px; font-weight: 600; color: #9a9a9a; }
+  .slide-foot b { color: var(--primary); font-weight: 700; }
   .block.center { top: 50%; transform: translateY(-50%); }
   .block.centered { align-items: center; text-align: center; right: 80px; }
   .el { will-change: transform, opacity; }
@@ -378,9 +383,21 @@
     const stage = document.getElementById("stage");
     stage.innerHTML = "";
     scenes = [];
+    const [w, hgt] = script.size || [1080, 1920];
+    for (const el of [document.documentElement, document.body, stage]) {
+      el.style.width = `${w}px`;
+      el.style.height = `${hgt}px`;
+    }
+    const carousel = script.format === "carousel";
+    stage.classList.toggle("feed", carousel);
     let t = 0;
-    for (const sd of script.scenes) {
+    for (const [i, sd] of script.scenes.entries()) {
       const s = buildScene(sd, t);
+      if (carousel) {
+        // Pie de cada lámina: cuenta y número de página
+        const n = script.scenes.length;
+        s.root.appendChild(h("div", "slide-foot", `<span>@robotscortacesped_argentina</span><span>${i === 0 ? "<b>Deslizá →</b>" : `${i + 1}/${n}`}</span>`));
+      }
       stage.appendChild(s.root);
       scenes.push(s);
       t += sd.dur;

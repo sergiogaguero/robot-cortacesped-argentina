@@ -1,0 +1,194 @@
+{
+ "title": "Mantenimiento: la guía corta",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "comercial",
+    "from": 7.6
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Guía"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mantenimiento de un robot: <em>la guía corta</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Todo lo que hay que hacer en un año."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Unas <em>2 horas por año</em>"
+    },
+    {
+     "type": "table",
+     "head": [
+      "Tarea",
+      "Cada cuánto",
+      "Tiempo"
+     ],
+     "rows": [
+      [
+       "Cambiar cuchillas",
+       "4 a 8 semanas",
+       "5 min"
+      ],
+      [
+       "Limpieza general",
+       "Semanal",
+       "5 min"
+      ],
+      [
+       "Limpiar los lentes",
+       "Semanal",
+       "10 seg"
+      ],
+      [
+       "Guardado de invierno",
+       "1 vez al año",
+       "20 min"
+      ],
+      [
+       "Actualizaciones",
+       "Automáticas",
+       "0"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "La tarea más importante"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Limpiá los lentes <em>una vez por semana</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Un lente sucio le hace perder precisión para ver bordes y obstáculos. Son 10 segundos con un paño húmedo."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Lo que nunca hay que hacer"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Cuidado con <s>el agua a presión</s>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "step": 0.2,
+     "items": [
+      "✗ Hidrolavadora: resiste lluvia y manguera, no esa presión",
+      "✗ Solventes o productos fuertes: alcanza con agua"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Cuando llega el frío"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Guardado <em>de invierno</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "step": 0.2,
+     "items": [
+      "Limpiarlo bien",
+      "Batería al 50-70 %",
+      "Bajo techo, a más de 0 °C y apagado"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Dudas con el mantenimiento? <em>Te ayudamos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}
