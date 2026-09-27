@@ -4,7 +4,7 @@ import ArticleCard from "@/components/ArticleCard.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAFinal from "@/components/CTAFinal.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { ldBreadcrumb } from "@/lib/schema";
+import { ldBreadcrumb, ldItemList } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/seo";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -12,7 +12,10 @@ const crumbs = [
   { name: "Inicio", href: "/" },
   { name: "Guías", href: "/blog" },
 ];
-const jsonLd = [ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) })))];
+const jsonLd = [
+  ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))),
+  ...(posts.length > 0 ? [ldItemList(posts.map((post) => ({ name: post.data.title, url: absoluteUrl(`/blog/${post.id}`) })))] : []),
+];
 ---
 <BaseLayout
   title="Guías sobre robots cortacésped | Blog"

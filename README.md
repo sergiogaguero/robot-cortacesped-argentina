@@ -82,7 +82,7 @@ El original actual (`media/hero-original.mp4`) es vertical (810×1080); un video
 
 ## Reglas que el build hace cumplir
 
-- La palabra prohibida (ver `scripts/check/config.mjs`) no puede aparecer en ninguna página (usar "Distribuidor autorizado de TerraMow", "garantía del fabricante").
+- La palabra prohibida (ver `scripts/check/config.mjs`) no puede aparecer en ninguna página ni en `llms.txt` (usar "Distribuidor autorizado de TerraMow", "garantía del fabricante").
 - Todo link interno debe existir.
 - Cada página: un solo `<h1>`, `<title>` ≤ 60 caracteres, descripción de 50-160, canónica correcta, imagen de preview existente.
 - La home no puede superar 500 KB (sin contar el video).

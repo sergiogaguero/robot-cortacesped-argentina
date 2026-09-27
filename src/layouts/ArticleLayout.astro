@@ -33,7 +33,15 @@ const jsonLd = [
   ldArticle({ title: d.title, description: d.description, url, imageUrl: absoluteUrl(cover.src), pubDate: d.pubDate, updatedDate: d.updatedDate, summary: d.summary, tags: d.tags }),
 ];
 ---
-<BaseLayout title={d.title} description={d.description} ogImage={og.src} ogType="article" jsonLd={jsonLd}>
+<BaseLayout
+  title={d.title}
+  description={d.description}
+  ogImage={og.src}
+  ogImageAlt={d.coverAlt}
+  ogType="article"
+  article={{ publishedTime: d.pubDate, modifiedTime: d.updatedDate, tags: d.tags }}
+  jsonLd={jsonLd}
+>
   <article class="wrap pt-24 pb-16 lg:pt-32">
     <div class="mx-auto max-w-3xl">
       <Breadcrumbs items={crumbs} />

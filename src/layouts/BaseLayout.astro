@@ -16,9 +16,11 @@ interface Props {
   ogImage?: string;
   ogType?: "website" | "product" | "article";
   noindex?: boolean;
+  ogImageAlt?: string;
+  article?: { publishedTime: Date; modifiedTime?: Date; tags: string[] };
   jsonLd?: object[];
 }
-const { title, description, ogImage, ogType, noindex, jsonLd = [] } = Astro.props;
+const { title, description, ogImage, ogType, noindex, ogImageAlt, article, jsonLd = [] } = Astro.props;
 const schemas = [ldOrganization(await getBrands()), ldWebSite(), ...jsonLd];
 ---
 <!doctype html>
@@ -32,7 +34,8 @@ const schemas = [ldOrganization(await getBrands()), ldWebSite(), ...jsonLd];
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={`${site.name} — Guías`} href="/rss.xml" />
-    <SEO title={title} description={description} ogImage={ogImage} ogType={ogType} noindex={noindex} />
+    <link rel="alternate" type="text/markdown" title="Resumen para modelos de lenguaje (llms.txt)" href="/llms.txt" />
+    <SEO title={title} description={description} ogImage={ogImage} ogType={ogType} noindex={noindex} ogImageAlt={ogImageAlt} article={article} />
     {schemas.map((s) => <JsonLd data={s} />)}
     {gaId && (
       <>

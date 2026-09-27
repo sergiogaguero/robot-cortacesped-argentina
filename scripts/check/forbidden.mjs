@@ -11,7 +11,7 @@ const NON_JSONLD_SCRIPT = /<script(?![^>]*application\/ld\+json)[^>]*>[\s\S]*?<\
 
 export function checkForbidden(distDir) {
   const errors = [];
-  for (const file of walk(distDir, [".html", ".xml"])) {
+  for (const file of walk(distDir, [".html", ".xml", ".txt"])) {
     const text = readFileSync(file, "utf8");
     const searched = file.endsWith(".html") ? text.replace(NON_JSONLD_SCRIPT, "") : text;
     const m = FORBIDDEN.exec(searched);

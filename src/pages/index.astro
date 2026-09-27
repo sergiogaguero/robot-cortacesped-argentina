@@ -13,7 +13,8 @@ import { site } from "@/config/site";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { withPublishedLinks } from "@/lib/faq-links";
 import { getBrands, getProducts, joinBrands } from "@/lib/products";
-import { ldBreadcrumb, ldFaq } from "@/lib/schema";
+import { ldBreadcrumb, ldFaq, ldItemList } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
 
 const products = await getProducts();
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
@@ -27,7 +28,11 @@ const title = `Robots Cortacésped con IA en Argentina | ${joinBrands(brands)}`;
 const description = brands.length > 1
   ? `Robots cortacésped ${joinBrands(brands)} con cámaras, LiDAR e IA, sin cable perimetral: para jardines y trabajo pesado. Garantía y soporte local.`
   : "Robots cortacésped con navegación por cámara e IA, sin cables perimetrales. Modelos TerraMow V600 y V1000, garantía y soporte local. Consultá por WhatsApp.";
-const jsonLd = [ldBreadcrumb([{ name: "Inicio", url: `${site.url}/` }]), ldFaq(faqs)];
+const jsonLd = [
+  ldBreadcrumb([{ name: "Inicio", url: `${site.url}/` }]),
+  ldItemList(products.map((p) => ({ name: p.data.name, url: absoluteUrl(`/productos/${p.data.slug}`) }))),
+  ldFaq(faqs),
+];
 ---
 <BaseLayout title={title} description={description} jsonLd={jsonLd}>
   <Hero />
