@@ -1,0 +1,386 @@
+<title>Centro de redes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --bg: #f2f4ee; --surface: #ffffff; --surface-2: #f7f9f3; --ink: #172015; --muted: #5d6756; --line: #dbe1d1;
+    --accent: #4b830a; --accent-soft: #e5f1cd; --accent-ink: #20380a;
+    --ok: #2f7d32; --ok-soft: #e3f3e0; --warn: #a15c0b; --warn-soft: #fbecd8; --err: #b3261e; --err-soft: #fbe3e1;
+    --wait: #55607a; --wait-soft: #e8ebf2;
+    --shadow: 0 1px 2px rgba(23,32,21,.06), 0 8px 24px rgba(23,32,21,.06);
+    --scrim: rgba(12,16,10,.55);
+    --display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+    --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0f130d; --surface: #171c14; --surface-2: #1c2218; --ink: #e7eddf; --muted: #9ba592; --line: #2a3224;
+      --accent: #9bd62a; --accent-soft: #23311a; --accent-ink: #d9f5a6;
+      --ok: #7fd083; --ok-soft: #1c2e1c; --warn: #f0a15a; --warn-soft: #33261a; --err: #ff8a80; --err-soft: #3a1d1b;
+      --wait: #a9b4cc; --wait-soft: #22262f; --shadow: none; --scrim: rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f130d; --surface: #171c14; --surface-2: #1c2218; --ink: #e7eddf; --muted: #9ba592; --line: #2a3224;
+    --accent: #9bd62a; --accent-soft: #23311a; --accent-ink: #d9f5a6;
+    --ok: #7fd083; --ok-soft: #1c2e1c; --warn: #f0a15a; --warn-soft: #33261a; --err: #ff8a80; --err-soft: #3a1d1b;
+    --wait: #a9b4cc; --wait-soft: #22262f; --shadow: none; --scrim: rgba(0,0,0,.7);
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); padding-inline: 16px; margin: 0; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 80px; display: flex; flex-direction: column; gap: 28px; }
+  h1, h2, h3 { font-family: var(--display); margin: 0; letter-spacing: -.02em; text-wrap: balance; }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.05; font-weight: 800; }
+  h2 { font-size: 22px; font-weight: 800; }
+  p { margin: 0; }
+  .muted { color: var(--muted); }
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .eyebrow { font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  button { font: 600 14px/1 var(--body); color: inherit; cursor: pointer; }
+  button:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  header.top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: flex-end; }
+  .health { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border-radius: 999px; font-size: 13px; font-weight: 600; background: var(--surface); border: 1px solid var(--line); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+  .ok { color: var(--ok); } .warn { color: var(--warn); } .err { color: var(--err); } .wait { color: var(--wait); }
+
+  .summary { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+  .next { padding: 16px; display: grid; grid-template-columns: 64px 1fr; gap: 14px; align-items: center; cursor: pointer; }
+  .next img { width: 64px; aspect-ratio: 9/16; object-fit: cover; border-radius: 8px; background: #0d0d0d; }
+  .next .when { font: 700 13px var(--mono); color: var(--accent); }
+  .next .title { font: 700 17px/1.25 var(--display); }
+  .count { padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+  .count b { font: 800 28px/1 var(--display); font-variant-numeric: tabular-nums; }
+  .count span { font-size: 13px; color: var(--muted); }
+
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+  .seg { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 2px; flex-wrap: wrap; }
+  .seg button { border: 0; background: transparent; padding: 8px 12px; border-radius: 9px; color: var(--muted); }
+  .seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent-ink); }
+  .ask-all { border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 10px 14px; border-radius: 10px; }
+  :root[data-theme="dark"] .ask-all { color: #0f130d; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ask-all { color: #0f130d; } }
+
+  .days { display: flex; flex-direction: column; gap: 6px; }
+  .day { display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .day.today .num { color: var(--accent); }
+  .dd { display: flex; flex-direction: column; gap: 2px; }
+  .dd .dow { font: 700 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .dd .num { font: 800 30px/1 var(--display); }
+  .dd .mon { font-size: 12px; color: var(--muted); }
+  .posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+  .post { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 10px; text-align: left; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); width: 100%; }
+  .post:hover { border-color: var(--accent); }
+  .post img { width: 56px; aspect-ratio: 9/16; object-fit: cover; border-radius: 7px; background: #0d0d0d; }
+  .post.feed img { aspect-ratio: 4/5; align-self: start; }
+  .post .body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .time { font: 700 13px var(--mono); }
+  .tag { font: 600 11px/1 var(--body); padding: 4px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .ptitle { font-weight: 700; font-size: 14.5px; line-height: 1.3; }
+  .nets { display: flex; gap: 6px; flex-wrap: wrap; }
+  .net { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; }
+  .net.ok { background: var(--ok-soft); } .net.warn { background: var(--warn-soft); } .net.err { background: var(--err-soft); } .net.wait { background: var(--wait-soft); }
+
+  .log { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+  .log ol { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .log li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; font-size: 14px; }
+  .how { padding: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .how div { display: flex; flex-direction: column; gap: 4px; }
+  .how b { font-family: var(--display); font-size: 16px; }
+
+  /* Detalle */
+  dialog { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100%; height: 100%; }
+  dialog::backdrop { background: var(--scrim); }
+  .sheet { background: var(--surface); color: var(--ink); max-width: 960px; margin: 4vh auto; border-radius: 20px; display: grid; grid-template-columns: minmax(260px, 360px) 1fr; overflow: hidden; max-height: 92vh; }
+  .stage { background: #0a0a0a; display: flex; align-items: center; justify-content: center; position: relative; min-height: 420px; }
+  .stage video, .stage img { width: 100%; height: 100%; max-height: 92vh; object-fit: contain; display: block; }
+  .nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); color: #111; font-size: 20px; }
+  .nav.prev { left: 10px; } .nav.next { right: 10px; }
+  .dots { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; }
+  .dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.4); }
+  .dots i.on { background: #fff; }
+  .side { padding: 22px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; }
+  .side-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+  .close { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; width: 36px; height: 36px; font-size: 18px; flex: none; }
+  .kv { display: grid; grid-template-columns: 110px 1fr; gap: 8px 12px; font-size: 14px; }
+  .kv dt { color: var(--muted); } .kv dd { margin: 0; }
+  .caption { white-space: pre-wrap; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px; font-size: 14px; overflow-wrap: anywhere; max-height: 220px; overflow-y: auto; }
+  .ask { border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips button { border: 1px solid var(--line); background: var(--surface-2); padding: 7px 10px; border-radius: 999px; font-size: 13px; font-weight: 500; }
+  textarea { width: 100%; min-height: 96px; resize: vertical; font: 15px/1.45 var(--body); color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+  .send { align-self: flex-start; border: 0; background: var(--accent); color: #fff; padding: 11px 16px; border-radius: 10px; }
+  :root[data-theme="dark"] .send { color: #0f130d; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .send { color: #0f130d; } }
+  .send:disabled { opacity: .5; cursor: default; }
+  .msg { font-size: 13px; }
+
+  @media (max-width: 760px) {
+    .summary { grid-template-columns: repeat(3, 1fr); }
+    .count { padding: 12px; } .count b { font-size: 24px; }
+    .next { grid-column: 1 / -1; }
+    .day { grid-template-columns: 1fr; gap: 8px; }
+    .dd { flex-direction: row; align-items: baseline; gap: 8px; }
+    .dd .num { font-size: 22px; }
+    .posts { grid-template-columns: 1fr; }
+    .sheet { grid-template-columns: 1fr; margin: 0; border-radius: 0; max-height: 100vh; height: 100%; overflow-y: auto; }
+    .stage { min-height: 0; height: 58vh; }
+    .side { overflow: visible; }
+    .log li { grid-template-columns: 1fr; gap: 2px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <p class="eyebrow">Robot Cortacésped Argentina · Instagram y Facebook</p>
+      <h1>Centro de redes</h1>
+    </div>
+    <div class="health" id="health"></div>
+  </header>
+
+  <section class="summary" id="summary" aria-label="Resumen"></section>
+
+  <section style="display:flex;flex-direction:column;gap:12px">
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Filtrar por tipo" id="fType"></div>
+      <div class="seg" role="group" aria-label="Filtrar por estado" id="fState"></div>
+    </div>
+    <div class="days" id="days"></div>
+  </section>
+
+  <section class="card how" aria-label="Cómo pedir cambios">
+    <div><b>1. Abrí una publicación</b><span class="muted">Tocá cualquier tarjeta para ver el video, la imagen o el carrusel completo, con su texto.</span></div>
+    <div><b>2. Pedime el cambio</b><span class="muted">Escribilo como me lo dirías a mí: “cambiá el horario a las 21”, “sacá esta historia”, “el título más corto”.</span></div>
+    <div><b>3. Lo aplico y reprogramo</b><span class="muted">Te respondo en el comentario, rehago la pieza si hace falta, la subo y actualizo esta página.</span></div>
+    <div style="justify-content:flex-end"><button type="button" class="ask-all" id="askAll">Pedir un cambio general</button></div>
+  </section>
+
+  <section class="card log" aria-label="Historial de cambios">
+    <h2>Historial de cambios</h2>
+    <ol id="log"></ol>
+  </section>
+
+  <p class="muted" style="font-size:13px" id="foot"></p>
+</div>
+
+<dialog id="dlg" aria-label="Detalle de la publicación">
+  <div class="sheet" id="sheet"></div>
+</dialog>
+
+<script>
+  const DATA = __DATA__;
+  const TYPES = { reel: "Reel", story: "Historia", carousel: "Carrusel" };
+  const DOW = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+  const MON = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch {} },
+  };
+  const synced = DATA.syncedAt ? new Date(DATA.syncedAt) : null;
+
+  // Estado de una publicación en una red, según lo último que se sincronizó.
+  function netState(p, key) {
+    const s = p.status?.[key];
+    if (s?.publicado) return { cls: "ok", label: "Publicado", detail: `Publicado el ${fmtFull(s.publicado)}` };
+    if (s?.error) return { cls: key === "fb" ? "warn" : "err", label: key === "fb" ? "Con aviso" : "Error", detail: s.error };
+    const when = new Date(p.when);
+    if (!synced || when > synced) return when > new Date() ? { cls: "wait", label: "Programado", detail: "Se publica solo a la hora indicada." } : { cls: "wait", label: "Por verificar", detail: "Ya pasó la hora; se confirma en la próxima sincronización." };
+    if (synced - when > 6 * 3600e3) return { cls: "err", label: "No salió", detail: "Pasaron más de 6 horas sin publicarse." };
+    return { cls: "wait", label: "En curso", detail: "Se está publicando." };
+  }
+  function overall(p) {
+    const ig = netState(p, "ig");
+    if (ig.cls === "err") return "err";
+    if (ig.cls === "ok") return "ok";
+    return new Date(p.when) > new Date() ? "wait" : "pend";
+  }
+  const pad = (n) => String(n).padStart(2, "0");
+  function fmtFull(iso) {
+    const d = new Date(iso);
+    return d.toLocaleString("es-AR", { timeZone: "America/Argentina/Buenos_Aires", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  }
+  function dayLabel(dstr) {
+    const [y, m, d] = dstr.split("-").map(Number);
+    const dt = new Date(Date.UTC(y, m - 1, d, 12));
+    return { dow: DOW[dt.getUTCDay()], num: d, mon: MON[m - 1] };
+  }
+
+  // ——— Encabezado ———
+  function renderHealth() {
+    const h = DATA.health;
+    $("health").innerHTML = h.map((x) => `<span class="pill ${x.cls}" title="${esc(x.detail)}"><span class="dot"></span>${esc(x.label)}</span>`).join("");
+  }
+  function renderSummary() {
+    const now = new Date();
+    const next = DATA.posts.find((p) => new Date(p.when) > now);
+    const counts = { ok: 0, wait: 0, err: 0, pend: 0 };
+    for (const p of DATA.posts) counts[overall(p)]++;
+    const nextHtml = next
+      ? `<div class="card next" role="button" tabindex="0" data-open="${esc(next.id)}"><img src="${esc(next.thumb)}" alt=""><div style="display:flex;flex-direction:column;gap:4px"><span class="eyebrow">Próxima publicación</span><span class="title">${esc(next.title)}</span><span class="when">${esc(fmtFull(next.when))} · ${TYPES[next.type]}</span></div></div>`
+      : `<div class="card next"><div></div><div><span class="eyebrow">Próxima publicación</span><p class="title">No queda nada programado</p><p class="muted">Pedime el calendario siguiente.</p></div></div>`;
+    $("summary").innerHTML = nextHtml +
+      `<div class="card count"><b class="ok">${counts.ok}</b><span>publicadas</span></div>` +
+      `<div class="card count"><b>${counts.wait + counts.pend}</b><span>programadas${counts.pend ? ` (${counts.pend} por verificar)` : ""}</span></div>` +
+      `<div class="card count"><b class="${counts.err ? "err" : ""}">${counts.err}</b><span>con error</span></div>`;
+  }
+
+  // ——— Filtros ———
+  let fType = store.get("fType") || "all";
+  let fState = store.get("fState") || "all";
+  function seg(el, items, current, onPick) {
+    el.innerHTML = items.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${v === current}">${l}</button>`).join("");
+    el.onclick = (e) => { const b = e.target.closest("button"); if (b) onPick(b.dataset.v); };
+  }
+  function renderFilters() {
+    seg($("fType"), [["all", "Todo"], ["reel", "Reels"], ["story", "Historias"], ["carousel", "Carruseles"]], fType, (v) => { fType = v; store.set("fType", v); renderFilters(); renderDays(); });
+    seg($("fState"), [["all", "Cualquier estado"], ["wait", "Programadas"], ["ok", "Publicadas"], ["err", "Con error"]], fState, (v) => { fState = v; store.set("fState", v); renderFilters(); renderDays(); });
+  }
+
+  // ——— Calendario ———
+  function renderDays() {
+    const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Argentina/Buenos_Aires" });
+    const list = DATA.posts.filter((p) => (fType === "all" || p.type === fType) && (fState === "all" || (fState === "wait" ? ["wait", "pend"].includes(overall(p)) : overall(p) === fState)));
+    const byDay = new Map();
+    for (const p of list) { const d = p.when.slice(0, 10); if (!byDay.has(d)) byDay.set(d, []); byDay.get(d).push(p); }
+    if (!list.length) { $("days").innerHTML = `<p class="muted" style="padding:20px 0">No hay publicaciones con ese filtro.</p>`; return; }
+    $("days").innerHTML = [...byDay.entries()].map(([d, ps]) => {
+      const l = dayLabel(d);
+      return `<div class="day${d === today ? " today" : ""}"><div class="dd"><span class="dow">${d === today ? "Hoy" : l.dow}</span><span class="num">${l.num}</span><span class="mon">${l.mon}</span></div><div class="posts">${ps.map(card).join("")}</div></div>`;
+    }).join("");
+  }
+  function card(p) {
+    const nets = [["ig", "Instagram"], ...(p.facebook ? [["fb", "Facebook"]] : [])].map(([k, n]) => { const s = netState(p, k); return `<span class="net ${s.cls}"><span class="dot"></span>${n}: ${s.label}</span>`; }).join("");
+    return `<button type="button" class="post${p.type === "carousel" ? " feed" : ""}" data-open="${esc(p.id)}"><img src="${esc(p.thumb)}" alt="" loading="lazy"><span class="body"><span class="meta"><span class="time">${p.when.slice(11, 16)}</span><span class="tag">${TYPES[p.type]}${p.media.length > 1 ? ` · ${p.media.length} láminas` : ""}</span></span><span class="ptitle">${esc(p.title)}</span><span class="nets">${nets}</span></span></button>`;
+  }
+
+  // ——— Detalle y pedidos ———
+  let current = null, slide = 0, comments = null, commentsReady = false;
+  function openPost(id) {
+    current = DATA.posts.find((p) => p.id === id);
+    slide = 0;
+    renderSheet();
+    $("dlg").showModal();
+  }
+  function openGeneral() { current = null; renderSheet(); $("dlg").showModal(); }
+  function media() {
+    if (!current) return `<div style="color:#fff;padding:30px;text-align:center"><p style="font:800 22px var(--display)">Pedido general</p><p style="opacity:.7;margin-top:8px">Para cambios de todo el calendario: horarios, frecuencia, contenido nuevo o pausar todo.</p></div>`;
+    const m = current.media[slide];
+    const el = m.endsWith(".mp4") ? `<video src="${esc(m)}" poster="${esc(current.thumb)}" controls playsinline muted autoplay loop></video>` : `<img src="${esc(m)}" alt="Vista previa">`;
+    if (current.media.length < 2) return el;
+    return el + `<button type="button" class="nav prev" data-nav="-1" aria-label="Anterior">‹</button><button type="button" class="nav next" data-nav="1" aria-label="Siguiente">›</button><div class="dots">${current.media.map((_, i) => `<i class="${i === slide ? "on" : ""}"></i>`).join("")}</div>`;
+  }
+  const SUGGEST = {
+    post: ["Cambiá el horario a…", "Cambiá el texto del post", "Rehacé el video con…", "Sacá esta publicación", "Publicala solo en Instagram"],
+    general: ["Pausá todo hasta nuevo aviso", "Sumá contenido sobre…", "Armá el calendario de las próximas 2 semanas", "Usá este video mío: te lo mando en el chat"],
+  };
+  function renderSheet() {
+    const p = current;
+    const draftKey = "draft:" + (p?.id ?? "general");
+    const kv = p ? `<dl class="kv"><dt>Cuándo</dt><dd>${esc(fmtFull(p.when))}</dd><dt>Tipo</dt><dd>${TYPES[p.type]}${p.media.length > 1 ? ` (${p.media.length} láminas)` : ""}</dd>${[["ig", "Instagram"], ...(p.facebook ? [["fb", "Facebook"]] : [])].map(([k, n]) => { const s = netState(p, k); return `<dt>${n}</dt><dd><span class="net ${s.cls}"><span class="dot"></span>${s.label}</span> <span class="muted" style="font-size:13px">${esc(s.detail)}</span></dd>`; }).join("")}<dt>ID</dt><dd class="mono" style="font-size:12px;overflow-wrap:anywhere">${esc(p.id)}</dd></dl>` : "";
+    $("sheet").innerHTML = `
+      <div class="stage" id="stage">${media()}</div>
+      <div class="side">
+        <div class="side-head"><div style="display:flex;flex-direction:column;gap:6px"><span class="eyebrow">${p ? TYPES[p.type] : "Todo el calendario"}</span><h2>${esc(p ? p.title : "Pedido general")}</h2></div><button type="button" class="close" id="close" aria-label="Cerrar">✕</button></div>
+        ${kv}
+        ${p?.caption ? `<div><p class="eyebrow" style="margin-bottom:8px">Texto del post</p><div class="caption">${esc(p.caption)}</div></div>` : p ? `<p class="muted" style="font-size:13px">Las historias no llevan texto aparte: todo está en la imagen o el video.</p>` : ""}
+        <div class="ask">
+          <label for="req"><b>Pedirle un cambio a Claude</b></label>
+          <div class="chips">${SUGGEST[p ? "post" : "general"].map((s) => `<button type="button" data-sug="${esc(s)}">${esc(s)}</button>`).join("")}</div>
+          <textarea id="req" maxlength="1500" placeholder="${p ? "Ej.: pasalo al jueves a las 20 y cambiá la primera frase por…" : "Ej.: la semana que viene quiero más contenido de mantenimiento"}"></textarea>
+          <button type="button" class="send" id="send">Enviar a Claude</button>
+          <p class="msg muted" id="msg" role="status"></p>
+        </div>
+      </div>`;
+    const ta = $("req");
+    ta.value = store.get(draftKey) || "";
+    ta.oninput = () => store.set(draftKey, ta.value);
+    $("close").onclick = () => $("dlg").close();
+    $("sheet").querySelectorAll("[data-sug]").forEach((b) => (b.onclick = () => { ta.value = b.dataset.sug; ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); store.set(draftKey, ta.value); }));
+    $("sheet").querySelectorAll("[data-nav]").forEach((b) => (b.onclick = () => { slide = (slide + Number(b.dataset.nav) + current.media.length) % current.media.length; $("stage").innerHTML = media(); bindNav(); }));
+    $("send").onclick = () => send(ta, draftKey);
+    checkSend();
+  }
+  function bindNav() {
+    $("sheet").querySelectorAll("[data-nav]").forEach((b) => (b.onclick = () => { slide = (slide + Number(b.dataset.nav) + current.media.length) % current.media.length; $("stage").innerHTML = media(); bindNav(); }));
+  }
+  async function checkSend() {
+    const btn = $("send"), msg = $("msg");
+    if (!comments) { btn.disabled = true; msg.textContent = commentsReady ? "Desde esta vista no se pueden enviar pedidos: mandámelos por el chat." : "Cargando la conexión con Claude…"; return; }
+    let can = "off";
+    try { can = await comments.canSendToClaude(); } catch {}
+    if (can === "available") { btn.disabled = false; msg.textContent = "Tu pedido queda como comentario en esta página y me llega a mí."; return; }
+    btn.disabled = false;
+    btn.textContent = "Dejar comentario";
+    msg.textContent = can === "no_session"
+      ? "No hay una sesión de Claude escuchando ahora mismo. Dejalo como comentario y avisame en el chat."
+      : "Desde esta vista no se puede enviar directo a Claude: se abre el comentario y me avisás en el chat.";
+  }
+  async function send(ta, draftKey) {
+    const text = ta.value.trim();
+    const btn = $("send"), msg = $("msg");
+    if (!text) { msg.textContent = "Escribí qué querés cambiar."; ta.focus(); return; }
+    const full = current ? `[${current.id}] ${text}` : `[general] ${text}`;
+    if (!comments) return;
+    btn.disabled = true;
+    msg.textContent = "Enviando…";
+    try {
+      const can = await comments.canSendToClaude().catch(() => "off");
+      const anchor = await comments.anchorFor($("sheet"));
+      if (can === "available") {
+        await comments.sendToClaude({ anchor, text: full });
+        store.set(draftKey, "");
+        ta.value = "";
+        msg.textContent = "Enviado. Te respondo en el comentario cuando esté aplicado; esta página se actualiza sola.";
+      } else {
+        const r = await comments.openComposer({ element: $("sheet") });
+        msg.textContent = r.opened ? "Se abrió el comentario: pegá tu pedido y avisame en el chat." : "No se pudo abrir el comentario ahora. Probá de nuevo.";
+      }
+    } catch (e) {
+      const code = e?.code;
+      msg.textContent = code === "consent_required" ? "Para enviarlo, aceptá el permiso de comentarios que te pide claude.ai. Tu texto quedó guardado."
+        : code === "forbidden" ? "Los comentarios desde la página están desactivados para vos. Tu texto quedó guardado: mandámelo por el chat."
+        : code === "rate_limited" ? "Esperá un momento antes de mandar otro pedido."
+        : code === "claude_unavailable" ? "Claude no puede recibirlo ahora mismo. Tu texto quedó guardado: probá en un rato o mandámelo por el chat."
+        : "No se pudo enviar. Tu texto quedó guardado; probá de nuevo en un momento.";
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  document.addEventListener("click", (e) => {
+    const o = e.target.closest("[data-open]");
+    if (o) openPost(o.dataset.open);
+  });
+  document.addEventListener("keydown", (e) => {
+    const o = e.target.closest?.("[data-open]");
+    if (o && (e.key === "Enter" || e.key === " ") && o.tagName !== "BUTTON") { e.preventDefault(); openPost(o.dataset.open); }
+  });
+  $("dlg").addEventListener("click", (e) => { if (e.target === $("dlg")) $("dlg").close(); });
+  $("dlg").addEventListener("close", () => { $("sheet").innerHTML = ""; });
+  $("askAll").onclick = openGeneral;
+
+  $("log").innerHTML = DATA.changelog.map((c) => `<li><span class="mono muted" style="font-size:13px">${esc(c.date)}</span><span>${esc(c.text)}</span></li>`).join("");
+  $("foot").textContent = `Estado sincronizado desde GitHub Actions${synced ? ` el ${fmtFull(DATA.syncedAt)}` : ""}. Los horarios son de Argentina. Las publicaciones salen solas; esta página las muestra y te deja pedir cambios.`;
+
+  renderHealth();
+  renderSummary();
+  renderFilters();
+  renderDays();
+
+  (async () => {
+    try { comments = await window.claude?.use?.("comments"); } catch { comments = null; }
+    commentsReady = true;
+    if ($("dlg").open) checkSend();
+  })();
+</script>
