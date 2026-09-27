@@ -1,16 +1,25 @@
 {
-  "syncedAt": null,
-  "estado": {},
+  "syncedAt": "2026-09-27T15:08:00Z",
+  "estado": {
+    "2026-09-27-reel-07-domingo": {
+      "mediaId": "18223962325330618",
+      "publicado": "2026-09-27T13:19:44.946Z"
+    },
+    "2026-09-27-reel-07-domingo#fb": {
+      "error": "Falta el permiso pages_manage_posts en el token",
+      "intento": "2026-09-27T14:41:35.297Z"
+    }
+  },
   "health": [
     {
       "cls": "ok",
-      "label": "Instagram conectado",
-      "detail": "Verificado con la prueba del 27/9 (@robotscortacesped_argentina)."
+      "label": "Instagram publicando",
+      "detail": "El primer reel salió el 27/9 a las 10:19."
     },
     {
       "cls": "warn",
       "label": "Facebook: falta un permiso",
-      "detail": "Hay que sumar pages_manage_posts al token para publicar en la página."
+      "detail": "Meta rechaza las publicaciones por falta de pages_manage_posts. Instagram no se ve afectado."
     },
     {
       "cls": "ok",
