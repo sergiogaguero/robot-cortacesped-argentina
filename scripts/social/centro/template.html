@@ -276,7 +276,7 @@
   function media() {
     if (!current) return `<div style="color:#fff;padding:30px;text-align:center"><p style="font:800 22px var(--display)">Pedido general</p><p style="opacity:.7;margin-top:8px">Para cambios de todo el calendario: horarios, frecuencia, contenido nuevo o pausar todo.</p></div>`;
     const m = current.media[slide];
-    const el = m.endsWith(".mp4") ? `<video src="${esc(m)}" poster="${esc(current.thumb)}" controls playsinline muted autoplay loop></video>` : `<img src="${esc(m)}" alt="Vista previa">`;
+    const el = m.endsWith(".mp4") ? `<video src="${esc(m)}" poster="${esc(current.thumb)}" controls playsinline autoplay loop></video>` : `<img src="${esc(m)}" alt="Vista previa">`;
     if (current.media.length < 2) return el;
     return el + `<button type="button" class="nav prev" data-nav="-1" aria-label="Anterior">‹</button><button type="button" class="nav next" data-nav="1" aria-label="Siguiente">›</button><div class="dots">${current.media.map((_, i) => `<i class="${i === slide ? "on" : ""}"></i>`).join("")}</div>`;
   }

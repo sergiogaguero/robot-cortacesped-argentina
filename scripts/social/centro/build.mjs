@@ -37,7 +37,7 @@ function preview(file) {
   if (file.endsWith(".mp4")) {
     const poster = dst.replace(/\.mp4$/, ".jpg");
     if (stale) {
-      ff("-i", src, "-vf", "scale=540:-2", "-c:v", "libx264", "-crf", "27", "-preset", "veryfast", "-an", "-movflags", "+faststart", dst);
+      ff("-i", src, "-vf", "scale=540:-2", "-c:v", "libx264", "-crf", "27", "-preset", "veryfast", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", dst);
       ff("-ss", "1.3", "-i", src, "-frames:v", "1", "-vf", "scale=270:-2", "-q:v", "4", poster);
     }
     return { media: `p/${file}`, thumb: `p/${file.replace(/\.mp4$/, ".jpg")}` };

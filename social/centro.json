@@ -2,13 +2,38 @@
   "syncedAt": null,
   "estado": {},
   "health": [
-    {"cls": "ok", "label": "Instagram conectado", "detail": "Verificado con la prueba del 27/9 (@robotscortacesped_argentina)."},
-    {"cls": "warn", "label": "Facebook: falta un permiso", "detail": "Hay que sumar pages_manage_posts al token para publicar en la página."},
-    {"cls": "ok", "label": "Publicación automática activa", "detail": "GitHub Actions revisa el calendario cada 30 minutos."}
+    {
+      "cls": "ok",
+      "label": "Instagram conectado",
+      "detail": "Verificado con la prueba del 27/9 (@robotscortacesped_argentina)."
+    },
+    {
+      "cls": "warn",
+      "label": "Facebook: falta un permiso",
+      "detail": "Hay que sumar pages_manage_posts al token para publicar en la página."
+    },
+    {
+      "cls": "ok",
+      "label": "Publicación automática activa",
+      "detail": "GitHub Actions revisa el calendario cada 30 minutos."
+    }
   ],
   "changelog": [
-    {"date": "27 sep", "text": "Sumados 4 carruseles, 2 reels y 4 historias de tips de jardinería. Todo se publica también en Facebook."},
-    {"date": "27 sep", "text": "Las historias con sticker pasan a “Respondé esta historia” y cada reel se comparte solo en historias a las 20:30."},
-    {"date": "26 sep", "text": "Calendario inicial: 10 reels y 16 historias del 28/9 al 11/10."}
+    {
+      "date": "27 sep",
+      "text": "Reel “De la caja al jardín”: música original, con el golpe justo cuando aparece “Ya está cortando”."
+    },
+    {
+      "date": "27 sep",
+      "text": "Sumados 4 carruseles, 2 reels y 4 historias de tips de jardinería. Todo se publica también en Facebook."
+    },
+    {
+      "date": "27 sep",
+      "text": "Las historias con sticker pasan a “Respondé esta historia” y cada reel se comparte solo en historias a las 20:30."
+    },
+    {
+      "date": "26 sep",
+      "text": "Calendario inicial: 10 reels y 16 historias del 28/9 al 11/10."
+    }
   ]
 }
