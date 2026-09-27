@@ -1,0 +1,139 @@
+{
+ "title": "Esto no es un comercial",
+ "audio": "media/musica/jardin-real.mp3",
+ "scenes": [
+  {
+   "dur": 1.8,
+   "align": "center",
+   "at": 0.05,
+   "bg": {
+    "style": "black"
+   },
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Esto no es <em>un comercial.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.0,
+   "cut": true,
+   "at": 0.1,
+   "bg": {
+    "clip": "casa",
+    "from": 0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "pill",
+     "text": "Filmado con el celu"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Un jardín real, <em>un robot real.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "cut": true,
+   "at": 0.1,
+   "bg": {
+    "clip": "arboles",
+    "from": 3.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Esquiva <em>los árboles</em> solo."
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.1,
+   "bg": {
+    "clip": "bordes",
+    "from": 2.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Sigue el borde <em>del cantero.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "at": 0.1,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 1.0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Gira, vuelve <em>y sigue.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.0,
+   "cut": true,
+   "at": 0.1,
+   "bg": {
+    "clip": "pasada",
+    "from": 0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Sin cables. <em>Sin antenas.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Querés verlo <em>en tu jardín?</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

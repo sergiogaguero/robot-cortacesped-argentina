@@ -1,0 +1,122 @@
+{
+ "title": "POV: sos el pasto",
+ "audio": "media/musica/pov-pasto.mp3",
+ "scenes": [
+  {
+   "dur": 1.6,
+   "at": 0.05,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 0,
+    "zoom": [
+     1.06,
+     1.0
+    ]
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "pill",
+     "text": "POV"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Sos el pasto."
+    }
+   ]
+  },
+  {
+   "dur": 3.0,
+   "cut": true,
+   "at": 0.05,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 1.6,
+    "speed": 0.8,
+    "zoom": [
+     1.0,
+     1.04
+    ]
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Y llega <em>el robot.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 4.0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Un poquito cada día. <em>Sin sufrir.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "at": 0.5,
+     "items": [
+      "Corte parejo",
+      "Silencioso",
+      "Sin bolsas"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 0
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Y vos, <em>ni te enteraste.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Lo querés en <em>tu jardín?</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}
