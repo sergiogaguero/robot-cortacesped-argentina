@@ -127,8 +127,7 @@ publicación entre corchetes (`[2026-10-01-reel-02-sin-cables] …`, o `[general
    `scripts/media/reels/`.
 2. Hacer el cambio (horario, texto, guion), volver a renderizar si cambió la pieza
    (`npm run media:reels -- <nombre>`), validar con `node scripts/social/publish.mjs --dry-run`.
-3. Commit y push a la rama de trabajo, abrir un pull request y mergearlo a `master` (el workflow y el
-   sitio publican desde ahí). El dueño autorizó (27/9/2026) que los pedidos del Centro de redes se
-   apliquen directo, sin esperar su aprobación en GitHub.
+3. Commit y push **directo a `master`** (el workflow y el sitio publican desde ahí). Regla del dueño
+   para este proyecto (27/9/2026): los cambios de redes se suben directo a `master`, sin pull request.
 4. Sumar una línea a `changelog` en `social/centro.json`, rearmar y republicar la página, y responder
    en el hilo del comentario qué se cambió.
