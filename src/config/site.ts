@@ -2,7 +2,6 @@ export const site = {
   url: "https://www.robotscortacesped.com.ar",
   name: "Robot Cortacésped Argentina",
   tagline: "Robots cortacésped con inteligencia artificial en Argentina",
-  brandClaim: "Distribuidor autorizado de TerraMow",
   hookii: "https://hookii.com/",
   locale: "es_AR",
   lang: "es-AR",

@@ -103,7 +103,7 @@ async function render(name, { lines, subtitle, image }) {
   ${picture ? `<image href="${picture}" x="${IMG_X}" y="${imgY}" width="${IMG_W}" height="${imgH}" preserveAspectRatio="xMidYMid meet" />` : ""}
   ${title}
   ${subtitleSvg}
-  <text x="${TEXT_X}" y="${H - 60}" font-family="${FONT}" font-size="24" font-weight="600" fill="#8fd014">robotscortacesped.com.ar · Distribuidor autorizado de TerraMow</text>
+  <text x="${TEXT_X}" y="${H - 60}" font-family="${FONT}" font-size="24" font-weight="600" fill="#8fd014">robotscortacesped.com.ar · Envíos a todo el país</text>
 </svg>`;
   const png = new Resvg(svg, { fitTo: { mode: "width", value: W }, ...RESVG_OPTS }).render().asPng();
   const out = `${OUT}/${name}.jpg`;

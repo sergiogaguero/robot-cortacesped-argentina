@@ -17,7 +17,7 @@ export function ldOrganization(brands: string[] = ["TerraMow"]): object {
     url: site.url,
     logo: absoluteUrl("/logo.png"),
     slogan: site.tagline,
-    description: `${site.brandClaim}. Robots cortacésped con navegación por cámara e inteligencia artificial, sin cables perimetrales. Venta con envío a todo el país, garantía del fabricante y soporte técnico local.`,
+    description: `Robots cortacésped con navegación por cámara e inteligencia artificial, sin cables perimetrales. Venta con envío a todo el país, garantía del fabricante y soporte técnico local.`,
     areaServed: { "@type": "Country", name: "Argentina" },
     brand: brands.map((name) => ({ "@type": "Brand", name })),
     knowsAbout: ["Robots cortacésped", "Cortadoras de césped robóticas", "Navegación por cámara con inteligencia artificial", "Navegación 3D LiDAR", "Mantenimiento de césped", "Mulching"],

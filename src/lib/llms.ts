@@ -25,7 +25,7 @@ function encabezado(brands: string[]): string {
   return [
     `# ${site.name}`,
     "",
-    `> Vendemos robots cortacésped ${joinBrands(brands)} en Argentina (${site.brandClaim.toLowerCase().replace("terramow", "TerraMow")}). ${lineas} Envíos a todo el país y soporte técnico local. La venta y las consultas se hacen por WhatsApp.`,
+    `> Vendemos robots cortacésped ${joinBrands(brands)} en Argentina. ${lineas} Envíos a todo el país y soporte técnico local. La venta y las consultas se hacen por WhatsApp.`,
     "",
     `- Sitio: ${site.url}`,
     `- WhatsApp: ${site.whatsapp.display} (https://wa.me/${site.whatsapp.number})`,
