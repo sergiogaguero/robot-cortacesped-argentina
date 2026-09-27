@@ -3,19 +3,29 @@ import type { Product } from "@/content/schemas";
 import { absoluteUrl } from "@/lib/seo";
 
 const CONTEXT = "https://schema.org";
+/** Identificadores estables: permiten que Google y los buscadores con IA unan las entidades entre páginas. */
+export const ORG_ID = `${site.url}/#organizacion`;
+export const WEBSITE_ID = `${site.url}/#sitio`;
 
 export function ldOrganization(): object {
   return {
     "@context": CONTEXT,
     "@type": "Organization",
+    "@id": ORG_ID,
     name: site.name,
+    alternateName: "Robots Cortacésped Argentina",
     url: site.url,
     logo: absoluteUrl("/logo.png"),
-    description: `${site.brandClaim}. Robots cortacésped con navegación por cámara e inteligencia artificial, sin cables perimetrales.`,
+    slogan: site.tagline,
+    description: `${site.brandClaim}. Robots cortacésped con navegación por cámara e inteligencia artificial, sin cables perimetrales. Venta con envío a todo el país, garantía del fabricante y soporte técnico local.`,
+    areaServed: { "@type": "Country", name: "Argentina" },
+    brand: { "@type": "Brand", name: "TerraMow" },
+    knowsAbout: ["Robots cortacésped", "Cortadoras de césped robóticas", "Navegación por cámara con inteligencia artificial", "Mantenimiento de césped", "Mulching"],
     address: { "@type": "PostalAddress", addressLocality: site.location.locality, addressCountry: site.location.country },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
+      areaServed: "AR",
       email: site.email,
       telephone: `+${site.whatsapp.number}`,
       availableLanguage: "es",
@@ -25,7 +35,7 @@ export function ldOrganization(): object {
 }
 
 export function ldWebSite(): object {
-  return { "@context": CONTEXT, "@type": "WebSite", name: site.name, url: site.url, description: site.tagline, inLanguage: "es-AR" };
+  return { "@context": CONTEXT, "@type": "WebSite", "@id": WEBSITE_ID, name: site.name, url: site.url, description: site.tagline, inLanguage: "es-AR", publisher: { "@id": ORG_ID } };
 }
 
 export function ldBreadcrumb(items: { name: string; url: string }[]): object {
@@ -47,7 +57,9 @@ export function ldProduct(p: Product, opts: { url: string; imageUrl: string }): 
           priceCurrency: "USD",
           availability: p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
           itemCondition: "https://schema.org/NewCondition",
-          seller: { "@type": "Organization", name: site.name },
+          seller: { "@type": "Organization", "@id": ORG_ID, name: site.name },
+          // El precio en dólares se revisa seguido: vale por 30 días desde cada publicación del sitio.
+          priceValidUntil: new Date(Date.now() + 30 * 86400e3).toISOString().slice(0, 10),
           shippingDetails: {
             "@type": "OfferShippingDetails",
             shippingDestination: { "@type": "DefinedRegion", addressCountry: "AR" },
@@ -68,6 +80,8 @@ export function ldProduct(p: Product, opts: { url: string; imageUrl: string }): 
       { "@type": "PropertyValue", name: "Cobertura", value: `Hasta ${p.coverageM2} m²` },
       { "@type": "PropertyValue", name: "Navegación", value: "Cámara con IA, sin cables" },
       { "@type": "PropertyValue", name: "Control", value: "App iOS/Android" },
+      // Todas las especificaciones de la ficha: los buscadores con IA responden con estos datos.
+      ...p.specs.flatMap((c) => c.items.map((it) => ({ "@type": "PropertyValue", name: it.label, value: it.value }))),
     ],
     ...(offers ? { offers } : {}),
   };
@@ -99,8 +113,8 @@ export function ldHowTo(opts: { name: string; description: string; steps: { name
   };
 }
 
-export function ldArticle(a: { title: string; description: string; url: string; imageUrl: string; pubDate: Date; updatedDate?: Date }): object {
-  const org = { "@type": "Organization", name: site.name, logo: { "@type": "ImageObject", url: absoluteUrl("/logo.png") } };
+export function ldArticle(a: { title: string; description: string; url: string; imageUrl: string; pubDate: Date; updatedDate?: Date; summary?: string[]; tags?: string[] }): object {
+  const org = { "@type": "Organization", "@id": ORG_ID, name: site.name, url: site.url, logo: { "@type": "ImageObject", url: absoluteUrl("/logo.png") } };
   return {
     "@context": CONTEXT,
     "@type": "BlogPosting",
@@ -114,5 +128,12 @@ export function ldArticle(a: { title: string; description: string; url: string; 
     author: org,
     publisher: org,
     inLanguage: "es-AR",
+    isPartOf: { "@id": WEBSITE_ID },
+    ...(a.summary?.length ? { abstract: a.summary.join(" ") } : {}),
+    ...(a.tags?.length ? { keywords: a.tags.join(", ") } : {}),
   };
+}
+
+export function ldAboutPage(opts: { url: string; description: string }): object {
+  return { "@context": CONTEXT, "@type": "AboutPage", url: opts.url, description: opts.description, inLanguage: "es-AR", about: { "@id": ORG_ID }, isPartOf: { "@id": WEBSITE_ID } };
 }

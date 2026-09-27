@@ -29,7 +29,7 @@ const crumbs = [
 ];
 const jsonLd = [
   ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))),
-  ldArticle({ title: d.title, description: d.description, url, imageUrl: absoluteUrl(cover.src), pubDate: d.pubDate, updatedDate: d.updatedDate }),
+  ldArticle({ title: d.title, description: d.description, url, imageUrl: absoluteUrl(cover.src), pubDate: d.pubDate, updatedDate: d.updatedDate, summary: d.summary, tags: d.tags }),
 ];
 ---
 <BaseLayout title={d.title} description={d.description} ogImage={og.src} ogType="article" jsonLd={jsonLd}>
@@ -43,6 +43,14 @@ const jsonLd = [
         Publicado el <time datetime={d.pubDate.toISOString()}>{date}</time>
         {d.updatedDate && <> · Actualizado el <time datetime={d.updatedDate.toISOString()}>{d.updatedDate.toLocaleDateString("es-AR", { year: "numeric", month: "long", day: "numeric" })}</time></>}
       </p>
+      {d.summary && (
+        <aside class="mb-10 rounded-2xl border border-primary/30 bg-card p-6" aria-labelledby="resumen-titulo">
+          <h2 id="resumen-titulo" class="mb-3 text-sm font-semibold tracking-widest text-primary uppercase">En resumen</h2>
+          <ul class="list-disc space-y-2 pl-5 text-foreground marker:text-primary">
+            {d.summary.map((item) => <li>{item}</li>)}
+          </ul>
+        </aside>
+      )}
       <Image src={d.cover} alt={d.coverAlt} width={1200} height={675} format="webp" loading="eager" fetchpriority="high" class="mb-10 aspect-video w-full rounded-2xl object-cover" />
       <div class="prose-dark">
         <slot />

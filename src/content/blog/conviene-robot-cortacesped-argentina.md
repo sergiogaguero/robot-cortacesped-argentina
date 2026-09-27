@@ -2,11 +2,17 @@
 title: "¿Conviene un robot cortacésped en Argentina? Costo real"
 description: "Cuánto cuesta cortar el pasto con jardinero o cortadora propia, cuánto cuesta un robot cortacésped, cuánto tarda en cortar y cuándo no conviene."
 pubDate: 2026-09-10
+updatedDate: 2026-09-27
 cover: "./conviene-robot-cortacesped-argentina.jpg"
 coverAlt: "Plano de un jardín con la ruta de corte planificada por un robot cortacésped"
 tags: ["costos", "guía de compra"]
 relatedProducts: ["v600", "v1000"]
 draft: false
+summary:
+  - "Un robot cortacésped conviene en jardines de entre 200 y 1500 m², en zonas donde el pasto se corta 25 veces al año o más."
+  - "Casi todo el costo está en la compra: después solo quedan la electricidad (unos 15 kWh por año) y las cuchillas, sin nafta, aceite ni service."
+  - "Corta entre 80 y 120 m² por hora, pero ese tiempo no es tuyo: trabaja solo 2 o 3 veces por semana y el pasto queda siempre a la misma altura."
+  - "No conviene en jardines de menos de 150 m², con pendientes de más de 18° o sin enchufe y Wi-Fi o 4G para la base."
 ---
 
 ¿Vale la pena gastar en un robot cortacésped lo mismo que un sueldo completo? Es la pregunta que se hace cualquiera antes de sacar la tarjeta. La respuesta no es un sí o un no genérico: depende de tres números que vos ya tenés, aunque nunca los hayas anotado en ningún lado — cuánto pagás hoy por cortar el pasto, cuántos metros cuadrados tenés que cubrir y cuánto vale tu tiempo libre los fines de semana. Este artículo pone esos tres números arriba de la mesa, con cifras concretas, para que la cuenta la termines de hacer vos.

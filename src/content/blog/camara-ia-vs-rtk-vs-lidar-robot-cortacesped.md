@@ -2,11 +2,17 @@
 title: "Cámara con IA vs RTK vs LiDAR en robots cortacésped"
 description: "Cómo navegan los robots cortacésped sin cable perimetral: cámara con IA, RTK y LiDAR comparados en instalación, precisión, límites y costo."
 pubDate: 2026-09-17
+updatedDate: 2026-09-27
 cover: "./camara-ia-vs-rtk-vs-lidar-robot-cortacesped.jpg"
 coverAlt: "Robot cortacésped mapeando un jardín con sus cámaras"
 tags: ["tecnología", "comparativa"]
 relatedProducts: ["v1000"]
 draft: false
+summary:
+  - "Hay tres formas de que un robot cortacésped sepa dónde cortar sin cable enterrado: RTK (GPS de precisión con antena), LiDAR (láser) y cámara con inteligencia artificial."
+  - "El RTK es muy preciso a cielo abierto, pero pierde señal bajo árboles y cerca de paredes, y necesita una antena fija."
+  - "El LiDAR funciona de noche, pero no distingue el césped de la tierra o de un cantero bajo."
+  - "La cámara con IA reconoce el césped, los bordes y los obstáculos sin obra ni antena; su límite es que necesita luz. Para el jardín típico argentino, con árboles y canteros, es la opción con menos fricción."
 ---
 
 Durante veinte años, "robot cortacésped" significó lo mismo para todo el mundo: enterrar un cable alrededor del jardín, marcar el límite y esperar que el robot no se lo saltee. Hoy esa etapa quedó atrás. Hay tres formas distintas de que un robot sepa dónde puede cortar sin cable enterrado, y no son equivalentes entre sí — cada una resuelve el problema con una tecnología diferente, y cada una tiene un punto donde se queda corta. Este artículo las compara sin marketing, con las ventajas y los límites reales de cada una.

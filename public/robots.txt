@@ -1,5 +1,53 @@
+# Robot Cortacésped Argentina — www.robotscortacesped.com.ar
+# Todo el sitio está abierto a buscadores y a asistentes de IA: queremos que nos encuentren y nos citen.
+# Resumen del sitio para modelos de lenguaje: https://www.robotscortacesped.com.ar/llms.txt
+
 User-agent: *
 Allow: /
 Disallow: /404
+
+# Buscadores
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Buscadores y asistentes con IA
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
 
 Sitemap: https://www.robotscortacesped.com.ar/sitemap-index.xml

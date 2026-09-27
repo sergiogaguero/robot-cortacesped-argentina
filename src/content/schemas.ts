@@ -65,6 +65,8 @@ export const blogSchema = z.object({
   coverAlt: z.string().min(10),
   tags: z.array(z.string().min(1)).min(1),
   relatedProducts: z.array(productSlugSchema).default([]),
+  /** Puntos clave al principio del artículo: lo que más citan Google y los buscadores con IA. */
+  summary: z.array(z.string().min(20)).min(2).max(6).optional(),
   draft: z.boolean().default(false),
 });
 export type BlogFrontmatter = z.infer<typeof blogSchema>;

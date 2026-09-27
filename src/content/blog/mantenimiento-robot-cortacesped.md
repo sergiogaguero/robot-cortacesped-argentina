@@ -2,11 +2,17 @@
 title: "Mantenimiento de un robot cortacésped: qué hacer y qué no"
 description: "¿Hay que recoger el césped cortado? ¿Cada cuánto se cambian las cuchillas? Guía de mantenimiento de un robot cortacésped: limpieza, lluvia, invierno y batería."
 pubDate: 2026-09-24
+updatedDate: 2026-09-27
 cover: "./mantenimiento-robot-cortacesped.jpg"
 coverAlt: "Robot cortacésped trabajando sobre el césped, visto de cerca"
 tags: ["mantenimiento", "uso"]
 relatedProducts: ["v600", "v1000"]
 draft: false
+summary:
+  - "Un robot cortacésped lleva unas 2 horas de mantenimiento por año, contra 10 a 12 de una cortadora convencional."
+  - "No hay que juntar el pasto: los recortes son tan finos que se descomponen en 24 a 48 horas y abonan el suelo."
+  - "Lo único que se cambia seguido son las cuchillas, cada 4 a 8 semanas en temporada alta, en unos 5 minutos con un destornillador."
+  - "La tarea más importante es limpiar los lentes de la cámara una vez por semana; nunca hay que lavarlo con hidrolavadora."
 ---
 
 Las tres preguntas que más recibimos por WhatsApp antes de que alguien compre un robot cortacésped son sobre mantenimiento, no sobre corte: ¿hay que juntar el pasto que corta?, ¿cada cuánto se le cambia algo?, ¿qué hay que hacer en invierno? La respuesta corta es siempre la misma: muchísimo menos que con una cortadora a nafta o eléctrica. La respuesta larga — con tiempos concretos, tareas reales y lo que conviene evitar — es esta guía.

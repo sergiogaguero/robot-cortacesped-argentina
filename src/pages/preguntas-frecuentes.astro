@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withPublishedLinks } from "@/lib/faq-links";
+import { ldBreadcrumb, ldFaq } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+// Todas las preguntas frecuentes en una sola página, con las respuestas a la vista (no plegadas):
+// es el formato que mejor leen Google y los buscadores con IA para responder con nuestros datos.
+const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
+const faqs = withPublishedLinks(
+  (await getCollection("faq")).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
+  publishedIds,
+);
+
+const title = "Preguntas frecuentes sobre robots cortacésped";
+const description = "Respuestas claras sobre los robots cortacésped TerraMow: cables, pasto cortado, seguridad, mantenimiento, superficie, envíos y garantía en Argentina.";
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
+];
+const jsonLd = [ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))), ldFaq(faqs)];
+---
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <div class="wrap pt-24 pb-8 lg:pt-32">
+    <div class="mx-auto max-w-3xl">
+      <Breadcrumbs items={crumbs} />
+      <p class="mb-3 text-xs font-semibold tracking-widest text-primary uppercase">Preguntas frecuentes</p>
+      <h1 class="mb-4 text-3xl leading-tight font-bold md:text-5xl">Todo lo que nos preguntan sobre los robots cortacésped</h1>
+      <p class="mb-12 text-lg text-muted-foreground">Las dudas más comunes antes de comprar un robot TerraMow, con respuestas directas. Si la tuya no está, escribinos por WhatsApp.</p>
+      <div class="space-y-4">
+        {faqs.map((f) => (
+          <section class="rounded-2xl border border-border bg-card p-6">
+            <h2 class="mb-3 text-lg font-semibold md:text-xl">{f.question}</h2>
+            <p class="leading-relaxed text-muted-foreground">{f.answer}</p>
+            {f.link && <a href={f.link.href} class="mt-3 inline-block text-sm font-medium text-primary hover:underline">{f.link.label} →</a>}
+          </section>
+        ))}
+      </div>
+    </div>
+  </div>
+  <CTAFinal wa="faq-cta" title="¿Te quedó otra duda?" text="Escribinos por WhatsApp y te respondemos con datos concretos para tu jardín, sin compromiso." />
+</BaseLayout>
