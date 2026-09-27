@@ -1,0 +1,78 @@
+{
+ "title": "¿Y los bordes?",
+ "audio": "media/musica/bordes.mp3",
+ "scenes": [
+  {
+   "dur": 2.0,
+   "at": 0.05,
+   "bg": {
+    "clip": "bordes",
+    "from": 0
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "¿Y los bordes?"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Corta pegado <em>al cantero.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 4.5,
+   "bg": {
+    "clip": "bordes",
+    "from": 2.0,
+    "speed": 0.9
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Su cámara ve dónde termina el césped <em>y sigue la línea.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "note",
+     "at": 1.4,
+     "text": "En rincones muy irregulares o contra paredes, una pasada de bordeadora de vez en cuando."
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Filmado en un jardín real. <em>¿Consultas?</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

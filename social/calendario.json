@@ -93,6 +93,13 @@
       "auto": true
     },
     {
+      "id": "2026-10-01-historia-16-bordes",
+      "when": "2026-10-01T15:00:00-03:00",
+      "type": "story",
+      "file": "reels/16-bordes.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-10-01-historia-15-tip-puntas",
       "when": "2026-10-01T17:00:00-03:00",
       "type": "story",
@@ -161,9 +168,24 @@
     },
     {
       "id": "2026-10-03-historia-video-tiempo",
-      "when": "2026-10-03T20:30:00-03:00",
+      "when": "2026-10-03T16:00:00-03:00",
       "type": "story",
       "file": "extra/tiempo.mp4",
+      "auto": true
+    },
+    {
+      "id": "2026-10-03-reel-13-pov-pasto",
+      "when": "2026-10-03T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/13-pov-pasto.mp4",
+      "auto": true,
+      "caption": "POV: sos el pasto y llega el robot 🌱🤖\n\nCorta un poquito cada día, sin ruido y sin bolsas. El pasto queda parejo y vos ni te enterás.\n\nFilmado con el celu en un jardín real, sin efectos. ¿Lo querés en el tuyo? Escribinos por WhatsApp (link en la bio) 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #pov #humor"
+    },
+    {
+      "id": "2026-10-03-historia-reel-13-pov-pasto",
+      "when": "2026-10-03T21:00:00-03:00",
+      "type": "story",
+      "file": "reels/13-pov-pasto.mp4",
       "auto": true
     },
     {
@@ -200,6 +222,13 @@
       "when": "2026-10-05T10:00:00-03:00",
       "type": "story",
       "file": "historias/08-mantenimiento.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-10-05-historia-15-arboles",
+      "when": "2026-10-05T15:00:00-03:00",
+      "type": "story",
+      "file": "reels/15-arboles.mp4",
       "auto": true
     },
     {
@@ -359,9 +388,24 @@
     },
     {
       "id": "2026-10-10-historia-video-terramow",
-      "when": "2026-10-10T20:30:00-03:00",
+      "when": "2026-10-10T16:00:00-03:00",
       "type": "story",
       "file": "extra/terramow.mp4",
+      "auto": true
+    },
+    {
+      "id": "2026-10-10-reel-14-jardin-real",
+      "when": "2026-10-10T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/14-jardin-real.mp4",
+      "auto": true,
+      "caption": "Esto no es un comercial 📱 Es un robot TerraMow trabajando en jardines reales, filmado con el celular.\n\nEsquiva árboles, sigue el borde de los canteros, gira y sigue. Sin cables ni antenas.\n\n¿Querés verlo en tu jardín? Escribinos por WhatsApp (link en la bio) 💬\n\n#robotcortacesped #terramow #jardin #cortacesped #jardinreal"
+    },
+    {
+      "id": "2026-10-10-historia-reel-14-jardin-real",
+      "when": "2026-10-10T21:00:00-03:00",
+      "type": "story",
+      "file": "reels/14-jardin-real.mp4",
       "auto": true
     },
     {

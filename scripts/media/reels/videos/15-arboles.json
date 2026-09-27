@@ -1,0 +1,80 @@
+{
+ "title": "¿Árboles? Los esquiva",
+ "audio": "media/musica/arboles.mp3",
+ "scenes": [
+  {
+   "dur": 2.0,
+   "at": 0.05,
+   "bg": {
+    "clip": "arboles",
+    "from": 0
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "¿Árboles en el jardín?"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mirá cómo <em>los esquiva.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 5.0,
+   "bg": {
+    "clip": "arboles",
+    "from": 2.4
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Los reconoce con sus cámaras y <em>pasa por al lado.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "at": 1.2,
+     "items": [
+      "Sin cable perimetral",
+      "Sin marcar nada"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Filmado en un jardín real. <em>¿Consultas?</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}
