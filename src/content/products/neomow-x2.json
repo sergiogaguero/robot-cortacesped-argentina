@@ -6,7 +6,7 @@
   "segment": "Quintas, campos y parques",
   "navigation": "3D LiDAR + visión con IA",
   "model": "Neomow X2",
-  "draft": true,
+  "draft": false,
   "tagline": "Para trabajo pesado: quintas, campos y parques de hasta 6000 m²",
   "coverageM2": 6000,
   "priceUSD": 3166,

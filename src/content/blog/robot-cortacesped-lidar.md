@@ -6,7 +6,7 @@ cover: "./robot-cortacesped-lidar.jpg"
 coverAlt: "Primer plano del pasto mientras pasa un robot cortacésped"
 tags: ["tecnología", "trabajo pesado"]
 relatedProducts: ["neomow-x2", "v1000"]
-draft: true
+draft: false
 summary:
   - "El LiDAR 3D mide el entorno con pulsos de láser y arma un mapa tridimensional para que el robot sepa dónde está."
   - "No depende de la señal satelital como el RTK, así que se ubica bien bajo árboles y cerca de paredes, sin antena externa."

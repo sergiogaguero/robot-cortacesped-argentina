@@ -6,7 +6,7 @@ cover: "./como-elegir-robot-cortacesped.jpg"
 coverAlt: "Persona apoyando un robot cortacésped sobre el césped antes de ponerlo a trabajar"
 tags: ["guía de compra", "comparativa"]
 relatedProducts: ["v1000", "neomow-x2"]
-draft: true
+draft: false
 summary:
   - "Lo primero es la superficie real de césped, no la del terreno: elegí un robot que la cubra con margen."
   - "La pendiente más empinada define el modelo: los TerraMow V Series suben hasta 18° y el Hookii Neomow X2, hasta 24°."

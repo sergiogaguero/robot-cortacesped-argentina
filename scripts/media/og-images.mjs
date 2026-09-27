@@ -114,3 +114,4 @@ async function render(name, { lines, subtitle, image }) {
 await render("default", { lines: ["Robot cortacésped", "con inteligencia artificial"], subtitle: "Sin cables perimetrales · Garantía y soporte local · Envíos a todo el país", image: "src/assets/hero-mower.jpg" });
 await render("v600", { lines: ["TerraMow V600", "hasta 600 m²"], subtitle: "Navegación por cámara con IA · Sin cables ni RTK", image: "src/assets/products/v600.png" });
 await render("v1000", { lines: ["TerraMow V1000", "hasta 1200 m²"], subtitle: "Navegación por cámara con IA · 150 min de autonomía", image: "src/assets/products/v1000.png" });
+await render("neomow-x2", { lines: ["Hookii Neomow X2", "hasta 6000 m²"], subtitle: "3D LiDAR + visión con IA · Pendientes de 24°", image: "src/assets/products/neomow-x2.jpg" });

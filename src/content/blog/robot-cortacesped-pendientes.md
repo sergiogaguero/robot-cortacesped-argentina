@@ -6,7 +6,7 @@ cover: "./robot-cortacesped-pendientes.jpg"
 coverAlt: "Robot cortacésped trabajando sobre el césped, visto desde el nivel del suelo"
 tags: ["pendientes", "guía de compra"]
 relatedProducts: ["v1000", "neomow-x2"]
-draft: true
+draft: false
 summary:
   - "Lo que decide es la parte más empinada del terreno, no la pendiente promedio."
   - "Grados y porcentaje no son lo mismo: 18° equivalen a 32,5 % y 24°, a 44,5 %."
