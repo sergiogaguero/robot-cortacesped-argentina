@@ -13,8 +13,8 @@ const products = readJsonDir("products");
 const faqs = readJsonDir("faq");
 
 describe("productos", () => {
-  it("hay exactamente v600 y v1000", () => {
-    expect(products.map((p) => p.id).sort()).toEqual(["v1000", "v600"]);
+  it("están el V600, el V1000 y el Neomow X2", () => {
+    expect(products.map((p) => p.id)).toEqual(expect.arrayContaining(["v600", "v1000", "neomow-x2"]));
   });
   it.each(products)("$id cumple el esquema", ({ data }) => {
     const r = productSchema.safeParse(data);
@@ -28,7 +28,7 @@ describe("productos", () => {
     expect(byId.v1000!.coverageM2).toBe(1200);
     expect(byId.v600!.coverageM2).toBe(600);
   });
-  it.each(["v600", "v1000"] as const)("%s tiene al menos 3 FAQ cuyo scope lo incluye", (slug) => {
+  it.each(products.map((p) => p.id))("%s tiene al menos 3 FAQ cuyo scope lo incluye", (slug) => {
     const matches = faqs.filter((f) => faqSchema.parse(f.data).scope.includes(slug));
     expect(matches.length).toBeGreaterThanOrEqual(3);
   });
@@ -43,8 +43,23 @@ describe("productos", () => {
     const items = p.specs.flatMap((g) => g.items);
     const value = (label: string) => items.find((i) => i.label === label)?.value ?? "";
     expect(value("Pendiente máxima")).toContain(`${p.fit.maxSlopeDeg}°`);
-    expect(value("Nivel de ruido")).toContain(`${p.fit.noiseDb}`);
-    expect(value("Autonomía por carga")).toContain(`${p.fit.runtimeMin}`);
+    // null = dato sin confirmar: entonces tampoco puede figurar en la ficha.
+    if (p.fit.noiseDb === null) expect(value("Nivel de ruido")).toBe("");
+    else expect(value("Nivel de ruido")).toContain(`${p.fit.noiseDb}`);
+    if (p.fit.runtimeMin === null) expect(value("Autonomía por carga")).toBe("");
+    else expect(value("Autonomía por carga")).toContain(`${p.fit.runtimeMin}`);
+  });
+  it.each(products)("$id: con versiones, el precio es el más bajo y la superficie la más grande", ({ data }) => {
+    const p = productSchema.parse(data);
+    if (!p.variants) return;
+    const prices = p.variants.map((v) => v.priceUSD).filter((x): x is number => x !== null);
+    expect(p.priceUSD).toBe(Math.min(...prices));
+    expect(p.coverageM2).toBe(Math.max(...p.variants.map((v) => v.coverageM2)));
+    expect(new Set(p.variants.map((v) => v.id)).size).toBe(p.variants.length);
+  });
+  it("los precios del Neomow X2 son los acordados", () => {
+    const p = productSchema.parse(products.find((x) => x.id === "neomow-x2")!.data);
+    expect(p.variants!.map((v) => [v.coverageM2, v.priceUSD])).toEqual([[3000, 3166], [4000, 3520], [6000, 3800]]);
   });
 });
 

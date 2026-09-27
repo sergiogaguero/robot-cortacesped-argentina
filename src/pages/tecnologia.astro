@@ -18,7 +18,7 @@ import { absoluteUrl } from "@/lib/seo";
 const guiaCamara = await getEntry("blog", "camara-ia-vs-rtk-vs-lidar-robot-cortacesped");
 const showGuia = guiaCamara !== undefined && !guiaCamara.data.draft;
 
-const [v600, v1000] = (await getCollection("products")).sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
+const [v600, v1000] = (await getCollection("products", ({ data }) => ["v600", "v1000"].includes(data.slug))).sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
 
 const crumbs = [
   { name: "Inicio", href: "/" },

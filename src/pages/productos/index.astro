@@ -1,0 +1,44 @@
+---
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFinal from "@/components/CTAFinal.astro";
+import ProductCard from "@/components/ProductCard.astro";
+import WhichOne from "@/components/WhichOne.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { formatNumber, formatUSD } from "@/lib/price";
+import { coverageRange, getProducts } from "@/lib/products";
+import { ldBreadcrumb, ldItemList } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/seo";
+
+const products = await getProducts();
+const brands = [...new Set(products.map((p) => p.data.brand))];
+const title = "Robots cortacésped: modelos y precios en Argentina";
+const description = `Todos nuestros robots cortacésped ${brands.join(" y ")}: superficie, tecnología, pendiente máxima y precio. Envíos a todo el país y soporte local.`;
+const crumbs = [
+  { name: "Inicio", href: "/" },
+  { name: "Productos", href: "/productos" },
+];
+const jsonLd = [
+  ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl(c.href) }))),
+  ldItemList(products.map((p) => ({ name: p.data.name, url: absoluteUrl(`/productos/${p.data.slug}`) }))),
+];
+---
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <div class="wrap pt-24 lg:pt-32">
+    <div class="mx-auto max-w-3xl">
+      <Breadcrumbs items={crumbs} />
+      <p class="mb-3 text-xs font-semibold tracking-widest text-primary uppercase">Productos</p>
+      <h1 class="mb-4 text-3xl leading-tight font-bold md:text-5xl">Robots cortacésped: modelos y precios</h1>
+      <p class="mb-6 text-lg text-muted-foreground">Trabajamos con {brands.join(" y ")}. Ninguno necesita cable perimetral: se guían con cámaras, LiDAR e inteligencia artificial.</p>
+      <ul class="mb-12 space-y-2 text-muted-foreground">
+        {products.map((p) => (
+          <li><a href={`/productos/${p.data.slug}`} class="font-semibold text-foreground hover:text-primary">{p.data.name}</a>: {p.data.segment.toLowerCase()}, {coverageRange(p.data, formatNumber).toLowerCase()}, {p.data.variants ? "desde " : ""}{formatUSD(p.data.priceUSD)}.</li>
+        ))}
+      </ul>
+    </div>
+    <div class:list={["mx-auto grid gap-8", products.length > 2 ? "max-w-6xl md:grid-cols-2 lg:grid-cols-3" : "max-w-5xl md:grid-cols-2"]}>
+      {products.map((product) => <ProductCard product={product} />)}
+    </div>
+  </div>
+  <WhichOne products={products} showLink={false} />
+  <CTAFinal wa="productos-cta" />
+</BaseLayout>

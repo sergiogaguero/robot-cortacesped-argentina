@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar.astro";
 import SEO from "@/components/SEO.astro";
 import WhatsAppFloat from "@/components/WhatsAppFloat.astro";
 import { gaId, site } from "@/config/site";
+import { getBrands } from "@/lib/products";
 import { ldOrganization, ldWebSite } from "@/lib/schema";
 
 interface Props {
@@ -18,7 +19,7 @@ interface Props {
   jsonLd?: object[];
 }
 const { title, description, ogImage, ogType, noindex, jsonLd = [] } = Astro.props;
-const schemas = [ldOrganization(), ldWebSite(), ...jsonLd];
+const schemas = [ldOrganization(await getBrands()), ldWebSite(), ...jsonLd];
 ---
 <!doctype html>
 <html lang={site.lang}>

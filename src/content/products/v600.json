@@ -1,6 +1,10 @@
 {
   "name": "TerraMow V600",
   "slug": "v600",
+  "brand": "TerraMow",
+  "series": "V Series",
+  "segment": "Jardines medianos",
+  "navigation": "Triple cámara con IA",
   "model": "V600",
   "tagline": "Ideal para jardines medianos",
   "coverageM2": 600,
@@ -25,44 +29,113 @@
     {
       "category": "Parámetros generales",
       "items": [
-        { "label": "Tecnología de navegación", "value": "TerraVision™ 2.0, visión con IA de triple cámara" },
-        { "label": "Conectividad", "value": "Wi-Fi / red celular 4G" },
-        { "label": "Área de corte recomendada", "value": "600 m² (0,15 acres)" },
-        { "label": "Área de corte por hora", "value": "80-120 m² (según la complejidad del césped)" },
-        { "label": "Área de corte por carga completa", "value": "130-250 m²" },
-        { "label": "Altura de corte", "value": "25-75 mm" },
-        { "label": "Ancho de corte", "value": "203 mm" }
+        {
+          "label": "Tecnología de navegación",
+          "value": "TerraVision™ 2.0, visión con IA de triple cámara"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi / red celular 4G"
+        },
+        {
+          "label": "Área de corte recomendada",
+          "value": "600 m² (0,15 acres)"
+        },
+        {
+          "label": "Área de corte por hora",
+          "value": "80-120 m² (según la complejidad del césped)"
+        },
+        {
+          "label": "Área de corte por carga completa",
+          "value": "130-250 m²"
+        },
+        {
+          "label": "Altura de corte",
+          "value": "25-75 mm"
+        },
+        {
+          "label": "Ancho de corte",
+          "value": "203 mm"
+        }
       ]
     },
     {
       "category": "Funciones inteligentes",
       "items": [
-        { "label": "Mapeo automático con IA", "value": "Sí" },
-        { "label": "Evasión de obstáculos 3D", "value": "Sí" },
-        { "label": "Ajuste eléctrico de altura de corte", "value": "Sí" },
-        { "label": "Recarga automática", "value": "Sí" },
-        { "label": "Detección de lluvia", "value": "Sí" },
-        { "label": "Actualización OTA (por internet)", "value": "Sí" }
+        {
+          "label": "Mapeo automático con IA",
+          "value": "Sí"
+        },
+        {
+          "label": "Evasión de obstáculos 3D",
+          "value": "Sí"
+        },
+        {
+          "label": "Ajuste eléctrico de altura de corte",
+          "value": "Sí"
+        },
+        {
+          "label": "Recarga automática",
+          "value": "Sí"
+        },
+        {
+          "label": "Detección de lluvia",
+          "value": "Sí"
+        },
+        {
+          "label": "Actualización OTA (por internet)",
+          "value": "Sí"
+        }
       ]
     },
     {
       "category": "Batería",
       "items": [
-        { "label": "Capacidad", "value": "3,8 Ah / 84,36 Wh" },
-        { "label": "Tiempo de carga", "value": "100 minutos" },
-        { "label": "Autonomía por carga", "value": "120 minutos" }
+        {
+          "label": "Capacidad",
+          "value": "3,8 Ah / 84,36 Wh"
+        },
+        {
+          "label": "Tiempo de carga",
+          "value": "100 minutos"
+        },
+        {
+          "label": "Autonomía por carga",
+          "value": "120 minutos"
+        }
       ]
     },
     {
       "category": "Otras especificaciones",
       "items": [
-        { "label": "Nivel de ruido", "value": "< 54 dB" },
-        { "label": "Impermeabilidad", "value": "IPX6" },
-        { "label": "Temperatura de operación", "value": "0-50 °C" },
-        { "label": "Pendiente máxima", "value": "18° (32,5 %)" },
-        { "label": "Voltaje de trabajo", "value": "24 V CC" },
-        { "label": "Peso", "value": "11,8 kg" },
-        { "label": "Dimensiones", "value": "60,2 × 39,4 × 33,1 cm" }
+        {
+          "label": "Nivel de ruido",
+          "value": "< 54 dB"
+        },
+        {
+          "label": "Impermeabilidad",
+          "value": "IPX6"
+        },
+        {
+          "label": "Temperatura de operación",
+          "value": "0-50 °C"
+        },
+        {
+          "label": "Pendiente máxima",
+          "value": "18° (32,5 %)"
+        },
+        {
+          "label": "Voltaje de trabajo",
+          "value": "24 V CC"
+        },
+        {
+          "label": "Peso",
+          "value": "11,8 kg"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "60,2 × 39,4 × 33,1 cm"
+        }
       ]
     }
   ],

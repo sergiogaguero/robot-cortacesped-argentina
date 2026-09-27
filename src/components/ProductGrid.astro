@@ -5,11 +5,15 @@ import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props { products: CollectionEntry<"products">[] }
 const { products } = Astro.props;
+const heavy = products.some((p) => p.data.brand === "Hookii");
+const text = heavy
+  ? "TerraMow para jardines residenciales y Hookii para trabajo pesado. Todos sin cable perimetral, con navegación por cámaras, LiDAR e inteligencia artificial."
+  : "Visión artificial de triple cámara. Sin cables, sin antenas RTK. Configuración en minutos.";
 ---
 <section id="productos" class="scroll-mt-20 py-24 lg:py-32" aria-labelledby="productos-titulo">
   <div class="wrap">
-    <SectionHeader id="productos-titulo" eyebrow="V Series" title="Elegí tu robot cortacésped" text="Visión artificial de triple cámara. Sin cables, sin antenas RTK. Configuración en minutos." />
-    <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+    <SectionHeader id="productos-titulo" eyebrow="Nuestros robots" title="Elegí tu robot cortacésped" text={text} />
+    <div class:list={["mx-auto grid gap-8", products.length > 2 ? "max-w-6xl md:grid-cols-2 lg:grid-cols-3" : "max-w-5xl md:grid-cols-2"]}>
       {products.map((product) => <ProductCard product={product} />)}
     </div>
   </div>

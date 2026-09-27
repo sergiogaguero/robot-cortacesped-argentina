@@ -50,13 +50,20 @@ Sitio estático en [Astro](https://astro.build) + Tailwind 4. Objetivo: que el v
 
 ### Editar un producto (precio, stock, specs)
 
-`src/content/products/v600.json` y `v1000.json`. Campos clave: `priceUSD` (número o `null` = "Consultar precio"), `inStock` (`true`/`false`), `coverageM2`, `specs`. Todas las páginas leen de acá.
+Un archivo por modelo en `src/content/products/` (`v600.json`, `v1000.json`, `neomow-x2.json`). Campos clave: `brand`, `priceUSD` (número o `null` = "Consultar precio"), `inStock` (`true`/`false`), `coverageM2`, `specs`, `draft` (`true` = no se publica). Todas las páginas leen de acá.
+
+- **Versiones de un mismo modelo** (ej. Neomow X2 de 3000, 4000 y 6000 m²): `variants`, con `coverageM2` y `priceUSD` de cada una. En ese caso `priceUSD` es el de la más barata ("desde") y `coverageM2` el de la más grande. La ficha muestra un selector de versión.
+- **Dato sin confirmar** (autonomía, ruido, etc.): `null` en `fit` y fuera de `specs`; no se muestra. `specsNote` agrega una aclaración debajo de la ficha técnica.
+- **Producto nuevo**: copiar un JSON, cambiar `slug` (= nombre del archivo y URL `/productos/<slug>`), poner la foto en `src/assets/products/` y la imagen de preview en `public/og/`. Con `draft: true` no se publica hasta que esté listo.
+- **Marca nueva**: sumarla a `brandSchema` en `src/content/schemas.ts`. Los textos de la home, el título, las preguntas frecuentes, `llms.txt` y los datos estructurados se arman solos con las marcas publicadas.
+
+**Pendiente:** el Hookii Neomow X2 y las guías que lo enlazan (`como-elegir-robot-cortacesped`, `robot-cortacesped-pendientes`, `robot-cortacesped-lidar`) están en `draft` hasta tener las fotos oficiales (`src/assets/products/neomow-x2.jpg` y `public/og/neomow-x2.jpg`). Para publicarlos: sumar las fotos y pasar los cuatro `draft` a `false`.
 
 La cobertura del V1000 (1200 m²) sale de la ficha de TerraMow; si cambia, actualizá `coverageM2` y regenerá las imágenes OG con `npm run media:og`.
 
 ### Editar las preguntas frecuentes
 
-`src/content/faq/*.json`. `scope` define dónde aparece cada una: `home`, `v600`, `v1000`, `comparativa`. `link` es opcional.
+`src/content/faq/*.json`. `scope` define dónde aparece cada una: `home`, `comparativa` o el slug de un producto (`v600`, `v1000`, `neomow-x2`…). Las de un producto en borrador no se muestran. `link` es opcional.
 
 ### Activar Google Analytics 4
 

@@ -3,6 +3,9 @@ import { Image } from "astro:assets";
 import logo from "@/assets/logo.png";
 import IconInstagram from "@/components/icons/IconInstagram.astro";
 import { site } from "@/config/site";
+import { getBrands } from "@/lib/products";
+
+const brands = await getBrands();
 
 const year = new Date().getFullYear();
 const linkCls = "text-sm text-muted-foreground transition-colors hover:text-primary";
@@ -19,13 +22,14 @@ const linkCls = "text-sm text-muted-foreground transition-colors hover:text-prim
       <nav aria-label="Enlaces del sitio">
         <h2 class="mb-4 font-semibold">Enlaces</h2>
         <ul class="space-y-3">
-          <li><a href="/#productos" class={linkCls}>Productos</a></li>
+          <li><a href="/productos" class={linkCls}>Productos y precios</a></li>
           <li><a href="/productos/v600-vs-v1000" class={linkCls}>Comparativa V600 vs V1000</a></li>
           <li><a href="/tecnologia" class={linkCls}>Tecnología</a></li>
           <li><a href="/blog" class={linkCls}>Guías</a></li>
           <li><a href="/preguntas-frecuentes" class={linkCls}>Preguntas frecuentes</a></li>
           <li><a href="/nosotros" class={linkCls}>Quiénes somos</a></li>
           <li><a href={site.terramow} target="_blank" rel="noopener noreferrer" class={linkCls}>Sitio de TerraMow ↗</a></li>
+          {brands.includes("Hookii") && <li><a href={site.hookii} target="_blank" rel="noopener noreferrer" class={linkCls}>Sitio de Hookii ↗</a></li>}
         </ul>
       </nav>
       <div>

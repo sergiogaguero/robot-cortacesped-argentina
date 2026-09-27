@@ -1,0 +1,97 @@
+{
+  "name": "Hookii Neomow X2",
+  "slug": "neomow-x2",
+  "brand": "Hookii",
+  "series": "Neomow X2 · Trabajo pesado",
+  "segment": "Quintas, campos y parques",
+  "navigation": "3D LiDAR + visión con IA",
+  "model": "Neomow X2",
+  "draft": true,
+  "tagline": "Para trabajo pesado: quintas, campos y parques de hasta 6000 m²",
+  "coverageM2": 6000,
+  "priceUSD": 3166,
+  "variants": [
+    {
+      "id": "3000",
+      "label": "3.000 m²",
+      "coverageM2": 3000,
+      "priceUSD": 3166
+    },
+    {
+      "id": "4000",
+      "label": "4.000 m²",
+      "coverageM2": 4000,
+      "priceUSD": 3520
+    },
+    {
+      "id": "6000",
+      "label": "6.000 m²",
+      "coverageM2": 6000,
+      "priceUSD": 3800
+    }
+  ],
+  "inStock": true,
+  "highlights": [
+    "Navegación 3D LiDAR + visión con IA, sin cable perimetral",
+    "Versiones para 3000, 4000 y 6000 m²",
+    "Pendientes de hasta 24° (45 %)",
+    "Ancho de corte de 28 cm"
+  ],
+  "fit": {
+    "maxSlopeDeg": 24,
+    "maxSlopePct": 45,
+    "obstacles": true,
+    "multiZone": null,
+    "noiseDb": null,
+    "areaPerHourM2": null,
+    "runtimeMin": null
+  },
+  "specs": [
+    {
+      "category": "Parámetros generales",
+      "items": [
+        {
+          "label": "Tecnología de navegación",
+          "value": "3D LiDAR + visión con inteligencia artificial"
+        },
+        {
+          "label": "Cable perimetral",
+          "value": "No necesita"
+        },
+        {
+          "label": "Área de corte recomendada",
+          "value": "3000, 4000 o 6000 m² según la versión"
+        },
+        {
+          "label": "Ancho de corte",
+          "value": "28 cm"
+        }
+      ]
+    },
+    {
+      "category": "Terreno",
+      "items": [
+        {
+          "label": "Pendiente máxima",
+          "value": "24° (45 %)"
+        },
+        {
+          "label": "Evasión de obstáculos",
+          "value": "Sí, con LiDAR 3D y visión artificial"
+        }
+      ]
+    }
+  ],
+  "specsNote": "Estamos terminando de confirmar con Hookii la ficha técnica completa (batería, autonomía, altura de corte, ruido y dimensiones). Si necesitás algún dato puntual, escribinos y te lo pasamos.",
+  "image": "neomow-x2.jpg",
+  "imageAlt": "Robot cortacésped Hookii Neomow X2 con navegación 3D LiDAR para terrenos grandes y con pendiente",
+  "ogImage": "/og/neomow-x2.jpg",
+  "why": {
+    "title": "¿Por qué el Neomow X2?",
+    "text": "Es nuestra línea para trabajo pesado. Pensado para quintas, campos, parques y terrenos grandes, cubre de 3000 a 6000 m² según la versión y sube pendientes de hasta 24°, más que cualquier modelo de la línea residencial. Se guía con un sensor 3D LiDAR, que mide el terreno con láser y no depende de la señal satelital como el RTK, combinado con visión artificial que reconoce el césped y los obstáculos. No necesita cable perimetral."
+  },
+  "seo": {
+    "title": "Hookii Neomow X2: robot cortacésped hasta 6000 m²",
+    "description": "Robot cortacésped Hookii Neomow X2 para trabajo pesado: 3D LiDAR + IA, sin cables, de 3000 a 6000 m² y pendientes de 24°. Precios y envío a todo el país."
+  }
+}

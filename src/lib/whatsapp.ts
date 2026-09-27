@@ -14,7 +14,7 @@ export function whatsappMessage(context: WaContext, subject = ""): string {
       return "Hola, no sé si me conviene el V600 o el V1000. ¿Me ayudan a elegir?";
     case "general":
     default:
-      return "Hola, quiero consultar por los robots cortacésped TerraMow.";
+      return "Hola, quiero consultar por los robots cortacésped.";
   }
 }
 

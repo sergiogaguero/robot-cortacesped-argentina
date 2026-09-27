@@ -14,19 +14,21 @@ import TrustStrip from "@/components/TrustStrip.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { withPublishedLinks } from "@/lib/faq-links";
 import { productImage } from "@/lib/product-images";
+import { getProducts } from "@/lib/products";
 import { ldBreadcrumb, ldFaq, ldProduct } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/seo";
 
 export async function getStaticPaths() {
-  const products = await getCollection("products");
-  if (products.length !== 2) throw new Error(`Se esperan exactamente 2 productos, hay ${products.length}: ${products.map((p) => p.id).join(", ")}`);
+  const products = await getProducts();
   return products.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
 }
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { entry } = Astro.props as Props;
 const p = entry.data;
-const other = (await getCollection("products")).find((o) => o.data.slug !== p.slug)!.data;
+const all = (await getProducts()).map((e) => e.data);
+// Comparativa más útil: la de la misma línea si existe, si no la de todos los modelos.
+const compare = p.brand === "TerraMow" ? { href: "/productos/v600-vs-v1000", label: "¿Dudás entre el V600 y el V1000? Mirá la comparativa" } : { href: "/productos", label: "Compará todos los modelos y precios" };
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
 const faqs = withPublishedLinks(
   (await getCollection("faq", ({ data }) => data.scope.includes(p.slug))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
@@ -38,7 +40,7 @@ const optimized = await getImage({ src: image, width: 800, height: 800, format: 
 const url = absoluteUrl(`/productos/${p.slug}`);
 const crumbs = [
   { name: "Inicio", href: "/" },
-  { name: "Productos", href: "/#productos" },
+  { name: "Productos", href: "/productos" },
   { name: p.name, href: `/productos/${p.slug}` },
 ];
 const jsonLd = [
@@ -64,13 +66,14 @@ const jsonLd = [
   <TrustStrip />
 
   <div class="wrap pb-24">
-    <FitCheck product={p} other={other} />
+    <FitCheck product={p} products={all} />
     <SpecsTable specs={p.specs} />
+    {p.specsNote && <p class="mt-4 text-sm text-muted-foreground">{p.specsNote}</p>}
 
     <section class="mt-24 rounded-2xl border border-border bg-card p-8 md:p-12" aria-labelledby="why-titulo">
       <h2 id="why-titulo" class="mb-4 text-2xl font-bold">{p.why.title}</h2>
       <p class="mb-6 leading-relaxed text-muted-foreground">{p.why.text}</p>
-      <a href="/productos/v600-vs-v1000" class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">¿Dudás entre los dos? Mirá la comparativa <IconArrowRight size={16} /></a>
+      <a href={compare.href} class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">{compare.label} <IconArrowRight size={16} /></a>
     </section>
   </div>
 

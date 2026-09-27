@@ -4,19 +4,23 @@ import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAFinal from "@/components/CTAFinal.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { withPublishedLinks } from "@/lib/faq-links";
+import { getBrands, getProducts, joinBrands } from "@/lib/products";
 import { ldBreadcrumb, ldFaq } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/seo";
 
 // Todas las preguntas frecuentes en una sola página, con las respuestas a la vista (no plegadas):
 // es el formato que mejor leen Google y los buscadores con IA para responder con nuestros datos.
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
+// Solo las preguntas generales y las de productos publicados (un borrador no aparece).
+const visibleScopes = new Set(["home", "comparativa", ...(await getProducts()).map((p) => p.data.slug)]);
 const faqs = withPublishedLinks(
-  (await getCollection("faq")).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
+  (await getCollection("faq", ({ data }) => data.scope.some((s) => visibleScopes.has(s)))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
   publishedIds,
 );
 
 const title = "Preguntas frecuentes sobre robots cortacésped";
-const description = "Respuestas claras sobre los robots cortacésped TerraMow: cables, pasto cortado, seguridad, mantenimiento, superficie, envíos y garantía en Argentina.";
+const brandsText = joinBrands(await getBrands());
+const description = `Respuestas claras sobre los robots cortacésped ${brandsText}: cables, pasto cortado, seguridad, mantenimiento, superficie, envíos y garantía.`;
 const crumbs = [
   { name: "Inicio", href: "/" },
   { name: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
@@ -29,7 +33,7 @@ const jsonLd = [ldBreadcrumb(crumbs.map((c) => ({ name: c.name, url: absoluteUrl
       <Breadcrumbs items={crumbs} />
       <p class="mb-3 text-xs font-semibold tracking-widest text-primary uppercase">Preguntas frecuentes</p>
       <h1 class="mb-4 text-3xl leading-tight font-bold md:text-5xl">Todo lo que nos preguntan sobre los robots cortacésped</h1>
-      <p class="mb-12 text-lg text-muted-foreground">Las dudas más comunes antes de comprar un robot TerraMow, con respuestas directas. Si la tuya no está, escribinos por WhatsApp.</p>
+      <p class="mb-12 text-lg text-muted-foreground">Las dudas más comunes antes de comprar un robot {brandsText}, con respuestas directas. Si la tuya no está, escribinos por WhatsApp.</p>
       <div class="space-y-4">
         {faqs.map((f) => (
           <section class="rounded-2xl border border-border bg-card p-6">

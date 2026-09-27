@@ -14,8 +14,9 @@ import { productImage } from "@/lib/product-images";
 import { ldBreadcrumb, ldFaq, ldItemList } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/seo";
 
-const productEntries = await getCollection("products");
-if (productEntries.length !== 2) throw new Error(`Se esperan exactamente 2 productos, hay ${productEntries.length}: ${productEntries.map((p) => p.id).join(", ")}`);
+// Comparativa de la línea residencial de TerraMow; la de todas las marcas está en /productos.
+const productEntries = (await getCollection("products", ({ data }) => ["v600", "v1000"].includes(data.slug)));
+if (productEntries.length !== 2) throw new Error(`Faltan el V600 o el V1000: hay ${productEntries.map((p) => p.id).join(", ")}`);
 const products = productEntries.sort((a, b) => a.data.coverageM2 - b.data.coverageM2).map((e) => e.data);
 const [v600, v1000] = products;
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
@@ -33,7 +34,7 @@ const rows: { label: string; value: (p: Product) => string }[] = [
   { label: "Área por carga completa", value: (p) => spec(p, "Área de corte por carga completa") },
   { label: "Tiempo de carga", value: (p) => spec(p, "Tiempo de carga") },
   { label: "Batería", value: (p) => spec(p, "Capacidad") },
-  { label: "Área de corte por hora", value: (p) => p.fit.areaPerHourM2 },
+  { label: "Área de corte por hora", value: (p) => p.fit.areaPerHourM2 ?? "—" },
   { label: "Navegación", value: (p) => spec(p, "Tecnología de navegación") },
   { label: "Pendiente máxima", value: (p) => `${p.fit.maxSlopeDeg}° (${formatDecimal(p.fit.maxSlopePct)} %)` },
   { label: "Nivel de ruido", value: (p) => `< ${p.fit.noiseDb} dB` },

@@ -3,25 +3,29 @@ import type { CollectionEntry } from "astro:content";
 import IconArrowRight from "@/components/icons/IconArrowRight.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import { formatNumber, formatUSD } from "@/lib/price";
+import { coverageRange } from "@/lib/products";
 
-interface Props { products: CollectionEntry<"products">[] }
-const { products } = Astro.props;
+interface Props { products: CollectionEntry<"products">[]; showLink?: boolean }
+const { products, showLink = true } = Astro.props;
+type P = (typeof products)[number];
 const rows = [
-  { label: "Superficie", value: (p: (typeof products)[number]) => `Hasta ${formatNumber(p.data.coverageM2)} m²` },
-  { label: "Autonomía por carga", value: (p: (typeof products)[number]) => `${p.data.fit.runtimeMin} min` },
-  { label: "Precio", value: (p: (typeof products)[number]) => formatUSD(p.data.priceUSD) },
-  { label: "Disponibilidad", value: (p: (typeof products)[number]) => (p.data.inStock ? "En stock" : "Sin stock · Consultá disponibilidad") },
+  { label: "Ideal para", value: (p: P) => p.data.segment },
+  { label: "Superficie", value: (p: P) => coverageRange(p.data, formatNumber) },
+  { label: "Navegación", value: (p: P) => p.data.navigation },
+  { label: "Pendiente máxima", value: (p: P) => `${p.data.fit.maxSlopeDeg}°` },
+  { label: "Precio", value: (p: P) => `${p.data.variants ? "Desde " : ""}${formatUSD(p.data.priceUSD)}` },
+  { label: "Disponibilidad", value: (p: P) => (p.data.inStock ? "En stock" : "Sin stock · Consultá disponibilidad") },
 ];
 ---
 <section class="bg-card py-24 lg:py-32">
   <div class="wrap">
-    <SectionHeader eyebrow="¿Cuál me conviene?" title="V600 o V1000, en 10 segundos" text="La diferencia es la superficie y la autonomía. Todo lo demás —cámaras, IA, app, mulching— es igual." />
-    <div class="mx-auto max-w-3xl overflow-x-auto">
+    <SectionHeader eyebrow="¿Cuál me conviene?" title="Todos los modelos, en 10 segundos" text="La clave es la superficie y el tipo de terreno: jardín residencial o trabajo pesado." />
+    <div class="mx-auto max-w-5xl overflow-x-auto">
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-border text-left">
             <th scope="col" class="py-3 pr-4 font-semibold">Característica</th>
-            {products.map((p) => <th scope="col" class="py-3 pr-4 font-semibold text-primary">{p.data.name}</th>)}
+            {products.map((p) => <th scope="col" class="py-3 pr-4 font-semibold text-primary"><a href={`/productos/${p.data.slug}`} class="hover:underline">{p.data.name}</a></th>)}
           </tr>
         </thead>
         <tbody>
@@ -34,10 +38,10 @@ const rows = [
         </tbody>
       </table>
     </div>
-    <div class="mt-8 text-center">
-      <a href="/productos/v600-vs-v1000" class="inline-flex items-center gap-2 rounded-lg border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10">
-        Ver la comparativa completa <IconArrowRight size={16} />
+    {showLink && <div class="mt-8 text-center">
+      <a href="/productos" class="inline-flex items-center gap-2 rounded-lg border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10">
+        Ver todos los modelos y precios <IconArrowRight size={16} />
       </a>
-    </div>
+    </div>}
   </div>
 </section>

@@ -3,7 +3,7 @@ import { whatsappMessage, whatsappUrl } from "@/lib/whatsapp";
 
 describe("whatsappMessage", () => {
   it("general", () => {
-    expect(whatsappMessage("general")).toBe("Hola, quiero consultar por los robots cortacésped TerraMow.");
+    expect(whatsappMessage("general")).toBe("Hola, quiero consultar por los robots cortacésped.");
   });
   it("product usa el nombre del modelo", () => {
     expect(whatsappMessage("product", "TerraMow V1000")).toBe("Hola, quiero consultar por el TerraMow V1000.");

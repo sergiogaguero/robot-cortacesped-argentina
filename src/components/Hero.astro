@@ -3,8 +3,12 @@ import { Picture } from "astro:assets";
 import heroImage from "@/assets/hero-mower.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton.astro";
 import { site } from "@/config/site";
+import { getBrands, joinBrands } from "@/lib/products";
+
+const brands = await getBrands();
+const multi = brands.length > 1;
 ---
-<section class="relative flex min-h-[92svh] items-center overflow-hidden" aria-label="Robot cortacésped TerraMow con inteligencia artificial">
+<section class="relative flex min-h-[92svh] items-center overflow-hidden" aria-label={`Robots cortacésped ${joinBrands(brands)} con inteligencia artificial`}>
   <div class="absolute inset-0" aria-hidden="true">
     <Picture
       src={heroImage}
@@ -41,7 +45,9 @@ import { site } from "@/config/site";
         El futuro del<br /><span class="text-gradient">corte inteligente</span>
       </h1>
       <p class="mb-8 max-w-lg text-lg text-muted-foreground animate-fade-up md:text-xl" style="animation-delay: 0.2s">
-        Robots cortacésped TerraMow con navegación por cámara e inteligencia artificial. Sin cables, sin antenas. Tu jardín perfecto sin mover un dedo.
+        {multi
+          ? <>Robots cortacésped {joinBrands(brands)}: para jardines residenciales y para trabajo pesado. Navegación con cámaras, LiDAR e inteligencia artificial, sin cable perimetral. Tu jardín perfecto sin mover un dedo.</>
+          : <>Robots cortacésped {brands[0]} con navegación por cámara e inteligencia artificial. Sin cables, sin antenas. Tu jardín perfecto sin mover un dedo.</>}
       </p>
       <div class="flex flex-col gap-4 animate-fade-up sm:flex-row" style="animation-delay: 0.3s">
         <WhatsAppButton context="general" wa="home-hero" label="Consultar por WhatsApp" />

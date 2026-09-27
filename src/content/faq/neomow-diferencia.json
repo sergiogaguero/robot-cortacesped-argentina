@@ -1,0 +1,12 @@
+{
+  "question": "¿Qué diferencia hay entre el Neomow X2 y los TerraMow?",
+  "answer": "El Neomow X2 es nuestra línea para trabajo pesado: cubre de 3000 a 6000 m² según la versión y sube pendientes de hasta 24°, contra los 1200 m² y 18° del TerraMow V1000. Además de visión artificial, usa un sensor 3D LiDAR. Para un jardín residencial de hasta 1200 m², los TerraMow son la opción más conveniente.",
+  "scope": [
+    "neomow-x2"
+  ],
+  "order": 21,
+  "link": {
+    "label": "Compará todos los modelos",
+    "href": "/productos"
+  }
+}

@@ -45,7 +45,7 @@ export const howItWorks: Step[] = [
     step: 4,
     title: "Monitoreo y control",
     description:
-      "Desde la app TerraMow manejás todo: horarios, zonas, altura de corte e historial. Recibís avisos en tiempo real sobre el estado del robot, estés donde estés.",
+      "Desde la app del robot manejás todo: horarios, zonas, altura de corte e historial. Recibís avisos en tiempo real sobre el estado del robot, estés donde estés.",
     detail: "Mapa en vivo, estadísticas de corte y alertas de mantenimiento en tu celular.",
     image: stepMonitoring,
     alt: "Persona controlando el robot cortacésped desde la app en el celular",

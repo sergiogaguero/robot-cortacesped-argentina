@@ -3,21 +3,24 @@ import type { Product } from "@/content/schemas";
 import IconArrowRight from "@/components/icons/IconArrowRight.astro";
 import { formatDecimal, formatNumber } from "@/lib/price";
 
-interface Props { product: Product; other: Product }
-const { product: p, other } = Astro.props;
-const bigger = other.coverageM2 > p.coverageM2;
+interface Props { product: Product; products: Product[] }
+const { product: p, products } = Astro.props;
+// Sugerencia según superficie: el modelo inmediatamente más grande o, si es el más grande, el anterior.
+const bigger = products.filter((o) => o.coverageM2 > p.coverageM2).sort((a, b) => a.coverageM2 - b.coverageM2)[0];
+const smaller = products.filter((o) => o.coverageM2 < p.coverageM2).sort((a, b) => b.coverageM2 - a.coverageM2)[0];
+const smallest = p.variants ? Math.min(...p.variants.map((v) => v.coverageM2)) : p.coverageM2;
 const cells = [
   { value: `${formatNumber(p.coverageM2)} m²`, label: "superficie máxima" },
   { value: `${p.fit.maxSlopeDeg}°`, label: `pendiente máxima (${formatDecimal(p.fit.maxSlopePct)} %)` },
   { value: p.fit.obstacles ? "Sí" : "No", label: "árboles, canteros, macetas" },
-  { value: p.fit.multiZone ? "Sí" : "No", label: "varias zonas separadas" },
-  { value: `${p.fit.runtimeMin} min`, label: "autonomía por carga" },
-  { value: `< ${p.fit.noiseDb} dB`, label: "nivel de ruido" },
-];
+  p.fit.multiZone !== null && { value: p.fit.multiZone ? "Sí" : "No", label: "varias zonas separadas" },
+  p.fit.runtimeMin !== null && { value: `${p.fit.runtimeMin} min`, label: "autonomía por carga" },
+  p.fit.noiseDb !== null && { value: `< ${p.fit.noiseDb} dB`, label: "nivel de ruido" },
+].filter((c): c is { value: string; label: string } => Boolean(c));
 ---
 <section class="mt-16 rounded-2xl border border-border bg-card p-6 lg:p-8" aria-labelledby="fit-titulo">
   <h2 id="fit-titulo" class="mb-2 text-2xl font-bold">¿Es para tu jardín?</h2>
-  <p class="mb-6 text-sm text-muted-foreground">Chequeá estos seis datos contra tu terreno. Si dudás, escribinos y lo vemos juntos.</p>
+  <p class="mb-6 text-sm text-muted-foreground">Chequeá estos datos contra tu terreno. Si dudás, escribinos y lo vemos juntos.</p>
   <dl class="grid grid-cols-2 gap-4 md:grid-cols-3">
     {cells.map((c) => (
       <div class="flex flex-col rounded-xl border border-border bg-background p-4">
@@ -26,9 +29,11 @@ const cells = [
       </div>
     ))}
   </dl>
-  <p class="mt-6 text-sm text-muted-foreground">
-    {bigger
-      ? <>¿Tu jardín supera los {formatNumber(p.coverageM2)} m²? Mirá el <a href={`/productos/${other.slug}`} class="inline-flex items-center gap-1 font-medium text-primary hover:underline">{other.name} <IconArrowRight size={14} /></a>, que cubre hasta {formatNumber(other.coverageM2)} m².</>
-      : <>¿Tu jardín es más chico? El <a href={`/productos/${other.slug}`} class="inline-flex items-center gap-1 font-medium text-primary hover:underline">{other.name} <IconArrowRight size={14} /></a> cubre hasta {formatNumber(other.coverageM2)} m² con la misma tecnología.</>}
-  </p>
+  {(bigger || smaller) && (
+    <p class="mt-6 text-sm text-muted-foreground">
+      {bigger
+        ? <>¿Tu terreno supera los {formatNumber(p.coverageM2)} m²? Mirá el <a href={`/productos/${bigger.slug}`} class="inline-flex items-center gap-1 font-medium text-primary hover:underline">{bigger.name} <IconArrowRight size={14} /></a>, que cubre hasta {formatNumber(bigger.coverageM2)} m².</>
+        : <>¿Tu jardín tiene menos de {formatNumber(smallest)} m²? El <a href={`/productos/${smaller!.slug}`} class="inline-flex items-center gap-1 font-medium text-primary hover:underline">{smaller!.name} <IconArrowRight size={14} /></a> cubre hasta {formatNumber(smaller!.coverageM2)} m².</>}
+    </p>
+  )}
 </section>

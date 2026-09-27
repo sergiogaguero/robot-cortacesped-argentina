@@ -1,0 +1,8 @@
+{
+  "question": "¿El Neomow X2 necesita cable perimetral o antena?",
+  "answer": "No. Se guía con un sensor 3D LiDAR, que mide el terreno con láser, y con visión artificial que reconoce el césped y los obstáculos. No hace falta enterrar cables ni instalar antenas RTK: se ubica la base, se hace el mapeo y empieza a trabajar.",
+  "scope": [
+    "neomow-x2"
+  ],
+  "order": 20
+}

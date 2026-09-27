@@ -12,17 +12,21 @@ import WhyRobot from "@/components/WhyRobot.astro";
 import { site } from "@/config/site";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { withPublishedLinks } from "@/lib/faq-links";
+import { getBrands, getProducts, joinBrands } from "@/lib/products";
 import { ldBreadcrumb, ldFaq } from "@/lib/schema";
 
-const products = (await getCollection("products")).sort((a, b) => a.data.coverageM2 - b.data.coverageM2);
+const products = await getProducts();
 const publishedIds = (await getCollection("blog", ({ data }) => !data.draft)).map((post) => post.id);
 const faqs = withPublishedLinks(
   (await getCollection("faq", ({ data }) => data.scope.includes("home"))).sort((a, b) => a.data.order - b.data.order).map((f) => f.data),
   publishedIds,
 );
 
-const title = "Robot Cortacésped con IA en Argentina | TerraMow";
-const description = "Robots cortacésped con navegación por cámara e IA, sin cables perimetrales. Modelos TerraMow V600 y V1000, garantía y soporte local. Consultá por WhatsApp.";
+const brands = await getBrands();
+const title = `Robots Cortacésped con IA en Argentina | ${joinBrands(brands)}`;
+const description = brands.length > 1
+  ? `Robots cortacésped ${joinBrands(brands)} con cámaras, LiDAR e IA, sin cable perimetral: para jardines y trabajo pesado. Garantía y soporte local.`
+  : "Robots cortacésped con navegación por cámara e IA, sin cables perimetrales. Modelos TerraMow V600 y V1000, garantía y soporte local. Consultá por WhatsApp.";
 const jsonLd = [ldBreadcrumb([{ name: "Inicio", url: `${site.url}/` }]), ldFaq(faqs)];
 ---
 <BaseLayout title={title} description={description} jsonLd={jsonLd}>
