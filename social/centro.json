@@ -1,20 +1,52 @@
 {
-  "syncedAt": "2026-09-27T15:08:00Z",
+  "syncedAt": "2026-09-28T00:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
       "publicado": "2026-09-27T13:19:44.946Z"
     },
     "2026-09-27-reel-07-domingo#fb": {
-      "error": "Falta el permiso pages_manage_posts en el token",
-      "intento": "2026-09-27T14:41:35.297Z"
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-09-27T18:45:40.730Z"
+    },
+    "2026-09-27-carrusel-05-quienes-somos": {
+      "mediaId": "18114742537817448",
+      "publicado": "2026-09-27T15:42:55.825Z"
+    },
+    "2026-09-27-carrusel-05-quienes-somos#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-09-27T21:18:47.131Z"
+    },
+    "2026-09-27-historia-19-arranca-temporada": {
+      "mediaId": "18022561727878907",
+      "publicado": "2026-09-27T18:25:46.627Z"
+    },
+    "2026-09-27-historia-19-arranca-temporada#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-09-27T23:40:43.827Z"
+    },
+    "2026-09-27-historia-20-que-queres-ver": {
+      "mediaId": "18138226039618290",
+      "publicado": "2026-09-27T20:21:26.681Z"
+    },
+    "2026-09-27-historia-20-que-queres-ver#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-09-27T23:40:44.044Z"
+    },
+    "2026-09-27-historia-reel-07-domingo": {
+      "mediaId": "18110680999890191",
+      "publicado": "2026-09-27T23:41:24.550Z"
+    },
+    "2026-09-27-historia-reel-07-domingo#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-09-27T23:41:24.802Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "El primer reel salió el 27/9 a las 10:19."
+      "detail": "Todo lo del 27/9 salió: reel, carrusel y 3 historias."
     },
     {
       "cls": "warn",
