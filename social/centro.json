@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-28T00:08:00Z",
+  "syncedAt": "2026-09-28T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -31,7 +31,7 @@
     },
     "2026-09-27-historia-20-que-queres-ver#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-09-27T23:40:44.044Z"
+      "intento": "2026-09-28T01:41:41.377Z"
     },
     "2026-09-27-historia-reel-07-domingo": {
       "mediaId": "18110680999890191",
@@ -39,14 +39,22 @@
     },
     "2026-09-27-historia-reel-07-domingo#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-09-27T23:41:24.802Z"
+      "intento": "2026-09-28T05:25:42.846Z"
+    },
+    "2026-09-28-historia-01-horas": {
+      "mediaId": "17910186654517172",
+      "publicado": "2026-09-28T13:26:35.962Z"
+    },
+    "2026-09-28-historia-01-horas#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-09-28T14:49:30.006Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Todo lo del 27/9 salió: reel, carrusel y 3 historias."
+      "detail": "Al día: la historia del 28/9 de las 10:00 salió a las 10:26."
     },
     {
       "cls": "warn",
