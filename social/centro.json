@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-29T00:08:00Z",
+  "syncedAt": "2026-09-29T15:09:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -55,7 +55,7 @@
     },
     "2026-09-28-reel-01-unboxing#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-09-28T23:43:02.066Z"
+      "intento": "2026-09-29T04:27:11.629Z"
     },
     "2026-09-28-historia-reel-01-unboxing": {
       "mediaId": "17967907473176552",
@@ -63,14 +63,14 @@
     },
     "2026-09-28-historia-reel-01-unboxing#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-09-28T23:43:52.293Z"
+      "intento": "2026-09-29T05:24:06.680Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: todo lo del 28/9 salió (el reel del unboxing a las 19:43)."
+      "detail": "Al día: todo lo programado hasta ahora salió. Lo próximo es la encuesta de las 13:00."
     },
     {
       "cls": "warn",
