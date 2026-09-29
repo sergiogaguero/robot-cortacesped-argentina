@@ -1,5 +1,5 @@
 {
- "title": "¿Y el pasto cortado?",
+ "title": "¿Qué pasa con el pasto cortado?",
  "scenes": [
   {
    "dur": 1.8,
@@ -18,7 +18,7 @@
     {
      "type": "title",
      "size": "xl",
-     "text": "¿Y el pasto cortado?"
+     "text": "¿Qué pasa con el pasto cortado?"
     }
    ]
   },
