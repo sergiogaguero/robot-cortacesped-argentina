@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-30T00:08:00Z",
+  "syncedAt": "2026-09-30T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -79,7 +79,7 @@
     },
     "2026-09-29-reel-13-pov-pasto#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-09-29T23:41:29.743Z"
+      "intento": "2026-09-30T04:27:52.034Z"
     },
     "2026-09-29-historia-reel-13-pov-pasto": {
       "mediaId": "17911919580287293",
@@ -87,14 +87,22 @@
     },
     "2026-09-29-historia-reel-13-pov-pasto#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-09-29T23:42:11.680Z"
+      "intento": "2026-09-30T05:24:37.498Z"
+    },
+    "2026-09-30-historia-03-mito-cable": {
+      "mediaId": "18118272385757514",
+      "publicado": "2026-09-30T13:26:05.399Z"
+    },
+    "2026-09-30-historia-03-mito-cable#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-09-30T14:49:28.402Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: todo lo del 29/9 salió (el reel “POV pasto” a las 19:43)."
+      "detail": "Al día: la historia del 30/9 de las 10:00 salió a las 10:26. Lo próximo es el carrusel “Mitos” a las 12:30."
     },
     {
       "cls": "warn",
