@@ -1,5 +1,5 @@
 {
- "title": "¿Te sirve? Checklist",
+ "title": "¿Es para vos? Lo que te resuelve",
  "scenes": [
   {
    "bg": {
@@ -8,25 +8,26 @@
    "top": [
     {
      "type": "eyebrow",
-     "text": "¿Te sirve un robot?"
+     "text": "¿Te suena alguna?"
     },
     {
      "type": "title",
      "size": "m",
-     "text": "Si tildás las 3, <em>es para vos.</em>"
+     "text": "Un robot cortacésped <em>es para vos si…</em>"
     }
    ],
    "center": [
     {
      "type": "space",
-     "h": 80
+     "h": 60
     },
     {
      "type": "ticks",
      "items": [
-      "Jardín de más de 150 m²",
-      "Pendientes de 18° o menos",
-      "Enchufe + Wi-Fi o 4G"
+      "Querés los fines de semana para vos, no para el pasto",
+      "El jardín crece más rápido de lo que llegás a cortarlo",
+      "No querés depender de que venga el jardinero",
+      "Te vas unos días y querés volver a un jardín impecable"
      ]
     }
    ],
