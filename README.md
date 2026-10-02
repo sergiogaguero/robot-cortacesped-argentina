@@ -91,7 +91,7 @@ El original actual (`media/hero-original.mp4`) es vertical (810×1080); un video
 
 - [Rich Results Test](https://search.google.com/test/rich-results) sobre `/productos/v1000`, `/` y un artículo: sin errores en Product, FAQ y Article.
 - Compartir cada URL por WhatsApp y revisar la imagen y el título de la vista previa.
-- Abrir el sitio en un celular real: menú, toggle USD/ARS, barra fija, y que cada botón de WhatsApp abra el chat con `+54 9 2494 31-8185` y el mensaje de su contexto.
+- Abrir el sitio en un celular real: menú, toggle USD/ARS, barra fija, y que cada botón de WhatsApp abra el chat con `+54 9 2494 02-8837` y el mensaje de su contexto.
 - Recorrer las páginas en DevTools: 0 `console.error`.
 
 ## Después de publicar

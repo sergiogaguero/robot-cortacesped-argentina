@@ -6,8 +6,8 @@ export const site = {
   locale: "es_AR",
   lang: "es-AR",
   whatsapp: {
-    number: "5492494318185",
-    display: "+54 9 2494 31-8185",
+    number: "5492494028837",
+    display: "+54 9 2494 02-8837",
   },
   email: "ventas@robotscortacesped.com.ar",
   instagram: "https://www.instagram.com/robotscortacesped_argentina/",

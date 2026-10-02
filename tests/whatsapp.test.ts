@@ -22,7 +22,7 @@ describe("whatsappMessage", () => {
 describe("whatsappUrl", () => {
   it("usa el número del sitio y codifica el mensaje", () => {
     const url = whatsappUrl("product", "TerraMow V600");
-    expect(url.startsWith("https://wa.me/5492494318185?text=")).toBe(true);
+    expect(url.startsWith("https://wa.me/5492494028837?text=")).toBe(true);
     expect(decodeURIComponent(url.split("text=")[1]!)).toBe("Hola, quiero consultar por el TerraMow V600.");
     expect(url).not.toContain(" ");
   });

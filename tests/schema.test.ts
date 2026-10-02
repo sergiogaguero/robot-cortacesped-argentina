@@ -14,7 +14,7 @@ describe("JSON-LD", () => {
     const o = asRecord(ldOrganization());
     expect(o["@type"]).toBe("Organization");
     expect(o.logo).toBe("https://www.robotscortacesped.com.ar/logo.png");
-    expect(o.contactPoint.telephone).toBe("+5492494318185");
+    expect(o.contactPoint.telephone).toBe("+5492494028837");
     expect(o.sameAs).toContain("https://www.instagram.com/robotscortacesped_argentina/");
     expect(JSON.stringify(o).toLowerCase()).not.toContain("oficial");
   });

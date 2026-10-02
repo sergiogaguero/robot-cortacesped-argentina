@@ -67,7 +67,7 @@ describe("dist-bad reporta cada problema", () => {
   it("whatsapp detecta el número viejo y el link sin data-wa", () => {
     const errs = checkWhatsapp(bad);
     expect(errs.length).toBe(2);
-    expect(errs.some((e) => e.includes("5492494028837"))).toBe(true);
+    expect(errs.some((e) => e.includes("5492494318185"))).toBe(true);
     expect(errs.some((e) => e.includes("data-wa"))).toBe(true);
   });
 });
