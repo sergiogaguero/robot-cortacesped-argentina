@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-02T00:08:00Z",
+  "syncedAt": "2026-10-02T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -143,7 +143,7 @@
     },
     "2026-10-01-historia-15-tip-puntas#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-01T23:43:01.575Z"
+      "intento": "2026-10-02T01:38:08.479Z"
     },
     "2026-10-01-reel-02-sin-cables": {
       "mediaId": "18094170503650625",
@@ -151,7 +151,7 @@
     },
     "2026-10-01-reel-02-sin-cables#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-01T23:43:01.740Z"
+      "intento": "2026-10-02T04:27:19.524Z"
     },
     "2026-10-01-historia-reel-02-sin-cables": {
       "mediaId": "18112066513849155",
@@ -159,14 +159,22 @@
     },
     "2026-10-01-historia-reel-02-sin-cables#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-01T23:43:41.802Z"
+      "intento": "2026-10-02T05:23:30.485Z"
+    },
+    "2026-10-02-historia-05-silencio": {
+      "mediaId": "17991994410101432",
+      "publicado": "2026-10-02T13:24:01.690Z"
+    },
+    "2026-10-02-historia-05-silencio#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-02T14:47:50.125Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: las 5 publicaciones del 1/10 salieron (el reel “Sin cables” a las 19:44)."
+      "detail": "Al día: la historia del 2/10 de las 10:00 salió a las 10:24. Lo próximo es el reel del mulching a las 19:30."
     },
     {
       "cls": "warn",
