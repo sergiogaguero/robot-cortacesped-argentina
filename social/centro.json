@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-02T15:08:00Z",
+  "syncedAt": "2026-10-03T00:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -167,14 +167,30 @@
     },
     "2026-10-02-historia-05-silencio#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-02T14:47:50.125Z"
+      "intento": "2026-10-02T18:48:39.313Z"
+    },
+    "2026-10-02-reel-03-mulching": {
+      "mediaId": "18117128875788388",
+      "publicado": "2026-10-02T22:45:04.638Z"
+    },
+    "2026-10-02-reel-03-mulching#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-02T23:42:08.969Z"
+    },
+    "2026-10-02-historia-reel-03-mulching": {
+      "mediaId": "17879448813652131",
+      "publicado": "2026-10-02T23:42:47.028Z"
+    },
+    "2026-10-02-historia-reel-03-mulching#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-02T23:42:47.447Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: la historia del 2/10 de las 10:00 salió a las 10:24. Lo próximo es el reel del mulching a las 19:30."
+      "detail": "Al día: todo lo del 2/10 salió (el reel del mulching a las 19:45)."
     },
     {
       "cls": "warn",
