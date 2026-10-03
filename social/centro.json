@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-03T00:08:00Z",
+  "syncedAt": "2026-10-03T15:12:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -175,7 +175,7 @@
     },
     "2026-10-02-reel-03-mulching#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-02T23:42:08.969Z"
+      "intento": "2026-10-03T04:27:36.770Z"
     },
     "2026-10-02-historia-reel-03-mulching": {
       "mediaId": "17879448813652131",
@@ -183,14 +183,30 @@
     },
     "2026-10-02-historia-reel-03-mulching#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-02T23:42:47.447Z"
+      "intento": "2026-10-03T05:28:35.157Z"
+    },
+    "2026-10-03-carrusel-02-checklist": {
+      "mediaId": "18136206628631445",
+      "publicado": "2026-10-03T15:08:16.902Z"
+    },
+    "2026-10-03-carrusel-02-checklist#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-03T15:08:18.289Z"
+    },
+    "2026-10-03-historia-06-checklist": {
+      "mediaId": "18110364272600485",
+      "publicado": "2026-10-03T15:08:33.195Z"
+    },
+    "2026-10-03-historia-06-checklist#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-03T15:08:33.310Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: todo lo del 2/10 salió (el reel del mulching a las 19:45)."
+      "detail": "Al día: el carrusel “Checklist” y la historia “¿Es para vos?” de las 11:00 salieron a las 12:08 (GitHub demoró la corrida). Lo próximo es la historia de las 20:30."
     },
     {
       "cls": "warn",
