@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-03T15:12:00Z",
+  "syncedAt": "2026-10-04T00:30:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -191,7 +191,7 @@
     },
     "2026-10-03-carrusel-02-checklist#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-03T15:08:18.289Z"
+      "intento": "2026-10-03T19:59:38.867Z"
     },
     "2026-10-03-historia-06-checklist": {
       "mediaId": "18110364272600485",
@@ -199,14 +199,22 @@
     },
     "2026-10-03-historia-06-checklist#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-03T15:08:33.310Z"
+      "intento": "2026-10-03T19:59:39.115Z"
+    },
+    "2026-10-03-historia-video-tiempo": {
+      "mediaId": "18166982326415813",
+      "publicado": "2026-10-04T00:24:19.957Z"
+    },
+    "2026-10-03-historia-video-tiempo#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-04T00:24:21.276Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: el carrusel “Checklist” y la historia “¿Es para vos?” de las 11:00 salieron a las 12:08 (GitHub demoró la corrida). Lo próximo es la historia de las 20:30."
+      "detail": "Al día: todo lo del 3/10 salió (la historia “Ganá tiempo” a las 21:24, con 1 h de demora de GitHub)."
     },
     {
       "cls": "warn",
