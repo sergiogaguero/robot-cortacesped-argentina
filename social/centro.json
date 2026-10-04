@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-04T00:30:00Z",
+  "syncedAt": "2026-10-04T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -207,14 +207,22 @@
     },
     "2026-10-03-historia-video-tiempo#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-04T00:24:21.276Z"
+      "intento": "2026-10-04T04:29:28.564Z"
+    },
+    "2026-10-04-reel-06-te-sirve": {
+      "mediaId": "18629820508032422",
+      "publicado": "2026-10-04T14:57:02.679Z"
+    },
+    "2026-10-04-reel-06-te-sirve#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-04T14:57:04.024Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: todo lo del 3/10 salió (la historia “Ganá tiempo” a las 21:24, con 1 h de demora de GitHub)."
+      "detail": "Al día: el reel “¿Te sirve?” de las 11:00 salió a las 11:57. Lo próximo es el quiz de las 13:00."
     },
     {
       "cls": "warn",
