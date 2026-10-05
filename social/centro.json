@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-04T15:08:00Z",
+  "syncedAt": "2026-10-05T00:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -215,14 +215,38 @@
     },
     "2026-10-04-reel-06-te-sirve#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-04T14:57:04.024Z"
+      "intento": "2026-10-04T19:43:13.079Z"
+    },
+    "2026-10-04-historia-07-quiz-cortes": {
+      "mediaId": "18125482909867818",
+      "publicado": "2026-10-04T16:39:42.321Z"
+    },
+    "2026-10-04-historia-07-quiz-cortes#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-04T21:46:58.770Z"
+    },
+    "2026-10-04-historia-16-tip-amarillo": {
+      "mediaId": "18144415540596999",
+      "publicado": "2026-10-04T21:02:55.181Z"
+    },
+    "2026-10-04-historia-16-tip-amarillo#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-04T23:42:53.179Z"
+    },
+    "2026-10-04-historia-reel-06-te-sirve": {
+      "mediaId": "18114164315111764",
+      "publicado": "2026-10-04T23:43:34.373Z"
+    },
+    "2026-10-04-historia-reel-06-te-sirve#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-04T23:43:34.771Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: el reel “¿Te sirve?” de las 11:00 salió a las 11:57. Lo próximo es el quiz de las 13:00."
+      "detail": "Al día: las 4 publicaciones del 4/10 salieron."
     },
     {
       "cls": "warn",
