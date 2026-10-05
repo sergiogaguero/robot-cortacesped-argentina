@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-05T00:08:00Z",
+  "syncedAt": "2026-10-05T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -231,7 +231,7 @@
     },
     "2026-10-04-historia-16-tip-amarillo#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-04T23:42:53.179Z"
+      "intento": "2026-10-05T01:44:53.487Z"
     },
     "2026-10-04-historia-reel-06-te-sirve": {
       "mediaId": "18114164315111764",
@@ -239,14 +239,22 @@
     },
     "2026-10-04-historia-reel-06-te-sirve#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-04T23:43:34.771Z"
+      "intento": "2026-10-05T05:10:38.696Z"
+    },
+    "2026-10-05-historia-08-mantenimiento": {
+      "mediaId": "17947315422343108",
+      "publicado": "2026-10-05T13:31:18.688Z"
+    },
+    "2026-10-05-historia-08-mantenimiento#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-05T14:49:44.595Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: las 4 publicaciones del 4/10 salieron."
+      "detail": "Al día: la historia del 5/10 de las 10:00 salió a las 10:31. Lo próximo es “¿Árboles? Los esquiva” a las 15:00."
     },
     {
       "cls": "warn",
