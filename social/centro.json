@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-06T00:08:00Z",
+  "syncedAt": "2026-10-06T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -263,7 +263,7 @@
     },
     "2026-10-05-reel-08-como-funciona#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-05T23:42:02.082Z"
+      "intento": "2026-10-06T04:28:02.785Z"
     },
     "2026-10-05-historia-reel-08-como-funciona": {
       "mediaId": "18112412894590580",
@@ -271,14 +271,22 @@
     },
     "2026-10-05-historia-reel-08-como-funciona#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-05T23:42:40.643Z"
+      "intento": "2026-10-06T05:24:19.397Z"
+    },
+    "2026-10-06-historia-09-seguridad": {
+      "mediaId": "18151411621470389",
+      "publicado": "2026-10-06T13:25:41.845Z"
+    },
+    "2026-10-06-historia-09-seguridad#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-06T14:48:04.721Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: las 4 publicaciones del 5/10 salieron (el reel “Cómo funciona” a las 19:45)."
+      "detail": "Al día: la historia del 6/10 de las 10:00 salió a las 10:25. Lo próximo es el tip “Recortes” a las 17:00."
     },
     {
       "cls": "warn",
