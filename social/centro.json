@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-07T15:20:00Z",
+  "syncedAt": "2026-10-08T00:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -287,7 +287,7 @@
     },
     "2026-10-06-historia-17-tip-recortes#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-06T23:43:40.648Z"
+      "intento": "2026-10-07T01:42:18.104Z"
     },
     "2026-10-06-reel-05-seguridad": {
       "mediaId": "17959366455249567",
@@ -295,7 +295,7 @@
     },
     "2026-10-06-reel-05-seguridad#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-06T23:43:41.247Z"
+      "intento": "2026-10-07T04:28:30.816Z"
     },
     "2026-10-06-historia-reel-05-seguridad": {
       "mediaId": "18160287616498903",
@@ -303,14 +303,46 @@
     },
     "2026-10-06-historia-reel-05-seguridad#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-06T23:44:24.623Z"
+      "intento": "2026-10-07T05:24:56.308Z"
+    },
+    "2026-10-07-carrusel-03-tecnologias": {
+      "mediaId": "18093913547360221",
+      "publicado": "2026-10-07T15:34:55.404Z"
+    },
+    "2026-10-07-carrusel-03-tecnologias#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-07T21:22:16.263Z"
+    },
+    "2026-10-07-historia-10-encuesta-freno": {
+      "mediaId": "17911131537537700",
+      "publicado": "2026-10-07T16:27:05.818Z"
+    },
+    "2026-10-07-historia-10-encuesta-freno#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-07T21:45:22.333Z"
+    },
+    "2026-10-07-reel-12-tip-riego": {
+      "mediaId": "18106859720622935",
+      "publicado": "2026-10-07T22:44:58.114Z"
+    },
+    "2026-10-07-reel-12-tip-riego#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-07T23:44:07.327Z"
+    },
+    "2026-10-07-historia-reel-12-tip-riego": {
+      "mediaId": "18067333109602111",
+      "publicado": "2026-10-07T23:44:47.597Z"
+    },
+    "2026-10-07-historia-reel-12-tip-riego#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-07T23:44:47.957Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: todo lo programado hasta ahora salió. Lo próximo es el carrusel “Tecnologías” a las 12:30."
+      "detail": "Al día: las 4 publicaciones del 7/10 salieron (el reel “Tip de riego” a las 19:44)."
     },
     {
       "cls": "warn",
