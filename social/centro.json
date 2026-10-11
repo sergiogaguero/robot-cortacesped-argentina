@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-11T00:08:00Z",
+  "syncedAt": "2026-10-11T15:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -423,14 +423,38 @@
     },
     "2026-10-10-reel-14-jardin-real#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-10T23:43:29.134Z"
+      "intento": "2026-10-11T04:28:29.033Z"
+    },
+    "2026-10-10-historia-reel-14-jardin-real": {
+      "mediaId": "18132164893664856",
+      "publicado": "2026-10-11T01:07:06.972Z"
+    },
+    "2026-10-10-historia-reel-14-jardin-real#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-11T05:46:11.927Z"
+    },
+    "2026-10-11-historia-14-precio": {
+      "mediaId": "18118764473471673",
+      "publicado": "2026-10-11T13:21:31.218Z"
+    },
+    "2026-10-11-historia-14-precio#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-11T14:44:15.053Z"
+    },
+    "2026-10-11-reel-10-v1000": {
+      "mediaId": "17912475927540154",
+      "publicado": "2026-10-11T14:23:00.131Z"
+    },
+    "2026-10-11-reel-10-v1000#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-11T14:44:15.321Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: todo lo del 10/10 hasta ahora salió (el reel “Jardín real” a las 19:44). La historia de las 21:00 sale en la próxima corrida."
+      "detail": "Al día: salieron la historia “Precio” (10:21) y el reel “V1000” (11:23). Lo último del calendario es la historia del reel a las 20:30."
     },
     {
       "cls": "warn",
