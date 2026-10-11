@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-10T15:08:00Z",
+  "syncedAt": "2026-10-11T00:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -399,14 +399,38 @@
     },
     "2026-10-10-carrusel-04-mantenimiento#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-10T14:43:40.824Z"
+      "intento": "2026-10-10T19:42:21.214Z"
+    },
+    "2026-10-10-historia-13-slider": {
+      "mediaId": "18169887748466273",
+      "publicado": "2026-10-10T16:23:20.650Z"
+    },
+    "2026-10-10-historia-13-slider#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-10T21:43:24.822Z"
+    },
+    "2026-10-10-historia-video-terramow": {
+      "mediaId": "17982601911092888",
+      "publicado": "2026-10-10T19:19:40.923Z"
+    },
+    "2026-10-10-historia-video-terramow#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-10T23:43:27.996Z"
+    },
+    "2026-10-10-reel-14-jardin-real": {
+      "mediaId": "17975867879934411",
+      "publicado": "2026-10-10T22:44:01.109Z"
+    },
+    "2026-10-10-reel-14-jardin-real#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-10T23:43:29.134Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: el carrusel “Mantenimiento” de las 11:00 salió a las 11:22. Lo próximo es el slider de las 13:00."
+      "detail": "Al día: todo lo del 10/10 hasta ahora salió (el reel “Jardín real” a las 19:44). La historia de las 21:00 sale en la próxima corrida."
     },
     {
       "cls": "warn",
