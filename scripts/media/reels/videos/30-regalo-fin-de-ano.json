@@ -1,0 +1,108 @@
+{
+ "title": "El regalo que trabaja todo el verano",
+ "scenes": [
+  {
+   "dur": 2.4,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Regalo de fin de año"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "El regalo que <em>trabaja todo el verano.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "comercial",
+    "from": 0.5
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Para la casa, <em>para la familia.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "pasada",
+    "from": 0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Más tiempo libre, <em>todos los fines de semana.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Sin cables",
+      "App en el celular"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Jardín de casa o <em>quinta grande:</em> tenemos el modelo."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Elegilo con nosotros <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/regalo-fin-de-ano.mp3"
+}

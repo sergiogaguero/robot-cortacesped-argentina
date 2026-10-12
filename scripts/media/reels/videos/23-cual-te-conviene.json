@@ -1,0 +1,120 @@
+{
+ "title": "¿Cuál te conviene?",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Elegí en 10 segundos"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Qué robot <em>te conviene?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "clip": "casa",
+    "from": 0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Hasta 600 m²"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "TerraMow <em>V600</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "clip": "arboles",
+    "from": 6
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Hasta 1200 m²"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "TerraMow <em>V1000</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "3000 a 6000 m² · pendientes de hasta 24°"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Hookii <em>Neomow X2</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-x2.jpg",
+     "height": 560
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Mandanos los m² <em>y te decimos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/cual-te-conviene.mp3"
+}

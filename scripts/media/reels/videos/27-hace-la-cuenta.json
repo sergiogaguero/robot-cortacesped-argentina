@@ -1,0 +1,116 @@
+{
+ "title": "Hacé la cuenta",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Hacé la cuenta"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Cuántas horas al año <em>cortás el pasto?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "lead",
+     "text": "Ejemplo: 2 horas por semana, 30 semanas de temporada"
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "counter",
+     "to": 60,
+     "suffix": " h",
+     "label": "por año cortando el pasto"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Son <em>más de 7 jornadas</em> de trabajo."
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "clip": "pasada",
+    "from": 1.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Un robot te devuelve <em>ese tiempo.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Todos los años",
+      "Sin esfuerzo"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Hacé tu cuenta con nosotros <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/hace-la-cuenta.mp3"
+}

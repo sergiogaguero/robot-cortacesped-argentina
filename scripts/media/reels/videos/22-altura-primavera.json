@@ -1,0 +1,109 @@
+{
+ "title": "Altura de corte en primavera",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 2
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "pill",
+     "text": "Tip de primavera"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿A qué altura <em>cortar?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Nunca más de <em>un tercio</em> de la hoja por corte."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "pasada",
+    "from": 2.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Cortes cortos y seguidos = <em>césped más denso.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Más verde",
+      "Menos maleza"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "clip": "bordes",
+    "from": 4
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Justo lo que hace un robot: <em>un poco, todos los días.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Dudas con tu césped? <em>Escribinos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/altura-primavera.mp3"
+}

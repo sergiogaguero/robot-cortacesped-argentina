@@ -1,0 +1,114 @@
+{
+ "title": "Césped y calor",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 4
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "pill",
+     "text": "Tip de verano"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Con calor, <em>no lo dejes bajito.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Subí la altura de corte <em>en verano.</em>"
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "lead",
+     "text": "El pasto más alto da sombra al suelo y pierde menos agua."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Regá temprano, <em>a la mañana.</em>"
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "lead",
+     "text": "Al mediodía, buena parte del agua se evapora."
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "clip": "pasada",
+    "from": 3
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Con el robot, la altura <em>la cambiás desde la app.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Dudas? <em>Escribinos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/calor.mp3"
+}

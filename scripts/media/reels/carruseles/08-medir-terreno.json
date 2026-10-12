@@ -1,0 +1,200 @@
+{
+ "title": "Cómo medir tu terreno",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 2
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Guía rápida"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Cómo medir los m² de <em>tu césped</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Sin cinta métrica. Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Paso 1"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Abrí <em>Google Maps</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "En la computadora o el celular, con la vista satélite activada."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Paso 2"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Usá <em>“Medir distancia”</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Clic derecho sobre el mapa (o mantené apretado en el celular)."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Paso 3"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Marcá el contorno <em>del césped</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Al cerrar la figura te muestra el área en m²."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "4",
+     "text": "Paso 4"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Restá lo que <em>no es pasto</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Casa, pileta, quincho, canteros y caminos."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Con ese número"
+    },
+    {
+     "type": "table",
+     "head": [
+      "Césped",
+      "Robot"
+     ],
+     "rows": [
+      [
+       "Hasta 600 m²",
+       "TerraMow V600"
+      ],
+      [
+       "Hasta 1200 m²",
+       "TerraMow V1000"
+      ],
+      [
+       "3000 a 6000 m²",
+       "Hookii Neomow X2"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Mandanos la captura <em>y te ayudamos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

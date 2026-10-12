@@ -1,0 +1,40 @@
+{
+ "title": "Llega Hookii",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Se viene"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Quinta, campo <em>o parque grande?</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-x2.jpg",
+     "height": 560
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Esta semana te presentamos el Hookii Neomow X2."
+    }
+   ]
+  }
+ ]
+}

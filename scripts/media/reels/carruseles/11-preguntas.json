@@ -1,0 +1,121 @@
+{
+ "title": "Preguntas antes de comprar",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Preguntas frecuentes"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Lo que nos preguntan <em>antes de comprar</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Necesita cable perimetral?",
+     "a": "No.",
+     "detail": "TerraMow usa cámaras con IA y Hookii usa 3D LiDAR + visión."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Sirve para mi terreno?",
+     "a": "Depende de los m².",
+     "detail": "Hasta 1200 m², TerraMow. De 3000 a 6000 m², Hookii Neomow X2."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Y si tengo pendientes?",
+     "a": "Hasta 24°.",
+     "detail": "TerraMow sube hasta 18° y Hookii hasta 24°. Decide la parte más empinada."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "qa",
+     "q": "¿Hacen envíos?",
+     "a": "Sí, a todo el país.",
+     "detail": "Consultanos por la entrega a tu zona."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "¿Te quedó otra pregunta? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "title": "Te vas de vacaciones",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Verano"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Te vas de vacaciones <em>dos semanas.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Volvés y el pasto <em>te llega a las rodillas.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2,
+   "cut": true,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "mega",
+     "text": "O no."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "pasada",
+    "from": 0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "El robot sigue cortando <em>mientras no estás.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Programado",
+      "Lo seguís desde la app"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 1
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Volvés a un jardín <em>impecable.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Dejalo listo antes de irte. <em>Escribinos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/vacaciones.mp3"
+}

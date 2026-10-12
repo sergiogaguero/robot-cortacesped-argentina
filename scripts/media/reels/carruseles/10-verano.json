@@ -1,0 +1,167 @@
+{
+ "title": "Guía de verano para el césped",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 3
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Verano"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Guía de verano <em>para tu césped</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Guardala 📌 Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Altura"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Subí la <em>altura de corte</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "El pasto más alto da sombra al suelo y aguanta mejor el calor."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Riego"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Regá <em>temprano</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "A la mañana: menos evaporación y el pasto se seca antes de la noche."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Frecuencia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mejor <em>poco y seguido</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Cortes frecuentes y livianos estresan menos al césped que uno fuerte."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "4",
+     "text": "Recortes"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Dejá los <em>recortes</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Los recortes finos vuelven al suelo como abono natural."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Un robot hace <em>los pasos 3 y 4</em> solo."
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "title": "Pendientes de hasta 24°",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Hookii Neomow X2"
+    },
+    {
+     "type": "counter",
+     "to": 24,
+     "suffix": "°",
+     "label": "de pendiente máxima"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "Para terrenos con lomas y desniveles."
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

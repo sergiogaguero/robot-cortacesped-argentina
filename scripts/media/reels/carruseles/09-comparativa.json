@@ -1,0 +1,171 @@
+{
+ "title": "TerraMow vs Hookii",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Comparativa"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "TerraMow vs <em>Hookii</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "Dos tecnologías, dos tipos de terreno. ¿Cuál es la tuya? Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "table",
+     "head": [
+      "",
+      "TerraMow",
+      "Hookii X2"
+     ],
+     "rows": [
+      [
+       "Superficie",
+       "600–1200 m²",
+       "3000–6000 m²"
+      ],
+      [
+       "Pendiente",
+       "Hasta 18°",
+       "Hasta 24°"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "table",
+     "head": [
+      "",
+      "TerraMow",
+      "Hookii X2"
+     ],
+     "rows": [
+      [
+       "Navegación",
+       "Triple cámara con IA",
+       "3D LiDAR + visión"
+      ],
+      [
+       "Cable perimetral",
+       "No",
+       "No"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "TerraMow V Series"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Para el <em>jardín de casa.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Jardines residenciales con árboles, canteros y varias zonas."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Hookii Neomow X2"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Para <em>trabajo pesado.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Quintas, campos y parques grandes, o terrenos con pendientes fuertes."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "¿Dudás entre los dos? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

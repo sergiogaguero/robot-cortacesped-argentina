@@ -1,0 +1,38 @@
+{
+ "title": "Mañana es el Día de la Madre",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Domingo 18/10"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mañana es el <em>Día de la Madre.</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "¿Todavía no tenés el regalo? Te asesoramos hoy por WhatsApp."
+    },
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

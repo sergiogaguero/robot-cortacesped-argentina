@@ -1,0 +1,40 @@
+{
+ "title": "60 horas por año",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Hacé la cuenta"
+    },
+    {
+     "type": "counter",
+     "to": 60,
+     "suffix": " h",
+     "label": "por año cortando el pasto"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Ejemplo: 2 h por semana durante 30 semanas."
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "¿Cuánto te lleva a vos? Respondé esta historia."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "title": "Preguntanos lo que quieras",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Cajita de preguntas"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Qué querés saber de los <em>robots cortacésped?</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "Respondé esta historia con tu pregunta y te contestamos en las próximas."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "title": "Mientras tanto",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mientras vos estás en la pileta…"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "<em>el robot corta.</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

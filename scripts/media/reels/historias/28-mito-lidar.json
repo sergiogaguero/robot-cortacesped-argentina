@@ -1,0 +1,39 @@
+{
+ "title": "Mito: el LiDAR necesita antena",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Mito"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "“Un robot sin cable necesita <em>una antena</em> en el jardín.”"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "mega",
+     "text": "Falso"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "El Hookii se ubica con 3D LiDAR + visión y los TerraMow con cámaras. Ninguno necesita antena externa."
+    }
+   ]
+  }
+ ]
+}

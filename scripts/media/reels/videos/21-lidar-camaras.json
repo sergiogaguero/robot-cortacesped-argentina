@@ -1,0 +1,147 @@
+{
+ "title": "LiDAR vs cámaras",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Explicado fácil"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Cómo sabe el robot <em>dónde cortar?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "arboles",
+    "from": 4
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "TerraMow"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Triple cámara <em>con IA</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Ve el césped, los bordes y los obstáculos. Ideal para jardines de casa."
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Hookii"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "3D LiDAR + <em>visión</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-x2.jpg",
+     "height": 480
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mide el terreno con láser. Ideal para quintas y terrenos grandes."
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "table",
+     "head": [
+      "",
+      "TerraMow",
+      "Hookii"
+     ],
+     "rows": [
+      [
+       "Superficie",
+       "600–1200 m²",
+       "3000–6000 m²"
+      ],
+      [
+       "Pendiente",
+       "18°",
+       "24°"
+      ],
+      [
+       "Cable perimetral",
+       "No",
+       "No"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Cuál va con tu terreno? <em>Escribinos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/lidar-camaras.mp3"
+}

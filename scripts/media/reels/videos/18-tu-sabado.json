@@ -1,0 +1,117 @@
+{
+ "title": "Tu sábado, con robot",
+ "scenes": [
+  {
+   "dur": 1.8,
+   "at": 0.05,
+   "bg": {
+    "clip": "pov-pasto",
+    "from": 0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Sábado, 9 AM"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Cortar el pasto <em>o...?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "rotator",
+     "size": "xl",
+     "height": 240,
+     "items": [
+      "Asado.",
+      "Pileta.",
+      "Siesta.",
+      "Nada."
+     ],
+     "step": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "pasada",
+    "from": 1
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mientras tanto, <em>el robot corta.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Programado desde la app",
+      "Silencioso"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "clip": "bordes",
+    "from": 1
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Y deja los bordes <em>prolijos.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Precio del día <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/tu-sabado.mp3"
+}

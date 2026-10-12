@@ -1,0 +1,41 @@
+{
+ "title": "¿Jardín o quinta?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Dónde lo usarías?"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · Jardín de casa",
+      "2 · Quinta o campo"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número por mensaje."
+    }
+   ]
+  }
+ ]
+}

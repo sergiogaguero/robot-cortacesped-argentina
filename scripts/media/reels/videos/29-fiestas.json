@@ -1,0 +1,108 @@
+{
+ "title": "Llegá a las fiestas con el jardín listo",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Fiestas"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Diciembre se viene <em>con todo.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Reuniones, asados, <em>la familia en casa.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "arboles",
+    "from": 10
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Que el jardín esté listo <em>sin que lo cortes vos.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Corta solo",
+      "Todo el verano"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Dejalo andando <em>antes de las fiestas.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Consultá disponibilidad <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/fiestas.mp3"
+}

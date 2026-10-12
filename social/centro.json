@@ -462,7 +462,7 @@
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Calendario completo: las 57 publicaciones salieron en Instagram. No queda nada programado."
+      "detail": "Las 57 publicaciones del primer calendario salieron en Instagram. Desde el 13/10 sigue la campaña octubre–noviembre."
     },
     {
       "cls": "warn",
@@ -470,9 +470,9 @@
       "detail": "Meta rechaza las publicaciones por falta de pages_manage_posts. Instagram no se ve afectado."
     },
     {
-      "cls": "warn",
-      "label": "Calendario terminado",
-      "detail": "Desde el 12/10 no hay publicaciones programadas. Falta armar las 2 semanas siguientes."
+      "cls": "ok",
+      "label": "Campaña octubre–noviembre programada",
+      "detail": "56 publicaciones nuevas del 13/10 al 29/11: 14 reels (cada uno también como historia), 21 historias y 7 carruseles."
     }
   ],
   "changelog": [
@@ -515,6 +515,10 @@
     {
       "date": "2 oct",
       "text": "Historia del 3/10 (11:00) rehecha: en vez de requisitos técnicos, ahora habla de lo que te resuelve el robot (fines de semana libres, no depender del jardinero, volver de viaje con el jardín impecable)."
+    },
+    {
+      "date": "12 oct",
+      "text": "Campaña octubre–noviembre (13/10 al 29/11): 14 reels con música propia, 21 historias y 7 carruseles. Temas: Día de la Madre (18/10), lanzamiento de Hookii Neomow X2 para quintas y campos, LiDAR vs cámaras, cuál conviene según los m², verano y vacaciones, objeciones (hacé la cuenta, 3 errores al elegir) y fiestas de fin de año."
     }
   ]
 }

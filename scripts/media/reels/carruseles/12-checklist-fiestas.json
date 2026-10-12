@@ -1,0 +1,167 @@
+{
+ "title": "Checklist de fiestas",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "arboles",
+    "from": 1
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Fiestas"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Jardín listo para <em>las fiestas</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Checklist rápido. Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Superficie"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Medí <em>tu césped</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Con Google Maps, en 2 minutos."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Pendiente"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Revisá <em>la pendiente</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "La parte más empinada define el modelo."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Base de carga"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Elegí el lugar <em>de la base</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Plano, con enchufe cerca y buena señal."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "4",
+     "text": "Tiempo"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Consultá <em>con tiempo</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Así lo tenés andando antes de las reuniones de diciembre."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Consultá disponibilidad <em>por WhatsApp.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

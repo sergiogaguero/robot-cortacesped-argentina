@@ -1,0 +1,42 @@
+{
+ "title": "¿Qué le regalás a mamá?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Qué le regalás <em>a mamá</em> este domingo?"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · Flores",
+      "2 · Algo para la casa",
+      "3 · Tiempo libre 😉"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número por mensaje."
+    }
+   ]
+  }
+ ]
+}

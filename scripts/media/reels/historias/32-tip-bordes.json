@@ -1,0 +1,42 @@
+{
+ "title": "Tip: los bordes",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Tip"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Bordes prolijos <em>sin bordeadora.</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Dejá una franja de 5 cm entre césped y cantero",
+      "Usá borde de ladrillo o metal al ras del pasto",
+      "Así el robot pasa por encima y corta hasta el final"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Guardá esta historia 📌"
+    }
+   ]
+  }
+ ]
+}

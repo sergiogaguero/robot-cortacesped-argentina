@@ -1,0 +1,42 @@
+{
+ "title": "¿Cuántos m² tiene tu terreno?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Cuántos m² de pasto <em>tenés?</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · Menos de 600",
+      "2 · Hasta 1200",
+      "3 · Más de 3000"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número y te decimos qué robot te sirve."
+    }
+   ]
+  }
+ ]
+}

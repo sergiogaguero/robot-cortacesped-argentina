@@ -1,0 +1,36 @@
+{
+ "title": "Consultá disponibilidad",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "TerraMow y Hookii: <em>consultá disponibilidad.</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "title": "Cómo medir tu terreno",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Tip"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Medí tu pasto <em>en 2 minutos.</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Abrí Google Maps en vista satélite",
+      "Clic derecho → Medir distancia",
+      "Marcá el contorno del césped",
+      "Restá casa, pileta y canteros"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "¿Lo mediste? Mandanos el número."
+    }
+   ]
+  }
+ ]
+}

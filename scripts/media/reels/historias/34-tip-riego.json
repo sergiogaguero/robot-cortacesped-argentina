@@ -1,0 +1,39 @@
+{
+ "title": "Tip: regá a la mañana",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Tip de verano"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Regá <em>temprano.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Al mediodía, buena parte del agua se evapora antes de llegar a la raíz."
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Y con calor, subí un poco la altura de corte."
+    }
+   ]
+  }
+ ]
+}

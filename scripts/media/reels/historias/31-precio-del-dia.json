@@ -1,0 +1,33 @@
+{
+ "title": "Precio del día",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "TerraMow · Hookii"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Precio del día y asesoramiento <em>por WhatsApp.</em>"
+    },
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

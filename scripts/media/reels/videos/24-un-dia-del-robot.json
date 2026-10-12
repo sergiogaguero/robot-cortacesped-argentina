@@ -1,0 +1,133 @@
+{
+ "title": "Un día del robot",
+ "scenes": [
+  {
+   "dur": 2,
+   "at": 0.05,
+   "bg": {
+    "clip": "casa",
+    "from": 0
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Un día cualquiera"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "<em>9:00</em> · Sale de la base"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "bg": {
+    "clip": "pasada",
+    "from": 0.5
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "<em>9:05</em> · Corta en franjas"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "bg": {
+    "clip": "arboles",
+    "from": 8
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "<em>10:00</em> · Esquiva los árboles"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "bg": {
+    "clip": "bordes",
+    "from": 5
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "<em>11:30</em> · Repasa los bordes"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "cut": true,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 3.5
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "<em>12:00</em> · Vuelve a cargar <em>solo</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.2,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Vos: <em>nada.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Precio del día <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/un-dia-del-robot.mp3"
+}

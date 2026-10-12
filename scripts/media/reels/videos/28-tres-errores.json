@@ -1,0 +1,135 @@
+{
+ "title": "3 errores al elegir robot",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Antes de comprar"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "3 errores al elegir <em>un robot cortacésped</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Error 1"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Medir el terreno, <em>no el pasto</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Contá solo los m² de césped: sin casa, pileta ni canteros."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Error 2"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Ignorar <em>la pendiente</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Lo que decide es la parte más empinada. TerraMow sube hasta 18°; Hookii, hasta 24°."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Error 3"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Olvidar <em>la base de carga</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Necesita un lugar plano, con enchufe cerca y buena señal de Wi-Fi o 4G."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Te ayudamos a elegir. <em>Escribinos.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/tres-errores.mp3"
+}

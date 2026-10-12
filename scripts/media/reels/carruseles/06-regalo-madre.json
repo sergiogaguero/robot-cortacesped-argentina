@@ -1,0 +1,193 @@
+{
+ "title": "5 razones para regalarle un robot a mamá",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 1
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Día de la Madre"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "5 razones para regalarle <em>un robot cortacésped</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "1",
+     "text": "Tiempo"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Le regalás <em>tiempo libre</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Los fines de semana vuelven a ser para ella, no para cortar el pasto."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "2",
+     "text": "Esfuerzo"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Cero <em>esfuerzo</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Corta solo y vuelve a cargar solo. Nada de empujar una máquina al sol."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "3",
+     "text": "Silencio"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Es <em>silencioso</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Mucho más que una cortadora a nafta. Puede trabajar sin molestar."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "4",
+     "text": "App"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Todo desde <em>el celular</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Horarios, zonas y altura de corte, todo desde la app."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "step",
+     "n": "5",
+     "text": "Resultado"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Jardín siempre <em>impecable</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "lead",
+     "text": "Corta un poco y seguido: el césped queda más denso y parejo."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Te ayudamos a elegir <em>el modelo justo.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

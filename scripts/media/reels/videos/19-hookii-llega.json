@@ -1,0 +1,159 @@
+{
+ "title": "Presentamos Hookii Neomow X2",
+ "scenes": [
+  {
+   "dur": 2.4,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Nuevo"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Para terrenos <em>grandes.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Hookii · trabajo pesado"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Neomow <em>X2</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-x2.jpg",
+     "height": 620
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "3000 m²",
+      "4000 m²",
+      "6000 m²"
+     ],
+     "at": 0.8
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Navegación"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "3D LiDAR + <em>visión con IA</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Mide el terreno con láser y reconoce el césped. Sin cable perimetral."
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "counter",
+     "to": 24,
+     "suffix": "°",
+     "label": "de pendiente máxima"
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Quintas, campos <em>y parques.</em>"
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Corte de 28 cm"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Elegí tu versión <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/hookii-llega.mp3"
+}

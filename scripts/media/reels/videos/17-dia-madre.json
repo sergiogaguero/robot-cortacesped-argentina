@@ -1,0 +1,120 @@
+{
+ "title": "Regalale tiempo a mamá",
+ "scenes": [
+  {
+   "dur": 2,
+   "at": 0.05,
+   "bg": {
+    "clip": "casa",
+    "from": 0,
+    "zoom": [
+     1.1,
+     1
+    ]
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Día de la Madre · 18/10"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Este año no le regales <em>otra cosa.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 2.2,
+   "cut": true,
+   "bg": {
+    "clip": "pasada",
+    "from": 0.2
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Regalale <em>tiempo.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "clip": "vista-arriba",
+    "from": 0.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Los domingos son para ella,<br><em>no para el pasto.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Corta solo",
+      "Sin cables",
+      "Vuelve a cargar solo"
+     ],
+     "at": 0.8
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "arboles",
+    "from": 2
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Robot cortacésped con IA"
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "El jardín impecable, <em>sin que nadie lo corte.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Consultá modelos y precio <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/dia-madre.mp3"
+}

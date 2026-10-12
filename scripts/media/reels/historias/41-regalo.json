@@ -1,0 +1,38 @@
+{
+ "title": "Regalo de fin de año",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Regalo de fin de año"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Y si este año regalás <em>tiempo libre?</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "Te ayudamos a elegir el modelo por WhatsApp."
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "title": "¿Te vas de vacaciones?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Respondé esta historia"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Te vas de vacaciones <em>este verano?</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 160
+    },
+    {
+     "type": "chips",
+     "items": [
+      "1 · Sí, y el jardín me preocupa",
+      "2 · Sí, ya lo tengo resuelto",
+      "3 · No"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mandanos el número por mensaje."
+    }
+   ]
+  }
+ ]
+}

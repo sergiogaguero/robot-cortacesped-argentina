@@ -1,0 +1,41 @@
+{
+ "title": "Te asesoramos",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Antes de comprar"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Te ayudamos a elegir <em>sin compromiso.</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Mandanos los m² aproximados",
+      "Unas fotos del jardín o terreno",
+      "Y te decimos qué modelo te conviene"
+     ]
+    }
+   ],
+   "bottom": [
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}
