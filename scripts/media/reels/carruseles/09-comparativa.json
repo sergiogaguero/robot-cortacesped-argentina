@@ -44,18 +44,18 @@
      "head": [
       "",
       "TerraMow",
-      "Hookii X2"
+      "Hookii"
      ],
      "rows": [
       [
        "Superficie",
        "600–1200 m²",
-       "3000–6000 m²"
+       "2000–6000 m²"
       ],
       [
        "Pendiente",
        "Hasta 18°",
-       "Hasta 24°"
+       "Hasta 27°"
       ]
      ]
     }
@@ -72,13 +72,13 @@
      "head": [
       "",
       "TerraMow",
-      "Hookii X2"
+      "Hookii"
      ],
      "rows": [
       [
        "Navegación",
        "Triple cámara con IA",
-       "3D LiDAR + visión"
+       "LiDAR 3D + visión"
       ],
       [
        "Cable perimetral",
@@ -122,12 +122,12 @@
    "center": [
     {
      "type": "eyebrow",
-     "text": "Hookii Neomow X2"
+     "text": "Hookii Neomow L Pro y X2 Pro"
     },
     {
      "type": "title",
      "size": "l",
-     "text": "Para <em>trabajo pesado.</em>"
+     "text": "Para terrenos <em>grandes.</em>"
     },
     {
      "type": "space",
@@ -135,7 +135,7 @@
     },
     {
      "type": "lead",
-     "text": "Quintas, campos y parques grandes, o terrenos con pendientes fuertes."
+     "text": "L Pro: hasta 2000 m² y 27° de pendiente. X2 Pro: quintas, campos y parques de hasta 6000 m²."
     }
    ]
   },

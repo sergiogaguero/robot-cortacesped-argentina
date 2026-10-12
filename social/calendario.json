@@ -461,6 +461,13 @@
       "auto": true
     },
     {
+      "id": "2026-10-13-historia-42-l-pro-teaser",
+      "when": "2026-10-13T13:00:00-03:00",
+      "type": "story",
+      "file": "historias/42-l-pro-teaser.jpg",
+      "auto": true
+    },
+    {
       "id": "2026-10-13-reel-17-dia-madre",
       "when": "2026-10-13T19:30:00-03:00",
       "type": "reel",
@@ -483,6 +490,21 @@
       "auto": true
     },
     {
+      "id": "2026-10-14-reel-31-neomow-l-pro",
+      "when": "2026-10-14T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/31-neomow-l-pro.mp4",
+      "caption": "Nuevo Hookii Neomow L Pro 💚🤖\n\nEl robot cortacésped con LiDAR 3D para jardines grandes:\n✅ Hasta 2000 m² sin cable perimetral\n✅ Pendientes de hasta 27° (50 %)\n✅ LiDAR 3D 360° + visión con IA\n✅ Altura de corte automática de 20 a 80 mm\n✅ Hasta 40 zonas desde la app, con 4G, Wi-Fi y Bluetooth\n✅ IPX6 y GPS antirrobo\n\nEs lo último de Hookii. Escribinos por WhatsApp y consultá disponibilidad y precio (link en la bio).\n\n#hookii #neomow #robotcortacesped #jardin #lidar",
+      "auto": true
+    },
+    {
+      "id": "2026-10-14-historia-reel-31-neomow-l-pro",
+      "when": "2026-10-14T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/31-neomow-l-pro.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-10-15-carrusel-06-regalo-madre",
       "when": "2026-10-15T12:30:00-03:00",
       "type": "carousel",
@@ -496,6 +518,13 @@
         "carruseles/06-regalo-madre/07.jpg"
       ],
       "caption": "5 razones para regalarle un robot cortacésped a mamá 💚👉\n\nTiempo libre, cero esfuerzo, silencio, todo desde el celular y el jardín siempre impecable.\n\nEl domingo 18 es el Día de la Madre: escribinos por WhatsApp y te ayudamos a elegir (link en la bio).\n\n#diadelamadre #regalodiadelamadre #robotcortacesped #jardin #terramow",
+      "auto": true
+    },
+    {
+      "id": "2026-10-16-historia-43-l-pro-numeros",
+      "when": "2026-10-16T13:00:00-03:00",
+      "type": "story",
+      "file": "historias/43-l-pro-numeros.jpg",
       "auto": true
     },
     {
@@ -539,7 +568,7 @@
       "when": "2026-10-20T19:30:00-03:00",
       "type": "reel",
       "file": "reels/19-hookii-llega.mp4",
-      "caption": "Llegó Hookii Neomow X2 🚜💚\n\nEl robot cortacésped para trabajo pesado: versiones para 3000, 4000 y 6000 m², navegación 3D LiDAR + visión con IA y pendientes de hasta 24°. Sin cable perimetral.\n\nIdeal para quintas, campos y parques. Escribinos por WhatsApp y te decimos qué versión te conviene (link en la bio).\n\n#hookii #neomow #robotcortacesped #quinta #campo",
+      "caption": "Hookii Neomow X2 Pro: el robot cortacésped para terrenos grandes de verdad 🚜💚\n\nHasta 6000 m², navegación LiDAR 3D 360° + visión con IA, pendientes de hasta 24° y 150 minutos por carga. Sin cable perimetral ni antena RTK.\n\n¿Tu terreno es un poco más chico? La línea X2 también viene para 3000 y 4000 m², y el nuevo Neomow L Pro cubre hasta 2000 m².\n\nEscribinos por WhatsApp y te decimos cuál te conviene (link en la bio).\n\n#hookii #neomow #robotcortacesped #quinta #campo",
       "auto": true
     },
     {
@@ -557,41 +586,41 @@
       "auto": true
     },
     {
-      "id": "2026-10-23-reel-20-quinta-campo",
+      "id": "2026-10-23-reel-20-l-pro-vs-x2-pro",
       "when": "2026-10-23T19:30:00-03:00",
       "type": "reel",
-      "file": "reels/20-quinta-campo.mp4",
-      "caption": "¿Tenés una quinta, un campo o un parque grande? 🌳\n\nEl Hookii Neomow X2 está pensado para trabajo pesado: hasta 6000 m², pendientes de hasta 24° y navegación 3D LiDAR, sin cables.\n\nMandanos los metros aproximados por WhatsApp y te recomendamos la versión (link en la bio).\n\n#quinta #campo #robotcortacesped #hookii #neomow",
+      "file": "reels/20-l-pro-vs-x2-pro.mp4",
+      "caption": "¿Hookii Neomow L Pro o X2 Pro? 🤔\n\n🏡 L Pro: hasta 2000 m² y pendientes de hasta 27°. Ideal para casas con mucho parque o quintas chicas.\n🌳 X2 Pro: hasta 6000 m² y pendientes de hasta 24°. Para quintas, campos y parques.\n\nLos dos usan LiDAR 3D + visión con IA, sin cable perimetral. La regla es simple: mirá los m² de césped.\n\nMandanos los metros por WhatsApp y te decimos cuál es el tuyo (link en la bio).\n\n#hookii #neomow #robotcortacesped #quinta #jardin",
       "auto": true
     },
     {
-      "id": "2026-10-23-historia-reel-20-quinta-campo",
+      "id": "2026-10-23-historia-reel-20-l-pro-vs-x2-pro",
       "when": "2026-10-23T20:30:00-03:00",
       "type": "story",
-      "file": "reels/20-quinta-campo.mp4",
+      "file": "reels/20-l-pro-vs-x2-pro.mp4",
       "auto": true
     },
     {
-      "id": "2026-10-24-historia-26-pendiente-24",
+      "id": "2026-10-24-historia-26-pendientes",
       "when": "2026-10-24T11:00:00-03:00",
       "type": "story",
-      "file": "historias/26-pendiente-24.jpg",
+      "file": "historias/26-pendientes.jpg",
       "auto": true
     },
     {
-      "id": "2026-10-25-carrusel-07-hookii-ficha",
+      "id": "2026-10-25-carrusel-07-hookii-l-pro-x2-pro",
       "when": "2026-10-25T11:00:00-03:00",
       "type": "carousel",
       "files": [
-        "carruseles/07-hookii-ficha/01.jpg",
-        "carruseles/07-hookii-ficha/02.jpg",
-        "carruseles/07-hookii-ficha/03.jpg",
-        "carruseles/07-hookii-ficha/04.jpg",
-        "carruseles/07-hookii-ficha/05.jpg",
-        "carruseles/07-hookii-ficha/06.jpg",
-        "carruseles/07-hookii-ficha/07.jpg"
+        "carruseles/07-hookii-l-pro-x2-pro/01.jpg",
+        "carruseles/07-hookii-l-pro-x2-pro/02.jpg",
+        "carruseles/07-hookii-l-pro-x2-pro/03.jpg",
+        "carruseles/07-hookii-l-pro-x2-pro/04.jpg",
+        "carruseles/07-hookii-l-pro-x2-pro/05.jpg",
+        "carruseles/07-hookii-l-pro-x2-pro/06.jpg",
+        "carruseles/07-hookii-l-pro-x2-pro/07.jpg"
       ],
-      "caption": "Hookii Neomow X2: todo lo que tenés que saber en 6 láminas 👉\n\nVersiones de 3000, 4000 y 6000 m², navegación 3D LiDAR + visión con IA, pendientes de hasta 24° y 28 cm de ancho de corte. Para quintas, campos y parques.\n\nGuardalo 📌 y escribinos por WhatsApp para saber qué versión te conviene (link en la bio).\n\n#hookii #neomow #robotcortacesped #quinta #campo",
+      "caption": "Hookii Neomow L Pro vs X2 Pro: ¿cuál es para vos? 👉\n\nL Pro: hasta 2000 m², pendientes de hasta 27° y altura de corte automática de 20 a 80 mm.\nX2 Pro: hasta 6000 m², pendientes de hasta 24° y 150 minutos por carga.\n\nLos dos con LiDAR 3D 360° + visión con IA y sin cable perimetral. Guardalo 📌 y escribinos por WhatsApp para saber cuál te conviene (link en la bio).\n\n#hookii #neomow #robotcortacesped #quinta #campo",
       "auto": true
     },
     {
@@ -606,7 +635,7 @@
       "when": "2026-10-27T19:30:00-03:00",
       "type": "reel",
       "file": "reels/21-lidar-camaras.mp4",
-      "caption": "Cámaras con IA o LiDAR: ¿cuál conviene? 🤖\n\n📷 TerraMow (triple cámara con IA): jardines de casa de hasta 1200 m².\n📡 Hookii Neomow X2 (3D LiDAR + visión): quintas y terrenos de 3000 a 6000 m².\n\nNinguno necesita cable perimetral. Guardalo para cuando tengas que elegir 📌\n\n#robotcortacesped #lidar #terramow #hookii #tecnologia",
+      "caption": "Cámaras con IA o LiDAR: ¿cuál conviene? 🤖\n\n📷 TerraMow (triple cámara con IA): jardines de casa de hasta 1200 m².\n📡 Hookii Neomow L Pro y X2 Pro (LiDAR 3D + visión): jardines grandes y quintas de 2000 a 6000 m², con pendientes de hasta 27°.\n\nNinguno necesita cable perimetral. Guardalo para cuando tengas que elegir 📌\n\n#robotcortacesped #lidar #terramow #hookii #tecnologia",
       "auto": true
     },
     {
@@ -658,7 +687,7 @@
         "carruseles/08-medir-terreno/06.jpg",
         "carruseles/08-medir-terreno/07.jpg"
       ],
-      "caption": "¿Cuántos m² de césped tenés? Medilo en 2 minutos con Google Maps 👉\n\nY con ese número, elegís el robot: hasta 600 m² TerraMow V600, hasta 1200 m² TerraMow V1000, de 3000 a 6000 m² Hookii Neomow X2.\n\nGuardalo 📌 ¿Lo mediste? Mandanos la captura por WhatsApp (link en la bio).\n\n#jardin #robotcortacesped #guiadecompra #terramow #hookii",
+      "caption": "¿Cuántos m² de césped tenés? Medilo en 2 minutos con Google Maps 👉\n\nY con ese número, elegís el robot: hasta 600 m² TerraMow V600, hasta 1200 m² TerraMow V1000, hasta 2000 m² Hookii Neomow L Pro, hasta 6000 m² Hookii Neomow X2 Pro.\n\nGuardalo 📌 ¿Lo mediste? Mandanos la captura por WhatsApp (link en la bio).\n\n#jardin #robotcortacesped #guiadecompra #terramow #hookii",
       "auto": true
     },
     {
@@ -673,7 +702,7 @@
       "when": "2026-11-03T19:30:00-03:00",
       "type": "reel",
       "file": "reels/23-cual-te-conviene.mp4",
-      "caption": "¿Qué robot cortacésped te conviene? Fijate cuántos m² de pasto tenés 👇\n\n🏡 Hasta 600 m² → TerraMow V600\n🏡 Hasta 1200 m² → TerraMow V1000\n🌳 3000 a 6000 m² o pendientes de hasta 24° → Hookii Neomow X2\n\n¿No sabés los metros? Mandanos una captura de Google Maps por WhatsApp y te ayudamos (link en la bio).\n\n#robotcortacesped #terramow #hookii #jardin #quinta",
+      "caption": "¿Qué robot cortacésped te conviene? Fijate cuántos m² de pasto tenés 👇\n\n🏡 Hasta 600 m² → TerraMow V600\n🏡 Hasta 1200 m² → TerraMow V1000\n🌳 Hasta 2000 m² o pendientes de hasta 27° → Hookii Neomow L Pro\n🚜 Hasta 6000 m² → Hookii Neomow X2 Pro\n\n¿No sabés los metros? Mandanos una captura de Google Maps por WhatsApp y te ayudamos (link en la bio).\n\n#robotcortacesped #terramow #hookii #jardin #quinta",
       "auto": true
     },
     {
@@ -724,7 +753,7 @@
         "carruseles/09-comparativa/05.jpg",
         "carruseles/09-comparativa/06.jpg"
       ],
-      "caption": "TerraMow vs Hookii: ¿cuál es para vos? 👉\n\nTerraMow V Series: jardines de casa de hasta 1200 m², triple cámara con IA.\nHookii Neomow X2: quintas y terrenos de 3000 a 6000 m², 3D LiDAR + visión, pendientes de hasta 24°.\n\nGuardalo 📌 y si dudás, escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #terramow #hookii #comparativa #jardin",
+      "caption": "TerraMow vs Hookii: ¿cuál es para vos? 👉\n\nTerraMow V Series: jardines de casa de hasta 1200 m², triple cámara con IA.\nHookii Neomow L Pro y X2 Pro: de 2000 a 6000 m², LiDAR 3D + visión y pendientes de hasta 27°.\n\nGuardalo 📌 y si dudás, escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #terramow #hookii #comparativa #jardin",
       "auto": true
     },
     {
@@ -827,7 +856,7 @@
       "when": "2026-11-20T19:30:00-03:00",
       "type": "reel",
       "file": "reels/28-tres-errores.mp4",
-      "caption": "3 errores al elegir un robot cortacésped (y cómo evitarlos) 👇\n\n1️⃣ Medir el terreno y no el pasto: contá solo los m² de césped.\n2️⃣ Ignorar la pendiente: decide la parte más empinada (TerraMow hasta 18°, Hookii hasta 24°).\n3️⃣ Olvidar la base de carga: lugar plano, enchufe cerca y buena señal.\n\nGuardalo 📌 y si tenés dudas, escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #guiadecompra #jardin #terramow #hookii",
+      "caption": "3 errores al elegir un robot cortacésped (y cómo evitarlos) 👇\n\n1️⃣ Medir el terreno y no el pasto: contá solo los m² de césped.\n2️⃣ Ignorar la pendiente: decide la parte más empinada (TerraMow hasta 18°, Hookii X2 Pro hasta 24° y L Pro hasta 27°).\n3️⃣ Olvidar la base de carga: lugar plano, enchufe cerca y buena señal.\n\nGuardalo 📌 y si tenés dudas, escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #guiadecompra #jardin #terramow #hookii",
       "auto": true
     },
     {
@@ -893,7 +922,7 @@
       "when": "2026-11-27T19:30:00-03:00",
       "type": "reel",
       "file": "reels/30-regalo-fin-de-ano.mp4",
-      "caption": "El regalo de fin de año que trabaja todo el verano 🎁🤖\n\nUn robot cortacésped regala tiempo libre todos los fines de semana. Tenemos modelos para jardines de casa (TerraMow) y para quintas y terrenos grandes (Hookii Neomow X2).\n\nEscribinos por WhatsApp y te ayudamos a elegir (link en la bio).\n\n#regalo #fiestas #robotcortacesped #terramow #hookii",
+      "caption": "El regalo de fin de año que trabaja todo el verano 🎁🤖\n\nUn robot cortacésped regala tiempo libre todos los fines de semana. Tenemos modelos para jardines de casa (TerraMow) y para jardines grandes y quintas (Hookii Neomow L Pro y X2 Pro).\n\nEscribinos por WhatsApp y te ayudamos a elegir (link en la bio).\n\n#regalo #fiestas #robotcortacesped #terramow #hookii",
       "auto": true
     },
     {

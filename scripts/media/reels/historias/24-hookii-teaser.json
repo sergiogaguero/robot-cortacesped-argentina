@@ -1,5 +1,5 @@
 {
- "title": "Llega Hookii",
+ "title": "Semana Hookii",
  "scenes": [
   {
    "dur": 3,
@@ -10,12 +10,12 @@
    "center": [
     {
      "type": "pill",
-     "text": "Se viene"
+     "text": "Semana Hookii"
     },
     {
      "type": "title",
      "size": "l",
-     "text": "¿Quinta, campo <em>o parque grande?</em>"
+     "text": "L Pro vs X2 Pro: <em>¿cuál es el tuyo?</em>"
     },
     {
      "type": "space",
@@ -23,8 +23,17 @@
     },
     {
      "type": "photo",
+     "src": "src/assets/products/neomow-l-pro.jpg",
+     "height": 400
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "photo",
      "src": "src/assets/products/neomow-x2.jpg",
-     "height": 560
+     "height": 400
     },
     {
      "type": "space",
@@ -32,7 +41,7 @@
     },
     {
      "type": "lead",
-     "text": "Esta semana te presentamos el Hookii Neomow X2."
+     "text": "Esta semana te mostramos los dos, frente a frente."
     }
    ]
   }

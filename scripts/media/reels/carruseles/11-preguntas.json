@@ -57,7 +57,7 @@
      "type": "qa",
      "q": "¿Sirve para mi terreno?",
      "a": "Depende de los m².",
-     "detail": "Hasta 1200 m², TerraMow. De 3000 a 6000 m², Hookii Neomow X2."
+     "detail": "Hasta 1200 m², TerraMow. Hasta 2000 m², Hookii L Pro. Hasta 6000 m², Hookii X2 Pro."
     }
    ]
   },
@@ -70,8 +70,8 @@
     {
      "type": "qa",
      "q": "¿Y si tengo pendientes?",
-     "a": "Hasta 24°.",
-     "detail": "TerraMow sube hasta 18° y Hookii hasta 24°. Decide la parte más empinada."
+     "a": "Hasta 27°.",
+     "detail": "TerraMow sube hasta 18°, Hookii X2 Pro hasta 24° y L Pro hasta 27°. Decide la parte más empinada."
     }
    ]
   },

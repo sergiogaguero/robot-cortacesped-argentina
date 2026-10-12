@@ -1,0 +1,186 @@
+{
+ "title": "¿L Pro o X2 Pro?",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Hookii frente a frente"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿L Pro <em>o X2 Pro?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Casa grande o quinta chica"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Neomow <em>L Pro</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro.jpg",
+     "height": 540
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "items": [
+      "Hasta 2000 m²",
+      "Pendientes de hasta 27°",
+      "Hasta 40 zonas en la app"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Quintas, campos y parques"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Neomow <em>X2 Pro</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-x2.jpg",
+     "height": 540
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "items": [
+      "Hasta 6000 m²",
+      "Pendientes de hasta 24°",
+      "150 min por carga"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "table",
+     "head": [
+      "",
+      "L Pro",
+      "X2 Pro"
+     ],
+     "rows": [
+      [
+       "Superficie",
+       "2000 m²",
+       "6000 m²"
+      ],
+      [
+       "Pendiente",
+       "27°",
+       "24°"
+      ],
+      [
+       "Navegación",
+       "LiDAR 3D + IA",
+       "LiDAR 3D + IA"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "La regla: <em>mirá los m².</em>"
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "lead",
+     "text": "Hasta 2000 m², L Pro. Más que eso, X2 Pro."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Contanos tu terreno <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/l-pro-vs-x2-pro.mp3"
+}

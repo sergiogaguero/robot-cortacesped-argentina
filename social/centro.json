@@ -472,7 +472,7 @@
     {
       "cls": "ok",
       "label": "Campaña octubre–noviembre programada",
-      "detail": "56 publicaciones nuevas del 13/10 al 29/11: 14 reels (cada uno también como historia), 21 historias y 7 carruseles."
+      "detail": "60 publicaciones del 13/10 al 29/11: 15 reels (cada uno también como historia), 23 historias y 7 carruseles."
     }
   ],
   "changelog": [
@@ -519,6 +519,10 @@
     {
       "date": "12 oct",
       "text": "Campaña octubre–noviembre (13/10 al 29/11): 14 reels con música propia, 21 historias y 7 carruseles. Temas: Día de la Madre (18/10), lanzamiento de Hookii Neomow X2 para quintas y campos, LiDAR vs cámaras, cuál conviene según los m², verano y vacaciones, objeciones (hacé la cuenta, 3 errores al elegir) y fiestas de fin de año."
+    },
+    {
+      "date": "12 oct",
+      "text": "Entra el nuevo Hookii Neomow L Pro (hasta 2000 m², pendientes de 27°): historia teaser el 13/10, reel de lanzamiento el 14/10 y una historia con los datos el 16/10. La semana Hookii (19–25/10) pasa a ser “L Pro vs X2 Pro”, con reel y carrusel comparativos, y los comparativos de noviembre suman al L Pro. En el sitio, las versiones del X2 ahora se llaman X2 SE, X2 y X2 Pro, y la ficha suma la autonomía (150 min) y la altura de corte (30–85 mm)."
     }
   ]
 }

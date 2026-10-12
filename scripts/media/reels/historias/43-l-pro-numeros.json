@@ -1,0 +1,43 @@
+{
+ "title": "Neomow L Pro en números",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Nuevo"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Hookii <em>Neomow L Pro</em>"
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Hasta 2000 m², sin cable perimetral",
+      "Pendientes de hasta 27° (50 %)",
+      "Altura de corte automática 20–80 mm",
+      "Hasta 40 zonas desde la app"
+     ]
+    },
+    {
+     "type": "space",
+     "h": 70
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

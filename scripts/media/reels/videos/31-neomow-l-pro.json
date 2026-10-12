@@ -1,0 +1,161 @@
+{
+ "title": "Nuevo Hookii Neomow L Pro",
+ "scenes": [
+  {
+   "dur": 2.2,
+   "at": 0.05,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Nuevo · Hookii"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Neomow <em>L Pro</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro.jpg",
+     "height": 700
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "counter",
+     "to": 2000,
+     "label": "m² de césped, sin cables"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "counter",
+     "to": 27,
+     "suffix": "°",
+     "label": "de pendiente (50 %)"
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "lead",
+     "text": "Sube más que cualquier otro modelo que ofrecemos."
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "Navegación"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "LiDAR 3D 360° + <em>visión con IA</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Altura de corte automática 20–80 mm",
+      "Hasta 40 zonas",
+      "4G · Wi-Fi · Bluetooth",
+      "IPX6"
+     ],
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Corta, y vuelve solo <em>a su base.</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro-base.jpg",
+     "height": 560
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Consultá disponibilidad <em>por WhatsApp.</em>",
+     "gap": 0.35
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa",
+     "gap": 0.4
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/neomow-l-pro.mp3"
+}

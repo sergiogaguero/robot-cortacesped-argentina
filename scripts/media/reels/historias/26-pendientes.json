@@ -1,0 +1,56 @@
+{
+ "title": "¿Tu terreno tiene lomas?",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Pendientes"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Tu terreno <em>tiene lomas?</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "table",
+     "head": [
+      "Robot",
+      "Pendiente máx."
+     ],
+     "rows": [
+      [
+       "Hookii Neomow L Pro",
+       "27° (50 %)"
+      ],
+      [
+       "Hookii Neomow X2 Pro",
+       "24° (45 %)"
+      ],
+      [
+       "TerraMow V Series",
+       "18°"
+      ]
+     ],
+     "hi": 1
+    },
+    {
+     "type": "space",
+     "h": 50
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

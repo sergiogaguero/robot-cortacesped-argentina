@@ -1,0 +1,40 @@
+{
+ "title": "Se viene algo nuevo",
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "Se viene"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Algo nuevo para jardines <em>de hasta 2000 m².</em>"
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro.jpg",
+     "height": 520
+    },
+    {
+     "type": "space",
+     "h": 40
+    },
+    {
+     "type": "lead",
+     "text": "El miércoles te lo presentamos. 👀"
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "title": "Presentamos Hookii Neomow X2",
+ "title": "Presentamos Hookii Neomow X2 Pro",
  "scenes": [
   {
    "dur": 2.4,
@@ -11,12 +11,12 @@
    "center": [
     {
      "type": "pill",
-     "text": "Nuevo"
+     "text": "Trabajo pesado"
     },
     {
      "type": "title",
      "size": "xl",
-     "text": "Para terrenos <em>grandes.</em>"
+     "text": "Para terrenos <em>grandes de verdad.</em>"
     }
    ]
   },
@@ -28,12 +28,12 @@
    "top": [
     {
      "type": "eyebrow",
-     "text": "Hookii · trabajo pesado"
+     "text": "Hookii"
     },
     {
      "type": "title",
      "size": "xl",
-     "text": "Neomow <em>X2</em>"
+     "text": "Neomow <em>X2 Pro</em>"
     }
    ],
    "center": [
@@ -51,9 +51,8 @@
     {
      "type": "chips",
      "items": [
-      "3000 m²",
-      "4000 m²",
-      "6000 m²"
+      "Hasta 6000 m²",
+      "150 min por carga"
      ],
      "at": 0.8
     }
@@ -73,7 +72,7 @@
     {
      "type": "title",
      "size": "l",
-     "text": "3D LiDAR + <em>visión con IA</em>"
+     "text": "LiDAR 3D 360° + <em>visión con IA</em>"
     },
     {
      "type": "space",
@@ -81,7 +80,7 @@
     },
     {
      "type": "lead",
-     "text": "Mide el terreno con láser y reconoce el césped. Sin cable perimetral."
+     "text": "Mide el terreno con láser y reconoce el césped. Sin cable perimetral ni antena RTK."
     }
    ]
   },
@@ -101,7 +100,7 @@
    ]
   },
   {
-   "dur": 2.4,
+   "dur": 2.6,
    "bg": {
     "style": "glow"
    },
@@ -117,11 +116,8 @@
      "h": 20
     },
     {
-     "type": "chips",
-     "items": [
-      "Corte de 28 cm"
-     ],
-     "at": 0.6
+     "type": "lead",
+     "text": "También en versiones de 3000 y 4000 m²."
     }
    ]
   },

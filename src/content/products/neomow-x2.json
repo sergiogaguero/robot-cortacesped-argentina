@@ -13,19 +13,19 @@
   "variants": [
     {
       "id": "3000",
-      "label": "3.000 m²",
+      "label": "X2 SE · 3.000 m²",
       "coverageM2": 3000,
       "priceUSD": 3166
     },
     {
       "id": "4000",
-      "label": "4.000 m²",
+      "label": "X2 · 4.000 m²",
       "coverageM2": 4000,
       "priceUSD": 3520
     },
     {
       "id": "6000",
-      "label": "6.000 m²",
+      "label": "X2 Pro · 6.000 m²",
       "coverageM2": 6000,
       "priceUSD": 3800
     }
@@ -33,7 +33,7 @@
   "inStock": true,
   "highlights": [
     "Navegación 3D LiDAR + visión con IA, sin cable perimetral",
-    "Versiones para 3000, 4000 y 6000 m²",
+    "Versiones X2 SE (3000 m²), X2 (4000 m²) y X2 Pro (6000 m²)",
     "Pendientes de hasta 24° (45 %)",
     "Ancho de corte de 28 cm"
   ],
@@ -44,7 +44,7 @@
     "multiZone": null,
     "noiseDb": null,
     "areaPerHourM2": null,
-    "runtimeMin": null
+    "runtimeMin": 150
   },
   "specs": [
     {
@@ -60,11 +60,19 @@
         },
         {
           "label": "Área de corte recomendada",
-          "value": "3000, 4000 o 6000 m² según la versión"
+          "value": "3000 (X2 SE), 4000 (X2) o 6000 m² (X2 Pro)"
         },
         {
           "label": "Ancho de corte",
           "value": "28 cm"
+        },
+        {
+          "label": "Autonomía por carga",
+          "value": "Hasta 150 minutos"
+        },
+        {
+          "label": "Altura de corte",
+          "value": "30 a 85 mm, con ajuste eléctrico"
         }
       ]
     },
@@ -82,7 +90,7 @@
       ]
     }
   ],
-  "specsNote": "Estamos terminando de confirmar con Hookii la ficha técnica completa (batería, autonomía, altura de corte, ruido y dimensiones). Si necesitás algún dato puntual, escribinos y te lo pasamos.",
+  "specsNote": "Estamos terminando de confirmar con Hookii el resto de la ficha técnica (ruido y dimensiones). Si necesitás algún dato puntual, escribinos y te lo pasamos.",
   "image": "neomow-x2.jpg",
   "imageAlt": "Robot cortacésped Hookii Neomow X2 con navegación 3D LiDAR para terrenos grandes y con pendiente",
   "ogImage": "/og/neomow-x2.jpg",

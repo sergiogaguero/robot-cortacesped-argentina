@@ -68,14 +68,14 @@
     },
     {
      "type": "photo",
-     "src": "src/assets/products/neomow-x2.jpg",
+     "src": "src/assets/products/neomow-l-pro.jpg",
      "height": 480
     }
    ],
    "bottom": [
     {
      "type": "lead",
-     "text": "Mide el terreno con láser. Ideal para quintas y terrenos grandes."
+     "text": "Mide el terreno con láser. Ideal para jardines grandes, quintas y terrenos con lomas."
     }
    ]
   },
@@ -97,12 +97,12 @@
       [
        "Superficie",
        "600–1200 m²",
-       "3000–6000 m²"
+       "2000–6000 m²"
       ],
       [
        "Pendiente",
        "18°",
-       "24°"
+       "24–27°"
       ],
       [
        "Cable perimetral",

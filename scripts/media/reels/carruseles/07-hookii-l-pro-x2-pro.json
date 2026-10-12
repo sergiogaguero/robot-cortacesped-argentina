@@ -1,0 +1,245 @@
+{
+ "title": "Hookii L Pro vs X2 Pro",
+ "format": "carousel",
+ "size": [
+  1080,
+  1350
+ ],
+ "scenes": [
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "pill",
+     "text": "Hookii Neomow"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "L Pro <em>vs X2 Pro</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 60
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro.jpg",
+     "height": 380
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "¿Cuál va con tu terreno? Deslizá 👉"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Casa grande o quinta chica"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Neomow <em>L Pro</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro-lado.jpg",
+     "height": 330
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Hasta 2000 m²",
+      "Pendientes de hasta 27° (50 %)",
+      "Altura automática de 20 a 80 mm",
+      "Hasta 40 zonas"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Quintas, campos y parques"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Neomow <em>X2 Pro</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-x2.jpg",
+     "height": 330
+    },
+    {
+     "type": "space",
+     "h": 20
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Hasta 6000 m²",
+      "Pendientes de hasta 24° (45 %)",
+      "150 min por carga",
+      "Corte de 28 cm"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "En común"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "LiDAR 3D 360° + <em>visión con IA</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Sin cable perimetral ni antena RTK",
+      "App con 4G y Wi-Fi",
+      "IPX6 y GPS antirrobo"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "table",
+     "head": [
+      "",
+      "L Pro",
+      "X2 Pro"
+     ],
+     "rows": [
+      [
+       "Superficie",
+       "2000 m²",
+       "6000 m²"
+      ],
+      [
+       "Pendiente",
+       "27°",
+       "24°"
+      ],
+      [
+       "Altura de corte",
+       "20–80 mm",
+       "30–85 mm"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "eyebrow",
+     "text": "¿Cuál elegir?"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mirá <em>los m² de césped.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "ticks",
+     "items": [
+      "Hasta 2000 m² o lomas fuertes → L Pro",
+      "Más de 2000 m² → X2 Pro",
+      "También hay X2 de 3000 y 4000 m²"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "title",
+     "size": "m",
+     "text": "¿Dudás entre los dos? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "wa"
+    }
+   ]
+  }
+ ]
+}

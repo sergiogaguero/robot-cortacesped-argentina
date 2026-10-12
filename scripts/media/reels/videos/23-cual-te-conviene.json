@@ -59,19 +59,47 @@
    ]
   },
   {
-   "dur": 3,
+   "dur": 2.8,
    "bg": {
     "style": "glow"
    },
    "top": [
     {
      "type": "eyebrow",
-     "text": "3000 a 6000 m² · pendientes de hasta 24°"
+     "text": "Hasta 2000 m² · pendientes de hasta 27°"
     },
     {
      "type": "title",
      "size": "l",
-     "text": "Hookii <em>Neomow X2</em>"
+     "text": "Hookii <em>Neomow L Pro</em>"
+    }
+   ],
+   "center": [
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "photo",
+     "src": "src/assets/products/neomow-l-pro.jpg",
+     "height": 540
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "style": "glow"
+   },
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Hasta 6000 m² · quintas y campos"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Hookii <em>Neomow X2 Pro</em>"
     }
    ],
    "center": [
@@ -82,7 +110,7 @@
     {
      "type": "photo",
      "src": "src/assets/products/neomow-x2.jpg",
-     "height": 560
+     "height": 540
     }
    ]
   },
