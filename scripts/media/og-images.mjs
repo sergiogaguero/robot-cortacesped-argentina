@@ -115,3 +115,4 @@ await render("default", { lines: ["Robot cortacésped", "con inteligencia artifi
 await render("v600", { lines: ["TerraMow V600", "hasta 600 m²"], subtitle: "Navegación por cámara con IA · Sin cables ni RTK", image: "src/assets/products/v600.png" });
 await render("v1000", { lines: ["TerraMow V1000", "hasta 1200 m²"], subtitle: "Navegación por cámara con IA · 150 min de autonomía", image: "src/assets/products/v1000.png" });
 await render("neomow-x2", { lines: ["Hookii Neomow X2", "hasta 6000 m²"], subtitle: "3D LiDAR + visión con IA · Pendientes de 24°", image: "src/assets/products/neomow-x2.jpg" });
+await render("neomow-l", { lines: ["Hookii Neomow L", "hasta 2000 m²"], subtitle: "LiDAR 3D + visión con IA · Pendientes de 27°", image: "src/assets/products/neomow-l-pro.jpg" });

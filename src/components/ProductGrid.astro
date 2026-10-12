@@ -7,7 +7,7 @@ interface Props { products: CollectionEntry<"products">[] }
 const { products } = Astro.props;
 const heavy = products.some((p) => p.data.brand === "Hookii");
 const text = heavy
-  ? "TerraMow para jardines residenciales y Hookii para trabajo pesado. Todos sin cable perimetral, con navegación por cámaras, LiDAR e inteligencia artificial."
+  ? "TerraMow para jardines residenciales y Hookii para jardines grandes y trabajo pesado. Todos sin cable perimetral, con navegación por cámaras, LiDAR e inteligencia artificial."
   : "Visión artificial de triple cámara. Sin cables, sin antenas RTK. Configuración en minutos.";
 ---
 <section id="productos" class="scroll-mt-20 py-24 lg:py-32" aria-labelledby="productos-titulo">

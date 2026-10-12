@@ -1,0 +1,113 @@
+{
+  "name": "Hookii Neomow L",
+  "slug": "neomow-l",
+  "brand": "Hookii",
+  "series": "Neomow L · Jardines grandes",
+  "segment": "Casas con mucho parque y quintas chicas",
+  "navigation": "LiDAR 3D 360° + visión con IA",
+  "model": "Neomow L",
+  "draft": false,
+  "tagline": "LiDAR 3D para jardines grandes: hasta 2000 m² y pendientes de 27°",
+  "coverageM2": 2000,
+  "priceUSD": 2230,
+  "variants": [
+    {
+      "id": "l",
+      "label": "L · 1.200 m²",
+      "coverageM2": 1200,
+      "priceUSD": 2230
+    },
+    {
+      "id": "l-pro",
+      "label": "L Pro · 2.000 m²",
+      "coverageM2": 2000,
+      "priceUSD": 2620
+    }
+  ],
+  "inStock": true,
+  "highlights": [
+    "Navegación LiDAR 3D 360° + visión con IA, sin cable perimetral",
+    "Versiones L (1200 m²) y L Pro (2000 m²)",
+    "Pendientes de hasta 27° (50 %)",
+    "Altura de corte automática de 20 a 80 mm",
+    "Hasta 20 zonas (L) o 40 zonas (L Pro) desde la app"
+  ],
+  "fit": {
+    "maxSlopeDeg": 27,
+    "maxSlopePct": 50,
+    "obstacles": true,
+    "multiZone": true,
+    "noiseDb": null,
+    "areaPerHourM2": null,
+    "runtimeMin": null
+  },
+  "specs": [
+    {
+      "category": "Parámetros generales",
+      "items": [
+        {
+          "label": "Tecnología de navegación",
+          "value": "LiDAR 3D 360° + visión con inteligencia artificial"
+        },
+        {
+          "label": "Cable perimetral",
+          "value": "No necesita"
+        },
+        {
+          "label": "Área de corte recomendada",
+          "value": "1200 m² (L) o 2000 m² (L Pro)"
+        },
+        {
+          "label": "Altura de corte",
+          "value": "20 a 80 mm, con ajuste automático"
+        },
+        {
+          "label": "Zonas",
+          "value": "Hasta 20 (L) o 40 (L Pro), desde la app"
+        }
+      ]
+    },
+    {
+      "category": "Terreno",
+      "items": [
+        {
+          "label": "Pendiente máxima",
+          "value": "27° (50 %)"
+        },
+        {
+          "label": "Evasión de obstáculos",
+          "value": "Sí, con LiDAR 3D y visión artificial"
+        }
+      ]
+    },
+    {
+      "category": "Conectividad y protección",
+      "items": [
+        {
+          "label": "Conectividad",
+          "value": "4G, Wi-Fi y Bluetooth"
+        },
+        {
+          "label": "Resistencia al agua",
+          "value": "IPX6"
+        },
+        {
+          "label": "Antirrobo",
+          "value": "Localización por GPS"
+        }
+      ]
+    }
+  ],
+  "specsNote": "Es un lanzamiento de Hookii: estamos terminando de confirmar el resto de la ficha técnica (batería, autonomía, ruido y dimensiones) y la fecha de entrega. Escribinos y te pasamos lo último que tengamos.",
+  "image": "neomow-l-pro.jpg",
+  "imageAlt": "Robot cortacésped Hookii Neomow L Pro con navegación LiDAR 3D para jardines grandes y con pendiente",
+  "ogImage": "/og/neomow-l.jpg",
+  "why": {
+    "title": "¿Por qué el Neomow L?",
+    "text": "Está entre los TerraMow y el Neomow X2: cubre hasta 1200 m² (L) o 2000 m² (L Pro) y sube pendientes de hasta 27°, más que cualquier otro modelo que ofrecemos. Se guía con un LiDAR 3D de 360°, que mide el terreno con láser, combinado con visión artificial que reconoce el césped y los obstáculos. No necesita cable perimetral ni antena RTK, y la altura de corte se ajusta sola entre 20 y 80 mm."
+  },
+  "seo": {
+    "title": "Hookii Neomow L: robot cortacésped hasta 2000 m²",
+    "description": "Robot cortacésped Hookii Neomow L y L Pro: LiDAR 3D + IA, sin cables, hasta 2000 m² y pendientes de 27°. Precios en USD y envío a todo el país."
+  }
+}

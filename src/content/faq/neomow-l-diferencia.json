@@ -1,0 +1,13 @@
+{
+  "question": "¿Qué diferencia hay entre el Neomow L y el Neomow X2?",
+  "answer": "Los dos usan LiDAR 3D + visión con IA y no necesitan cable perimetral. El Neomow L está pensado para jardines grandes de hasta 2000 m² y sube pendientes más fuertes (hasta 27°). El Neomow X2 es para trabajo pesado: quintas, campos y parques de 3000 a 6000 m², con pendientes de hasta 24°.",
+  "scope": [
+    "neomow-l",
+    "neomow-x2"
+  ],
+  "order": 24,
+  "link": {
+    "label": "Compará todos los modelos",
+    "href": "/productos"
+  }
+}
