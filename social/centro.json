@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-11T15:08:00Z",
+  "syncedAt": "2026-10-12T00:08:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -439,7 +439,7 @@
     },
     "2026-10-11-historia-14-precio#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-11T14:44:15.053Z"
+      "intento": "2026-10-11T18:49:09.701Z"
     },
     "2026-10-11-reel-10-v1000": {
       "mediaId": "17912475927540154",
@@ -447,14 +447,22 @@
     },
     "2026-10-11-reel-10-v1000#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-11T14:44:15.321Z"
+      "intento": "2026-10-11T19:42:43.639Z"
+    },
+    "2026-10-11-historia-reel-10-v1000": {
+      "mediaId": "18119858747011962",
+      "publicado": "2026-10-11T23:44:29.542Z"
+    },
+    "2026-10-11-historia-reel-10-v1000#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-11T23:44:30.652Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Al día: salieron la historia “Precio” (10:21) y el reel “V1000” (11:23). Lo último del calendario es la historia del reel a las 20:30."
+      "detail": "Calendario completo: las 57 publicaciones salieron en Instagram. No queda nada programado."
     },
     {
       "cls": "warn",
@@ -462,9 +470,9 @@
       "detail": "Meta rechaza las publicaciones por falta de pages_manage_posts. Instagram no se ve afectado."
     },
     {
-      "cls": "ok",
-      "label": "Publicación automática activa",
-      "detail": "GitHub Actions revisa el calendario cada 30 minutos."
+      "cls": "warn",
+      "label": "Calendario terminado",
+      "detail": "Desde el 12/10 no hay publicaciones programadas. Falta armar las 2 semanas siguientes."
     }
   ],
   "changelog": [
