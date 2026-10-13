@@ -111,7 +111,9 @@ publicación entre corchetes (`[2026-10-01-reel-02-sin-cables] …`, o `[general
   (estado sincronizado, salud del sistema, historial de cambios).
 - Armar: `node scripts/social/centro/build.mjs` → `.centro/centro-redes.html` y las vistas previas en
   `.centro/p/`. Se publica con el tool Artifact (url de arriba, `root: .centro`, los archivos de `p/`
-  como `files`, `capabilities` sin cambios).
+  como `files`, `capabilities` sin cambios). Siempre que haya piezas nuevas o rerenderizadas hay que
+  mandar sus vistas previas en `files`: si se publica solo la página, las piezas nuevas quedan sin
+  imagen ni video en el Centro (pasó el 12/10 con la campaña octubre–noviembre).
 
 ### Sincronizar el estado
 
