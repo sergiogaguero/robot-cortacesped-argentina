@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-13T15:10:00Z",
+  "syncedAt": "2026-10-14T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -455,14 +455,38 @@
     },
     "2026-10-11-historia-reel-10-v1000#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-11T23:44:30.652Z"
+      "intento": "2026-10-12T05:29:55.772Z"
+    },
+    "2026-10-13-historia-42-l-pro-teaser": {
+      "mediaId": "17950962954293742",
+      "publicado": "2026-10-13T16:27:33.959Z"
+    },
+    "2026-10-13-historia-42-l-pro-teaser#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-13T21:42:26.851Z"
+    },
+    "2026-10-13-reel-17-dia-madre": {
+      "mediaId": "18078198614720343",
+      "publicado": "2026-10-13T22:43:42.718Z"
+    },
+    "2026-10-13-reel-17-dia-madre#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-13T23:42:02.690Z"
+    },
+    "2026-10-13-historia-reel-17-dia-madre": {
+      "mediaId": "17986619658096219",
+      "publicado": "2026-10-13T23:42:42.606Z"
+    },
+    "2026-10-13-historia-reel-17-dia-madre#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-13T23:42:42.905Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "Las 57 publicaciones del primer calendario salieron en Instagram. La campaña octubre–noviembre arranca hoy 13/10 a las 13:00."
+      "detail": "60 publicaciones salieron en Instagram. La campaña octubre–noviembre arrancó el 13/10: salieron la historia teaser del Neomow L Pro y el reel del Día de la Madre (también como historia)."
     },
     {
       "cls": "warn",
