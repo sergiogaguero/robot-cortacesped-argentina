@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-15T15:10:00Z",
+  "syncedAt": "2026-10-16T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -504,13 +504,21 @@
     "2026-10-14-historia-reel-31-neomow-l-pro#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-10-15T05:21:59.766Z"
+    },
+    "2026-10-15-carrusel-06-regalo-madre": {
+      "mediaId": "17876860695572582",
+      "publicado": "2026-10-15T15:46:45.562Z"
+    },
+    "2026-10-15-carrusel-06-regalo-madre#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-15T21:21:00.190Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "63 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 14/10 salieron la encuesta del Día de la Madre y el reel de lanzamiento del Neomow L Pro (también como historia)."
+      "detail": "64 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 15/10 salió el carrusel “5 razones para regalarle un robot a mamá”."
     },
     {
       "cls": "warn",
