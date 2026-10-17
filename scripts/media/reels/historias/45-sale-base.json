@@ -1,0 +1,32 @@
+{
+ "title": "Sale de su base",
+ "format": "video",
+ "audio": "media/musica/sale-base.mp3",
+ "scenes": [
+  {
+   "dur": 8.4,
+   "bg": {
+    "clip": "sale-base",
+    "from": 0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Así arranca"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Sale de su base <em>y se pone a trabajar.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "wa",
+     "at": 3.5
+    }
+   ]
+  }
+ ]
+}

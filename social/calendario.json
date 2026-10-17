@@ -586,6 +586,21 @@
       "auto": true
     },
     {
+      "id": "2026-10-22-reel-35-de-noche",
+      "when": "2026-10-22T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/35-de-noche.mp4",
+      "caption": "¿Un robot que corta el pasto de noche? 🌙\n\nLos Hookii se guían con LiDAR 3D: miden el terreno con láser, así que no dependen de la luz. Vos dormís y el jardín amanece cortado.\n\nVideo real 🇦🇷 Conocé el Neomow L y el Neomow X2: escribinos por WhatsApp (link en la bio).\n\n#hookii #neomow #lidar #robotcortacesped #jardin",
+      "auto": true
+    },
+    {
+      "id": "2026-10-22-historia-reel-35-de-noche",
+      "when": "2026-10-22T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/35-de-noche.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-10-23-reel-20-l-pro-vs-x2-pro",
       "when": "2026-10-23T19:30:00-03:00",
       "type": "reel",
@@ -631,6 +646,13 @@
       "auto": true
     },
     {
+      "id": "2026-10-26-historia-44-en-accion",
+      "when": "2026-10-26T18:00:00-03:00",
+      "type": "story",
+      "file": "historias/44-en-accion.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-10-27-reel-21-lidar-camaras",
       "when": "2026-10-27T19:30:00-03:00",
       "type": "reel",
@@ -650,6 +672,21 @@
       "when": "2026-10-28T13:00:00-03:00",
       "type": "story",
       "file": "historias/28-mito-lidar.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-10-29-reel-34-el-gato",
+      "when": "2026-10-29T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/34-el-gato.mp4",
+      "caption": "Él también quiere saber quién corta el pasto 🐱\n\nSpoiler: no es nadie de la casa. El robot corta solo, sin cables, y detecta lo que tiene adelante para esquivarlo.\n\nTip: si tenés mascotas, programalo para los horarios en que no están en el jardín.\n\n¿Dudas? Escribinos por WhatsApp (link en la bio).\n\n#gato #mascotas #robotcortacesped #jardin #cesped",
+      "auto": true
+    },
+    {
+      "id": "2026-10-29-historia-reel-34-el-gato",
+      "when": "2026-10-29T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/34-el-gato.mp4",
       "auto": true
     },
     {
@@ -720,6 +757,21 @@
       "auto": true
     },
     {
+      "id": "2026-11-05-reel-33-pies-arriba",
+      "when": "2026-11-05T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/33-pies-arriba.mp4",
+      "caption": "POV: sábado a la mañana y el pasto se corta solo 😎\n\nEl robot sale de su base, corta y vuelve a cargar sin que hagas nada. Vos, pies arriba.\n\nVideo real de un cliente 🇦🇷 ¿Querés el tuyo? Escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #pov #finde #jardin #cesped",
+      "auto": true
+    },
+    {
+      "id": "2026-11-05-historia-reel-33-pies-arriba",
+      "when": "2026-11-05T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/33-pies-arriba.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-11-06-reel-24-un-dia-del-robot",
       "when": "2026-11-06T19:30:00-03:00",
       "type": "reel",
@@ -764,6 +816,13 @@
       "auto": true
     },
     {
+      "id": "2026-11-09-historia-45-sale-base",
+      "when": "2026-11-09T18:00:00-03:00",
+      "type": "story",
+      "file": "historias/45-sale-base.mp4",
+      "auto": true
+    },
+    {
       "id": "2026-11-10-reel-25-vacaciones",
       "when": "2026-11-10T19:30:00-03:00",
       "type": "reel",
@@ -783,6 +842,21 @@
       "when": "2026-11-11T13:00:00-03:00",
       "type": "story",
       "file": "historias/34-tip-riego.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-11-12-reel-32-jardines-reales",
+      "when": "2026-11-12T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/32-jardines-reales.mp4",
+      "caption": "Así se ve un robot cortacésped trabajando de verdad 🌿\n\nUna quinta con parque grande y un terreno con pendiente: corta solo, sin cables, y vuelve a cargar solo. Vos hacés cualquier otra cosa.\n\nVideos reales de clientes 🇦🇷 ¿Querés ver si sirve para tu terreno? Escribinos por WhatsApp (link en la bio).\n\n#robotcortacesped #quinta #jardin #cesped #argentina",
+      "auto": true
+    },
+    {
+      "id": "2026-11-12-historia-reel-32-jardines-reales",
+      "when": "2026-11-12T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/32-jardines-reales.mp4",
       "auto": true
     },
     {
@@ -849,6 +923,21 @@
       "when": "2026-11-18T13:00:00-03:00",
       "type": "story",
       "file": "historias/37-asesoramiento.jpg",
+      "auto": true
+    },
+    {
+      "id": "2026-11-19-reel-36-primer-corte",
+      "when": "2026-11-19T19:30:00-03:00",
+      "type": "reel",
+      "file": "reels/36-primer-corte.mp4",
+      "caption": "¿El pasto creció de más? Así se hace el primer corte 🌱\n\n1️⃣ Arrancá con la altura de corte al máximo.\n2️⃣ Bajala de a poco, en varios días.\n3️⃣ Después, el robot lo mantiene parejo con cortes cortos todos los días.\n\nSi está muy, muy alto, conviene una primera pasada a mano. Guardá este tip 📌\n\n#cesped #jardineria #robotcortacesped #primavera #tipsdejardin",
+      "auto": true
+    },
+    {
+      "id": "2026-11-19-historia-reel-36-primer-corte",
+      "when": "2026-11-19T20:30:00-03:00",
+      "type": "story",
+      "file": "reels/36-primer-corte.mp4",
       "auto": true
     },
     {

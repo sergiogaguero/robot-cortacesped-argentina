@@ -1,0 +1,98 @@
+{
+ "title": "El primer corte de la temporada",
+ "scenes": [
+  {
+   "dur": 3,
+   "at": 0.05,
+   "bg": {
+    "clip": "pasto-alto",
+    "from": 0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Tip"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿El pasto <em>creció de más?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "bg": {
+    "clip": "pasto-alto",
+    "from": 6
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Arrancá con la altura de corte <em>al máximo.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "bg": {
+    "clip": "pasto-alto",
+    "from": 12
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Y bajala de a poco, <em>en varios días.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "bg": {
+    "clip": "pasto-alto",
+    "from": 18
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Así el césped no se estresa <em>y queda parejo.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Dudas con tu césped? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/primer-corte.mp3"
+}

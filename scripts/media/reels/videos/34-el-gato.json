@@ -1,0 +1,106 @@
+{
+ "title": "El gato lo vigila",
+ "scenes": [
+  {
+   "dur": 3.6,
+   "at": 0.05,
+   "bg": {
+    "clip": "gato",
+    "from": 10.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Él también quiere saber <em>quién corta el pasto.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "clip": "gato",
+    "from": 14.2
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Spoiler: <em>no es nadie de la casa.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "cut": true,
+   "bg": {
+    "clip": "gato",
+    "from": 0.3
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Corta solo, sin cables, <em>todos los días.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "pill",
+     "text": "¿Y las mascotas?"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Detecta lo que tiene adelante <em>y lo esquiva.</em>"
+    },
+    {
+     "type": "space",
+     "h": 30
+    },
+    {
+     "type": "lead",
+     "text": "Igual, lo ideal es programarlo para cuando no están en el jardín."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Dudas? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/el-gato.mp3"
+}

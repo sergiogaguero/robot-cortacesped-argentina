@@ -1,0 +1,114 @@
+{
+ "title": "Jardines reales",
+ "audio": "media/musica/jardines-reales.mp3",
+ "scenes": [
+  {
+   "dur": 3,
+   "at": 0.05,
+   "bg": {
+    "clip": "quinta",
+    "from": 0,
+    "zoom": [
+     1.06,
+     1
+    ]
+   },
+   "shade": "bottom",
+   "bottom": [
+    {
+     "type": "eyebrow",
+     "text": "Jardín real · Argentina"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Así se ve un robot <em>trabajando de verdad.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "clip": "quinta",
+    "from": 3
+   },
+   "shade": "top",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Un parque grande, <em>y nadie empujando nada.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "cut": true,
+   "bg": {
+    "clip": "campo-pendiente",
+    "from": 0.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Pendiente? <em>Sigue de largo.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Sin cables",
+      "Corta solo",
+      "Vuelve a cargar solo"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "clip": "campo-pendiente",
+    "from": 7
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Mientras vos hacés <em>cualquier otra cosa.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Querés uno así? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ]
+}

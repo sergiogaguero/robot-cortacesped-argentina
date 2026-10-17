@@ -1,0 +1,58 @@
+{
+ "title": "En acción, en una quinta",
+ "format": "video",
+ "audio": "media/musica/en-accion.mp3",
+ "scenes": [
+  {
+   "dur": 6,
+   "bg": {
+    "clip": "quinta",
+    "from": 0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "pill",
+     "text": "Jardín real"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "Así corta <em>solo</em>, en una quinta de verdad."
+    }
+   ],
+   "bottom": [
+    {
+     "type": "ticks",
+     "at": 1,
+     "step": 0.5,
+     "items": [
+      "Sin cables perimetrales",
+      "Parque grande, cero esfuerzo"
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 4.5,
+   "bg": {
+    "clip": "campo-pendiente",
+    "from": 2
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "l",
+     "text": "¿Querés ver si <em>sirve para tu terreno?</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "wa",
+     "at": 0.6
+    }
+   ]
+  }
+ ]
+}

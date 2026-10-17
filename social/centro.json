@@ -552,7 +552,7 @@
     {
       "cls": "ok",
       "label": "Campaña octubre–noviembre programada",
-      "detail": "60 publicaciones del 13/10 al 29/11: 15 reels (cada uno también como historia), 23 historias y 7 carruseles."
+      "detail": "72 publicaciones del 13/10 al 29/11: 20 reels (cada uno también como historia), 25 historias y 7 carruseles."
     }
   ],
   "changelog": [
@@ -607,6 +607,10 @@
     {
       "date": "12 oct",
       "text": "Nueva ficha en el sitio: Hookii Neomow L (/productos/neomow-l), con las versiones L (1200 m², USD 2.230) y L Pro (2000 m², USD 2.620), 3 preguntas frecuentes e imagen para compartir. El precio va solo en la web; en las redes se sigue consultando por WhatsApp."
+    },
+    {
+      "date": "17 oct",
+      "text": "Con los videos reales que mandaste: 5 reels nuevos los jueves a las 19:30 (también como historia): “Hookii de noche” (22/10), “El gato lo vigila” (29/10), “POV: pies arriba” (5/11), “Jardines reales” (12/11) y “El primer corte de la temporada” (19/11), más 2 historias en video: “En acción, en una quinta” (26/10) y “Sale de su base” (9/11)."
     }
   ]
 }

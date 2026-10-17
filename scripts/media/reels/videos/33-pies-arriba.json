@@ -1,0 +1,108 @@
+{
+ "title": "POV: pies arriba",
+ "scenes": [
+  {
+   "dur": 3.2,
+   "at": 0.05,
+   "bg": {
+    "clip": "pies-arriba",
+    "from": 0
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "POV"
+    },
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Sábado, <em>11 de la mañana.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "bg": {
+    "clip": "pies-arriba",
+    "from": 3.2
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "El pasto se corta <em>solo.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "cut": true,
+   "bg": {
+    "clip": "sale-base",
+    "from": 0.5
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "m",
+     "text": "Sale de su base, corta <em>y vuelve a cargar.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "Sin cables",
+      "Programado desde la app"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "bg": {
+    "style": "glow"
+   },
+   "align": "center",
+   "center": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Vos: <em>pies arriba.</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "¿Querés tu sábado así? <em>Escribinos.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/pies-arriba.mp3"
+}

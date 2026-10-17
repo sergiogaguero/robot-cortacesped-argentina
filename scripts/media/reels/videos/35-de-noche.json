@@ -1,0 +1,99 @@
+{
+ "title": "Hookii de noche",
+ "scenes": [
+  {
+   "dur": 3,
+   "at": 0.05,
+   "bg": {
+    "clip": "noche",
+    "from": 3
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "¿Cortar el pasto <em>de noche?</em>"
+    }
+   ]
+  },
+  {
+   "dur": 3.6,
+   "bg": {
+    "clip": "noche",
+    "from": 6.2
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "eyebrow",
+     "text": "Hookii"
+    },
+    {
+     "type": "title",
+     "size": "l",
+     "text": "El LiDAR <em>no necesita luz.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "lead",
+     "text": "Mide el terreno con láser, de día o de noche."
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "bg": {
+    "clip": "noche",
+    "from": 11
+   },
+   "shade": "both",
+   "top": [
+    {
+     "type": "title",
+     "size": "xl",
+     "text": "Trabaja <em>mientras dormís.</em>"
+    }
+   ],
+   "bottom": [
+    {
+     "type": "chips",
+     "items": [
+      "LiDAR 3D 360°",
+      "Sin cables"
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "align": "center",
+   "bg": {
+    "style": "glow"
+   },
+   "center": [
+    {
+     "type": "logo"
+    },
+    {
+     "type": "title",
+     "size": "s",
+     "text": "Conocé los Hookii <em>por WhatsApp.</em>"
+    },
+    {
+     "type": "space",
+     "h": 10
+    },
+    {
+     "type": "wa"
+    },
+    {
+     "type": "trust"
+    }
+   ]
+  }
+ ],
+ "audio": "media/musica/de-noche.mp3"
+}
