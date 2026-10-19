@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-19T00:10:00Z",
+  "syncedAt": "2026-10-19T15:13:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -552,13 +552,21 @@
     "2026-10-18-historia-23-feliz-dia#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-10-18T18:43:25.813Z"
+    },
+    "2026-10-19-historia-24-hookii-teaser": {
+      "mediaId": "18118048943072667",
+      "publicado": "2026-10-19T13:26:53.261Z"
+    },
+    "2026-10-19-historia-24-hookii-teaser#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-19T14:46:34.186Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "69 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 18/10 salió la historia del Día de la Madre."
+      "detail": "70 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 19/10 arrancó la semana Hookii con la historia “L Pro vs X2 Pro”."
     },
     {
       "cls": "warn",
