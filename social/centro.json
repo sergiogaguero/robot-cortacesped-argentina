@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-21T15:10:00Z",
+  "syncedAt": "2026-10-22T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -576,13 +576,21 @@
     "2026-10-20-historia-reel-19-hookii-llega#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-10-21T05:22:42.552Z"
+    },
+    "2026-10-21-historia-25-encuesta-m2": {
+      "mediaId": "18100762781541890",
+      "publicado": "2026-10-21T16:23:56.445Z"
+    },
+    "2026-10-21-historia-25-encuesta-m2#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-21T21:44:07.197Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "72 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 20/10 salió el reel “Presentamos Hookii Neomow X2 Pro” (también como historia)."
+      "detail": "73 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 21/10 salió la encuesta “¿Cuántos m² de pasto tenés?”."
     },
     {
       "cls": "warn",
