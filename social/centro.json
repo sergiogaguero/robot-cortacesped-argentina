@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-22T15:10:00Z",
+  "syncedAt": "2026-10-23T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -584,13 +584,29 @@
     "2026-10-21-historia-25-encuesta-m2#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-10-21T21:44:07.197Z"
+    },
+    "2026-10-22-reel-35-de-noche": {
+      "mediaId": "18112938734464676",
+      "publicado": "2026-10-22T22:43:47.823Z"
+    },
+    "2026-10-22-reel-35-de-noche#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-22T23:41:41.250Z"
+    },
+    "2026-10-22-historia-reel-35-de-noche": {
+      "mediaId": "18345657886283356",
+      "publicado": "2026-10-22T23:42:25.103Z"
+    },
+    "2026-10-22-historia-reel-35-de-noche#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-22T23:42:25.487Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "73 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 21/10 salió la encuesta “¿Cuántos m² de pasto tenés?”."
+      "detail": "75 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 22/10 salió el reel “Hookii de noche” (también como historia), el primero con videos reales."
     },
     {
       "cls": "warn",
