@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-26T00:10:00Z",
+  "syncedAt": "2026-10-26T15:19:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -632,13 +632,21 @@
     "2026-10-25-carrusel-07-hookii-l-pro-x2-pro#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-10-25T19:41:09.324Z"
+    },
+    "2026-10-26-historia-27-medir-terreno": {
+      "mediaId": "17943148992098642",
+      "publicado": "2026-10-26T13:56:33.032Z"
+    },
+    "2026-10-26-historia-27-medir-terreno#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-26T15:08:51.172Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "79 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 25/10 salió el carrusel “L Pro vs X2 Pro” y cerró la semana Hookii."
+      "detail": "80 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 26/10 salió la historia “Medí tu pasto en 2 minutos”."
     },
     {
       "cls": "warn",
