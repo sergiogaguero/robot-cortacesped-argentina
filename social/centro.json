@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-27T00:10:00Z",
+  "syncedAt": "2026-10-27T15:13:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -647,7 +647,7 @@
     },
     "2026-10-26-historia-44-en-accion#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-26T23:43:42.530Z"
+      "intento": "2026-10-27T02:52:15.457Z"
     }
   },
   "health": [
