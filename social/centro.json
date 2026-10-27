@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-26T15:19:00Z",
+  "syncedAt": "2026-10-27T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -639,14 +639,22 @@
     },
     "2026-10-26-historia-27-medir-terreno#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
-      "intento": "2026-10-26T15:08:51.172Z"
+      "intento": "2026-10-26T18:57:43.728Z"
+    },
+    "2026-10-26-historia-44-en-accion": {
+      "mediaId": "18119034632091482",
+      "publicado": "2026-10-26T21:22:12.014Z"
+    },
+    "2026-10-26-historia-44-en-accion#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-26T23:43:42.530Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "80 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 26/10 salió la historia “Medí tu pasto en 2 minutos”."
+      "detail": "81 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 26/10 salió la historia en video “En acción, en una quinta”, la primera con videos de clientes."
     },
     {
       "cls": "warn",
