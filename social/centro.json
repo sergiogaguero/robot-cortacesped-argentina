@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-27T15:13:00Z",
+  "syncedAt": "2026-10-28T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -648,13 +648,29 @@
     "2026-10-26-historia-44-en-accion#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-10-27T02:52:15.457Z"
+    },
+    "2026-10-27-reel-21-lidar-camaras": {
+      "mediaId": "18137995729645044",
+      "publicado": "2026-10-27T22:41:08.895Z"
+    },
+    "2026-10-27-reel-21-lidar-camaras#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-27T23:39:14.836Z"
+    },
+    "2026-10-27-historia-reel-21-lidar-camaras": {
+      "mediaId": "18201811978377565",
+      "publicado": "2026-10-27T23:39:54.006Z"
+    },
+    "2026-10-27-historia-reel-21-lidar-camaras#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-27T23:39:54.385Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "81 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 26/10 salió la historia en video “En acción, en una quinta”, la primera con videos de clientes."
+      "detail": "83 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 27/10 salió el reel “LiDAR vs cámaras” (también como historia)."
     },
     {
       "cls": "warn",
