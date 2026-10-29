@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-28T15:12:00Z",
+  "syncedAt": "2026-10-29T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -664,13 +664,21 @@
     "2026-10-27-historia-reel-21-lidar-camaras#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-10-28T05:17:33.963Z"
+    },
+    "2026-10-28-historia-28-mito-lidar": {
+      "mediaId": "18413829901085097",
+      "publicado": "2026-10-28T16:20:35.202Z"
+    },
+    "2026-10-28-historia-28-mito-lidar#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-28T21:39:28.535Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "83 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 27/10 salió el reel “LiDAR vs cámaras” (también como historia)."
+      "detail": "84 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 28/10 salió la historia “Mito: un robot sin cable necesita antena”."
     },
     {
       "cls": "warn",
