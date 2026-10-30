@@ -8,12 +8,12 @@ import { coverageRange } from "@/lib/products";
 interface Props { products: CollectionEntry<"products">[]; showLink?: boolean }
 const { products, showLink = true } = Astro.props;
 type P = (typeof products)[number];
-const rows = [
+const rows: { label: string; value: (p: P) => string; usd?: (p: P) => number | null }[] = [
   { label: "Ideal para", value: (p: P) => p.data.segment },
   { label: "Superficie", value: (p: P) => coverageRange(p.data, formatNumber) },
   { label: "Navegación", value: (p: P) => p.data.navigation },
   { label: "Pendiente máxima", value: (p: P) => `${p.data.fit.maxSlopeDeg}°` },
-  { label: "Precio", value: (p: P) => `${p.data.variants ? "Desde " : ""}${formatUSD(p.data.priceUSD)}` },
+  { label: "Precio", value: (p: P) => `${p.data.variants ? "Desde " : ""}${formatUSD(p.data.priceUSD)}`, usd: (p: P) => p.data.priceUSD },
   { label: "Disponibilidad", value: (p: P) => (p.data.inStock ? "En stock" : "Sin stock · Consultá disponibilidad") },
 ];
 ---
@@ -32,7 +32,7 @@ const rows = [
           {rows.map((r) => (
             <tr class="border-b border-border">
               <th scope="row" class="py-3 pr-4 text-left font-medium">{r.label}</th>
-              {products.map((p) => <td class="py-3 pr-4 text-muted-foreground">{r.value(p)}</td>)}
+              {products.map((p) => <td class="py-3 pr-4 text-muted-foreground">{r.usd && r.usd(p) !== null ? <>{p.data.variants ? "Desde " : ""}<span data-usd={r.usd(p)}>{formatUSD(r.usd(p))}</span></> : r.value(p)}</td>)}
             </tr>
           ))}
         </tbody>

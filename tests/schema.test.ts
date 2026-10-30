@@ -33,11 +33,11 @@ describe("JSON-LD", () => {
     expect(p.offers.url).toBe("https://x/productos/v1000");
   });
   it("Product sin precio: sin Offer; sin stock → OutOfStock no aplica porque no hay oferta", () => {
-    const p = asRecord(ldProduct(v600, { url: "https://x/productos/v600", imageUrl: "https://x/i.webp" }));
+    const p = asRecord(ldProduct({ ...v600, priceUSD: null, inStock: false }, { url: "https://x/productos/v600", imageUrl: "https://x/i.webp" }));
     expect(p.offers).toBeUndefined();
   });
   it("Product sin stock pero con precio → OutOfStock", () => {
-    const p = asRecord(ldProduct({ ...v600, priceUSD: 1500 }, { url: "https://x", imageUrl: "https://x/i" }));
+    const p = asRecord(ldProduct({ ...v600, priceUSD: 1500, inStock: false }, { url: "https://x", imageUrl: "https://x/i" }));
     expect(p.offers.availability).toBe("https://schema.org/OutOfStock");
   });
   it("FAQPage", () => {

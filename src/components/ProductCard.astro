@@ -10,7 +10,6 @@ interface Props { product: CollectionEntry<"products"> }
 const { product } = Astro.props;
 const p = product.data;
 const href = `/productos/${p.slug}`;
-const price = `${p.variants ? "Desde " : ""}${formatUSD(p.priceUSD)}`;
 ---
 <article>
   <a href={href} class="group relative block overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 glow-border hover:border-primary/50 hover:animate-pulse-glow">
@@ -29,7 +28,7 @@ const price = `${p.variants ? "Desde " : ""}${formatUSD(p.priceUSD)}`;
         {p.highlights.map((h) => <li class="rounded-full bg-secondary px-3 py-1.5 text-xs text-muted-foreground">{h}</li>)}
       </ul>
       {p.inStock ? (
-        <p class="mt-6 rounded-lg bg-primary py-3 text-center font-semibold text-primary-foreground transition-opacity group-hover:opacity-90">{price} · Ver ficha</p>
+        <p class="mt-6 rounded-lg bg-primary py-3 text-center font-semibold text-primary-foreground transition-opacity group-hover:opacity-90">{p.variants ? "Desde " : ""}<span data-usd={p.priceUSD ?? undefined}>{formatUSD(p.priceUSD)}</span> · Ver ficha</p>
       ) : (
         <p class="mt-6 rounded-lg bg-muted py-3 text-center font-semibold text-muted-foreground">Sin stock · Consultá disponibilidad</p>
       )}

@@ -13,7 +13,7 @@ export const site = {
   instagram: "https://www.instagram.com/robotscortacesped_argentina/",
   terramow: "https://www.terramow.com/",
   location: { locality: "Buenos Aires", country: "AR" },
-  exchangeRate: { fallback: 1200, ttlMinutes: 60, timeoutMs: 4000 },
+  exchangeRate: { fallback: 1565, ttlMinutes: 60, timeoutMs: 4000 },
   googleSiteVerification: "1yzojphGNe10deN-CMqx2NHtcYYhzQPkoySsWLobITI",
 } as const;
 

@@ -52,7 +52,7 @@ Estos son los precios de referencia en dólares; el precio del día en pesos te 
 
 | Modelo | Superficie | Precio de referencia |
 | --- | --- | --- |
-| TerraMow V600 | Hasta 600 m² | A consultar |
+| TerraMow V600 | Hasta 600 m² | USD 1.750 |
 | TerraMow V1000 | Hasta 1200 m² | USD 2.100 |
 | Hookii Neomow X2 | 3000 m² | USD 3.166 |
 | Hookii Neomow X2 | 4000 m² | USD 3.520 |

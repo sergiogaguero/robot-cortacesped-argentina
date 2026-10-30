@@ -1,19 +1,19 @@
-export type RateSource = "bluelytics" | "exchangerate-api" | "fallback";
+export type RateSource = "bluelytics" | "dolarapi" | "fallback";
 
 function positiveNumber(v: unknown): number | null {
   return typeof v === "number" && Number.isFinite(v) && v > 0 ? v : null;
 }
 
-/** https://api.bluelytics.com.ar/v2/latest → { oficial: { value_sell } } (cotización Banco Nación, venta) */
+/** https://api.bluelytics.com.ar/v2/latest → { blue: { value_sell } } (dólar blue, venta) */
 export function parseBluelytics(json: unknown): number | null {
-  const root = json as { oficial?: { value_sell?: unknown } } | null;
-  return positiveNumber(root?.oficial?.value_sell);
+  const root = json as { blue?: { value_sell?: unknown } } | null;
+  return positiveNumber(root?.blue?.value_sell);
 }
 
-/** https://api.exchangerate-api.com/v4/latest/USD → { rates: { ARS } } */
-export function parseExchangeRateApi(json: unknown): number | null {
-  const root = json as { rates?: { ARS?: unknown } } | null;
-  return positiveNumber(root?.rates?.ARS);
+/** https://dolarapi.com/v1/dolares/blue → { venta } (dólar blue, venta) */
+export function parseDolarApi(json: unknown): number | null {
+  const root = json as { venta?: unknown } | null;
+  return positiveNumber(root?.venta);
 }
 
 export async function fetchJsonWithTimeout(
@@ -36,7 +36,7 @@ export async function fetchJsonWithTimeout(
 
 const SOURCES: ReadonlyArray<{ name: Exclude<RateSource, "fallback">; url: string; parse: (json: unknown) => number | null }> = [
   { name: "bluelytics", url: "https://api.bluelytics.com.ar/v2/latest", parse: parseBluelytics },
-  { name: "exchangerate-api", url: "https://api.exchangerate-api.com/v4/latest/USD", parse: parseExchangeRateApi },
+  { name: "dolarapi", url: "https://dolarapi.com/v1/dolares/blue", parse: parseDolarApi },
 ];
 
 export async function getUsdArsRate(opts: {

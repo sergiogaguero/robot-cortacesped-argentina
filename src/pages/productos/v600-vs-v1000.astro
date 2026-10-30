@@ -28,7 +28,7 @@ const faqs = withPublishedLinks(
 const spec = (p: Product, label: string): string =>
   p.specs.flatMap((g) => g.items).find((i) => i.label === label)?.value ?? "—";
 
-const rows: { label: string; value: (p: Product) => string }[] = [
+const rows: { label: string; value: (p: Product) => string; usd?: (p: Product) => number | null }[] = [
   { label: "Superficie recomendada", value: (p) => `Hasta ${formatNumber(p.coverageM2)} m²` },
   { label: "Autonomía por carga", value: (p) => `${p.fit.runtimeMin} min` },
   { label: "Área por carga completa", value: (p) => spec(p, "Área de corte por carga completa") },
@@ -40,7 +40,7 @@ const rows: { label: string; value: (p: Product) => string }[] = [
   { label: "Nivel de ruido", value: (p) => `< ${p.fit.noiseDb} dB` },
   { label: "Impermeabilidad", value: (p) => spec(p, "Impermeabilidad") },
   { label: "Peso", value: (p) => spec(p, "Peso") },
-  { label: "Precio", value: (p) => formatUSD(p.priceUSD) },
+  { label: "Precio", value: (p) => formatUSD(p.priceUSD), usd: (p) => p.priceUSD },
   { label: "Disponibilidad", value: (p) => (p.inStock ? "En stock" : "Sin stock · Consultá disponibilidad") },
 ];
 
@@ -85,7 +85,7 @@ const jsonLd = [
           <Image src={productImage(p.image)} alt={p.imageAlt} width={160} height={160} format="webp" loading="eager" class="h-20 w-20 rounded-xl object-cover" />
           <div>
             <p class="text-xl font-bold">{p.name}</p>
-            <p class="text-sm text-primary">Hasta {formatNumber(p.coverageM2)} m² · {formatUSD(p.priceUSD)}</p>
+            <p class="text-sm text-primary">Hasta {formatNumber(p.coverageM2)} m² · <span data-usd={p.priceUSD ?? undefined}>{formatUSD(p.priceUSD)}</span></p>
           </div>
         </a>
       ))}
@@ -105,8 +105,8 @@ const jsonLd = [
           {rows.map((r, i) => (
             <tr class:list={["border-t border-border", i % 2 === 1 && "bg-secondary/30"]}>
               <th scope="row" class="p-4 text-left font-medium">{r.label}</th>
-              <td class="p-4 text-muted-foreground">{r.value(v600)}</td>
-              <td class="p-4 text-muted-foreground">{r.value(v1000)}</td>
+              <td class="p-4 text-muted-foreground">{r.usd && r.usd(v600) !== null ? <span data-usd={r.usd(v600)}>{r.value(v600)}</span> : r.value(v600)}</td>
+              <td class="p-4 text-muted-foreground">{r.usd && r.usd(v1000) !== null ? <span data-usd={r.usd(v1000)}>{r.value(v1000)}</span> : r.value(v1000)}</td>
             </tr>
           ))}
         </tbody>

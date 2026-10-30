@@ -43,7 +43,7 @@ El equipo de referencia acá es el [TerraMow V1000](/productos/v1000), pensado p
 
 | Concepto | Costo |
 | --- | --- |
-| Equipo | TerraMow V1000 (hasta 1200 m²): ver precio actualizado en la [ficha del V1000](/productos/v1000). TerraMow V600 (hasta 600 m²): a consultar |
+| Equipo | TerraMow V1000 (hasta 1200 m²): ver precio actualizado en la [ficha del V1000](/productos/v1000). TerraMow V600 (hasta 600 m²): ver precio en la [ficha del V600](/productos/v600) |
 | Electricidad por año | ≈100 Wh por carga × ~150 cargas al año ≈ 15 kWh — menos que una heladera en una semana |
 | Cuchillas | Kit de 9 cuchillas por temporada, costo bajo: a consultar |
 | Mantenimiento | 0: sin aceite, sin nafta, sin filtros |

@@ -23,7 +23,7 @@ const first = p.variants?.[0];
         {p.variants.map((v, i) => (
           <button type="button" class={variantBtn} data-variant={v.id} data-variant-label={v.label} data-variant-usd={v.priceUSD ?? ""} aria-pressed={i === 0 ? "true" : "false"}>
             <span class="block font-bold">{formatNumber(v.coverageM2)} m²</span>
-            <span class="block text-xs text-muted-foreground">{formatUSD(v.priceUSD)}</span>
+            <span class="block text-xs text-muted-foreground" data-usd={v.priceUSD ?? undefined}>{formatUSD(v.priceUSD)}</span>
           </button>
         ))}
       </div>
@@ -35,8 +35,8 @@ const first = p.variants?.[0];
       <p class="text-sm text-muted-foreground">Precio{first && <> · versión <span data-variant-name>{first.label}</span></>}</p>
       {p.priceUSD !== null && (
         <div class="flex gap-2" role="group" aria-label="Moneda">
-          <button type="button" data-currency="USD" aria-pressed="true" class={btn}>USD</button>
-          <button type="button" data-currency="ARS" aria-pressed="false" class={btn}>ARS</button>
+          <button type="button" data-currency="ARS" aria-pressed="true" class={btn}>ARS</button>
+          <button type="button" data-currency="USD" aria-pressed="false" class={btn}>USD</button>
         </div>
       )}
     </div>

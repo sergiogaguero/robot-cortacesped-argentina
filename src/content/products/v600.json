@@ -8,8 +8,8 @@
   "model": "V600",
   "tagline": "Ideal para jardines medianos",
   "coverageM2": 600,
-  "priceUSD": null,
-  "inStock": false,
+  "priceUSD": 1750,
+  "inStock": true,
   "highlights": [
     "Navegación por cámara con IA, sin cables ni antenas RTK",
     "Cobertura hasta 600 m²",
@@ -148,6 +148,6 @@
   },
   "seo": {
     "title": "TerraMow V600: robot cortacésped hasta 600 m² | Ficha",
-    "description": "Ficha del TerraMow V600 para jardines medianos: navegación con IA sin cables, mapeo automático y especificaciones. Consultá disponibilidad por WhatsApp."
+    "description": "Ficha del TerraMow V600 para jardines medianos: navegación con IA sin cables, mapeo automático y especificaciones. Precio y envío a todo el país."
   }
 }
