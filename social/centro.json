@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-31T00:10:00Z",
+  "syncedAt": "2026-10-31T15:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -695,7 +695,7 @@
     },
     "2026-10-30-reel-22-altura-primavera#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-10-30T23:39:34.169Z"
+      "intento": "2026-10-31T04:15:29.755Z"
     },
     "2026-10-30-historia-reel-22-altura-primavera": {
       "mediaId": "18117300071468294",
@@ -703,14 +703,22 @@
     },
     "2026-10-30-historia-reel-22-altura-primavera#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-10-30T23:40:13.483Z"
+      "intento": "2026-10-31T05:12:49.847Z"
+    },
+    "2026-10-31-historia-29-cajita": {
+      "mediaId": "18111862931230484",
+      "publicado": "2026-10-31T14:12:33.686Z"
+    },
+    "2026-10-31-historia-29-cajita#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-10-31T14:39:13.077Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "88 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 30/10 salió el reel “Altura de corte en primavera” (también como historia)."
+      "detail": "89 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 31/10 salió la historia “Preguntanos lo que quieras”."
     },
     {
       "cls": "warn",
