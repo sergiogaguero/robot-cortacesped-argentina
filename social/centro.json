@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-30T15:16:00Z",
+  "syncedAt": "2026-10-31T00:10:00Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -688,13 +688,29 @@
     "2026-10-29-historia-reel-34-el-gato#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-10-30T05:17:22.597Z"
+    },
+    "2026-10-30-reel-22-altura-primavera": {
+      "mediaId": "18009498417006101",
+      "publicado": "2026-10-30T22:40:00.216Z"
+    },
+    "2026-10-30-reel-22-altura-primavera#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-10-30T23:39:34.169Z"
+    },
+    "2026-10-30-historia-reel-22-altura-primavera": {
+      "mediaId": "18117300071468294",
+      "publicado": "2026-10-30T23:40:13.324Z"
+    },
+    "2026-10-30-historia-reel-22-altura-primavera#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-10-30T23:40:13.483Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "86 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 29/10 salió el reel “El gato lo vigila” (también como historia), con video real de un cliente."
+      "detail": "88 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 30/10 salió el reel “Altura de corte en primavera” (también como historia)."
     },
     {
       "cls": "warn",
