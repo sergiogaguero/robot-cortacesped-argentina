@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-04T15:10:55Z",
+  "syncedAt": "2026-11-05T00:09:01Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -744,13 +744,21 @@
     "2026-11-03-historia-reel-23-cual-te-conviene#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-11-04T05:15:06.936Z"
+    },
+    "2026-11-04-historia-31-precio-del-dia": {
+      "mediaId": "18099084245668971",
+      "publicado": "2026-11-04T16:16:46.801Z"
+    },
+    "2026-11-04-historia-31-precio-del-dia#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-11-04T21:39:25.528Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "93 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 3/11 salió el reel “¿Cuál te conviene?” con su historia."
+      "detail": "94 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 4/11 salió la historia “Precio del día”."
     },
     {
       "cls": "warn",
