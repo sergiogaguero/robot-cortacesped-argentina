@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-09T00:08:56Z",
+  "syncedAt": "2026-11-09T15:12:02Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -800,13 +800,21 @@
     "2026-11-08-carrusel-09-comparativa#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-11-08T19:39:42.203Z"
+    },
+    "2026-11-09-historia-33-encuesta-vacaciones": {
+      "mediaId": "18068685632789773",
+      "publicado": "2026-11-09T13:16:54.372Z"
+    },
+    "2026-11-09-historia-33-encuesta-vacaciones#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-11-09T14:39:50.268Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "100 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 8/11 salió el carrusel “Comparativa”."
+      "detail": "101 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 9/11 salió la historia “Encuesta: vacaciones”."
     },
     {
       "cls": "warn",
