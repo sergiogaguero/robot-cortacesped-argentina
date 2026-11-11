@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-11T00:09:22Z",
+  "syncedAt": "2026-11-11T15:10:32Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -823,7 +823,7 @@
     },
     "2026-11-10-reel-25-vacaciones#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-11-10T23:39:05.630Z"
+      "intento": "2026-11-11T04:17:01.676Z"
     },
     "2026-11-10-historia-reel-25-vacaciones": {
       "mediaId": "18175418050456511",
@@ -831,7 +831,7 @@
     },
     "2026-11-10-historia-reel-25-vacaciones#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-11-10T23:39:44.477Z"
+      "intento": "2026-11-11T05:14:51.034Z"
     }
   },
   "health": [
