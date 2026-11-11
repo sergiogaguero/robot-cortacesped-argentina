@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-10T15:12:05Z",
+  "syncedAt": "2026-11-11T00:09:22Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -816,13 +816,29 @@
     "2026-11-09-historia-45-sale-base#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-11-10T02:39:18.854Z"
+    },
+    "2026-11-10-reel-25-vacaciones": {
+      "mediaId": "18103705283456492",
+      "publicado": "2026-11-10T22:39:51.381Z"
+    },
+    "2026-11-10-reel-25-vacaciones#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-11-10T23:39:05.630Z"
+    },
+    "2026-11-10-historia-reel-25-vacaciones": {
+      "mediaId": "18175418050456511",
+      "publicado": "2026-11-10T23:39:44.223Z"
+    },
+    "2026-11-10-historia-reel-25-vacaciones#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-11-10T23:39:44.477Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "102 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 9/11 salió la historia “Sale de la base”."
+      "detail": "104 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 10/11 salió el reel “Vacaciones” con su historia."
     },
     {
       "cls": "warn",
