@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-12T15:10:33Z",
+  "syncedAt": "2026-11-13T00:08:54Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -840,13 +840,29 @@
     "2026-11-11-historia-34-tip-riego#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-11-11T21:39:24.126Z"
+    },
+    "2026-11-12-reel-32-jardines-reales": {
+      "mediaId": "17996501277022582",
+      "publicado": "2026-11-12T22:40:23.946Z"
+    },
+    "2026-11-12-reel-32-jardines-reales#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-11-12T23:39:09.552Z"
+    },
+    "2026-11-12-historia-reel-32-jardines-reales": {
+      "mediaId": "17997928962049267",
+      "publicado": "2026-11-12T23:39:51.045Z"
+    },
+    "2026-11-12-historia-reel-32-jardines-reales#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-11-12T23:39:51.371Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "105 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 11/11 salió la historia “Tip: riego”."
+      "detail": "107 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 12/11 salió el reel “Jardines reales” con su historia."
     },
     {
       "cls": "warn",
