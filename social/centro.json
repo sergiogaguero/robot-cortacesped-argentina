@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-13T15:47:38Z",
+  "syncedAt": "2026-11-14T00:08:54Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -856,13 +856,29 @@
     "2026-11-12-historia-reel-32-jardines-reales#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-11-13T05:14:34.154Z"
+    },
+    "2026-11-13-reel-26-calor": {
+      "mediaId": "17893552752454565",
+      "publicado": "2026-11-13T22:39:56.776Z"
+    },
+    "2026-11-13-reel-26-calor#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-11-13T23:39:03.134Z"
+    },
+    "2026-11-13-historia-reel-26-calor": {
+      "mediaId": "18082046846401663",
+      "publicado": "2026-11-13T23:39:43.578Z"
+    },
+    "2026-11-13-historia-reel-26-calor#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-11-13T23:39:43.953Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "107 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 12/11 salió el reel “Jardines reales” con su historia."
+      "detail": "109 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 13/11 salió el reel “Calor” con su historia."
     },
     {
       "cls": "warn",
