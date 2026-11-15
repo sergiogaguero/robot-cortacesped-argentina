@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-15T00:08:43Z",
+  "syncedAt": "2026-11-15T15:08:20Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -880,13 +880,21 @@
     "2026-11-14-historia-35-mientras-tanto#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-11-14T19:39:14.454Z"
+    },
+    "2026-11-15-carrusel-10-verano": {
+      "mediaId": "17868770727677030",
+      "publicado": "2026-11-15T14:13:57.582Z"
+    },
+    "2026-11-15-carrusel-10-verano#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-11-15T14:39:05.732Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "110 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 14/11 salió la historia “Mientras tanto”."
+      "detail": "111 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 15/11 salió el carrusel “Verano”."
     },
     {
       "cls": "warn",
