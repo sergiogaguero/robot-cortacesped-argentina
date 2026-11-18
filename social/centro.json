@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-18T00:09:02Z",
+  "syncedAt": "2026-11-18T15:08:44Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -903,7 +903,7 @@
     },
     "2026-11-17-reel-27-hace-la-cuenta#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-11-17T23:56:38.243Z"
+      "intento": "2026-11-18T04:16:35.476Z"
     },
     "2026-11-17-historia-reel-27-hace-la-cuenta": {
       "mediaId": "18001473150102523",
@@ -911,7 +911,7 @@
     },
     "2026-11-17-historia-reel-27-hace-la-cuenta#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-11-17T23:57:19.633Z"
+      "intento": "2026-11-18T05:14:34.654Z"
     }
   },
   "health": [
