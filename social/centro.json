@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-21T00:08:36Z",
+  "syncedAt": "2026-11-21T15:08:26Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -943,7 +943,7 @@
     },
     "2026-11-20-reel-28-tres-errores#fb": {
       "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
-      "intento": "2026-11-20T23:38:58.839Z"
+      "intento": "2026-11-21T04:15:48.628Z"
     },
     "2026-11-20-historia-reel-28-tres-errores": {
       "mediaId": "18020079173978678",
@@ -951,14 +951,22 @@
     },
     "2026-11-20-historia-reel-28-tres-errores#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
-      "intento": "2026-11-20T23:39:37.491Z"
+      "intento": "2026-11-21T05:14:05.330Z"
+    },
+    "2026-11-21-historia-38-encuesta-freno": {
+      "mediaId": "18120271532017368",
+      "publicado": "2026-11-21T14:13:49.650Z"
+    },
+    "2026-11-21-historia-38-encuesta-freno#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-11-21T14:39:00.523Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "119 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 20/11 salió el reel “Tres errores” con su historia."
+      "detail": "120 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 21/11 salió la historia “Encuesta: freno”."
     },
     {
       "cls": "warn",
