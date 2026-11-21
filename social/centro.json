@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-20T15:08:48Z",
+  "syncedAt": "2026-11-21T00:08:36Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -936,13 +936,29 @@
     "2026-11-19-historia-reel-36-primer-corte#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-11-20T05:14:42.781Z"
+    },
+    "2026-11-20-reel-28-tres-errores": {
+      "mediaId": "18423967873153581",
+      "publicado": "2026-11-20T22:39:39.419Z"
+    },
+    "2026-11-20-reel-28-tres-errores#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-11-20T23:38:58.839Z"
+    },
+    "2026-11-20-historia-reel-28-tres-errores": {
+      "mediaId": "18020079173978678",
+      "publicado": "2026-11-20T23:39:37.256Z"
+    },
+    "2026-11-20-historia-reel-28-tres-errores#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-11-20T23:39:37.491Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "117 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 19/11 salió el reel “Primer corte” con su historia."
+      "detail": "119 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 20/11 salió el reel “Tres errores” con su historia."
     },
     {
       "cls": "warn",
