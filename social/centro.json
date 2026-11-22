@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-22T00:08:42Z",
+  "syncedAt": "2026-11-22T15:08:29Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -960,13 +960,21 @@
     "2026-11-21-historia-38-encuesta-freno#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-11-21T19:38:52.114Z"
+    },
+    "2026-11-22-carrusel-11-preguntas": {
+      "mediaId": "18213511090317401",
+      "publicado": "2026-11-22T14:14:37.576Z"
+    },
+    "2026-11-22-carrusel-11-preguntas#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-11-22T14:38:59.559Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "120 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 21/11 salió la historia “Encuesta: freno”."
+      "detail": "121 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 22/11 salió el carrusel “Preguntas”."
     },
     {
       "cls": "warn",
