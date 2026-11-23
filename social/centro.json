@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-23T00:08:57Z",
+  "syncedAt": "2026-11-23T15:10:08Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -968,13 +968,21 @@
     "2026-11-22-carrusel-11-preguntas#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-11-22T19:38:43.994Z"
+    },
+    "2026-11-23-historia-39-fiestas": {
+      "mediaId": "18128828503686666",
+      "publicado": "2026-11-23T13:16:16.119Z"
+    },
+    "2026-11-23-historia-39-fiestas#fb": {
+      "error": "1308202005717410/photos: (#200) Permissions error",
+      "intento": "2026-11-23T14:39:23.706Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "121 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 22/11 salió el carrusel “Preguntas”."
+      "detail": "122 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 23/11 salió la historia “Fiestas”."
     },
     {
       "cls": "warn",
