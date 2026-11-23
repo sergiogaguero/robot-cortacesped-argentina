@@ -82,7 +82,7 @@
         },
         {
           "label": "Evasión de obstáculos",
-          "value": "Sí, con LiDAR 3D y visión artificial"
+          "value": "Sí, con LiDAR 3D, visión artificial y paragolpes"
         }
       ]
     },
@@ -102,9 +102,34 @@
           "value": "Localización por GPS"
         }
       ]
+    },
+    {
+      "category": "Datos del L SE",
+      "items": [
+        {
+          "label": "Batería",
+          "value": "4,4 Ah / 22 V"
+        },
+        {
+          "label": "Tracción",
+          "value": "Trasera (RWD)"
+        },
+        {
+          "label": "Paso mínimo",
+          "value": "Pasillos desde 65 cm"
+        },
+        {
+          "label": "Ruido",
+          "value": "Menos de 58 dB(A)"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "640 × 446 × 315 mm"
+        }
+      ]
     }
   ],
-  "specsNote": "Es un lanzamiento de Hookii: estamos terminando de confirmar el resto de la ficha técnica (batería, autonomía, ruido y dimensiones) y la fecha de entrega. Escribinos y te pasamos lo último que tengamos.",
+  "specsNote": "Los datos de batería, ruido y dimensiones que figuran son los del L SE. Estamos terminando de confirmar los del L y el L Pro (batería, autonomía, ruido y dimensiones) y la fecha de entrega. Escribinos y te pasamos lo último que tengamos.",
   "image": "neomow-l-pro.jpg",
   "imageAlt": "Robot cortacésped Hookii Neomow L Pro con navegación LiDAR 3D para jardines grandes y con pendiente",
   "ogImage": "/og/neomow-l.jpg",
