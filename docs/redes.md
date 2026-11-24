@@ -92,7 +92,15 @@ como mensaje directo. Si alguna vez querés una historia para subir a mano, pon�
   que estar publicado con esos archivos **antes** de la hora del post.
 - GitHub solo ejecuta los workflows programados desde `master`, y los pausa si el repo pasa 60 días sin
   commits (se reactivan desde la pestaña Actions).
-- La API no da acceso a la biblioteca de audio de Instagram. Para ponerle música a un reel:
+- **Música de fondo (desde el 24/11/2026):** temas elegidos por el dueño en Meta Sound Collection
+  (libres para usar en Instagram y Facebook), guardados en `media/musica/biblioteca/`: `everything`,
+  `slow-burn`, `zulu`, `headshot-glazin` y `show-up-get-paid`. Para cada pieza se recorta un tramo con
+  `node scripts/media/pista.mjs media/musica/biblioteca/<tema>.m4a media/musica/<pieza>.mp3 <desde> <duración>`
+  (arrancar en la entrada fuerte del tema: everything 12,4 s · slow-burn 0,4 s · zulu 30,4 s ·
+  headshot-glazin 6,9 s · show-up-get-paid 9,5 s) y se pone `"audio"` en el guion. Una historia con
+  música tiene que ser video: `"format": "video"` en el guion y `.mp4` en el calendario (la API solo
+  acepta JPG sin sonido para historias con imagen).
+- La API no da acceso a la biblioteca de audio de Instagram. Antes de tener temas propios, la música salía de:
   `node scripts/media/musica.mjs media/musica/<nombre>.mp3 <duración> [segundo del drop] [estilo]` compone
   una pista original (sin derechos de terceros; estilos luminoso, chill, groove y epico) y
   `"audio": "media/musica/<nombre>.mp3"` en el guion la suma. La música en tendencia de Instagram solo

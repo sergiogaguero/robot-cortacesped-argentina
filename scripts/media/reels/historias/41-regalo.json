@@ -1,8 +1,9 @@
 {
  "title": "Regalo de fin de año",
+ "format": "video",
  "scenes": [
   {
-   "dur": 3,
+   "dur": 7,
    "bg": {
     "style": "glow"
    },
@@ -34,5 +35,6 @@
     }
    ]
   }
- ]
+ ],
+ "audio": "media/musica/regalo.mp3"
 }

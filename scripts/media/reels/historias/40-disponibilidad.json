@@ -1,8 +1,9 @@
 {
  "title": "Consultá disponibilidad",
+ "format": "video",
  "scenes": [
   {
-   "dur": 3,
+   "dur": 7,
    "bg": {
     "style": "glow"
    },
@@ -32,5 +33,6 @@
     }
    ]
   }
- ]
+ ],
+ "audio": "media/musica/disponibilidad.mp3"
 }
