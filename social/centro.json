@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-24T15:09:00Z",
+  "syncedAt": "2026-11-25T00:09:31Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -976,13 +976,29 @@
     "2026-11-23-historia-39-fiestas#fb": {
       "error": "1308202005717410/photos: (#200) Permissions error",
       "intento": "2026-11-23T18:39:13.890Z"
+    },
+    "2026-11-24-reel-29-fiestas": {
+      "mediaId": "18129147340930011",
+      "publicado": "2026-11-24T22:39:58.555Z"
+    },
+    "2026-11-24-reel-29-fiestas#fb": {
+      "error": "1308202005717410/video_reels: (#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.",
+      "intento": "2026-11-24T23:38:53.598Z"
+    },
+    "2026-11-24-historia-reel-29-fiestas": {
+      "mediaId": "18132591473488379",
+      "publicado": "2026-11-24T23:39:33.412Z"
+    },
+    "2026-11-24-historia-reel-29-fiestas#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-11-24T23:39:33.732Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "122 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 23/11 salió la historia “Fiestas”."
+      "detail": "124 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 24/11 salió el reel “Fiestas” (ya con la música nueva) con su historia."
     },
     {
       "cls": "warn",
