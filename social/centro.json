@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-25T15:08:39Z",
+  "syncedAt": "2026-11-26T00:09:01Z",
   "estado": {
     "2026-09-27-reel-07-domingo": {
       "mediaId": "18223962325330618",
@@ -992,13 +992,21 @@
     "2026-11-24-historia-reel-29-fiestas#fb": {
       "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
       "intento": "2026-11-25T05:15:42.417Z"
+    },
+    "2026-11-25-historia-40-disponibilidad": {
+      "mediaId": "17991960762089275",
+      "publicado": "2026-11-25T16:19:51.540Z"
+    },
+    "2026-11-25-historia-40-disponibilidad#fb": {
+      "error": "1308202005717410/video_stories: (#3) Application does not have the granular permission to make this API call.",
+      "intento": "2026-11-25T21:39:21.463Z"
     }
   },
   "health": [
     {
       "cls": "ok",
       "label": "Instagram publicando",
-      "detail": "124 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 24/11 salió el reel “Fiestas” (ya con la música nueva) con su historia."
+      "detail": "125 publicaciones salieron en Instagram. Campaña octubre–noviembre al día: el 25/11 salió la historia “Consultá disponibilidad”, la primera historia en video con música."
     },
     {
       "cls": "warn",
